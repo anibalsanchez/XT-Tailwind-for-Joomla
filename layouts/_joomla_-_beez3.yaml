@@ -1,0 +1,48 @@
+version: 2
+
+preset:
+  image: gantry-admin://images/layouts/3-col.png
+
+layout:
+  /header/:
+    - [logo, position-0]
+
+  /navigation/:
+    - menu
+
+  /container-main/:
+    -
+      - sidebar 20:
+        - position-7
+        - position-4
+        - position-5
+      - main 60:
+        - position-2
+        - position-12
+        - system-messages
+        - system-content
+      - aside 20:
+        - position-6
+        - position-8
+        - position-3
+
+  /footer/:
+    - [position-9, position-10, position-11]
+    - position-14
+
+  offcanvas:
+    - mobile-menu
+
+structure:
+  sidebar:
+    subtype: aside
+    block:
+      fixed: 1
+  aside:
+    block:
+      fixed: 1
+
+content:
+  position-0:
+    attributes:
+      chrome: none

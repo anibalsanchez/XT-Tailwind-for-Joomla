@@ -1,0 +1,5 @@
+enabled: '1'
+url: ''
+image: 'gantry-assets://images/xt-tailwind-logo.png'
+text: 'XT Tailwind'
+class: xt-tailwind-logo
