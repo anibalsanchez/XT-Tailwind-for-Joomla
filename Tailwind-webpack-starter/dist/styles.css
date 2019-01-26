@@ -1,0 +1,1834 @@
+@import url(https://fonts.googleapis.com/css?family=Muli);/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+/* Misc
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+  display: none;
+}
+
+/**
+ * Manually forked from SUIT CSS Base: https://github.com/suitcss/base
+ * A thin layer on top of normalize.css that provides a starting point more
+ * suitable for web applications.
+ */
+
+/**
+ * 1. Prevent padding and border from affecting element width
+ * https://goo.gl/pYtbK7
+ * 2. Change the default font family in all browsers (opinionated)
+ */
+
+html {
+  box-sizing: border-box; /* 1 */
+  font-family: sans-serif; /* 2 */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/**
+ * Removes the default spacing and border for appropriate elements.
+ */
+
+
+dl,
+dd,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
+
+button {
+  background: transparent;
+  padding: 0;
+}
+
+/**
+ * Work around a Firefox/IE bug where the transparent `button` background
+ * results in a loss of the default `button` focus styles.
+ */
+
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+ol,
+ul {
+  margin: 0;
+}
+
+/**
+ * Tailwind custom reset styles
+ */
+
+/**
+ * Allow adding a border to an element by just adding a border-width.
+ *
+ * By default, the way the browser specifies that an element should have no
+ * border is by setting it's border-style to `none` in the user-agent
+ * stylesheet.
+ *
+ * In order to easily add borders to elements by just setting the `border-width`
+ * property, we change the default border-style for all elements to `solid`, and
+ * use border-width to hide them instead. This way our `border` utilities only
+ * need to set the `border-width` property instead of the entire `border`
+ * shorthand, making our border utilities much more straightforward to compose.
+ *
+ * https://github.com/tailwindcss/tailwindcss/pull/116
+ */
+
+*,
+*::before,
+*::after {
+  border-width: 0;
+  border-style: solid;
+  border-color: #f5f5f5;
+}
+
+/**
+ * Undo the `border-style: none` reset that Normalize applies to images so that
+ * our `border-{width}` utilities have the expected effect.
+ *
+ * The Normalize reset is unnecessary for us since we default the border-width
+ * to 0 on all elements.
+ *
+ * https://github.com/tailwindcss/tailwindcss/issues/362
+ */
+
+img {
+  border-style: solid;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input::placeholder {
+  color: inherit;
+  opacity: .5;
+}
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 576px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 992px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+.list-reset {
+  list-style: none;
+  padding: 0;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-grey-dark {
+  background-color: #0d0d0d;
+}
+
+.bg-grey-light {
+  background-color: #f5f5f5;
+}
+
+.bg-oldlace {
+  background-color: #fff6e9;
+}
+
+.rounded {
+  border-radius: .25rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.font-sans {
+  font-family: muli, Helvetica, Tahoma, Geneva, Arial, sans-serif;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.h-32-lite {
+  height: 7rem;
+}
+
+.leading-normal {
+  line-height: 1.5;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.ml-6 {
+  margin-left: 1.5rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.ml-8 {
+  margin-left: 2rem;
+}
+
+.max-w-xs {
+  max-width: 20rem;
+}
+
+.max-w-sm {
+  max-width: 30rem;
+}
+
+.max-w-md {
+  max-width: 40rem;
+}
+
+.max-w-lg {
+  max-width: 50rem;
+}
+
+.max-w-xl {
+  max-width: 60rem;
+}
+
+.max-w-2xl {
+  max-width: 70rem;
+}
+
+.max-w-3xl {
+  max-width: 80rem;
+}
+
+.max-w-4xl {
+  max-width: 90rem;
+}
+
+.max-w-5xl {
+  max-width: 100rem;
+}
+
+.max-w-full {
+  max-width: 100%;
+}
+
+.min-w-0 {
+  min-width: 0;
+}
+
+.min-w-full {
+  min-width: 100%;
+}
+
+.opacity-75 {
+  opacity: .75;
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-visible {
+  overflow: visible;
+}
+
+.overflow-scroll {
+  overflow: scroll;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+
+.overflow-x-visible {
+  overflow-x: visible;
+}
+
+.overflow-y-visible {
+  overflow-y: visible;
+}
+
+.overflow-x-scroll {
+  overflow-x: scroll;
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
+
+.py-2 {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+.px-2 {
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.pr-4 {
+  padding-right: 1rem;
+}
+
+.pl-6 {
+  padding-left: 1.5rem;
+}
+
+.pt-32-lite {
+  padding-top: 7rem;
+}
+
+.static {
+  position: static;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.pin-t {
+  top: 0;
+}
+
+.pin-l {
+  left: 0;
+}
+
+.shadow-md {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .12), 0 2px 4px 0 rgba(0, 0, 0, .08);
+}
+
+.shadow-lg {
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, .11), 0 5px 15px 0 rgba(0, 0, 0, .08);
+}
+
+.shadow-inner {
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, .06);
+}
+
+.shadow-none {
+  box-shadow: none;
+}
+
+.fill-current {
+  fill: currentColor;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-black {
+  color: #22292f;
+}
+
+.text-grey {
+  color: #666;
+}
+
+.text-oldlace {
+  color: #fff6e9;
+}
+
+.text-2xl {
+  font-size: 1.728rem;
+}
+
+.text-3xl {
+  font-size: 2rem;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+.w-1 {
+  width: .25rem;
+}
+
+.w-2 {
+  width: .5rem;
+}
+
+.w-3 {
+  width: .75rem;
+}
+
+.w-4 {
+  width: 1rem;
+}
+
+.w-6 {
+  width: 1.5rem;
+}
+
+.w-8 {
+  width: 2rem;
+}
+
+.w-10 {
+  width: 2.5rem;
+}
+
+.w-12 {
+  width: 3rem;
+}
+
+.w-16 {
+  width: 4rem;
+}
+
+.w-24 {
+  width: 6rem;
+}
+
+.w-32 {
+  width: 8rem;
+}
+
+.w-48 {
+  width: 12rem;
+}
+
+.w-64 {
+  width: 16rem;
+}
+
+.w-auto {
+  width: auto;
+}
+
+.w-px {
+  width: 1px;
+}
+
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-1\/3 {
+  width: 33.33333%;
+}
+
+.w-2\/3 {
+  width: 66.66667%;
+}
+
+.w-1\/4 {
+  width: 25%;
+}
+
+.w-3\/4 {
+  width: 75%;
+}
+
+.w-1\/5 {
+  width: 20%;
+}
+
+.w-2\/5 {
+  width: 40%;
+}
+
+.w-3\/5 {
+  width: 60%;
+}
+
+.w-4\/5 {
+  width: 80%;
+}
+
+.w-1\/6 {
+  width: 16.66667%;
+}
+
+.w-5\/6 {
+  width: 83.33333%;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-screen {
+  width: 100vw;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.z-40 {
+  z-index: 40;
+}
+
+.pin-32-lite {
+  top: 7rem;
+}
+
+a {
+  color: #ffa32b;
+  text-decoration: none;
+}
+
+footer a {
+  color: #ffa32b;
+  text-decoration: none;
+  color: #666;
+}
+
+p {
+  margin-top: 1.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: .75rem;
+}
+
+h3 {
+  font-size: 1.728rem;
+  margin-bottom: 2rem;
+}
+
+h4 {
+  font-size: 1.44rem;
+  margin-top: 1.5rem;
+  margin-bottom: .75rem;
+  letter-spacing: .05em;
+}
+
+h5 {
+  font-size: 1.12rem;
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+  letter-spacing: .05em;
+}
+
+ul {
+  margin-top: 1.5rem;
+  padding-inline-start: 1rem;
+}
+
+.article-info-term {
+  display: none;
+}
+
+dl.article-info dd {
+  font-size: 1.12rem;
+}
+
+.tags li {
+  display: inline;
+  border-radius: 9999px;
+  background-color: #2d6987;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  font-size: .7rem;
+  margin-right: .75rem;
+}
+
+.tags li a {
+  color: #fff;
+}
+
+footer {
+  color: #9b6f37;
+}
+
+@media (min-width: 576px) {
+
+  .sm\:flex-row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  .sm\:max-w-xs {
+    max-width: 20rem;
+  }
+
+  .sm\:max-w-sm {
+    max-width: 30rem;
+  }
+
+  .sm\:max-w-md {
+    max-width: 40rem;
+  }
+
+  .sm\:max-w-lg {
+    max-width: 50rem;
+  }
+
+  .sm\:max-w-xl {
+    max-width: 60rem;
+  }
+
+  .sm\:max-w-2xl {
+    max-width: 70rem;
+  }
+
+  .sm\:max-w-3xl {
+    max-width: 80rem;
+  }
+
+  .sm\:max-w-4xl {
+    max-width: 90rem;
+  }
+
+  .sm\:max-w-5xl {
+    max-width: 100rem;
+  }
+
+  .sm\:max-w-full {
+    max-width: 100%;
+  }
+
+  .sm\:min-w-0 {
+    min-width: 0;
+  }
+
+  .sm\:min-w-full {
+    min-width: 100%;
+  }
+
+  .sm\:overflow-auto {
+    overflow: auto;
+  }
+
+  .sm\:overflow-hidden {
+    overflow: hidden;
+  }
+
+  .sm\:overflow-visible {
+    overflow: visible;
+  }
+
+  .sm\:overflow-scroll {
+    overflow: scroll;
+  }
+
+  .sm\:overflow-x-auto {
+    overflow-x: auto;
+  }
+
+  .sm\:overflow-y-auto {
+    overflow-y: auto;
+  }
+
+  .sm\:overflow-x-hidden {
+    overflow-x: hidden;
+  }
+
+  .sm\:overflow-y-hidden {
+    overflow-y: hidden;
+  }
+
+  .sm\:overflow-x-visible {
+    overflow-x: visible;
+  }
+
+  .sm\:overflow-y-visible {
+    overflow-y: visible;
+  }
+
+  .sm\:overflow-x-scroll {
+    overflow-x: scroll;
+  }
+
+  .sm\:overflow-y-scroll {
+    overflow-y: scroll;
+  }
+
+  .sm\:shadow-md {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .12), 0 2px 4px 0 rgba(0, 0, 0, .08);
+  }
+
+  .sm\:shadow-lg {
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, .11), 0 5px 15px 0 rgba(0, 0, 0, .08);
+  }
+
+  .sm\:shadow-inner {
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, .06);
+  }
+
+  .sm\:shadow-none {
+    box-shadow: none;
+  }
+
+  .sm\:w-1 {
+    width: .25rem;
+  }
+
+  .sm\:w-2 {
+    width: .5rem;
+  }
+
+  .sm\:w-3 {
+    width: .75rem;
+  }
+
+  .sm\:w-4 {
+    width: 1rem;
+  }
+
+  .sm\:w-6 {
+    width: 1.5rem;
+  }
+
+  .sm\:w-8 {
+    width: 2rem;
+  }
+
+  .sm\:w-10 {
+    width: 2.5rem;
+  }
+
+  .sm\:w-12 {
+    width: 3rem;
+  }
+
+  .sm\:w-16 {
+    width: 4rem;
+  }
+
+  .sm\:w-24 {
+    width: 6rem;
+  }
+
+  .sm\:w-32 {
+    width: 8rem;
+  }
+
+  .sm\:w-48 {
+    width: 12rem;
+  }
+
+  .sm\:w-64 {
+    width: 16rem;
+  }
+
+  .sm\:w-auto {
+    width: auto;
+  }
+
+  .sm\:w-px {
+    width: 1px;
+  }
+
+  .sm\:w-1\/2 {
+    width: 50%;
+  }
+
+  .sm\:w-1\/3 {
+    width: 33.33333%;
+  }
+
+  .sm\:w-2\/3 {
+    width: 66.66667%;
+  }
+
+  .sm\:w-1\/4 {
+    width: 25%;
+  }
+
+  .sm\:w-3\/4 {
+    width: 75%;
+  }
+
+  .sm\:w-1\/5 {
+    width: 20%;
+  }
+
+  .sm\:w-2\/5 {
+    width: 40%;
+  }
+
+  .sm\:w-3\/5 {
+    width: 60%;
+  }
+
+  .sm\:w-4\/5 {
+    width: 80%;
+  }
+
+  .sm\:w-1\/6 {
+    width: 16.66667%;
+  }
+
+  .sm\:w-5\/6 {
+    width: 83.33333%;
+  }
+
+  .sm\:w-full {
+    width: 100%;
+  }
+
+  .sm\:w-screen {
+    width: 100vw;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .md\:flex-row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  .md\:max-w-xs {
+    max-width: 20rem;
+  }
+
+  .md\:max-w-sm {
+    max-width: 30rem;
+  }
+
+  .md\:max-w-md {
+    max-width: 40rem;
+  }
+
+  .md\:max-w-lg {
+    max-width: 50rem;
+  }
+
+  .md\:max-w-xl {
+    max-width: 60rem;
+  }
+
+  .md\:max-w-2xl {
+    max-width: 70rem;
+  }
+
+  .md\:max-w-3xl {
+    max-width: 80rem;
+  }
+
+  .md\:max-w-4xl {
+    max-width: 90rem;
+  }
+
+  .md\:max-w-5xl {
+    max-width: 100rem;
+  }
+
+  .md\:max-w-full {
+    max-width: 100%;
+  }
+
+  .md\:min-w-0 {
+    min-width: 0;
+  }
+
+  .md\:min-w-full {
+    min-width: 100%;
+  }
+
+  .md\:overflow-auto {
+    overflow: auto;
+  }
+
+  .md\:overflow-hidden {
+    overflow: hidden;
+  }
+
+  .md\:overflow-visible {
+    overflow: visible;
+  }
+
+  .md\:overflow-scroll {
+    overflow: scroll;
+  }
+
+  .md\:overflow-x-auto {
+    overflow-x: auto;
+  }
+
+  .md\:overflow-y-auto {
+    overflow-y: auto;
+  }
+
+  .md\:overflow-x-hidden {
+    overflow-x: hidden;
+  }
+
+  .md\:overflow-y-hidden {
+    overflow-y: hidden;
+  }
+
+  .md\:overflow-x-visible {
+    overflow-x: visible;
+  }
+
+  .md\:overflow-y-visible {
+    overflow-y: visible;
+  }
+
+  .md\:overflow-x-scroll {
+    overflow-x: scroll;
+  }
+
+  .md\:overflow-y-scroll {
+    overflow-y: scroll;
+  }
+
+  .md\:shadow-md {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .12), 0 2px 4px 0 rgba(0, 0, 0, .08);
+  }
+
+  .md\:shadow-lg {
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, .11), 0 5px 15px 0 rgba(0, 0, 0, .08);
+  }
+
+  .md\:shadow-inner {
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, .06);
+  }
+
+  .md\:shadow-none {
+    box-shadow: none;
+  }
+
+  .md\:w-1 {
+    width: .25rem;
+  }
+
+  .md\:w-2 {
+    width: .5rem;
+  }
+
+  .md\:w-3 {
+    width: .75rem;
+  }
+
+  .md\:w-4 {
+    width: 1rem;
+  }
+
+  .md\:w-6 {
+    width: 1.5rem;
+  }
+
+  .md\:w-8 {
+    width: 2rem;
+  }
+
+  .md\:w-10 {
+    width: 2.5rem;
+  }
+
+  .md\:w-12 {
+    width: 3rem;
+  }
+
+  .md\:w-16 {
+    width: 4rem;
+  }
+
+  .md\:w-24 {
+    width: 6rem;
+  }
+
+  .md\:w-32 {
+    width: 8rem;
+  }
+
+  .md\:w-48 {
+    width: 12rem;
+  }
+
+  .md\:w-64 {
+    width: 16rem;
+  }
+
+  .md\:w-auto {
+    width: auto;
+  }
+
+  .md\:w-px {
+    width: 1px;
+  }
+
+  .md\:w-1\/2 {
+    width: 50%;
+  }
+
+  .md\:w-1\/3 {
+    width: 33.33333%;
+  }
+
+  .md\:w-2\/3 {
+    width: 66.66667%;
+  }
+
+  .md\:w-1\/4 {
+    width: 25%;
+  }
+
+  .md\:w-3\/4 {
+    width: 75%;
+  }
+
+  .md\:w-1\/5 {
+    width: 20%;
+  }
+
+  .md\:w-2\/5 {
+    width: 40%;
+  }
+
+  .md\:w-3\/5 {
+    width: 60%;
+  }
+
+  .md\:w-4\/5 {
+    width: 80%;
+  }
+
+  .md\:w-1\/6 {
+    width: 16.66667%;
+  }
+
+  .md\:w-5\/6 {
+    width: 83.33333%;
+  }
+
+  .md\:w-full {
+    width: 100%;
+  }
+
+  .md\:w-screen {
+    width: 100vw;
+  }
+}
+
+@media (min-width: 992px) {
+
+  .lg\:flex-row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  .lg\:max-w-xs {
+    max-width: 20rem;
+  }
+
+  .lg\:max-w-sm {
+    max-width: 30rem;
+  }
+
+  .lg\:max-w-md {
+    max-width: 40rem;
+  }
+
+  .lg\:max-w-lg {
+    max-width: 50rem;
+  }
+
+  .lg\:max-w-xl {
+    max-width: 60rem;
+  }
+
+  .lg\:max-w-2xl {
+    max-width: 70rem;
+  }
+
+  .lg\:max-w-3xl {
+    max-width: 80rem;
+  }
+
+  .lg\:max-w-4xl {
+    max-width: 90rem;
+  }
+
+  .lg\:max-w-5xl {
+    max-width: 100rem;
+  }
+
+  .lg\:max-w-full {
+    max-width: 100%;
+  }
+
+  .lg\:min-w-0 {
+    min-width: 0;
+  }
+
+  .lg\:min-w-full {
+    min-width: 100%;
+  }
+
+  .lg\:overflow-auto {
+    overflow: auto;
+  }
+
+  .lg\:overflow-hidden {
+    overflow: hidden;
+  }
+
+  .lg\:overflow-visible {
+    overflow: visible;
+  }
+
+  .lg\:overflow-scroll {
+    overflow: scroll;
+  }
+
+  .lg\:overflow-x-auto {
+    overflow-x: auto;
+  }
+
+  .lg\:overflow-y-auto {
+    overflow-y: auto;
+  }
+
+  .lg\:overflow-x-hidden {
+    overflow-x: hidden;
+  }
+
+  .lg\:overflow-y-hidden {
+    overflow-y: hidden;
+  }
+
+  .lg\:overflow-x-visible {
+    overflow-x: visible;
+  }
+
+  .lg\:overflow-y-visible {
+    overflow-y: visible;
+  }
+
+  .lg\:overflow-x-scroll {
+    overflow-x: scroll;
+  }
+
+  .lg\:overflow-y-scroll {
+    overflow-y: scroll;
+  }
+
+  .lg\:shadow-md {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .12), 0 2px 4px 0 rgba(0, 0, 0, .08);
+  }
+
+  .lg\:shadow-lg {
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, .11), 0 5px 15px 0 rgba(0, 0, 0, .08);
+  }
+
+  .lg\:shadow-inner {
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, .06);
+  }
+
+  .lg\:shadow-none {
+    box-shadow: none;
+  }
+
+  .lg\:w-1 {
+    width: .25rem;
+  }
+
+  .lg\:w-2 {
+    width: .5rem;
+  }
+
+  .lg\:w-3 {
+    width: .75rem;
+  }
+
+  .lg\:w-4 {
+    width: 1rem;
+  }
+
+  .lg\:w-6 {
+    width: 1.5rem;
+  }
+
+  .lg\:w-8 {
+    width: 2rem;
+  }
+
+  .lg\:w-10 {
+    width: 2.5rem;
+  }
+
+  .lg\:w-12 {
+    width: 3rem;
+  }
+
+  .lg\:w-16 {
+    width: 4rem;
+  }
+
+  .lg\:w-24 {
+    width: 6rem;
+  }
+
+  .lg\:w-32 {
+    width: 8rem;
+  }
+
+  .lg\:w-48 {
+    width: 12rem;
+  }
+
+  .lg\:w-64 {
+    width: 16rem;
+  }
+
+  .lg\:w-auto {
+    width: auto;
+  }
+
+  .lg\:w-px {
+    width: 1px;
+  }
+
+  .lg\:w-1\/2 {
+    width: 50%;
+  }
+
+  .lg\:w-1\/3 {
+    width: 33.33333%;
+  }
+
+  .lg\:w-2\/3 {
+    width: 66.66667%;
+  }
+
+  .lg\:w-1\/4 {
+    width: 25%;
+  }
+
+  .lg\:w-3\/4 {
+    width: 75%;
+  }
+
+  .lg\:w-1\/5 {
+    width: 20%;
+  }
+
+  .lg\:w-2\/5 {
+    width: 40%;
+  }
+
+  .lg\:w-3\/5 {
+    width: 60%;
+  }
+
+  .lg\:w-4\/5 {
+    width: 80%;
+  }
+
+  .lg\:w-1\/6 {
+    width: 16.66667%;
+  }
+
+  .lg\:w-5\/6 {
+    width: 83.33333%;
+  }
+
+  .lg\:w-full {
+    width: 100%;
+  }
+
+  .lg\:w-screen {
+    width: 100vw;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .xl\:flex-row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  .xl\:max-w-xs {
+    max-width: 20rem;
+  }
+
+  .xl\:max-w-sm {
+    max-width: 30rem;
+  }
+
+  .xl\:max-w-md {
+    max-width: 40rem;
+  }
+
+  .xl\:max-w-lg {
+    max-width: 50rem;
+  }
+
+  .xl\:max-w-xl {
+    max-width: 60rem;
+  }
+
+  .xl\:max-w-2xl {
+    max-width: 70rem;
+  }
+
+  .xl\:max-w-3xl {
+    max-width: 80rem;
+  }
+
+  .xl\:max-w-4xl {
+    max-width: 90rem;
+  }
+
+  .xl\:max-w-5xl {
+    max-width: 100rem;
+  }
+
+  .xl\:max-w-full {
+    max-width: 100%;
+  }
+
+  .xl\:min-w-0 {
+    min-width: 0;
+  }
+
+  .xl\:min-w-full {
+    min-width: 100%;
+  }
+
+  .xl\:overflow-auto {
+    overflow: auto;
+  }
+
+  .xl\:overflow-hidden {
+    overflow: hidden;
+  }
+
+  .xl\:overflow-visible {
+    overflow: visible;
+  }
+
+  .xl\:overflow-scroll {
+    overflow: scroll;
+  }
+
+  .xl\:overflow-x-auto {
+    overflow-x: auto;
+  }
+
+  .xl\:overflow-y-auto {
+    overflow-y: auto;
+  }
+
+  .xl\:overflow-x-hidden {
+    overflow-x: hidden;
+  }
+
+  .xl\:overflow-y-hidden {
+    overflow-y: hidden;
+  }
+
+  .xl\:overflow-x-visible {
+    overflow-x: visible;
+  }
+
+  .xl\:overflow-y-visible {
+    overflow-y: visible;
+  }
+
+  .xl\:overflow-x-scroll {
+    overflow-x: scroll;
+  }
+
+  .xl\:overflow-y-scroll {
+    overflow-y: scroll;
+  }
+
+  .xl\:shadow-md {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .12), 0 2px 4px 0 rgba(0, 0, 0, .08);
+  }
+
+  .xl\:shadow-lg {
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, .11), 0 5px 15px 0 rgba(0, 0, 0, .08);
+  }
+
+  .xl\:shadow-inner {
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, .06);
+  }
+
+  .xl\:shadow-none {
+    box-shadow: none;
+  }
+
+  .xl\:w-1 {
+    width: .25rem;
+  }
+
+  .xl\:w-2 {
+    width: .5rem;
+  }
+
+  .xl\:w-3 {
+    width: .75rem;
+  }
+
+  .xl\:w-4 {
+    width: 1rem;
+  }
+
+  .xl\:w-6 {
+    width: 1.5rem;
+  }
+
+  .xl\:w-8 {
+    width: 2rem;
+  }
+
+  .xl\:w-10 {
+    width: 2.5rem;
+  }
+
+  .xl\:w-12 {
+    width: 3rem;
+  }
+
+  .xl\:w-16 {
+    width: 4rem;
+  }
+
+  .xl\:w-24 {
+    width: 6rem;
+  }
+
+  .xl\:w-32 {
+    width: 8rem;
+  }
+
+  .xl\:w-48 {
+    width: 12rem;
+  }
+
+  .xl\:w-64 {
+    width: 16rem;
+  }
+
+  .xl\:w-auto {
+    width: auto;
+  }
+
+  .xl\:w-px {
+    width: 1px;
+  }
+
+  .xl\:w-1\/2 {
+    width: 50%;
+  }
+
+  .xl\:w-1\/3 {
+    width: 33.33333%;
+  }
+
+  .xl\:w-2\/3 {
+    width: 66.66667%;
+  }
+
+  .xl\:w-1\/4 {
+    width: 25%;
+  }
+
+  .xl\:w-3\/4 {
+    width: 75%;
+  }
+
+  .xl\:w-1\/5 {
+    width: 20%;
+  }
+
+  .xl\:w-2\/5 {
+    width: 40%;
+  }
+
+  .xl\:w-3\/5 {
+    width: 60%;
+  }
+
+  .xl\:w-4\/5 {
+    width: 80%;
+  }
+
+  .xl\:w-1\/6 {
+    width: 16.66667%;
+  }
+
+  .xl\:w-5\/6 {
+    width: 83.33333%;
+  }
+
+  .xl\:w-full {
+    width: 100%;
+  }
+
+  .xl\:w-screen {
+    width: 100vw;
+  }
+}

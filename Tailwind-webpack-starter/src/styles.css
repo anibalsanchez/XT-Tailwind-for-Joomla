@@ -1,0 +1,68 @@
+@tailwind preflight;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
+.pin-32-lite {
+  top: 7rem
+}
+
+a {
+  @apply text-link no-underline
+}
+
+footer a {
+  @apply text-link no-underline text-grey
+}
+
+p {
+  @apply mt-6
+}
+
+h2 {
+  @apply text-3xl mb-3
+}
+
+h3 {
+  @apply text-2xl mb-8
+}
+
+h4 {
+  @apply text-xl mt-6 mb-3 tracking-wide
+}
+
+h5 {
+  @apply text-lg mt-4 mb-2 tracking-wide
+}
+
+ul {
+  @apply mt-6;
+  padding-inline-start: 1rem;
+}
+
+.article-info-term {
+  display: none;
+}
+
+dl.article-info dd {
+  @apply text-lg
+}
+
+.tags li {
+  @apply inline rounded-full bg-blue-happy px-2 py-1 text-xs mr-3
+}
+
+.tags li a {
+  @apply text-white
+}
+
+.pagination li {
+  @apply px-3 py-4
+}
+
+footer {
+  @apply text-orange-hot
+}
