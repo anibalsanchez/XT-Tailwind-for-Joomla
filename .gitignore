@@ -16,6 +16,7 @@ vendor/
 composer.lock
 
 # Node.js
+webpack-starter/node_modules/
 node_modules/
 
 # Cordova
