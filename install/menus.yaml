@@ -1,9 +1,0 @@
-hydrogen-theme:
-  title: 'XT Tailwind Theme'
-  description: 'Sample menu for XT Tailwind theme.'
-
-  items:
-    hydrogen:
-      title: 'Home'
-      outline: home
-      home: 1

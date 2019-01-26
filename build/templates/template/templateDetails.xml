@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="template" version="3.8" client="site" method="upgrade">
+  <name>tpl_[EXTENSION_ALIAS]</name>
+  <version>[RELEASE_VERSION]</version>
+  <creationDate>[DATE]</creationDate>
+
+[MANIFEST_COPYRIGHT]
+
+  <description><![CDATA[
+[EXTENSION_DESC]
+]]></description>
+
+  <files>
+    <folder>css</folder>
+    <folder>js</folder>
+    <filename>component.php</filename>
+    <filename>error.php</filename>
+    <filename>favicon.ico</filename>
+    <filename>index.php</filename>
+    <filename>offline.php</filename>
+    <filename>template_preview.png</filename>
+    <filename>template_thumbnail.png</filename>
+    <filename>templateDetails.xml</filename>
+  </files>
+  <positions>
+    <position>logo</position>
+    <position>menu</position>
+    <position>language-switcher</position>
+    <position>content</position>
+    <position>aside</position>
+    <position>copyright</position>
+    <position>debug</position>
+  </positions>
+  <config>
+    <fields name="params">
+      <fieldset name="advanced">
+        <field name="sitedescription" type="text" default="" label="JGLOBAL_DESCRIPTION" description="JGLOBAL_SUBHEADING_DESC" filter="string"/>
+      </fieldset>
+    </fields>
+  </config>
+</extension>

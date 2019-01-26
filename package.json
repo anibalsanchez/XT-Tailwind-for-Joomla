@@ -1,0 +1,40 @@
+{
+  "name": "xt-tailwind-for-joomla",
+  "version": "1.0.0",
+  "description": "XT Tailwind for Joomla. A starter project for a template based on Tailwind CSS.",
+  "main": "webpack.config.js",
+  "scripts": {
+    "build": "webpack --mode=production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anibalsanchez/XT-Tailwind-for-Joomla.git"
+  },
+  "keywords": [],
+  "author": "Andrea Gentil - Anibal Sanchez",
+  "license": "GPL-2.0-or-later",
+  "bugs": {
+    "url": "https://github.com/anibalsanchez/XT-Tailwind-for-Joomla/issues"
+  },
+  "homepage": "https://github.com/anibalsanchez/XT-Tailwind-for-Joomla#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "copy-webpack-plugin": "^4.5.1",
+    "dotenv-webpack": "^1.5.7",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.9.1",
+    "eslint": "^4.19.1",
+    "fs-extra": "^6.0.1",
+    "fs-readdir-recursive": "^1.1.0",
+    "moment": "^2.22.2",
+    "npm": "^6.4.1",
+    "uglifyjs-webpack-plugin": "^1.2.5",
+    "webpack-cli": "^3.1.2",
+    "webpack-zip-files-plugin": "^1.0.0",
+    "webpack": "^4.26.0"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="template" version="3.8" client="site" method="upgrade">
+  <name>tpl_xttailwind</name>
+  <version>1.0.0</version>
+  <creationDate>2019-01-26</creationDate>
+
+	<author>Extly, CB</author>
+	<authorEmail>team@extly.com</authorEmail>
+	<authorUrl>https://www.extly.com</authorUrl>
+	<copyright>Copyright (c)2007-2019 Extly, CB All rights reserved.</copyright>
+	<license>GNU/GPLv3 www.gnu.org/licenses/gpl-3.0.html</license>
+
+  <description><![CDATA[
+A starter project for a template based on Tailwind CSS.
+]]></description>
+
+  <files>
+    <folder>css</folder>
+    <folder>js</folder>
+    <filename>component.php</filename>
+    <filename>error.php</filename>
+    <filename>favicon.ico</filename>
+    <filename>index.php</filename>
+    <filename>offline.php</filename>
+    <filename>template_preview.png</filename>
+    <filename>template_thumbnail.png</filename>
+    <filename>templateDetails.xml</filename>
+  </files>
+  <positions>
+    <position>logo</position>
+    <position>menu</position>
+    <position>language-switcher</position>
+    <position>content</position>
+    <position>aside</position>
+    <position>copyright</position>
+    <position>debug</position>
+  </positions>
+  <config>
+    <fields name="params">
+      <fieldset name="advanced">
+        <field name="sitedescription" type="text" default="" label="JGLOBAL_DESCRIPTION" description="JGLOBAL_SUBHEADING_DESC" filter="string"/>
+      </fieldset>
+    </fields>
+  </config>
+</extension>
