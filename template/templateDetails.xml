@@ -16,6 +16,7 @@ A starter project for a template based on Tailwind CSS.
 
   <files>
     <folder>css</folder>
+    <folder>html</folder>
     <folder>js</folder>
     <filename>component.php</filename>
     <filename>error.php</filename>
@@ -31,8 +32,6 @@ A starter project for a template based on Tailwind CSS.
     <language tag="en-GB">language/en-GB/en-GB.tpl_xttailwind.sys.ini</language>
   </languages>
   <positions>
-    <position>logo</position>
-    <position>menu</position>
     <position>language-switcher</position>
     <position>content</position>
     <position>aside</position>
@@ -42,7 +41,8 @@ A starter project for a template based on Tailwind CSS.
   <config>
     <fields name="params">
       <fieldset name="advanced">
-        <field name="sitedescription" type="text" default="" label="JGLOBAL_DESCRIPTION" description="JGLOBAL_SUBHEADING_DESC" filter="string"/>
+        <field name="logoTitle" type="text" default="" label="Logo Title" filter="string"/>
+        <field name="siteDescription" type="text" default="" label="JGLOBAL_DESCRIPTION" description="JGLOBAL_SUBHEADING_DESC" filter="string"/>
       </fieldset>
     </fields>
   </config>
