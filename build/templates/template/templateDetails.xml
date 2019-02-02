@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="template" version="3.8" client="site" method="upgrade">
-  <name>tpl_[EXTENSION_ALIAS]</name>
+  <name>[EXTENSION_NAME]</name>
   <version>[RELEASE_VERSION]</version>
   <creationDate>[DATE]</creationDate>
 
@@ -8,7 +8,7 @@
 
   <description><![CDATA[
 [EXTENSION_DESC]
-]]></description>
+]]>  </description>
 
   <files>
     <folder>css</folder>
@@ -22,6 +22,10 @@
     <filename>template_thumbnail.png</filename>
     <filename>templateDetails.xml</filename>
   </files>
+  <languages>
+    <language tag="en-GB">language/en-GB/en-GB.tpl_[EXTENSION_ALIAS].ini</language>
+    <language tag="en-GB">language/en-GB/en-GB.tpl_[EXTENSION_ALIAS].sys.ini</language>
+  </languages>
   <positions>
     <position>logo</position>
     <position>menu</position>

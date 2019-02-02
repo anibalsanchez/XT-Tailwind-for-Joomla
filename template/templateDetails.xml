@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="template" version="3.8" client="site" method="upgrade">
-  <name>tpl_xttailwind</name>
+  <name>XT Tailwind</name>
   <version>1.0.0</version>
-  <creationDate>2019-01-26</creationDate>
+  <creationDate>2019-02-02</creationDate>
 
 	<author>Extly, CB</author>
 	<authorEmail>team@extly.com</authorEmail>
@@ -12,7 +12,7 @@
 
   <description><![CDATA[
 A starter project for a template based on Tailwind CSS.
-]]></description>
+]]>  </description>
 
   <files>
     <folder>css</folder>
@@ -26,6 +26,10 @@ A starter project for a template based on Tailwind CSS.
     <filename>template_thumbnail.png</filename>
     <filename>templateDetails.xml</filename>
   </files>
+  <languages>
+    <language tag="en-GB">language/en-GB/en-GB.tpl_xttailwind.ini</language>
+    <language tag="en-GB">language/en-GB/en-GB.tpl_xttailwind.sys.ini</language>
+  </languages>
   <positions>
     <position>logo</position>
     <position>menu</position>
