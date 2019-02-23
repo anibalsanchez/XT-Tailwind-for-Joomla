@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="template" version="3.8" client="site" method="upgrade">
-  <name>XT Tailwind</name>
+  <name>XT Tailwind CSS</name>
   <version>1.0.0</version>
-  <creationDate>2019-02-02</creationDate>
+  <creationDate>2019-02-23</creationDate>
 
 	<author>Extly, CB</author>
 	<authorEmail>team@extly.com</authorEmail>
@@ -11,7 +11,7 @@
 	<license>GNU/GPLv3 www.gnu.org/licenses/gpl-3.0.html</license>
 
   <description><![CDATA[
-A starter project for a template based on Tailwind CSS.
+XT Tailwind - My Blog template, based on Tailwind CSS.
 ]]>  </description>
 
   <files>
@@ -33,9 +33,9 @@ A starter project for a template based on Tailwind CSS.
   </languages>
   <positions>
     <position>language-switcher</position>
-    <position>content</position>
-    <position>aside</position>
-    <position>copyright</position>
+    <position>mainbar-a</position>
+    <position>aside-a</position>
+    <position>analytics</position>
     <position>debug</position>
   </positions>
   <config>
@@ -43,6 +43,7 @@ A starter project for a template based on Tailwind CSS.
       <fieldset name="advanced">
         <field name="logoTitle" type="text" default="" label="Logo Title" filter="string"/>
         <field name="siteDescription" type="text" default="" label="JGLOBAL_DESCRIPTION" description="JGLOBAL_SUBHEADING_DESC" filter="string"/>
+        <field name="headScripts" type="textarea" default="" label="Head Scripts" filter="raw" rows="24" cols="120" class="input-xxlarge"/>
       </fieldset>
     </fields>
   </config>

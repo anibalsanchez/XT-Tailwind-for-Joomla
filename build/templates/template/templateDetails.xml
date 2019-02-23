@@ -24,14 +24,14 @@
     <filename>templateDetails.xml</filename>
   </files>
   <languages>
-    <language tag="en-GB">language/en-GB/en-GB.tpl_[EXTENSION_ALIAS].ini</language>
-    <language tag="en-GB">language/en-GB/en-GB.tpl_[EXTENSION_ALIAS].sys.ini</language>
+    <language tag="en-GB">language/en-GB/en-GB.tpl_xttailwind.ini</language>
+    <language tag="en-GB">language/en-GB/en-GB.tpl_xttailwind.sys.ini</language>
   </languages>
   <positions>
     <position>language-switcher</position>
-    <position>content</position>
-    <position>aside</position>
-    <position>copyright</position>
+    <position>mainbar-a</position>
+    <position>aside-a</position>
+    <position>analytics</position>
     <position>debug</position>
   </positions>
   <config>
@@ -39,6 +39,7 @@
       <fieldset name="advanced">
         <field name="logoTitle" type="text" default="" label="Logo Title" filter="string"/>
         <field name="siteDescription" type="text" default="" label="JGLOBAL_DESCRIPTION" description="JGLOBAL_SUBHEADING_DESC" filter="string"/>
+        <field name="headScripts" type="textarea" default="" label="Head Scripts" filter="raw" rows="24" cols="120" class="input-xxlarge"/>
       </fieldset>
     </fields>
   </config>
