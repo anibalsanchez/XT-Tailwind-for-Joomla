@@ -16,16 +16,22 @@ XT Tailwind - My Blog template, based on Tailwind CSS.
 
   <files>
     <folder>css</folder>
+    <folder>dist</folder>
     <folder>html</folder>
     <folder>js</folder>
+    <folder>src</folder>
     <filename>component.php</filename>
     <filename>error.php</filename>
     <filename>favicon.ico</filename>
     <filename>index.php</filename>
     <filename>offline.php</filename>
+    <filename>package.json</filename>
+    <filename>postcss.config.js</filename>
+    <filename>tailwind.js</filename>
     <filename>template_preview.png</filename>
     <filename>template_thumbnail.png</filename>
     <filename>templateDetails.xml</filename>
+    <filename>webpack.config.js</filename>
   </files>
   <languages>
     <language tag="en-GB">language/en-GB/en-GB.tpl_xttailwind.ini</language>

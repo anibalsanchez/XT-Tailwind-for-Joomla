@@ -1,14 +1,10 @@
 {
-  "name": "xt-tailwindcss-starter",
+  "name": "xt-tailwind-for-joomla",
   "version": "1.1.0",
-  "description": "A Tailwind CSS Starter. Based on Tailwind CSS, Webpack, PostCSS, cssnano and purgecss. Fully optimized for top performance.",
+  "description": "XT Tailwind - My Blog template, based on Tailwind CSS.",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server",
     "prod": "cross-env NODE_ENV=production webpack --no-progress"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:anibalsanchez/XT-TailwindCSS-Starter.git"
   },
   "keywords": [
     "TailwindCSS, Webpack, PostCSS, cssnano, purgecss"
