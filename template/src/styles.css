@@ -135,12 +135,16 @@ blockquote p {
   @apply list-reset
 }
 
+.pagination {
+  @apply mb-4
+}
+
 .pagination p {
-  @apply float-right
+  @apply text-sm text-right
 }
 
 .pagination ul {
-  @apply inline-block list-reset text-lg shadow rounded
+  @apply inline-block list-reset text-sm shadow rounded mt-4
 }
 
 .pagination li {
@@ -148,7 +152,7 @@ blockquote p {
 }
 
 .pagination li span, .pagination li a {
-  @apply px-3 py-3 inline-block
+  @apply px-2 py-2 inline-block
 }
 
 .pagination li span {
@@ -156,7 +160,7 @@ blockquote p {
 }
 
 .footer-element {
-  @apply bg-oldlace text-center text-orange-hot py-8
+  @apply bg-oldlace text-center text-orange-hot
 }
 
 .footer-element a {

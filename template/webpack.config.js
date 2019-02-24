@@ -44,19 +44,25 @@ module.exports = {
       filename: 'index.html',
       template: 'src/index.html',
     }),
+
+    // Only at the final final pass
     new PurgecssPlugin({
       paths: glob.sync(`${PATHS.src}/*`),
-      whitelistPatterns: [/w-/],
+      whitelistPatterns: [/^w-/, /^sm:flex-no-wrap$/, /^sm:w-/, /^sm:pr-4$/, /^sm:ml-8$/, /^lg:px-0$/]
     }),
+
     new FilemanagerWebpackPlugin({
-      onEnd: [
-        {
-          copy: [
-            { source: "./dist/main.js", destination: "./js/template.js" },
-            { source: "./dist/styles.css", destination: "./css/template.css" },
-          ]
-        }
-      ]
+      onEnd: [{
+        copy: [{
+            source: './dist/main.js',
+            destination: './js/template.js',
+          },
+          {
+            source: './dist/styles.css',
+            destination: './css/template.css',
+          },
+        ]
+      }]
     }),
   ],
 };

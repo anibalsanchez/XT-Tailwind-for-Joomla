@@ -9,8 +9,10 @@
 module.exports = {
   plugins: [
     require('tailwindcss')('./tailwind.js'),
+
+    // Only at the final final pass
     require('cssnano')({
       preset: 'default',
     }),
   ],
-}
+};

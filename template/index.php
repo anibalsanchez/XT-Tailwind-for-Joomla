@@ -57,13 +57,17 @@ if (empty($pageDescription)) {
 <html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 
 <head>
-  <title><?php echo $document->getTitle(); ?></title>
-  <meta name="description" content="<?php echo $pageDescription; ?>" />
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-  <link href="<?php echo $templateCssFile; ?>" rel="stylesheet">
-  <link href="/templates/xttailwindcss/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+    <title><?php echo $document->getTitle(); ?></title>
+    <meta name="description" content="<?php echo $pageDescription; ?>" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <script defer src="<?php echo $templateJsFile; ?>"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/regular.js" integrity="sha384-Gxfqh68NuE4s0o2renzieYkDYVbdJynynsdrB7UG9yEvgpS9TVM+c4bknWfQXUBg" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/fontawesome.js" integrity="sha384-xl26xwG2NVtJDw2/96Lmg09++ZjrXPc89j0j7JHjLOdSwHDHPHiucUjfllW0Ywrq" crossorigin="anonymous"></script>
+
+    <link href="<?php echo $templateCssFile; ?>" rel="stylesheet">
+    <link href="/templates/xttailwindcss/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
 <?php
     if ($headScripts) {
         echo $headScripts;
@@ -88,7 +92,7 @@ if (empty($pageDescription)) {
       </svg>
     </div>
 
-    <div class="py-8 absolute z-40 w-full">
+    <div class="absolute z-40 w-full py-8 px-4 lg:px-0">
       <div class="container mx-auto">
         <div class="flex">
 
@@ -125,11 +129,11 @@ if (empty($pageDescription)) {
       </svg>
     </div>
 
-    <div class="absolute z-40 w-full pin-32-lite">
+    <div class="absolute z-40 w-full pin-32-lite py-8 px-4 lg:px-0">
       <div class="container mx-auto">
 
-        <div class="flex py-8">
-          <div class="w-2/3 pr-4">
+        <div class="flex flex-wrap sm:flex-no-wrap">
+          <div class="w-full sm:w-2/3 sm:pr-4">
             <!-- breadcrumbs-block -->
             <div class="breadcrumbs-block">
               <jdoc:include type="modules" name="mainbar-a" style="xhtml"/>
@@ -144,7 +148,7 @@ if (empty($pageDescription)) {
             </div>
           </div>
 
-          <div class="w-1/3 ml-8">
+          <div class="w-full mb-8 sm:w-1/3 sm:ml-8">
             <!-- aside-block -->
             <div class="aside-block">
               <jdoc:include type="modules" name="aside-a" style="xhtml"/>
@@ -154,7 +158,7 @@ if (empty($pageDescription)) {
       </div>
 
       <!-- footer-element -->
-      <div class="footer-element">
+      <div class="footer-element py-8 px-4 lg:px-0">
         <p>
           &copy; <?php echo date('Y'); ?> <a a href="<?php echo $this->baseurl; ?>/" target="_self"
             title="<?php echo $logoTitle; ?>"><?php echo $logoTitle; ?> - <?php echo $siteName; ?></a>
@@ -163,8 +167,6 @@ if (empty($pageDescription)) {
     </div>
 
   </div>
-
-  <script type="text/javascript" src="<?php echo $templateJsFile; ?>"></script>
 
   <jdoc:include type="modules" name="analytics" style="none" />
   <jdoc:include type="modules" name="debug" style="none" />

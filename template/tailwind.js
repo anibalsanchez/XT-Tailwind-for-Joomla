@@ -62,10 +62,9 @@ let colors = {
   'blue-happy': '#2d6987',
   'orange-hot': '#9b6f37',
 
-/*
   'grey-darkest': '#3d4852',
   'grey-darker': '#606f7b',
-  'grey-light': '#dae1e7',
+  // 'grey-light': '#dae1e7',
   'grey-lighter': '#f1f5f8',
   'grey-lightest': '#f8fafc',
 
@@ -140,8 +139,7 @@ let colors = {
   'pink-light': '#fa7ea8',
   'pink-lighter': '#ffbbca',
   'pink-lightest': '#ffebef',
-*/
-}
+};
 
 module.exports = {
 
@@ -208,12 +206,12 @@ module.exports = {
 
   fonts: {
     'sans': [
-      "muli",
-      "Helvetica",
-      "Tahoma",
-      "Geneva",
-      "Arial",
-      "sans-serif",
+      'muli',
+      'Helvetica',
+      'Tahoma',
+      'Geneva',
+      'Arial',
+      'sans-serif',
 
 /*
       'system-ui',
@@ -958,4 +956,4 @@ module.exports = {
     separator: ':',
   },
 
-}
+};

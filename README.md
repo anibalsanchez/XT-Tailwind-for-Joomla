@@ -2,14 +2,14 @@
 
 To get started, clone the project and install the dependencies:
 
-```
+```bash
 # Using npm
 npm install
 ```
 
 After that, start up Webpack Development Server:
 
-```
+```bash
 npm run dev
 ```
 
@@ -21,7 +21,7 @@ The sample page renders [my blog](https://blog.anibalhsanchez.com) layout redesi
 
 To build a production bundle run:
 
-```
+```bash
 npm run prod
 ```
 
