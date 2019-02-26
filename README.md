@@ -1,5 +1,10 @@
 # XT Tailwind for Joomla
 
+For future reference:
+
+- [Tailwind CSS has arrived at the Joomla scene](https://blog.anibalhsanchez.com/en/10-blogging/lost-and-found/47-tailwind-css-has-arrived-at-the-joomla-scene.html)
+- [anibalsanchez/XT-TailwindCSS-Starter](https://github.com/anibalsanchez/XT-TailwindCSS-Starter)
+
 To get started, clone the project and install the dependencies:
 
 ```bash
