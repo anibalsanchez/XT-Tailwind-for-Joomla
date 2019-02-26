@@ -23,7 +23,7 @@ h2 {
 }
 
 h3 {
-  @apply text-2xl mb-8
+  @apply text-2xl my-8
 }
 
 h4 {
@@ -35,7 +35,7 @@ h5 {
 }
 
 ul {
-  @apply mt-6;
+  @apply my-6;
   padding-inline-start: 1rem;
 }
 
@@ -88,7 +88,7 @@ blockquote p {
 }
 
 .breadcrumbs-block {
-  @apply flex-row w-2/3 pr-4 bg-grey-light-opacity-75 rounded
+  @apply flex-row pr-4 bg-grey-light-opacity-75 rounded
 }
 
 .breadcrumbs-block ul {
