@@ -34,6 +34,10 @@ After that you will have a ready to deploy bundle at `/dist`
 
 ## Changelog
 
+### 2.0.0
+
+- Update to Tailwind CSS v1.0.0-beta.1
+
 ### 1.0.0
 
 - Initial version

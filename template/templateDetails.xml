@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="template" version="3.8" client="site" method="upgrade">
   <name>XT Tailwind CSS</name>
-  <version>1.1.0</version>
-  <creationDate>2019-02-24</creationDate>
+  <version>2.0.0</version>
+  <creationDate>2019-03-29</creationDate>
 
 	<author>Extly, CB</author>
 	<authorEmail>team@extly.com</authorEmail>
@@ -27,7 +27,7 @@ XT Tailwind - My Blog template, based on Tailwind CSS.
     <filename>offline.php</filename>
     <filename>package.json</filename>
     <filename>postcss.config.js</filename>
-    <filename>tailwind.js</filename>
+    <filename>tailwind.config.js</filename>
     <filename>template_preview.png</filename>
     <filename>template_thumbnail.png</filename>
     <filename>templateDetails.xml</filename>

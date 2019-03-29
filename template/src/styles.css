@@ -1,15 +1,13 @@
-@tailwind preflight;
-
+@tailwind base;
 @tailwind components;
-
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css?family=Muli');
 
 body {
   @apply font-sans leading-normal bg-white
-
 }
+
 a {
   @apply text-link no-underline
 }
@@ -19,27 +17,27 @@ p {
 }
 
 h2 {
-  @apply text-3xl mb-3
+  @apply text-3xl mb-3 font-bold
 }
 
 h3 {
-  @apply text-2xl my-8
+  @apply text-2xl my-8 font-bold
 }
 
 h4 {
-  @apply text-xl mt-6 mb-3 tracking-wide
+  @apply text-xl mt-6 mb-3 tracking-wide font-bold
 }
 
 h5 {
-  @apply text-lg mt-4 mb-2 tracking-wide
+  @apply text-lg mt-4 mb-2 tracking-wide font-bold
 }
 
 ul {
-  @apply my-6;
+  @apply my-6 list-disc pl-4;
   padding-inline-start: 1rem;
 }
 
-li > ul {
+li>ul {
   @apply mt-0
 }
 
@@ -55,6 +53,10 @@ blockquote p {
   @apply mt-2
 }
 
+.header-background {
+  @apply bg-grey-dark overflow-hidden opacity-90
+}
+
 .navigation-block {
   @apply static
 }
@@ -64,11 +66,11 @@ blockquote p {
 }
 
 .languages-element ul {
-  @apply flex items-center mt-0 ml-6 pl-6 list-reset
+  @apply flex items-center mt-0 ml-6 pl-6 list-none p-0
 }
 
 .languages-element li {
-  @apply list-reset
+  @apply list-none p-0
 }
 
 .languages-element img {
@@ -83,16 +85,16 @@ blockquote p {
   @apply static text-grey;
 }
 
-.pin-32-lite {
+.top-32-lite {
   top: 7rem
 }
 
 .breadcrumbs-block {
-  @apply flex-row pr-4 bg-grey-light-opacity-75 rounded
+  @apply flex-row pr-4 bg-grey-light opacity-50 rounded
 }
 
 .breadcrumbs-block ul {
-  @apply list-reset mt-0 px-2 py-4 mb-6
+  @apply list-none p-0 mt-0 px-2 py-4 mb-6
 }
 
 .breadcrumbs-block li {
@@ -107,8 +109,14 @@ blockquote p {
   @apply pb-8
 }
 
-.blog-block .items-leading img, .blog-block .item img {
+.blog-block .items-leading img,
+.blog-block .item img {
   @apply my-4 border border-link rounded-lg
+}
+
+.blog-block .items-leading code,
+.blog-block .item code {
+  @apply block p-4
 }
 
 .blog-block .article-info-term {
@@ -132,7 +140,7 @@ blockquote p {
 }
 
 .tags {
-  @apply list-reset
+  @apply list-none p-0
 }
 
 .pagination {
@@ -144,14 +152,15 @@ blockquote p {
 }
 
 .pagination ul {
-  @apply inline-block list-reset text-sm shadow rounded mt-4
+  @apply inline-block list-none p-0 text-sm shadow rounded mt-4
 }
 
 .pagination li {
   @apply text-center inline-block p-0
 }
 
-.pagination li span, .pagination li a {
+.pagination li span,
+.pagination li a {
   @apply px-2 py-2 inline-block
 }
 

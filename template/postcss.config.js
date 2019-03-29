@@ -8,7 +8,7 @@
 
 module.exports = {
   plugins: [
-    require('tailwindcss')('./tailwind.js'),
+    require('tailwindcss')('./tailwind.config.js'),
 
     // Only at the final final pass
     require('cssnano')({

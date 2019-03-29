@@ -48,7 +48,7 @@ module.exports = {
     // Only at the final final pass
     new PurgecssPlugin({
       paths: glob.sync(`${PATHS.src}/*`),
-      whitelistPatterns: [/^w-/, /^sm:flex-no-wrap$/, /^sm:w-/, /^sm:pr-4$/, /^sm:ml-8$/, /^lg:px-0$/]
+      whitelistPatterns: [/^w-/, /^sm:flex-no-wrap$/, /^sm:w-/, /^sm:pr-4$/, /^sm:ml-8$/, /^lg:px-0$/, /code/]
     }),
 
     new FilemanagerWebpackPlugin({

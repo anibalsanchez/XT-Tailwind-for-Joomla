@@ -23,7 +23,7 @@
     <filename>offline.php</filename>
     <filename>package.json</filename>
     <filename>postcss.config.js</filename>
-    <filename>tailwind.js</filename>
+    <filename>tailwind.config.js</filename>
     <filename>template_preview.png</filename>
     <filename>template_thumbnail.png</filename>
     <filename>templateDetails.xml</filename>
