@@ -65,8 +65,6 @@ if (empty($pageDescription)) {
 
     <script defer src="<?php echo $templateJsFile; ?>"></script>
     <script defer src="<?php echo $prismJsFile; ?>"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/regular.js" integrity="sha384-Gxfqh68NuE4s0o2renzieYkDYVbdJynynsdrB7UG9yEvgpS9TVM+c4bknWfQXUBg" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/fontawesome.js" integrity="sha384-xl26xwG2NVtJDw2/96Lmg09++ZjrXPc89j0j7JHjLOdSwHDHPHiucUjfllW0Ywrq" crossorigin="anonymous"></script>
 
     <link href="<?php echo $templateCssFile; ?>" rel="stylesheet">
     <link href="/templates/xttailwindcss/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">

@@ -1,6 +1,6 @@
 {
   "name": "xt-tailwind-for-joomla",
-  "version": "2.0.0",
+  "version": "2.0.3",
   "description": "XT Tailwind - My Blog template, based on Tailwind CSS.",
   "main": "webpack.config.js",
   "scripts": {
@@ -30,7 +30,7 @@
     "fs-extra": "^6.0.1",
     "fs-readdir-recursive": "^1.1.0",
     "moment": "^2.22.2",
-    "npm": "^6.4.1",
+    "npm": "^6.9.0",
     "uglifyjs-webpack-plugin": "^1.2.5",
     "webpack-cli": "^3.1.2",
     "webpack-zip-files-plugin": "^1.0.0",
