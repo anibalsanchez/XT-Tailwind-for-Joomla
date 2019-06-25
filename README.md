@@ -5,9 +5,32 @@ For future reference:
 - [Tailwind CSS has arrived at the Joomla scene](https://blog.anibalhsanchez.com/en/10-blogging/lost-and-found/47-tailwind-css-has-arrived-at-the-joomla-scene.html)
 - [anibalsanchez/XT-TailwindCSS-Starter](https://github.com/anibalsanchez/XT-TailwindCSS-Starter)
 
+The project has two levels:
+
+- The Joomla extension build files at the `root` folder
+- The Tailwind template in the `template` folder
+
+## The Joomla extension build files
+
+To build the extension to create the installer package:
+
+For more information about the build scripts, please, visit [anibalsanchez/extly-buildfiles-for-joomla](https://github.com/anibalsanchez/extly-buildfiles-for-joomla).
+
+```bash
+# Using npm
+npm install
+npm run build
+```
+
+These steps create the installable package in the `build/release` directory.
+
+## The Tailwind template
+
 To get started, clone the project and install the dependencies:
 
 ```bash
+cd template
+
 # Using npm
 npm install
 ```
@@ -33,6 +56,10 @@ npm run prod
 After that you will have a ready to deploy bundle at `/dist`
 
 ## Changelog
+
+### 2.0.3
+
+- Update to Tailwind CSS v1.0.3
 
 ### 2.0.0
 
