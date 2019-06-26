@@ -96,6 +96,7 @@ function renderTemplates() {
           from: file,
           to: dest,
           transform: tagTransformation,
+          ignore: 'node_modules',
         };
 
         renderTpls.push(item);
