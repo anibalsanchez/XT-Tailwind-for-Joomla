@@ -41,6 +41,7 @@ $prismJsFile = CMSHTMLHelper::script('prism.js', ['version' => 'auto', 'relative
 
 // Add Stylesheets
 $templateCssFile = CMSHTMLHelper::stylesheet('template.css', ['version' => 'auto', 'relative' => true, 'pathOnly' => true]);
+$prismCssFile = CMSHTMLHelper::stylesheet('prism.min.css', ['version' => 'auto', 'relative' => true, 'pathOnly' => true]);
 
 $logoTitle = $this->params->get('logoTitle', '@Anibal_Sanchez');
 $siteDescription = htmlspecialchars($this->params->get('siteDescription'), ENT_QUOTES, 'UTF-8');
@@ -67,6 +68,7 @@ if (empty($pageDescription)) {
     <script defer src="<?php echo $prismJsFile; ?>"></script>
 
     <link href="<?php echo $templateCssFile; ?>" rel="stylesheet">
+    <link href="<?php echo $prismCssFile; ?>" rel="stylesheet">
     <link href="/templates/xttailwindcss/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
 <?php
     if ($headScripts) {
