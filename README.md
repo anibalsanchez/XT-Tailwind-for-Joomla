@@ -23,6 +23,12 @@ npm install
 npm run build
 ```
 
+As an alternative, there is a script with everything that must be done for each build:
+
+```bash
+./build/build_core.sh
+```
+
 These steps create the installable package in the `build/release` directory.
 
 ## The Tailwind template
@@ -57,6 +63,20 @@ npm run prod
 After that you will have a ready to deploy bundle at `/dist`
 
 ## Changelog
+
+### 3.0.0
+
+- Implementation of the [HTML Asset Tags Builder](https://github.com/anibalsanchez/extly-html-asset-tags-builder)
+  - InlineScriptTag
+  - InlineStyleTag
+  - LinkCriticalStylesheetTag
+  - LinkPreloadStylesheetTag
+  - LinkStylesheetTag
+  - ScriptTag
+
+### 2.1.0
+
+- Update to Tailwind CSS v1.1.0
 
 ### 2.0.3
 
