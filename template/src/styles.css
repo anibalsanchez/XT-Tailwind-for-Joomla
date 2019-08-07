@@ -8,12 +8,24 @@ body {
   @apply font-sans leading-normal bg-white
 }
 
+@font-face {
+  font-display: fallback;
+}
+
 a {
   @apply text-link no-underline
 }
 
+a[target=_blank], a[rel=nofollow] {
+  @apply block truncate
+}
+
 p {
   @apply mt-6
+}
+
+p.site-description {
+  @apply text-sm text-white mt-0
 }
 
 h2 {
@@ -34,7 +46,7 @@ h5 {
 
 ul {
   @apply my-6 list-disc pl-4;
-  padding-inline-start: 1rem;
+  padding-inline-start: 1rem
 }
 
 li>ul {
@@ -61,8 +73,12 @@ blockquote p {
   @apply static
 }
 
+.logo-element, .languages-element {
+  @apply flex-initial
+}
+
 .logo-element {
-  @apply w-5/6 text-3xl
+  @apply w-5/6 text-2xl
 }
 
 .languages-element ul {
@@ -82,7 +98,7 @@ blockquote p {
 }
 
 .main-container-block {
-  @apply static text-grey;
+  @apply static text-grey
 }
 
 .top-32-lite {
@@ -94,11 +110,19 @@ blockquote p {
 }
 
 .breadcrumbs-block ul {
-  @apply list-none p-0 mt-0 px-2 py-4 mb-6
+  @apply flex flex-wrap list-none p-0 mt-0 px-2 py-4 mb-6
 }
 
 .breadcrumbs-block li {
+  @apply flex-initial whitespace-no-wrap px-2 py-2
+}
+
+.divider img {
   @apply inline-block
+}
+
+.search-block {
+  @apply pt-4
 }
 
 .blog-block .items-leading {
@@ -115,12 +139,13 @@ blockquote p {
 }
 
 .blog-block .items-leading code,
+.blog-block .item-page code,
 .blog-block .item code {
   @apply block p-4
 }
 
 .blog-block .article-info-term {
-  display: none;
+  display: none
 }
 
 .blog-block dl.article-info dd {

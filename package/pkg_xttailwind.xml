@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.8.0" type="package" method="upgrade">
+  <packagename>xttailwind</packagename>
+  <packager>Extly, CB</packager>
+  <packagerurl>https://www.extly.com</packagerurl>
+  <name>XT Tailwind CSS</name>
+  <description>XT Tailwind - My Blog template, based on Tailwind CSS.</description>
+  <version>3.0.0</version>
+  <creationDate>2019-08-07</creationDate>
+
+	<author>Extly, CB</author>
+	<authorEmail>team@extly.com</authorEmail>
+	<authorUrl>https://www.extly.com</authorUrl>
+	<copyright>Copyright (c)2007-2019 Extly, CB All rights reserved.</copyright>
+	<license>GNU/GPLv3 www.gnu.org/licenses/gpl-3.0.html</license>
+
+  <!-- List of extensions to install -->
+  <files>
+    <!-- Template -->
+    <file type="template" client="site" id="tpl_xttailwind">template</file>
+
+    <!-- Library -->
+    <file type="library">library</file>
+  </files>
+  <!-- Installation script -->
+  <scriptfile>script.xttailwind.php</scriptfile>
+  <!-- Update servers -->
+  <updateservers>
+  </updateservers>
+</extension>

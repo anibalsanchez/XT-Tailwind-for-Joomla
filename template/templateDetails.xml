@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="template" version="3.8" client="site" method="upgrade">
   <name>XT Tailwind CSS</name>
-  <version>2.1.0</version>
+  <version>3.0.0</version>
   <creationDate>2019-08-07</creationDate>
 
 	<author>Extly, CB</author>
@@ -20,6 +20,7 @@ XT Tailwind - My Blog template, based on Tailwind CSS.
     <folder>html</folder>
     <folder>js</folder>
     <folder>src</folder>
+
     <filename>component.php</filename>
     <filename>error.php</filename>
     <filename>favicon.ico</filename>
@@ -32,12 +33,15 @@ XT Tailwind - My Blog template, based on Tailwind CSS.
     <filename>template_thumbnail.png</filename>
     <filename>templateDetails.xml</filename>
     <filename>webpack.config.js</filename>
+    <filename>XTHtmlAssetsBodyRenderer.php</filename>
+    <filename>XTHtmlAssetsRenderer.php</filename>
   </files>
   <languages>
     <language tag="en-GB">language/en-GB/en-GB.tpl_xttailwind.ini</language>
     <language tag="en-GB">language/en-GB/en-GB.tpl_xttailwind.sys.ini</language>
   </languages>
   <positions>
+    <position>search</position>
     <position>language-switcher</position>
     <position>mainbar-a</position>
     <position>aside-a</position>

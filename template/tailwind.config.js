@@ -16,7 +16,7 @@ module.exports = {
       'grey-dark': '#0d0d0d',
       'grey-light': '#f5f5f5',
       'grey': '#666',
-      'link': '#ffa32b',
+      'link': '#ff8900',
       'not-so-black': '#22292f',
       'oldlace': '#fff6e9',
       'orange-hot': '#9b6f37',

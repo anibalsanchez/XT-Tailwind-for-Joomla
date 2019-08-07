@@ -16,6 +16,7 @@
     <folder>html</folder>
     <folder>js</folder>
     <folder>src</folder>
+
     <filename>component.php</filename>
     <filename>error.php</filename>
     <filename>favicon.ico</filename>
@@ -28,12 +29,15 @@
     <filename>template_thumbnail.png</filename>
     <filename>templateDetails.xml</filename>
     <filename>webpack.config.js</filename>
+    <filename>XTHtmlAssetsBodyRenderer.php</filename>
+    <filename>XTHtmlAssetsRenderer.php</filename>
   </files>
   <languages>
     <language tag="en-GB">language/en-GB/en-GB.tpl_xttailwind.ini</language>
     <language tag="en-GB">language/en-GB/en-GB.tpl_xttailwind.sys.ini</language>
   </languages>
   <positions>
+    <position>search</position>
     <position>language-switcher</position>
     <position>mainbar-a</position>
     <position>aside-a</position>

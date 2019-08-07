@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.8.0" type="package" method="upgrade">
+  <packagename>[EXTENSION_ALIAS]</packagename>
+  <packager>Extly, CB</packager>
+  <packagerurl>https://www.extly.com</packagerurl>
+  <name>XT Tailwind CSS</name>
+  <description>[EXTENSION_DESC]</description>
+  <version>[RELEASE_VERSION]</version>
+  <creationDate>[DATE]</creationDate>
+
+[MANIFEST_COPYRIGHT]
+
+  <!-- List of extensions to install -->
+  <files>
+    <!-- Template -->
+    <file type="template" client="site" id="tpl_[EXTENSION_ALIAS]">template</file>
+
+    <!-- Library -->
+    <file type="library">library</file>
+  </files>
+  <!-- Installation script -->
+  <scriptfile>script.[EXTENSION_ALIAS].php</scriptfile>
+  <!-- Update servers -->
+  <updateservers>
+  </updateservers>
+</extension>

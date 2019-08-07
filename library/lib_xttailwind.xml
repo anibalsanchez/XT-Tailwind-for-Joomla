@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<extension method="upgrade" type="library" version="1.0">
+  <name>XT Tailwind CSS Library</name>
+  <libraryname>xttailwind</libraryname>
+  <version>3.0.0</version>
+  <creationDate>2019-08-07</creationDate>
+
+	<author>Extly, CB</author>
+	<authorEmail>team@extly.com</authorEmail>
+	<authorUrl>https://www.extly.com</authorUrl>
+	<copyright>Copyright (c)2007-2019 Extly, CB All rights reserved.</copyright>
+	<license>GNU/GPLv3 www.gnu.org/licenses/gpl-3.0.html</license>
+
+  <description>
+    <![CDATA[
+XT Tailwind - My Blog template, based on Tailwind CSS.
+  ]]>
+  </description>
+  <files>
+    <folder>prefixed_vendor</folder>
+    <folder>vendor</folder>
+    <filename>composer.json</filename>
+    <filename>lib_xttailwind.xml</filename>
+  </files>
+</extension>
