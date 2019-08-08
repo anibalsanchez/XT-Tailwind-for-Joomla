@@ -1,4 +1,5 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "XT Tailwind CSS" on 2019-08-08 07:00:24 */
 
 /*
  * @package     XT Tailwind for Joomla
@@ -17,11 +18,11 @@ require_once JPATH_ROOT.'/libraries/xttailwind/vendor/autoload.php';
 require_once 'XTHtmlAssetsBodyRenderer.php';
 require_once 'XTHtmlAssetsRenderer.php';
 
-use Extly\Infrastructure\Support\HtmlAsset\Asset\InlineScriptTag;
-use Extly\Infrastructure\Support\HtmlAsset\Asset\LinkCriticalStylesheetTag;
-use Extly\Infrastructure\Support\HtmlAsset\Asset\LinkStylesheetTag;
-use Extly\Infrastructure\Support\HtmlAsset\Asset\ScriptTag;
-use Extly\Infrastructure\Support\HtmlAsset\Repository as HtmlAssetRepository;
+use XTP_BUILD\Extly\Infrastructure\Support\HtmlAsset\Asset\InlineScriptTag;
+use XTP_BUILD\Extly\Infrastructure\Support\HtmlAsset\Asset\LinkCriticalStylesheetTag;
+use XTP_BUILD\Extly\Infrastructure\Support\HtmlAsset\Asset\LinkStylesheetTag;
+use XTP_BUILD\Extly\Infrastructure\Support\HtmlAsset\Asset\ScriptTag;
+use XTP_BUILD\Extly\Infrastructure\Support\HtmlAsset\Repository as HtmlAssetRepository;
 use Joomla\CMS\Factory as CMSFactory;
 use Joomla\CMS\HTML\HTMLHelper as CMSHTMLHelper;
 
