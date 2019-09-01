@@ -35,11 +35,6 @@
       "case-1": "includeLibrariesDependiencies: Process additional dependencies",
 
       "case-2": "ignorePaths: Do not prefix.",
-      "ignorePaths": [
-        "JsonSerializable",
-        "jsonSerialize",
-        "Carbon"
-      ],
 
       "case-3": "ignoreLibraries: Do not prefix.",
       "ignoreLibraries": [
@@ -54,16 +49,12 @@
       "ignoreGlobalObjects": [
         "JsonSerializable",
         "jsonSerialize",
-        "Carbon"
+        "value"
       ],
 
-      "case-5": "Libraries to be removed, but keep dependecies consistent (Platform Lib).",
-      "excludeFromClassmap": [
-      ],
+      "case-5": "excludeFromClassmap: Libraries to be removed, but keep dependecies consistent (Platform Lib).",
 
-      "case-6": "Files to be removed from the prefixer output.",
-      "excludePaths": [
-      ],
+      "case-6": "excludePaths: Files to be removed from the prefixer output.",
 
       "case-7": "Process additional project directories",
       "includeExtraSourcePaths": [

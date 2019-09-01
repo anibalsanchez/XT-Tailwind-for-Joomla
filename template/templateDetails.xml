@@ -2,7 +2,7 @@
 <extension type="template" version="3.8" client="site" method="upgrade">
   <name>XT Tailwind CSS</name>
   <version>3.0.0</version>
-  <creationDate>2019-08-08</creationDate>
+  <creationDate>2019-08-30</creationDate>
 
 	<author>Extly, CB</author>
 	<authorEmail>team@extly.com</authorEmail>
