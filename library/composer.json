@@ -48,8 +48,7 @@
       "case-4": "Do not prefix.",
       "ignoreGlobalObjects": [
         "JsonSerializable",
-        "jsonSerialize",
-        "value"
+        "jsonSerialize"
       ],
 
       "case-5": "excludeFromClassmap: Libraries to be removed, but keep dependecies consistent (Platform Lib).",
