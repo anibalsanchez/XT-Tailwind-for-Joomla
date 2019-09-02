@@ -26,6 +26,7 @@ node_modules/
 
 # Build files - Release directory
 /build/release
+/build/prefixed_release
 /build/templates/platform
 /platform
 
