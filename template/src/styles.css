@@ -43,10 +43,6 @@ a {
   @apply text-link no-underline
 }
 
-a[target=_blank], a[rel=nofollow] {
-  @apply block truncate
-}
-
 p {
   @apply mt-6
 }
@@ -226,4 +222,16 @@ blockquote p {
 
 .footer-element a {
   @apply text-link no-underline
+}
+
+.aside-block .moduletable {
+  @apply rounded overflow-hidden shadow-lg bg-white p-4 mt-12
+}
+
+.aside-block .moduletable ul {
+  list-style-type: circle;
+}
+
+.aside-block .moduletable h3 {
+  @apply bg-gray-200 rounded-full text-center px-3 py-1
 }

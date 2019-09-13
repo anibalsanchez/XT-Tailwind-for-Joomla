@@ -58,3 +58,4 @@ tslint.json
 /var/
 
 # Symlinks
+template/dist/main.*.css

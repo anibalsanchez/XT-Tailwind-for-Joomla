@@ -1,6 +1,7 @@
 #!/bin/sh
 
 cd template/
+rm dist/main.*.css
 npm i
 npm run prod
 cd ..
@@ -8,7 +9,7 @@ cd ..
 rm -rf template/node_modules
 
 # Stylesheet to be included inline
-cat template/dist/main.css > template/css/template.css
+cat template/dist/main.*.css > template/css/template.css
 
 # Stylesheet to be included at the bottom of the document
 cp template/src/prism.css template/css/

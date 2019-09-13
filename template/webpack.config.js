@@ -8,7 +8,6 @@
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const FilemanagerWebpackPlugin = require('filemanager-webpack-plugin');
 
 const devMode = process.env.NODE_ENV !== 'production';
 
@@ -32,27 +31,12 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      // filename: devMode ? '[name].css' : '[name].[hash].css',
-      // filename: devMode ? '[name].css' : '[name].[hash].css',
-      filename: '[name].css',
-      chunkFilename: '[id].css',
+      filename: devMode ? '[name].css' : '[name].[hash].css',
+      chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
     }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'src/index.html',
-    }),
-    new FilemanagerWebpackPlugin({
-      onEnd: [{
-        copy: [{
-            source: './dist/main.js',
-            destination: './js/template.js',
-          },
-          {
-            source: './dist/main.css',
-            destination: './css/template.css',
-          },
-        ]
-      }]
     }),
   ],
 };
