@@ -6,6 +6,10 @@
  * @see       https://www.extly.com
  */
 
+const tailwindcss = require('tailwindcss');
+
+const autoprefixer = require('autoprefixer');
+
 const purgecss = require('@fullhuman/postcss-purgecss')({
   content: [
     './src/**/*.html',
@@ -14,13 +18,14 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
   defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
 });
 
+const cssnano = require('cssnano')({
+  preset: 'advanced',
+});
+
 module.exports = {
   plugins: [
-    require('tailwindcss'),
-
-    ...process.env.NODE_ENV === 'production' ? [purgecss] : [],
-    require('cssnano')({
-      preset: 'advanced',
-    }),
+    tailwindcss,
+    autoprefixer,
+    ...process.env.NODE_ENV === 'production' ? [purgecss, cssnano] : [],
   ],
 };
