@@ -90,6 +90,7 @@ npm run dev-proxy
 
 ### 3.2.0
 
+- Support of Proxy Mode for Webpack / Tailwind CSS
 - Webpack Proxy support
 
 ### 3.1.0
