@@ -96,7 +96,7 @@ npm i
 npm run dev-proxy
 ```
 
-When you are done, remember to copy the changes back from the site to the repository and commit to make them permanent.
+When you are done, remember to copy the changes back from the site to the repository and commit to make them permanent. Of course, if the repository is mapped to the site, you can just commit the changes.
 
 ## Changelog
 
