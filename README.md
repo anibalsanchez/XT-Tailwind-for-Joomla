@@ -36,6 +36,7 @@ These steps create the installable package in the `build/release` directory.
 To get started, clone the project and install the dependencies:
 
 ```bash
+# Access to the repo folder where the template is developed
 cd template
 
 # Using npm
@@ -45,6 +46,8 @@ npm install
 After that, start up Webpack Development Server:
 
 ```bash
+cd template
+npm i
 npm run dev
 ```
 
@@ -57,6 +60,8 @@ The sample page renders [my blog](https://blog.anibalhsanchez.com) layout redesi
 To build a production bundle run:
 
 ```bash
+cd template
+npm i
 npm run prod
 ```
 
@@ -69,6 +74,8 @@ Beyond the basic development alternatives, now I'm adding the choice to develop 
 So, first, create the template as an installable extension:
 
 ```bash
+cd template
+npm i
 npm run prod
 ```
 
@@ -83,8 +90,13 @@ Then, install it on the Joomla site and adjust the proxy `proxyURL` in the insta
 On our development server, the site runs on `http://blogdb.lndo.site/index.php`. Finally, execute the command to activate the Webpack development proxy. After the proxy is active, the generated site is rendered on `http://localhost:3000/index.php` so you can change the source style interactively in `templates/xttailwindcss/src` and navigate the final output simultaneously.
 
 ```bash
+# Access to the site folder where the template is developed in Proxy Mode
+cd templates/xttailwindcss
+npm i
 npm run dev-proxy
 ```
+
+When you are done, remember to copy the changes back from the site to the repository and commit to make them permanent.
 
 ## Changelog
 
