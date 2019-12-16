@@ -1,6 +1,6 @@
 {
   "name": "xt-tailwind-for-joomla",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "description": "XT Tailwind - My Blog template, based on Tailwind CSS.",
   "main": "webpack.config.js",
   "scripts": {
@@ -23,7 +23,7 @@
     "@babel/core": "^7.4.5",
     "@babel/polyfill": "^7.2.5",
     "@babel/preset-env": "^7.4.5",
-    "copy-webpack-plugin": "^5.0.3",
+    "copy-webpack-plugin": "^5.1.1",
     "dotenv-webpack": "^1.7.0",
     "eslint": "^6.3.0",
     "eslint-config-airbnb": "^18.0.1",

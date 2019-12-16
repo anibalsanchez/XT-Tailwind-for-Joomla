@@ -1,18 +1,14 @@
 #!/bin/sh
 
 cd template/
-rm dist/main.*.css
-npm i
+rm css/template*.css
+rm dist/main*.css
+
+npm ci
 npm run prod
 cd ..
 
 rm -rf template/node_modules
-
-# Stylesheet to be included inline
-cat template/dist/main.*.css > template/css/template.css
-
-# Stylesheet to be included at the bottom of the document
-cp template/src/prism.css template/css/
 
 # JavaScript to be deferred
 cat template/dist/main.js > template/js/template.js

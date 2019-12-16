@@ -1,9 +1,11 @@
 {
   "name": "xt-tailwind-for-joomla",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "description": "XT Tailwind - My Blog template, based on Tailwind CSS.",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server",
+    "dev-proxy": "cross-env NODE_ENV=development webpack --colors --watch --hide-modules",
+    "dev-build": "cross-env NODE_ENV=development webpack",
     "prod": "cross-env NODE_ENV=production webpack --no-progress"
   },
   "repository": {
@@ -15,24 +17,30 @@
   ],
   "author": "Extly CB",
   "license": "GPL-3.0-or-later",
-  "devDependencies": {
+  "dependencies": {
     "@fullhuman/postcss-purgecss": "^1.2.0",
     "@tailwindcss/custom-forms": "^0.2.1",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "browser-sync": "^2.26.7",
     "cross-env": "^5.2",
     "css-loader": "^2.1.1",
-    "cssnano": "^4.1.10",
     "cssnano-preset-advanced": "^4.0.7",
+    "cssnano": "^4.1.10",
     "filemanager-webpack-plugin": "^2.0.5",
     "glob": "^7.1.4",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.7.0",
-    "postcss": "^7.0.17",
     "postcss-clean": "^1.1.0",
     "postcss-loader": "^3.0.0",
+    "postcss": "^7.0.17",
     "style-loader": "^0.23.1",
     "tailwindcss": "^1.1.0",
-    "webpack": "^4.33.0",
     "webpack-cli": "^3.3.3",
-    "webpack-dev-server": "^3.7.1"
+    "webpack-copy-on-build-plugin": "^1.0.4",
+    "webpack-dev-server": "^3.7.1",
+    "webpack": "^4.33.0"
+  },
+  "config": {
+    "proxyURL": "http://localhost:8080/index.php"
   }
 }

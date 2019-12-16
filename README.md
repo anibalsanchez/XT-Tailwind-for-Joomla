@@ -60,9 +60,42 @@ To build a production bundle run:
 npm run prod
 ```
 
-After that you will have a ready to deploy bundle at `/dist`
+After that, you will have a ready to deploy bundle at `/dist`
+
+## Proxy Server for Joomla Template Development
+
+Beyond the basic development alternatives, now I'm adding the choice to develop the template in **Proxy mode** in the site context. In the proxy mode, the Tailwind CSS template can be installed on the Joomla site and reloaded automatically from Joomla and tested dynamically.
+
+So, first, create the template as an installable extension:
+
+```bash
+npm run prod
+```
+
+Then, install it on the Joomla site and adjust the proxy `proxyURL` in the installed `templates/xttailwindcss/package.json`:
+
+```bash
+  "config": {
+    "proxyURL": "http://blogdb.lndo.site/index.php"
+  }
+```
+
+On our development server, the site runs on `http://blogdb.lndo.site/index.php`. Finally, execute the command to activate the Webpack development proxy. After the proxy is active, the generated site is rendered on `http://localhost:3000/index.php` so you can change the source style interactively in `templates/xttailwindcss/src` and navigate the final output simultaneously.
+
+```bash
+npm run dev-proxy
+```
 
 ## Changelog
+
+### 3.2.0
+
+- Webpack Proxy support
+
+### 3.1.0
+
+- Minor library updates
+- Styling
 
 ### 3.0.0
 
