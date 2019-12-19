@@ -57,14 +57,15 @@ if (proxyMode) {
 if (proxyMode || productionMode) {
   // Copy files
   plugins.push(
-    new WebpackOnBuildPlugin([{
-      from: path.resolve(__dirname, './dist/main.css'),
-      to: path.resolve(__dirname, './css/template.css'),
-    },
-    {
-      from: path.resolve(__dirname, './dist/main.js'),
-      to: path.resolve(__dirname, './js/template.js'),
-    },
+    new WebpackOnBuildPlugin([
+      {
+        from: path.resolve(__dirname, './dist/main.css'),
+        to: path.resolve(__dirname, './css/template.css'),
+      },
+      {
+        from: path.resolve(__dirname, './dist/main.js'),
+        to: path.resolve(__dirname, './js/template.js'),
+      },
     ]),
   );
 }
@@ -73,18 +74,21 @@ module.exports = {
   entry: './src/styles.css',
   mode: process.env.NODE_ENV,
   module: {
-    rules: [{
-      test: /\.css$/,
-      use: [{
-        loader: MiniCssExtractPlugin.loader,
-        options: {
-          hmr: devMode,
-        },
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              hmr: devMode,
+            },
+          },
+          'css-loader',
+          'postcss-loader',
+        ],
       },
-      'css-loader',
-      'postcss-loader',
-      ],
-    }],
+    ],
   },
   plugins,
 };
