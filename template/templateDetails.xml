@@ -2,12 +2,12 @@
 <extension type="template" version="3.8" client="site" method="upgrade">
   <name>XT Tailwind CSS</name>
   <version>3.2.0</version>
-  <creationDate>2019-12-16</creationDate>
+  <creationDate>2020-02-06</creationDate>
 
 	<author>Extly, CB</author>
 	<authorEmail>team@extly.com</authorEmail>
 	<authorUrl>https://www.extly.com</authorUrl>
-	<copyright>Copyright (c)2007-2019 Extly, CB All rights reserved.</copyright>
+	<copyright>Copyright (c)2007-2020 Extly, CB All rights reserved.</copyright>
 	<license>GNU/GPLv3 www.gnu.org/licenses/gpl-3.0.html</license>
 
   <description><![CDATA[

@@ -57,7 +57,6 @@
 
       "case-7": "Process additional project directories",
       "includeExtraSourcePaths": [
-        "../build/templates",
         "../template"
       ]
     }
