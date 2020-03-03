@@ -100,7 +100,7 @@ When you are done, remember to copy the changes back from the site to the reposi
 
 ## Changelog
 
-### 3.0.0
+### 3.3.0
 
 Update to Tailwind CSS v1.2.0, including Tailwind UI support.
 
@@ -108,6 +108,7 @@ Update to Tailwind CSS v1.2.0, including Tailwind UI support.
 - Support of [Tailwind UI](https://tailwindui.com/)
 - Addition of PostCSS best practices, [postcss-import](https://www.npmjs.com/package/postcss-import) and [postcss-nested](https://www.npmjs.com/package/postcss-nested)
 - Minimum tailwind.config.js
+- Pagination Component implementation
 
 ### 3.2.0
 
