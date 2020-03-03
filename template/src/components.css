@@ -244,3 +244,7 @@
     list-style-type: circle;
   }
 }
+
+.tagspopular a {
+  @apply block m-2;
+}
