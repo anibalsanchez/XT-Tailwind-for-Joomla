@@ -1,0 +1,147 @@
+.header-background {
+  @apply bg-grey-dark overflow-hidden opacity-90;
+}
+
+.navigation-block {
+  @apply static;
+}
+
+.logo-element {
+  @apply flex-initial w-5/6 text-2xl;
+}
+
+.site-description {
+  @apply text-sm text-white mt-0;
+}
+
+.languages-element {
+  @apply flex-initial;
+
+  img {
+    @apply px-2 py-2;
+  }
+
+  li {
+    @apply list-none p-0;
+  }
+
+  ul {
+    @apply flex items-center mt-0 ml-6 pl-6 list-none p-0;
+  }
+}
+
+.about-me img {
+  @apply rounded-full;
+}
+
+.main-container-block {
+  @apply static text-grey;
+}
+
+.top-32-lite {
+  top: 7rem;
+}
+
+.breadcrumbs-block {
+  @apply flex-row pr-4 bg-grey-light opacity-50 rounded;
+
+  li {
+    @apply flex-initial whitespace-no-wrap px-2 py-2;
+  }
+
+  ul {
+    @apply flex flex-wrap list-none p-0 mt-0 px-2 py-4 mb-6;
+  }
+}
+
+.divider img {
+  @apply inline-block;
+}
+
+.search-block {
+  @apply pt-4;
+}
+
+.blog-block {
+  .article-info-term {
+    display: none;
+  }
+
+  code {
+    @apply block p-4;
+  }
+
+  dl.article-info dd {
+    @apply text-lg;
+  }
+
+  img {
+    @apply my-4 border border-link rounded-lg;
+  }
+
+  .items-leading {
+    @apply pb-16;
+  }
+
+  .items-row {
+    @apply pb-8;
+  }
+}
+
+.tags {
+  @apply list-none p-0;
+
+  li {
+    @apply inline rounded-full bg-blue-happy px-2 py-1 text-xs mr-3;
+  }
+
+  li a {
+    @apply text-white;
+  }
+}
+
+.pagination {
+  @apply mb-4;
+
+  li {
+    @apply px-3 py-4 text-center inline-block p-0;
+  }
+
+  li a {
+    @apply px-2 py-2 inline-block;
+  }
+
+  li span {
+    @apply px-2 py-2 inline-block opacity-25;
+  }
+
+  p {
+    @apply text-sm text-right;
+  }
+
+  ul {
+    @apply inline-block list-none p-0 text-sm shadow rounded mt-4;
+  }
+}
+
+.footer-element {
+  @apply bg-oldlace text-center text-orange-hot;
+
+  a {
+    @apply text-link no-underline;
+  }
+}
+
+.aside-block {
+  .moduletable {
+    @apply rounded overflow-hidden shadow-lg bg-white p-4 mt-12;
+  }
+
+  .moduletable h3 {
+    @apply bg-gray-200 rounded-full text-center px-3 py-1;
+  }
+
+  .moduletable ul {
+    list-style-type: circle;
+  }
+}

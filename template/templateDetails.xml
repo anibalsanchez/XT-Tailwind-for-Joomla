@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="template" version="3.8" client="site" method="upgrade">
   <name>XT Tailwind CSS</name>
-  <version>3.2.0</version>
-  <creationDate>2020-02-06</creationDate>
+  <version>3.3.0</version>
+  <creationDate>2020-03-03</creationDate>
 
 	<author>Extly, CB</author>
 	<authorEmail>team@extly.com</authorEmail>
 	<authorUrl>https://www.extly.com</authorUrl>
-	<copyright>Copyright (c)2007-2020 Extly, CB All rights reserved.</copyright>
+	<copyright>Copyright (c)2012-2020 Extly, CB All rights reserved.</copyright>
 	<license>GNU/GPLv3 www.gnu.org/licenses/gpl-3.0.html</license>
 
   <description><![CDATA[

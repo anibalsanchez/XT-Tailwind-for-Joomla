@@ -100,6 +100,15 @@ When you are done, remember to copy the changes back from the site to the reposi
 
 ## Changelog
 
+### 3.0.0
+
+Update to Tailwind CSS v1.2.0, including Tailwind UI support.
+
+- Tailwind CSS v1.2.0
+- Support of [Tailwind UI](https://tailwindui.com/)
+- Addition of PostCSS best practices, [postcss-import](https://www.npmjs.com/package/postcss-import) and [postcss-nested](https://www.npmjs.com/package/postcss-nested)
+- Minimum tailwind.config.js
+
 ### 3.2.0
 
 - Support of Proxy Mode for Webpack / Tailwind CSS
@@ -147,6 +156,6 @@ When you are done, remember to copy the changes back from the site to the reposi
 
 ## Copyright & License
 
-- Copyright (c)2007-2019 Extly, CB. All rights reserved.
+- Copyright (c)2012-2020 Extly, CB. All rights reserved.
 - Distributed under the GNU General Public License version 3 or later; see LICENSE
 - This project is dedicated to [Andrea Gentil](http://www.twitter.com/andreagentil) ;-D
