@@ -69,6 +69,9 @@
 
   code {
     @apply block p-4;
+
+    /* Force the padding */
+    padding: 1rem!important;
   }
 
   dl.article-info dd {
@@ -112,7 +115,7 @@
   }
 
   li span {
-    @apply px-2 py-2 inline-block opacity-25;
+    @apply px-2 py-2 inline-block;
   }
 
   p {
@@ -121,6 +124,26 @@
 
   ul {
     @apply inline-block list-none p-0 text-sm shadow rounded mt-4;
+  }
+}
+
+.pager {
+  @apply inline-block list-none p-0 text-sm shadow rounded mt-4;
+
+  li {
+    @apply px-3 py-4 text-center inline-block p-0;
+  }
+
+  li a {
+    @apply px-2 inline-block;
+  }
+
+  li span {
+    @apply px-2 py-2 inline-block;
+  }
+
+  p {
+    @apply text-sm text-right;
   }
 }
 
