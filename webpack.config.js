@@ -3,7 +3,7 @@
  *
  * @license   License GNU General Public License version 2 or later; see LICENSE.txt
  * @author    Andrea Gentil - Anibal Sanchez <team@extly.com>
- * @copyright (c)2007-2018 Extly, CB. All rights reserved.
+ * @copyright (c)2012-2020 Extly, CB. All rights reserved.
  *
  */
 
@@ -65,27 +65,27 @@ function removeReleaseDirectory() {
 }
 
 const tagTransformation = (content) => content
-  .toString()
-  .replace(/\[MANIFEST_COPYRIGHT\]/g, definitions.MANIFEST_COPYRIGHT)
-  .replace(/; \[TRANSLATION_COPYRIGHT\]/g, definitions.TRANSLATION_COPYRIGHT)
-  .replace('// [PHP_COPYRIGHT]', definitions.PHP_COPYRIGHT)
-  .replace('/* [CSS_COPYRIGHT] */', definitions.CSS_COPYRIGHT)
-  .replace('// [JS_COPYRIGHT]', definitions.JS_COPYRIGHT)
-  .replace(/\[COPYRIGHT\]/g, definitions.COPYRIGHT)
-  .replace(/\[AUTHOR_EMAIL\]/g, definitions.AUTHOR_EMAIL)
-  .replace(/\[AUTHOR_URL\]/g, definitions.AUTHOR_URL)
-  .replace(/\[AUTHOR\]/g, definitions.AUTHOR)
-  .replace(/\[EXTENSION_CDN\]/g, definitions.EXTENSION_CDN)
-  .replace(/\[EXTENSION_CLASS_NAME\]/g, definitions.EXTENSION_CLASS_NAME)
-  .replace(/\[EXTENSION_ALIAS\]/g, definitions.EXTENSION_ALIAS)
-  .replace(/\[EXTENSION_DESC\]/g, definitions.EXTENSION_DESC)
-  .replace(/\[EXTENSION_NAME\]/g, definitions.EXTENSION_NAME)
-  .replace(/\[LICENSE_CODE\]/g, definitions.LICENSE_CODE)
-  .replace(/\[LICENSE\]/g, definitions.LICENSE)
-  .replace(/\[RELEASE_VERSION\]/g, definitions.RELEASE_VERSION)
-  .replace(/\[TRANSLATION_KEY\]/g, definitions.TRANSLATION_KEY)
-  .replace(/\[DATE\]/g, releaseDate)
-  .replace(/\[YEAR\]/g, year);
+    .toString()
+    .replace(/\[MANIFEST_COPYRIGHT\]/g, definitions.MANIFEST_COPYRIGHT)
+    .replace(/; \[TRANSLATION_COPYRIGHT\]/g, definitions.TRANSLATION_COPYRIGHT)
+    .replace('// [PHP_COPYRIGHT]', definitions.PHP_COPYRIGHT)
+    .replace('/* [CSS_COPYRIGHT] */', definitions.CSS_COPYRIGHT)
+    .replace('// [JS_COPYRIGHT]', definitions.JS_COPYRIGHT)
+    .replace(/\[COPYRIGHT\]/g, definitions.COPYRIGHT)
+    .replace(/\[AUTHOR_EMAIL\]/g, definitions.AUTHOR_EMAIL)
+    .replace(/\[AUTHOR_URL\]/g, definitions.AUTHOR_URL)
+    .replace(/\[AUTHOR\]/g, definitions.AUTHOR)
+    .replace(/\[EXTENSION_CDN\]/g, definitions.EXTENSION_CDN)
+    .replace(/\[EXTENSION_CLASS_NAME\]/g, definitions.EXTENSION_CLASS_NAME)
+    .replace(/\[EXTENSION_ALIAS\]/g, definitions.EXTENSION_ALIAS)
+    .replace(/\[EXTENSION_DESC\]/g, definitions.EXTENSION_DESC)
+    .replace(/\[EXTENSION_NAME\]/g, definitions.EXTENSION_NAME)
+    .replace(/\[LICENSE_CODE\]/g, definitions.LICENSE_CODE)
+    .replace(/\[LICENSE\]/g, definitions.LICENSE)
+    .replace(/\[RELEASE_VERSION\]/g, definitions.RELEASE_VERSION)
+    .replace(/\[TRANSLATION_KEY\]/g, definitions.TRANSLATION_KEY)
+    .replace(/\[DATE\]/g, releaseDate)
+    .replace(/\[YEAR\]/g, year);
 
 function renderTemplates() {
   const renderTpls = [];

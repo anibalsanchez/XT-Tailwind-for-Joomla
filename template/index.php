@@ -24,6 +24,7 @@ use Extly\Infrastructure\Support\HtmlAsset\Asset\ScriptTag;
 use Extly\Infrastructure\Support\HtmlAsset\Repository as HtmlAssetRepository;
 use Joomla\CMS\Factory as CMSFactory;
 use Joomla\CMS\HTML\HTMLHelper as CMSHTMLHelper;
+use Joomla\CMS\Version as CMSVersion;
 
 $app = CMSFactory::getApplication();
 $config = CMSFactory::getConfig();
@@ -47,18 +48,22 @@ $layout = $app->input->getCmd('layout', '');
 $task = $app->input->getCmd('task', '');
 $itemid = $app->input->getCmd('Itemid', '');
 $siteName = htmlspecialchars($app->get('sitename'), ENT_QUOTES, 'UTF-8');
+$mediaversion = (new CMSVersion())->getMediaVersion();
 
 // Add template js - JavaScript to be deferred
-$templateJsFile = CMSHTMLHelper::script('template.js', ['version' => 'auto', 'relative' => true, 'pathOnly' => true]);
+$templateJsFile = CMSHTMLHelper::script('template.js', ['relative' => true, 'pathOnly' => true]);
+$templateJsFile = $templateJsFile.'?'.$mediaversion;
 $htmlAssetRepository->push(ScriptTag::create($templateJsFile));
 
 // Add Stylesheets
 // Stylesheet to be included inline
-$templateCssFile = CMSHTMLHelper::stylesheet('template.css', ['version' => 'auto', 'relative' => true, 'pathOnly' => true]);
+$templateCssFile = CMSHTMLHelper::stylesheet('template.css', ['relative' => true, 'pathOnly' => true]);
+$templateCssFile = $templateCssFile.'?'.$mediaversion;
 $htmlAssetRepository->push(LinkCriticalStylesheetTag::create($templateCssFile));
 
 // Stylesheet to be included at the bottom of the document
-$prismCssFile = CMSHTMLHelper::stylesheet('prism.css', ['version' => 'auto', 'relative' => true, 'pathOnly' => true]);
+$prismCssFile = CMSHTMLHelper::stylesheet('prism.css', ['relative' => true, 'pathOnly' => true]);
+$prismCssFile = $prismCssFile.'?'.$mediaversion;
 $htmlAssetRepository->push(LinkStylesheetTag::create($prismCssFile));
 
 // Additional inline head scripts
