@@ -6,6 +6,11 @@
  * @see       https://www.extly.com
  */
 
+const prototypePages = [
+  'index',
+  'blog-post'
+];
+
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const WebpackOnBuildPlugin = require('webpack-copy-on-build-plugin');
@@ -16,9 +21,9 @@ const packageConfig = require('./package.json');
 
 const devMode = process.env.NODE_ENV === 'development';
 const productionMode = !devMode;
-const proxyMode = process.env.npm_lifecycle_event === 'dev-proxy'
-  && packageConfig.config
-  && packageConfig.config.proxyURL;
+const proxyMode = process.env.npm_lifecycle_event === 'dev-proxy' &&
+  packageConfig.config &&
+  packageConfig.config.proxyURL;
 
 const cssOutputfilename = devMode ? '[name].css' : '[name].css'; // [hash].
 const cssOutputchunkFilename = devMode ? '[id].css' : '[id].css'; // [hash].
@@ -31,12 +36,12 @@ const plugins = [
 ];
 
 if (devMode && !proxyMode) {
-  // Local development based on Html files
   plugins.push(
-    new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: 'src/index.html',
-    }),
+    ...prototypePages.map(
+      page => new HtmlWebpackPlugin({
+        filename: page + '.html',
+        template: 'src/' + page + '.html',
+      }))
   );
 }
 
@@ -57,8 +62,7 @@ if (proxyMode) {
 if (proxyMode || productionMode) {
   // Copy files
   plugins.push(
-    new WebpackOnBuildPlugin([
-      {
+    new WebpackOnBuildPlugin([{
         from: path.resolve(__dirname, './dist/main.css'),
         to: path.resolve(__dirname, './css/template.css'),
       },
@@ -74,21 +78,18 @@ module.exports = {
   entry: './src/styles.css',
   mode: process.env.NODE_ENV,
   module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              hmr: devMode,
-            },
+    rules: [{
+      test: /\.css$/,
+      use: [{
+          loader: MiniCssExtractPlugin.loader,
+          options: {
+            hmr: devMode,
           },
-          'css-loader',
-          'postcss-loader',
-        ],
-      },
-    ],
+        },
+        'css-loader',
+        'postcss-loader',
+      ],
+    }, ],
   },
   plugins,
 };
