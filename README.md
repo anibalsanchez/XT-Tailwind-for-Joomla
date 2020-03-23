@@ -31,19 +31,38 @@ As an alternative, there is a script with everything that must be done for each 
 
 These steps create the installable package in the `build/release` directory.
 
+The original XT build files, used to manage the extension development, can be found here [anibalsanchez/extly-buildfiles-for-joomla](https://github.com/anibalsanchez/extly-buildfiles-for-joomla).
+
 ## The Tailwind template
+
+Tailwind CSS framework is used in the development context of [Node.js](https://nodejs.org/en/). So, Node.js must be installed to continue.
+
+The Tailwind template can be executed in the following modes:
+
+- Development Mode
+- Proxy Server Mode for Joomla
+- Development Build
+- Production Build
+
+### Development Mode
+
+From the source (src/) directory, the live server is executed to design the template interactively. The objective of this mode is to create as many HTML files as necessary to develop the prototypes. In our case:
+
+- Blog Home Page, index.html
+- Blog Post, blog-post.html
+
+The HTML pages must be declared in `webpack.config.js`.
 
 To get started, clone the project and install the dependencies:
 
 ```bash
 # Access to the repo folder where the template is developed
 cd template
-
 # Using npm
 npm install
 ```
 
-After that, start up Webpack Development Server:
+After the dependencies installation step, start the Webpack Development Server:
 
 ```bash
 cd template
@@ -53,23 +72,11 @@ npm run dev
 
 The page is rendered here <http://localhost:8080/>.
 
-Webpack Development Server will watch `/src/styles.css` and `/tailwind.js` and rebuild your stylesheet on every change. You can play around with `/src/index.html` to see the effects of your changes.
+Webpack Development Server will watch `/src/styles.css` and `/tailwind.config.js` and rebuild your stylesheet on every change. You can play around with `/src/index.html` (or the rest of the pages) to design the template.
 
-The sample page renders [my blog](https://blog.anibalhsanchez.com) layout redesigned with Tailwind ;-)
+### Proxy Server Mode for Joomla
 
-To build a production bundle run:
-
-```bash
-cd template
-npm i
-npm run prod
-```
-
-After that, you will have a ready to deploy bundle at `/dist`
-
-## Proxy Server for Joomla Template Development
-
-Beyond the basic development alternatives, now I'm adding the choice to develop the template in **Proxy mode** in the site context. In the proxy mode, the Tailwind CSS template can be installed on the Joomla site and reloaded automatically from Joomla and tested dynamically.
+Beyond the basic development alternatives, now I'm adding the choice to develop the template in **Proxy Server Mode**. In the proxy mode, the Tailwind CSS template can be installed on the Joomla site and reloaded automatically from Joomla and tested dynamically.
 
 So, first, create the template as an installable extension:
 
@@ -79,24 +86,52 @@ npm i
 npm run prod
 ```
 
-Then, install it on the Joomla site and adjust the proxy `proxyURL` in the installed `templates/xttailwindcss/package.json`:
+Then, zip all files (exclude the node_modules folder), install it on the Joomla site, and adjust the proxy `proxyURL` in the installed `templates/xttailwind/package.json`:
 
 ```bash
   "config": {
-    "proxyURL": "http://blogdb.lndo.site/index.php"
+    "proxyURL": "http://jed.lndo.site/index.php"
   }
 ```
 
-On our development server, the site runs on `http://blogdb.lndo.site/index.php`. Finally, execute the command to activate the Webpack development proxy. After the proxy is active, the generated site is rendered on `http://localhost:3000/index.php` so you can change the source style interactively in `templates/xttailwindcss/src` and navigate the final output simultaneously.
+On our development server, the site runs on `http://jed.lndo.site/index.php`. Finally, execute the command to activate the Webpack development proxy. After the proxy is active, the generated site is rendered on `http://localhost:3000/index.php` so you can change the source style interactively in `templates/xttailwind/src` and navigate the final output simultaneously.
 
 ```bash
 # Access to the site folder where the template is developed in Proxy Mode
-cd templates/xttailwindcss
+cd templates/xttailwind
 npm i
 npm run dev-proxy
 ```
 
-When you are done, remember to copy the changes back from the site to the repository and commit to make them permanent. Of course, if the repository is mapped to the site, you can just commit the changes.
+When you are done, remember to copy the changes back from the site to the repository and commit to making them permanent. Of course, if the repository is mapped to the site, you can commit the changes.
+
+### Development Build
+
+This is almost the final step. It compiles all files, but it does not compress and optimize the styles. It is useful to test the template on different sites.
+
+```bash
+npm i
+npm run dev-build
+```
+
+After that, you will have a ready to deploy bundle at `/dist`. Then, zip all files (exclude the node_modules folder), and install it on a Joomla site.
+
+### Production Build
+
+This is the final step to produce the compressed and optimized template. To build a production bundle run:
+
+```bash
+npm i
+npm run prod
+```
+
+After that, you will have a ready to deploy bundle at `/dist`. Then, zip all files (exclude the node_modules folder) and install it on a Joomla site.
+
+To build everything and produce the installable template:
+
+```bash
+./build/build_core.sh
+```
 
 ## Changelog
 
