@@ -70,7 +70,7 @@ npm i
 npm run dev
 ```
 
-The page is rendered here <http://localhost:8080/>.
+The page is rendered here `http://localhost:8080/`.
 
 Webpack Development Server will watch `/src/styles.css` and `/tailwind.config.js` and rebuild your stylesheet on every change. You can play around with `/src/index.html` (or the rest of the pages) to design the template.
 
