@@ -6,6 +6,8 @@ For future reference:
 - [anibalsanchez/XT-TailwindCSS-Starter](https://github.com/anibalsanchez/XT-TailwindCSS-Starter)
 - [FAQ - XT Tailwind for Joomla](https://blog.anibalhsanchez.com/en/10-blogging/lost-and-found/55-faq-xt-tailwind-for-joomla.html). Questions and Answers about Tailwind on Joomla.
 
+**Prerequisites**: Before you use this template, you must install [Node.js](https://nodejs.org/).
+
 The project has two levels:
 
 - The Joomla extension build files at the `root` folder
