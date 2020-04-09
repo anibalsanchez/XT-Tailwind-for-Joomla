@@ -72,6 +72,20 @@ if (proxyMode || productionMode) {
       },
     ]),
   );
+
+  if (packageConfig.config.extraCCProxyFolder) {
+    plugins.push(
+      new WebpackOnBuildPlugin([{
+          from: path.resolve(__dirname, './dist/main.css'),
+          to: path.resolve(packageConfig.config.extraCCProxyFolder, './css/template.css'),
+        },
+        {
+          from: path.resolve(__dirname, './dist/main.js'),
+          to: path.resolve(packageConfig.config.extraCCProxyFolder, './js/template.js'),
+        },
+      ]),
+    );
+  }
 }
 
 module.exports = {

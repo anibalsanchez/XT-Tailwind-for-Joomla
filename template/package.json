@@ -40,6 +40,7 @@
     "webpack": "^4.42.0"
   },
   "config": {
-    "proxyURL": "http://localhost:8080/index.php"
+    "proxyURL": "http://localhost:8080/index.php",
+    "extraCCProxyFolder": "/var/www/html/templates/xttailwindcss"
   }
 }
