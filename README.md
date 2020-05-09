@@ -137,9 +137,14 @@ To build everything and produce the installable template:
 
 ## Changelog
 
+### 3.4.0
+
+- Update to Tailwind CSS v1.4
+- Reorganization of the build scripts
+
 ### 3.3.5
 
-Update to Tailwind CSS v1.3.5.
+- Update to Tailwind CSS v1.3.5
 
 ### 3.3.0
 
