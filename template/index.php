@@ -61,10 +61,15 @@ $templateCssFile = CMSHTMLHelper::stylesheet('template.css', ['relative' => true
 $templateCssFile = $templateCssFile.'?'.$mediaversion;
 $htmlAssetRepository->push(LinkCriticalStylesheetTag::create($templateCssFile));
 
-// Stylesheet to be included at the bottom of the document
+// Prism - Deferred Stylesheet
 $prismCssFile = CMSHTMLHelper::stylesheet('prism.css', ['relative' => true, 'pathOnly' => true]);
 $prismCssFile = $prismCssFile.'?'.$mediaversion;
 $htmlAssetRepository->push(LinkStylesheetTag::create($prismCssFile));
+
+// Prism - Deferred JavaScript
+$prismJsFile = CMSHTMLHelper::script('prism.js', ['relative' => true, 'pathOnly' => true]);
+$prismJsFile = $prismJsFile.'?'.$mediaversion;
+$htmlAssetRepository->push(ScriptTag::create($prismJsFile));
 
 // Additional inline head scripts
 $headScripts = $this->params->get('headScripts');

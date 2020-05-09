@@ -7,6 +7,9 @@ const tailwindCssUi = require('@tailwindcss/ui')({
 });
 
 module.exports = {
+  // Purge and minification on PostCSS, postcss.config.js
+  purge: false,
+
   theme: {
     extend: {
       screens: defaultTheme.screens,
