@@ -1,6 +1,6 @@
 {
   "name": "xt-tailwind-for-joomla",
-  "version": "3.3.5",
+  "version": "3.4.0",
   "description": "XT Tailwind - My Blog template, based on Tailwind CSS.",
   "main": "webpack.config.js",
   "scripts": {
@@ -19,25 +19,26 @@
   },
   "homepage": "https://github.com/anibalsanchez/XT-Tailwind-for-Joomla#readme",
   "devDependencies": {
-    "cross-env": "^7.0.2",
     "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.9.0",
+    "@babel/core": "^7.9.6",
     "@babel/polyfill": "^7.8.7",
-    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-env": "^7.9.6",
     "copy-webpack-plugin": "^5.1.1",
+    "cross-env": "^7.0.2",
     "dotenv-webpack": "^1.7.0",
-    "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.19.0",
+    "eslint": "^7.0.0",
+    "filemanager-webpack-plugin": "^2.0.5",
     "fs-extra": "^9.0.0",
-    "fs-readdir-recursive": "^1.1.0",
-    "moment": "^2.24.0",
-    "uglifyjs-webpack-plugin": "^2.2.0",
-    "webpack": "^4.43.0",
+    "glob": "^7.1.6",
+    "moment": "^2.25.3",
+    "serialize-javascript": "^3.0.0",
     "webpack-cli": "^3.3.11",
-    "webpack-zip-files-plugin": "^1.0.0"
+    "webpack-zip-files-plugin": "^1.0.0",
+    "webpack": "^4.43.0"
   },
   "browserslist": "> 0.25%, not dead"
 }
