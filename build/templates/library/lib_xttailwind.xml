@@ -13,7 +13,7 @@
   ]]>
   </description>
   <files>
-    <folder>prefixed_vendor</folder>
+    <folder>vendor_prefixed</folder>
     <folder>vendor</folder>
     <filename>composer.json</filename>
     <filename>lib_[EXTENSION_ALIAS].xml</filename>
