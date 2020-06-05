@@ -137,6 +137,10 @@ To build everything and produce the installable template:
 
 ## Changelog
 
+### 3.5.0
+
+- Add XT Renderers library
+
 ### 3.4.0
 
 - Update to Tailwind CSS v1.4
