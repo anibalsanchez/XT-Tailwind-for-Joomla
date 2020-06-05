@@ -1,5 +1,5 @@
 {
-  "name": "XT Tailwind CSS",
+  "name": "anibalsanchez/xt-tailwind-css",
   "description": "XT Tailwind - My Blog template, based on Tailwind CSS.",
   "authors": [
     {
@@ -21,10 +21,7 @@
     "vendor-dir": "library/vendor",
     "preferred-install": "dist",
     "sort-packages": true,
-    "optimize-autoloader": true,
-    "platform": {
-      "php": "5.6.40"
-    }
+    "optimize-autoloader": true
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
@@ -32,9 +29,17 @@
     "php": ">=5.6",
 
     "anibalsanchez/extly-html-asset-tags-builder": "dev-master",
+    "extly/xt-renderers-for-joomla": "dev-master",
+
     "doctrine/inflector": "~1.1.0",
     "illuminate/support": "~5.4.0"
   },
+  "repositories": [
+    {
+      "url": "git@github.com:extly/xt-renderers-for-joomla.git",
+      "type": "git"
+    }
+  ],
 
   "extra": {
     "php-prefixer": {

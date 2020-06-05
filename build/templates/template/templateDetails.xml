@@ -29,8 +29,6 @@
     <filename>template_thumbnail.png</filename>
     <filename>templateDetails.xml</filename>
     <filename>webpack.config.js</filename>
-    <filename>XTHtmlAssetsBodyRenderer.php</filename>
-    <filename>XTHtmlAssetsRenderer.php</filename>
   </files>
   <languages>
     <language tag="en-GB">language/en-GB/en-GB.tpl_xttailwind.ini</language>
@@ -48,8 +46,13 @@
     <fields name="params">
       <fieldset name="advanced">
         <field name="logoTitle" type="text" default="" label="Logo Title" filter="string"/>
-        <field name="siteDescription" type="text" default="" label="JGLOBAL_DESCRIPTION" description="JGLOBAL_SUBHEADING_DESC" filter="string"/>
-        <field name="headScripts" type="textarea" default="" label="Head Scripts" filter="raw" rows="24" cols="120" class="input-xxlarge"/>
+        <field name="siteDescription" type="text" default="" label="JGLOBAL_DESCRIPTION"
+          description="JGLOBAL_SUBHEADING_DESC" filter="string"/>
+        <field name="headScripts" type="textarea" default="" label="Head Scripts" filter="raw" rows="6" cols="120"
+          class="input-xxlarge"/>
+        <field name="allowedScriptsAndStylesheets" type="textarea" default="recaptcha, schema.org, application/ld+json" label="Allowed CMS Scripts and Stylesheets"
+          filter="raw" rows="6" cols="120" class="input-xxlarge"
+          description="List of keywords to allow the inclusion of core scripts and stylesheets. * to allow everything."/>
       </fieldset>
     </fields>
   </config>

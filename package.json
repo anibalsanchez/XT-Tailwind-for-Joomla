@@ -1,6 +1,6 @@
 {
   "name": "xt-tailwind-for-joomla",
-  "version": "3.4.0",
+  "version": "3.5.0",
   "description": "XT Tailwind - My Blog template, based on Tailwind CSS.",
   "main": "webpack.config.js",
   "scripts": {

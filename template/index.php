@@ -14,9 +14,6 @@ defined('_JEXEC') or die;
 
 require_once JPATH_ROOT.'/libraries/xttailwind/vendor/autoload.php';
 
-require_once 'XTHtmlAssetsBodyRenderer.php';
-require_once 'XTHtmlAssetsRenderer.php';
-
 use Extly\Infrastructure\Service\Cms\Joomla\ScriptHelper;
 use Extly\Infrastructure\Support\HtmlAsset\Asset\InlineScriptTag;
 use Extly\Infrastructure\Support\HtmlAsset\Asset\LinkCriticalStylesheetTag;
@@ -25,6 +22,8 @@ use Extly\Infrastructure\Support\HtmlAsset\Asset\ScriptTag;
 use Extly\Infrastructure\Support\HtmlAsset\Repository as HtmlAssetRepository;
 use Joomla\CMS\Factory as CMSFactory;
 use Joomla\CMS\HTML\HTMLHelper as CMSHTMLHelper;
+use Joomla\CMS\Uri\Uri as CMSUri;
+use Joomla\CMS\Version as CMSVersion;
 
 $app = CMSFactory::getApplication();
 $config = CMSFactory::getConfig();
@@ -48,9 +47,11 @@ $layout = $app->input->getCmd('layout', '');
 $task = $app->input->getCmd('task', '');
 $itemid = $app->input->getCmd('Itemid', '');
 $siteName = htmlspecialchars($app->get('sitename'), ENT_QUOTES, 'UTF-8');
+$mediaversion = (new CMSVersion())->getMediaVersion();
 
 // Add template js - JavaScript to be deferred
 $templateJsFile = CMSHTMLHelper::script('template.js', ['relative' => true, 'pathOnly' => true]);
+$templateJsFile = $templateJsFile.'?'.$mediaversion;
 $htmlAssetRepository->push(ScriptTag::create(ScriptHelper::addMediaVersion($templateJsFile)));
 
 // Add Stylesheets
@@ -75,6 +76,7 @@ if (!empty($headScripts)) {
 
 $htmlAssetRepository->push(ScriptTag::create('https://buttons.github.io/buttons.js'));
 
+$headData = $document->getHeadData();
 $logoTitle = $this->params->get('logoTitle', '@Anibal_Sanchez');
 $siteDescription = htmlspecialchars($this->params->get('siteDescription'), ENT_QUOTES, 'UTF-8');
 
@@ -83,8 +85,12 @@ $siteDescription = htmlspecialchars($this->params->get('siteDescription'), ENT_Q
 <html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 
 <head>
+  <meta http-equiv="Content-Type" content="<?php echo $headData['metaTags']['http-equiv']; ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <jdoc:include type="xthtmlassets" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <base href="<?php echo CMSUri::current(); ?>">
+
+  <jdoc:include type="XTHtmlAssets" />
 
   <!-- TODO: Support GA and the extra links -->
   <link rel="preconnect" href="https://api.github.com">
@@ -192,7 +198,7 @@ $siteDescription = htmlspecialchars($this->params->get('siteDescription'), ENT_Q
   <jdoc:include type="modules" name="analytics" style="none" />
   <jdoc:include type="modules" name="debug" style="none" />
 
-  <jdoc:include type="xthtmlassetsbody"  name="body" style="none" />
+  <jdoc:include type="XTHtmlAssetsBody"  name="body" style="none" />
 </body>
 
 </html>
