@@ -54,10 +54,20 @@ $templateJsFile = CMSHTMLHelper::script('template.js', ['relative' => true, 'pat
 $templateJsFile = $templateJsFile.'?'.$mediaversion;
 $htmlAssetRepository->push(ScriptTag::create(ScriptHelper::addMediaVersion($templateJsFile)));
 
-// Add Stylesheets
-// Stylesheet to be included inline
+// Add template.css
 $templateCssFile = CMSHTMLHelper::stylesheet('template.css', ['relative' => true, 'pathOnly' => true]);
 $htmlAssetRepository->push(LinkCriticalStylesheetTag::create(ScriptHelper::addMediaVersion($templateCssFile)));
+
+// Additional inline head scripts
+$headScripts = $params->get('headScripts');
+
+if (!empty($headScripts)) {
+    $htmlAssetRepository->push(InlineScriptTag::create($headScripts));
+}
+
+$headData = $document->getHeadData();
+
+/* The template customization starts here */
 
 // Prism - Deferred Stylesheet
 $prismCssFile = CMSHTMLHelper::stylesheet('prism.css', ['relative' => true, 'pathOnly' => true]);
@@ -67,18 +77,10 @@ $htmlAssetRepository->push(LinkStylesheetTag::create(ScriptHelper::addMediaVersi
 $prismJsFile = CMSHTMLHelper::script('prism.js', ['relative' => true, 'pathOnly' => true]);
 $htmlAssetRepository->push(ScriptTag::create(ScriptHelper::addMediaVersion($prismJsFile)));
 
-// Additional inline head scripts
-$headScripts = $this->params->get('headScripts');
-
-if (!empty($headScripts)) {
-    $htmlAssetRepository->push(InlineScriptTag::create($headScripts));
-}
-
 $htmlAssetRepository->push(ScriptTag::create('https://buttons.github.io/buttons.js'));
 
-$headData = $document->getHeadData();
-$logoTitle = $this->params->get('logoTitle', '@Anibal_Sanchez');
-$siteDescription = htmlspecialchars($this->params->get('siteDescription'), ENT_QUOTES, 'UTF-8');
+$logoTitle =  htmlspecialchars($params->get('logoTitle', '@Anibal_Sanchez'));
+$siteDescription = htmlspecialchars($params->get('siteDescription'), ENT_QUOTES, 'UTF-8');
 
 ?>
 <!DOCTYPE html>
