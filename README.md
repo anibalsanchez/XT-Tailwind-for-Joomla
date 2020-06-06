@@ -137,6 +137,10 @@ To build everything and produce the installable template:
 
 ## Changelog
 
+### 3.6.0
+
+- Component, Error and Off-line pages
+
 ### 3.5.0
 
 - Add XT Renderers library

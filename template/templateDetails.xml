@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="template" version="3.8" client="site" method="upgrade">
   <name>XT Tailwind CSS</name>
-  <version>3.5.0</version>
+  <version>3.6.0</version>
   <creationDate>2020-06-06</creationDate>
 
 	<author>Extly, CB</author>
