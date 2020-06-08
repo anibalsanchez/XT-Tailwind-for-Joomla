@@ -18,7 +18,7 @@
   @apply flex-initial;
 
   img {
-    @apply px-2 py-2;
+    @apply p-4;
   }
 
   li {
@@ -75,7 +75,7 @@
   }
 
   dl.article-info dd {
-    @apply text-lg;
+    @apply mt-2 mb-4 text-lg;
   }
 
   img {
@@ -92,10 +92,10 @@
 }
 
 .tags {
-  @apply list-none p-0;
+  @apply list-none my-4 p-0;
 
   li {
-    @apply inline rounded-full bg-blue-happy px-2 py-1 text-xs mr-3;
+    @apply inline-block rounded-full bg-blue-happy px-4 py-2 text-xs mr-4 mt-2;
   }
 
   li a {
@@ -218,6 +218,10 @@
 
   .moduletable ul {
     list-style-type: circle;
+
+    li {
+      @apply leading-8;
+    }
   }
 }
 
