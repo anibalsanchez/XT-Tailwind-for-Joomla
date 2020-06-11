@@ -14,16 +14,16 @@ defined('_JEXEC') or die;
 
 require_once JPATH_ROOT.'/libraries/xttailwind/vendor/autoload.php';
 
-use Joomla\CMS\Factory as CMSFactory;
-use Joomla\CMS\HTML\HTMLHelper as CMSHTMLHelper;
-use Joomla\CMS\Uri\Uri as CMSUri;
-use Joomla\CMS\Version as CMSVersion;
 use Extly\Infrastructure\Service\Cms\Joomla\ScriptHelper;
 use Extly\Infrastructure\Support\HtmlAsset\Asset\InlineScriptTag;
 use Extly\Infrastructure\Support\HtmlAsset\Asset\LinkCriticalStylesheetTag;
 use Extly\Infrastructure\Support\HtmlAsset\Asset\LinkStylesheetTag;
 use Extly\Infrastructure\Support\HtmlAsset\Asset\ScriptTag;
 use Extly\Infrastructure\Support\HtmlAsset\Repository as HtmlAssetRepository;
+use Joomla\CMS\Factory as CMSFactory;
+use Joomla\CMS\HTML\HTMLHelper as CMSHTMLHelper;
+use Joomla\CMS\Uri\Uri as CMSUri;
+use Joomla\CMS\Version as CMSVersion;
 
 $app = CMSFactory::getApplication();
 $config = CMSFactory::getConfig();
@@ -67,7 +67,7 @@ if (!empty($headScripts)) {
 
 $headData = $document->getHeadData();
 
-/* The template customization starts here */
+// The template customization starts here
 
 // Prism - Deferred Stylesheet
 $prismCssFile = CMSHTMLHelper::stylesheet('prism.css', ['relative' => true, 'pathOnly' => true]);
@@ -79,7 +79,7 @@ $htmlAssetRepository->push(ScriptTag::create(ScriptHelper::addMediaVersion($pris
 
 $htmlAssetRepository->push(ScriptTag::create('https://buttons.github.io/buttons.js'));
 
-$logoTitle =  htmlspecialchars($params->get('logoTitle', '@Anibal_Sanchez'));
+$logoTitle = htmlspecialchars($params->get('logoTitle', '@Anibal_Sanchez'));
 $siteDescription = htmlspecialchars($params->get('siteDescription'), ENT_QUOTES, 'UTF-8');
 
 ?>
