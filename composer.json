@@ -44,8 +44,8 @@
   "extra": {
     "php-prefixer": {
       "projectName": "XT Tailwind CSS",
-      "prefixForNamespaces": "XTT_BUILD",
-      "prefixForGlobalObjects": "XTT_",
+      "prefixForNamespaces": "XTP_BUILD",
+      "prefixForGlobalObjects": "XTP_",
 
       "case-1": "includeLibrariesDependiencies: Process additional dependencies",
 

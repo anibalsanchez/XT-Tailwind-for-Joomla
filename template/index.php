@@ -67,7 +67,7 @@ if (!empty($headScripts)) {
 
 $headData = $document->getHeadData();
 
-/* The template customization starts here */
+// The template customization starts here
 
 // Prism - Deferred Stylesheet
 $prismCssFile = CMSHTMLHelper::stylesheet('prism.css', ['relative' => true, 'pathOnly' => true]);
@@ -79,7 +79,7 @@ $htmlAssetRepository->push(ScriptTag::create(ScriptHelper::addMediaVersion($pris
 
 $htmlAssetRepository->push(ScriptTag::create('https://buttons.github.io/buttons.js'));
 
-$logoTitle =  htmlspecialchars($params->get('logoTitle', '@Anibal_Sanchez'));
+$logoTitle = htmlspecialchars($params->get('logoTitle', '@Anibal_Sanchez'));
 $siteDescription = htmlspecialchars($params->get('siteDescription'), ENT_QUOTES, 'UTF-8');
 
 ?>
@@ -95,8 +95,9 @@ $siteDescription = htmlspecialchars($params->get('siteDescription'), ENT_QUOTES,
   <jdoc:include type="XTHtmlAssets" />
 
   <!-- TODO: Support GA and the extra links -->
-  <link rel="preconnect" href="https://api.github.com">
-  <link rel="preconnect" href="https://www.google-analytics.com">
+  <link rel="preconnect" href="https://buttons.github.io" crossorigin>
+  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
 </head>
 
 <body class="site <?php echo $option
