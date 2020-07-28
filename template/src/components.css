@@ -70,8 +70,11 @@
   code {
     @apply block p-4;
 
-    /* Force the padding */
+    /* Force the styles */
     padding: 1rem !important;
+    font-size: 1em!important;
+    color: #f8f8f2!important;
+    font-weight: 400!important;
   }
 
   dl.article-info dd {
@@ -96,10 +99,21 @@
 
   li {
     @apply inline-block rounded-full bg-blue-happy px-4 py-2 text-xs mr-4 mt-2;
+    /* Just to force the style over prose */
+    padding-left: 1rem!important;
+  }
+
+  /* To avoid prose disc */
+  li::before {
+    content: none!important;
   }
 
   li a {
-    @apply text-white;
+    @apply text-white no-underline;
+    /* Just to force the style over prose */
+    color: #ffffff!important;
+    color: rgba(255, 255, 255, var(--text-opacity))!important;
+    text-decoration: none!important;
   }
 }
 
@@ -183,6 +197,14 @@
 
   li {
     @apply relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm leading-5 font-medium rounded-md text-gray-700 bg-white;
+
+    /* To avoid prose padding */
+    padding-left: 1rem!important;
+  }
+
+  /* To avoid prose disc */
+  li::before {
+    content: none!important;
   }
 
   a:active {
@@ -226,5 +248,6 @@
 }
 
 .tagspopular a {
-  @apply block m-2;
+  @apply block;
 }
+

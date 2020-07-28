@@ -46,6 +46,8 @@ body {
 
 a {
   @apply text-link no-underline;
+  /* Just to force the style over prose */
+  text-decoration: none!important;
 }
 
 p {

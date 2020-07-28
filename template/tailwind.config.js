@@ -1,10 +1,10 @@
-
 // tailwind.config.js
 const defaultTheme = require('tailwindcss/defaultTheme');
 const customForms = require('@tailwindcss/custom-forms');
 const tailwindCssUi = require('@tailwindcss/ui')({
   layout: 'sidebar',
 });
+const typography = require('@tailwindcss/typography');
 
 module.exports = {
   // Purge and minification on PostCSS, postcss.config.js
@@ -53,7 +53,19 @@ module.exports = {
         ...defaultTheme.opacity,
       },
     },
+    typography: {
+      default: {
+        css: {
+          a: {
+            color: '#ffa32b',
+            '&:hover': {
+              color: '#ef931b',
+            },
+          },
+        },
+      },
+    },
   },
   variants: {},
-  plugins: [customForms, tailwindCssUi],
+  plugins: [customForms, tailwindCssUi, typography],
 };

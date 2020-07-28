@@ -87,7 +87,7 @@ $siteDescription = htmlspecialchars($params->get('siteDescription'), ENT_QUOTES,
 <html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 
 <head>
-  <meta http-equiv="Content-Type" content="<?php echo $headData['metaTags']['http-equiv']; ?>">
+  <meta http-equiv="Content-Type" content="<?php echo $headData['metaTags']['http-equiv']['content-type']; ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <base href="<?php echo CMSUri::current(); ?>">
@@ -165,7 +165,7 @@ $siteDescription = htmlspecialchars($params->get('siteDescription'), ENT_QUOTES,
             </div>
 
             <!-- blog-block -->
-            <div class="blog-block">
+            <div class="blog-block prose prose-xl">
               <!-- Begin Content -->
               <jdoc:include type="message" />
               <jdoc:include type="component" />

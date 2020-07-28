@@ -137,6 +137,11 @@ To build everything and produce the installable template:
 
 ## Changelog
 
+### 3.7.0
+
+- Update Tailwind 1.5.2
+- Add Typography plugin
+
 ### 3.6.0
 
 - Component, Error and Off-line pages

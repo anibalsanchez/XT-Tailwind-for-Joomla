@@ -1,7 +1,7 @@
 {
-  "name": "xt-tailwind-for-joomla",
-  "version": "3.6.0",
-  "description": "XT Tailwind - My Blog template, based on Tailwind CSS.",
+  "name": "extly-boilerplate-buildfiles-for-joomla",
+  "version": "3.1.0",
+  "description": "Boilerplate files for Joomla! extensions.",
   "main": "webpack.config.js",
   "scripts": {
     "build": "cross-env webpack --mode=production",
@@ -9,33 +9,34 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anibalsanchez/XT-Tailwind-for-Joomla.git"
+    "url": "git+https://github.com/anibalsanchez/extly-boilerplate-buildfiles-for-joomla.git"
   },
   "keywords": [],
   "author": "Andrea Gentil - Anibal Sanchez",
   "license": "GPL-2.0-or-later",
   "bugs": {
-    "url": "https://github.com/anibalsanchez/XT-Tailwind-for-Joomla/issues"
+    "url": "https://github.com/anibalsanchez/extly-boilerplate-buildfiles-for-joomla/issues"
   },
-  "homepage": "https://github.com/anibalsanchez/XT-Tailwind-for-Joomla#readme",
+  "homepage": "https://github.com/anibalsanchez/extly-boilerplate-buildfiles-for-joomla#readme",
   "devDependencies": {
-    "@babel/cli": "^7.10.1",
-    "@babel/core": "^7.10.2",
-    "@babel/polyfill": "^7.10.1",
-    "@babel/preset-env": "^7.10.2",
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/polyfill": "^7.8.7",
+    "@babel/preset-env": "^7.9.6",
     "copy-webpack-plugin": "^5.1.1",
     "cross-env": "^7.0.2",
-    "dotenv-webpack": "^1.8.0",
+    "dotenv-webpack": "^1.7.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.20.0",
-    "eslint": "^7.1.0",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint": "^7.0.0",
     "filemanager-webpack-plugin": "^2.0.5",
-    "fs-extra": "^9.0.1",
+    "fs-extra": "^9.0.0",
     "glob": "^7.1.6",
-    "moment": "^2.26.0",
-    "serialize-javascript": "^3.1.0",
+    "moment": "^2.25.3",
+    "serialize-javascript": "^3.0.0",
+    "touch": "^3.1.0",
     "webpack-cli": "^3.3.11",
     "webpack-zip-files-plugin": "^1.0.0",
     "webpack": "^4.43.0"

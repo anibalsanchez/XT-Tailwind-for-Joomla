@@ -13,6 +13,7 @@
   ]]>
   </description>
   <files>
+    <folder>src</folder>
     <folder>vendor_prefixed</folder>
     <folder>vendor</folder>
     <filename>lib_[EXTENSION_ALIAS].xml</filename>

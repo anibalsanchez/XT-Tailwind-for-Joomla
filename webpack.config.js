@@ -22,97 +22,12 @@ const extensionTypesDirs = [
   'platform',
 ];
 
-// Only template xml are processed,
-//  other xml config files are ignored
+// Only template xml are processed, other xml config files are ignored
 const packageIgnoreFiles = ['config.xml'];
 
 // WARNING - Clean these development folders before building
-//  This is highly opinionated.
-//  NEVER USE A FOLDER WITH THESE NAMES IN THE FINAL PACKAGE.
 const globalCleanDevAssets = [
-  /*
-    // Directories to be purged
-    /\/\.git\//,
-    /\/\.github\//,
-    /\/\.phan\//,
-    /\/\.vscode\//,
-    /\/bin\//,
-    /\/build\//,
-    /\/demo\//,
-    /\/doc\//,
-    /\/docs\//,
-    /\/Documentation\//,
-    /\/examples\//,
-    /\/ext\//,
-    /\/nbproject\//,
-  */
   /\/node_modules\//,
-  /*
-    /\/style\//,
-
-    // Files to be purged
-    // Files ending with these extesion types
-    /\.neon$/,
-    /\.sh$/,
-    /\.twig$/,
-    /\.xlf$/,
-
-    /\.coveralls\.yml$/,
-    /\.editorconfig$/,
-    /\.gitattributes$/,
-    /\.gitignore$/,
-    /\.hhconfig$/,
-    /\.Mime$/,
-    /\.php_cs\.dist$/,
-    /\.php_cs$/,
-    /\.scrutinizer\.yml$/,
-    /\.State$/,
-    /\.styleci\.yml$/,
-    /\.travis\.yml$/,
-    /AUTHORS$/,
-    /behat\.yml$/,
-    /build\.php$/,
-    /build\.properties$/,
-    /build\.xml$/,
-    /CHANGELOG\.md$/,
-    /CHANGELOG\.mdown$/,
-    /CHANGELOG$/,
-    /CHANGES$/,
-    /circle\.yml$/,
-    /CODE_OF_CONDUCT\.md$/,
-    /CONDUCT\.md$/,
-    /CONTRIBUTING\.md$/,
-    /COPYING$/,
-    /db\.sql$/,
-    /docker-compose\.yml$/,
-    /example\.php$/,
-    /FastRoute\.hhi$/,
-    /gulp-config\.ci\.json$/,
-    /Makefile$/,
-    /mkdocs\.yml$/,
-    /package\.xml$/,
-    /phpcs\.xml\.dist$/,
-    /phpcs\.xml$/,
-    /phpmd\.xml$/,
-    /phpunit\.xml\.dist$/,
-    /phpunit*\.xml$/,
-    /psalm\.xml$/,
-    /puli\.json$/,
-    /README\.markdown$/,
-    /readme\.md$/,
-    /Readme\.md$/,
-    /README\.md$/,
-    /README\.rst$/,
-    /ReadMe\.txt$/,
-    /sonar-project\.properties$/,
-    /UPGRADE_TO_2_1$/,
-    /UPGRADE_TO_2_2$/,
-    /Upgrade\.md$/,
-    /UPGRADE\.md$/,
-    /UPGRADE$/,
-    /UPGRADING\.md$/,
-    /VERSION$/,
-  */
 ];
 
 // Required Webpack plugins
@@ -126,6 +41,7 @@ const path = require('path');
 const readDirRecursive = require('fs-readdir-recursive');
 const ZipFilesPlugin = require('webpack-zip-files-plugin');
 const glob = require("glob");
+const touch = require("touch")
 
 let definitions;
 const releaseDate = moment()
@@ -426,6 +342,9 @@ function declareZipsGeneration() {
 }
 
 // Let's build something
+
+// Ensure that there is a .gitkeep, the webpack runs "packing" .gitkeep
+touch('.gitkeep');
 
 // Global constant definitions (.env)
 definitions = loadEnvironmentDefinitions();
