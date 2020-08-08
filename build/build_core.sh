@@ -1,7 +1,7 @@
 #!/bin/sh
 
 cd template
-npm ci
+npm i
 npm run prod
 cd ..
 

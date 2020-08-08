@@ -3,7 +3,7 @@
   <name>XT Tailwind CSS Library</name>
   <libraryname>xttailwind</libraryname>
   <version>3.7.0</version>
-  <creationDate>2020-07-24</creationDate>
+  <creationDate>2020-08-08</creationDate>
 
 	<author>Extly, CB</author>
 	<authorEmail>team@extly.com</authorEmail>
@@ -17,6 +17,7 @@ XT Tailwind - My Blog template, based on Tailwind CSS.
   ]]>
   </description>
   <files>
+    <folder>src</folder>
     <folder>vendor_prefixed</folder>
     <folder>vendor</folder>
     <filename>lib_xttailwind.xml</filename>
