@@ -7,6 +7,46 @@
       "email": "team@extly.com"
     }
   ],
+  "require": {
+    "php": ">=5.6",
+    "anibalsanchez/extly-html-asset-tags-builder": "dev-master",
+    "anibalsanchez/xt-tailwind-for-joomla-template": "dev-master",
+    "doctrine/inflector": "~1.1.0",
+    "ergebnis/composer-normalize": "^2.6",
+    "extly/xt-renderers-for-joomla": "dev-master",
+    "illuminate/support": "~5.4.0",
+    "mnsami/composer-custom-directory-installer": "^1.1"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "vendor-dir": "library/vendor"
+  },
+  "extra": {
+    "installer-paths": {
+      "./template/": [
+        "anibalsanchez/xt-tailwind-for-joomla-template"
+      ]
+    },
+    "php-prefixer": {
+      "projectName": "XT Tailwind CSS",
+      "prefixForNamespaces": "XTP_BUILD",
+      "prefixForGlobalObjects": "XTP_",
+      "case-1": "includeLibrariesDependiencies: Process additional dependencies",
+      "case-2": "ignorePaths: Do not prefix.",
+      "case-3": "ignoreLibraries: Do not prefix.",
+      "ignoreLibraries": [],
+      "case-4": "Do not prefix.",
+      "ignoreGlobalObjects": [],
+      "case-5": "excludeFromClassmap: Libraries to be removed, but keep dependecies consistent (Platform Lib).",
+      "case-6": "excludePaths: Files to be removed from the prefixer output.",
+      "case-7": "Process additional project directories",
+      "includeExtraSourcePaths": [
+        "template"
+      ]
+    }
+  },
   "autoload": {
     "psr-4": {
       "Extly\\": "library/src/"
@@ -17,56 +57,16 @@
       "Extly\\": "library/tests/"
     }
   },
-  "config": {
-    "vendor-dir": "library/vendor",
-    "preferred-install": "dist",
-    "sort-packages": true,
-    "optimize-autoloader": true
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "require": {
-    "php": ">=5.6",
-
-    "anibalsanchez/extly-html-asset-tags-builder": "dev-master",
-    "extly/xt-renderers-for-joomla": "dev-master",
-
-    "doctrine/inflector": "~1.1.0",
-    "illuminate/support": "~5.4.0"
-  },
   "repositories": [
     {
-      "url": "git@github.com:extly/xt-renderers-for-joomla.git",
-      "type": "git"
+      "type": "git",
+      "url": "git@github.com:extly/xt-renderers-for-joomla.git"
+    },
+    {
+      "type": "git",
+      "url": "git@github.com:anibalsanchez/xt-tailwind-for-joomla-template.git"
     }
   ],
-
-  "extra": {
-    "php-prefixer": {
-      "projectName": "XT Tailwind CSS",
-      "prefixForNamespaces": "XTP_BUILD",
-      "prefixForGlobalObjects": "XTP_",
-
-      "case-1": "includeLibrariesDependiencies: Process additional dependencies",
-
-      "case-2": "ignorePaths: Do not prefix.",
-
-      "case-3": "ignoreLibraries: Do not prefix.",
-      "ignoreLibraries": [
-      ],
-
-      "case-4": "Do not prefix.",
-      "ignoreGlobalObjects": [
-      ],
-
-      "case-5": "excludeFromClassmap: Libraries to be removed, but keep dependecies consistent (Platform Lib).",
-
-      "case-6": "excludePaths: Files to be removed from the prefixer output.",
-
-      "case-7": "Process additional project directories",
-      "includeExtraSourcePaths": [
-        "template"
-      ]
-    }
-  }
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
