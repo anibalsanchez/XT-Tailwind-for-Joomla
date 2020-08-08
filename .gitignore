@@ -57,6 +57,5 @@ tslint.json
 # Symfony
 /var/
 
-# Symlinks
-template/dist/main.*.css
 package-lock.json
+/template
