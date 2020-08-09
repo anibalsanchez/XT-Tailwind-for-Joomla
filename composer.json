@@ -70,7 +70,7 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "scripts": {
-    "post-update-cmd": [
+    "disabled_post-update-cmd": [
       "composer normalize"
     ]
   }
