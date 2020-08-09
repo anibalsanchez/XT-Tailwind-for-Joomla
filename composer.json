@@ -12,10 +12,12 @@
     "anibalsanchez/extly-html-asset-tags-builder": "dev-master",
     "anibalsanchez/xt-tailwind-for-joomla-template": "dev-master",
     "doctrine/inflector": "~1.1.0",
-    "ergebnis/composer-normalize": "^2.6",
     "extly/xt-renderers-for-joomla": "dev-master",
     "illuminate/support": "~5.4.0",
     "mnsami/composer-custom-directory-installer": "^1.1"
+  },
+  "require-dev": {
+    "ergebnis/composer-normalize": "^2.6"
   },
   "config": {
     "optimize-autoloader": true,
