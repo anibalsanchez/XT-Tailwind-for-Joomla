@@ -10,7 +10,7 @@ For future reference:
 
 The project has two repositories:
 
-- **The Joomla extension build files**, in this repository: [anibalsanchez/xt-tailwind-css](https://github.com/anibalsanchez/XT-Tailwind-for-Joomla)
+- **The Joomla extension build files**, in this repository: [anibalsanchez/XT-Tailwind-for-Joomla](https://github.com/anibalsanchez/XT-Tailwind-for-Joomla)
 - **The Tailwind template itself**, in this repository: [anibalsanchez/xt-tailwind-for-joomla-template](https://github.com/anibalsanchez/xt-tailwind-for-joomla-template). The dependency is managed with the composer plugin [mnsami/composer-custom-directory-installer](https://github.com/mnsami/composer-custom-directory-installer) to download the template files in the the `template` folder.
 
 To develop and design in the context of the template, please go to [anibalsanchez/xt-tailwind-for-joomla-template](https://github.com/anibalsanchez/xt-tailwind-for-joomla-template).
