@@ -2,13 +2,13 @@
 <extension method="upgrade" type="library" version="1.0">
   <name>XT Tailwind CSS Library</name>
   <libraryname>xttailwind</libraryname>
-  <version>4.1.0</version>
-  <creationDate>2020-11-16</creationDate>
+  <version>5.0.0</version>
+  <creationDate>2021-01-29</creationDate>
 
 	<author>Extly, CB</author>
 	<authorEmail>team@extly.com</authorEmail>
 	<authorUrl>https://www.extly.com</authorUrl>
-	<copyright>Copyright (c)2012-2020 Extly, CB All rights reserved.</copyright>
+	<copyright>Copyright (c)2012-2021 Extly, CB All rights reserved.</copyright>
 	<license>GNU/GPLv3 www.gnu.org/licenses/gpl-3.0.html</license>
 
   <description>

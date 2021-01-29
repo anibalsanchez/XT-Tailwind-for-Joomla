@@ -1,7 +1,7 @@
 {
-  "name": "extly-boilerplate-buildfiles-for-joomla",
+  "name": "extension-skeleton-for-joomla",
   "version": "3.1.0",
-  "description": "Boilerplate files for Joomla! extensions.",
+  "description": "A skeleton repository for Extly's Extensions for Joomla.",
   "main": "webpack.config.js",
   "scripts": {
     "build": "cross-env webpack --mode=production",
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anibalsanchez/extly-boilerplate-buildfiles-for-joomla.git"
+    "url": "git+https://github.com/anibalsanchez/extension-skeleton-for-joomla.git"
   },
   "keywords": [],
   "author": "Andrea Gentil - Anibal Sanchez",
   "license": "GPL-2.0-or-later",
   "bugs": {
-    "url": "https://github.com/anibalsanchez/extly-boilerplate-buildfiles-for-joomla/issues"
+    "url": "https://github.com/anibalsanchez/extension-skeleton-for-joomla/issues"
   },
-  "homepage": "https://github.com/anibalsanchez/extly-boilerplate-buildfiles-for-joomla#readme",
+  "homepage": "https://github.com/anibalsanchez/extension-skeleton-for-joomla#readme",
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.6",
