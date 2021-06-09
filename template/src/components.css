@@ -135,7 +135,7 @@
     @apply text-white no-underline;
     /* Just to force the style over prose */
     color: #ffffff !important;
-    color: rgba(255, 255, 255, var(--text-opacity)) !important;
+    color: rgba(255, 255, 255, 255) !important;
     text-decoration: none !important;
   }
 }
