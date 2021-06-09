@@ -1,0 +1,83 @@
+/* @import url('https://fonts.googleapis.com/css?family=Muli'); with fallback */
+
+/* vietnamese */
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Muli Regular'), local('Muli-Regular'),
+    url(https://fonts.gstatic.com/s/muli/v16/7Auwp_0qiz-afT3GLRrX.woff2)
+      format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+  font-display: fallback;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Muli Regular'), local('Muli-Regular'),
+    url(https://fonts.gstatic.com/s/muli/v16/7Auwp_0qiz-afTzGLRrX.woff2)
+      format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  font-display: fallback;
+}
+/* latin */
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Muli Regular'), local('Muli-Regular'),
+    url(https://fonts.gstatic.com/s/muli/v16/7Auwp_0qiz-afTLGLQ.woff2)
+      format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+  font-display: fallback;
+}
+
+/* / @import url('https://fonts.googleapis.com/css?family=Muli'); with fallback */
+
+body {
+  @apply font-sans leading-normal bg-white;
+}
+
+a {
+  @apply text-link no-underline;
+  /* Just to force the style over prose */
+  text-decoration: none !important;
+}
+
+p {
+  @apply mt-6;
+}
+
+h2 {
+  @apply text-3xl mb-3 font-bold;
+}
+
+h3 {
+  @apply text-2xl my-8 font-bold;
+}
+
+h4 {
+  @apply text-xl mt-6 mb-3 tracking-wide font-bold;
+}
+
+h5 {
+  @apply text-lg mt-4 mb-2 tracking-wide font-bold;
+}
+
+figcaption {
+  @apply text-sm;
+}
+
+blockquote {
+  @apply bg-grey-light rounded-lg px-6 py-4 my-4 italic;
+
+  p {
+    @apply mt-2;
+  }
+}
