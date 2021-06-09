@@ -1,5 +1,4 @@
 <?php
-/* This file has been prefixed by <PHP-Prefixer> for "XT Tailwind CSS" */
 
 /*
  * @package     XT Tailwind for Joomla
@@ -25,12 +24,12 @@ if (file_exists(JPATH_SITE.'/cli/sentry.php')) {
 
 require_once JPATH_ROOT.'/libraries/xttailwind/vendor/autoload.php';
 
-use XTP_BUILD\Extly\Infrastructure\Service\Cms\Joomla\ScriptHelper;
-use XTP_BUILD\Extly\Infrastructure\Support\HtmlAsset\Asset\InlineScriptTag;
-use XTP_BUILD\Extly\Infrastructure\Support\HtmlAsset\Asset\LinkCriticalStylesheetTag;
-use XTP_BUILD\Extly\Infrastructure\Support\HtmlAsset\Asset\ScriptTag;
-use XTP_BUILD\Extly\Infrastructure\Support\HtmlAsset\HtmlAssetTagsBuilder;
-use XTP_BUILD\Extly\Infrastructure\Support\HtmlAsset\Repository as HtmlAssetRepository;
+use Extly\Infrastructure\Service\Cms\Joomla\ScriptHelper;
+use Extly\Infrastructure\Support\HtmlAsset\Asset\InlineScriptTag;
+use Extly\Infrastructure\Support\HtmlAsset\Asset\LinkCriticalStylesheetTag;
+use Extly\Infrastructure\Support\HtmlAsset\Asset\ScriptTag;
+use Extly\Infrastructure\Support\HtmlAsset\HtmlAssetTagsBuilder;
+use Extly\Infrastructure\Support\HtmlAsset\Repository as HtmlAssetRepository;
 use Joomla\CMS\Factory as CMSFactory;
 use Joomla\CMS\HTML\HTMLHelper as CMSHTMLHelper;
 use Joomla\CMS\Uri\Uri as CMSUri;
