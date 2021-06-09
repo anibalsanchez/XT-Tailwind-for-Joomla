@@ -12,7 +12,7 @@ jsconfig.json
 # Composer
 composer.phar
 vendor/
-composer.lock
+composer*.lock
 
 # Node.js
 webpack-starter/node_modules/

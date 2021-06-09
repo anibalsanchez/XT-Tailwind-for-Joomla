@@ -1,6 +1,6 @@
 {
   "name": "anibalsanchez/xt-tailwind-css",
-  "description": "XT Tailwind - My Blog template, based on Tailwind CSS.",
+  "description": "Special composer configuration to download the template from a repo, and install it in the template directory.",
   "authors": [
     {
       "name": "Extly CB",
@@ -10,6 +10,7 @@
   "require": {
     "php": ">=5.6",
     "anibalsanchez/extly-html-asset-tags-builder": "dev-master",
+    "anibalsanchez/xt-tailwind-for-joomla-template": "dev-master",
     "doctrine/inflector": "~1.1.0",
     "extly/xt-renderers-for-joomla": "dev-master",
     "illuminate/support": "~5.4.0",
@@ -22,6 +23,11 @@
     "vendor-dir": "library/vendor"
   },
   "extra": {
+    "installer-paths": {
+      "./template/": [
+        "anibalsanchez/xt-tailwind-for-joomla-template"
+      ]
+    },
     "php-prefixer": {
       "project-name": "XT Tailwind CSS",
       "namespaces-prefix": "XTP_BUILD",
