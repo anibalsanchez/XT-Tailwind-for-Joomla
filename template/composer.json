@@ -1,0 +1,20 @@
+{
+  "name": "anibalsanchez/xt-tailwind-for-joomla-template",
+  "description": "XT Tailwind - My Blog template, based on Tailwind CSS.",
+  "authors": [
+    {
+      "name": "Extly CB",
+      "email": "team@extly.com"
+    }
+  ],
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "optimize-autoloader": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": ">=5.6"
+  }
+}
