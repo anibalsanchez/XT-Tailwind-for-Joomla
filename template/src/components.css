@@ -1,0 +1,264 @@
+.header-background {
+  @apply bg-grey-dark overflow-hidden opacity-90;
+}
+
+.navigation-block {
+  @apply static;
+}
+
+.logo-element {
+  @apply flex-initial w-5/6 text-xl;
+
+  @screen md {
+    @apply text-3xl;
+  }
+}
+
+.site-description {
+  @apply text-sm text-white mt-0;
+}
+
+.languages-element {
+  @apply flex-initial;
+
+  img {
+    @apply p-4;
+  }
+
+  li {
+    @apply list-none p-0;
+  }
+
+  ul {
+    @apply flex items-center mt-0 ml-6 pl-6 list-none p-0;
+  }
+
+  a {
+    @apply inline-block pl-2 whitespace-nowrap text-sm;
+  }
+
+  li.lang-active a {
+    text-decoration: underline !important;
+  }
+}
+
+.about-me img {
+  @apply rounded-full;
+}
+
+.aside-block {
+  ul {
+    @apply my-6 list-disc pl-4;
+    padding-inline-start: 1rem;
+  }
+
+  li > ul {
+    @apply mt-0;
+  }
+}
+
+.main-container-block {
+  @apply static text-grey;
+}
+
+.top-32-lite {
+  top: 7rem;
+}
+
+.breadcrumbs-block {
+  @apply flex-row pr-4 bg-grey-light opacity-50 rounded;
+
+  li {
+    @apply flex-initial whitespace-nowrap px-2 py-2;
+  }
+
+  ul {
+    @apply flex flex-wrap list-none p-0 mt-0 px-2 py-4 mb-6;
+  }
+}
+
+.divider img {
+  @apply inline-block;
+}
+
+.search-block {
+  @apply pt-4;
+}
+
+.blog-block {
+  .article-info-term {
+    display: none;
+  }
+
+  code {
+    @apply block p-4;
+
+    /* Force the styles */
+    padding: 1rem !important;
+    font-size: 1em !important;
+    color: #f8f8f2 !important;
+    font-weight: 400 !important;
+  }
+
+  dl.article-info dd {
+    @apply mt-2 mb-4 text-lg;
+  }
+
+  img {
+    @apply my-4 border border-link rounded-lg;
+  }
+
+  .items-leading {
+    @apply pb-16;
+  }
+
+  .items-row {
+    @apply pb-8;
+  }
+}
+
+.tags {
+  @apply list-none my-4 p-0;
+
+  li {
+    @apply inline-block rounded-full bg-blue-happy px-4 py-2 text-xs mr-4 mt-2;
+    /* Just to force the style over prose */
+    padding-left: 1rem !important;
+  }
+
+  /* To avoid prose disc */
+  li::before {
+    content: none !important;
+  }
+
+  li a {
+    @apply text-white no-underline;
+    /* Just to force the style over prose */
+    color: #ffffff !important;
+    color: rgba(255, 255, 255, var(--text-opacity)) !important;
+    text-decoration: none !important;
+  }
+}
+
+.pagination {
+  @apply flex-1 flex justify-between;
+
+  p.counter {
+    @apply hidden;
+  }
+
+  ul {
+    @apply flex-1 flex justify-between pl-0;
+  }
+
+  li {
+    @apply hidden relative items-center border border-gray-300 -ml-px bg-white text-sm leading-5 font-medium text-gray-500 rounded-md;
+  }
+
+  li.pagination-prev,
+  li.pagination-next {
+    @apply inline-flex;
+  }
+
+  li span {
+    @apply px-3 py-2;
+  }
+
+  li a {
+    @apply px-3 py-2 transition ease-in-out duration-150;
+  }
+
+  .pagenav {
+    @apply active:bg-gray-100 active:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:ring-blue-400 hover:text-gray-400;
+  }
+
+  @screen sm {
+    @apply flex-1 flex items-center justify-between;
+
+    ul {
+      @apply list-none relative z-0 flex-none inline-flex shadow-sm;
+    }
+
+    li {
+      @apply inline-flex rounded-none;
+    }
+
+    li a {
+      @apply -ml-px;
+    }
+
+    p.counter {
+      @apply block m-0 text-sm leading-5 text-gray-700;
+    }
+
+    ul:first-child {
+      @apply ml-0;
+    }
+
+    li.pagination-start {
+      @apply rounded-l-md;
+    }
+
+    li.pagination-end {
+      @apply rounded-r-md;
+    }
+  }
+}
+
+div.blog-block.prose > div.blog-featured > div.pagination > ul > li {
+  @apply pl-0;
+}
+
+div.blog-block.prose > div.blog-featured > div.pagination > ul > li:before {
+  content: none !important;
+}
+
+.pager {
+  @apply flex-1 flex justify-between pl-0;
+
+  li {
+    @apply relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm leading-5 font-medium rounded-md text-gray-700 bg-white;
+
+    /* To avoid prose padding */
+    padding-left: 1rem !important;
+  }
+
+  /* To avoid prose disc */
+  li::before {
+    content: none !important;
+  }
+
+  a {
+    @apply active:bg-gray-100 active:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:ring-blue-400 hover:text-gray-400;
+  }
+}
+
+.footer-element {
+  @apply bg-oldlace text-center text-orange-hot;
+
+  a {
+    @apply text-link no-underline;
+  }
+}
+
+.aside-block {
+  .moduletable {
+    @apply rounded overflow-hidden shadow-lg bg-white p-4 mt-12;
+  }
+
+  .moduletable h3 {
+    @apply bg-gray-200 rounded-full text-center px-3 py-1;
+  }
+
+  .moduletable ul {
+    list-style-type: circle;
+
+    li {
+      @apply leading-8;
+    }
+  }
+}
+
+.tagspopular a {
+  @apply block;
+}

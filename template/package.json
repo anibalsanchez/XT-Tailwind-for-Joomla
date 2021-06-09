@@ -1,0 +1,53 @@
+{
+  "name": "xt-tailwind-for-joomla",
+  "version": "5.0.0",
+  "description": "XT Tailwind - My Blog template, based on Tailwind CSS.",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server",
+    "serve": "cross-env NODE_ENV=development webpack-dev-server",
+    "dev-proxy": "cross-env NODE_ENV=development webpack --colors --watch --hide-modules",
+    "dev-build": "cross-env NODE_ENV=development webpack",
+    "build": "cross-env NODE_ENV=production webpack --no-progress",
+    "prod": "cross-env NODE_ENV=production webpack --no-progress",
+    "update-browserslist": "npx browserslist@latest --update-db"
+  },
+  "keywords": [
+    "Tailwind, CSS, Webpack, PostCSS, cssnano, purgecss"
+  ],
+  "author": "Extly CB",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.2.0",
+    "@tailwindcss/forms": "^0.3.2",
+    "@tailwindcss/line-clamp": "^0.2.0",
+    "@tailwindcss/typography": "^0.4.0",
+    "autoprefixer": "^10.2.3",
+    "cssnano": "^4.1.10",
+    "cssnano-preset-advanced": "^4.0.7",
+    "postcss": "^8.2.4",
+    "postcss-clean": "^1.2.1",
+    "postcss-import": "^14.0.0",
+    "postcss-loader": "^4.2.0",
+    "postcss-nested": "^5.0.3",
+    "tailwindcss": "^2.1.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.12",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "cross-env": "^7.0",
+    "css-loader": "^4.2.1",
+    "filemanager-webpack-plugin": "^2.0.5",
+    "glob": "^7.1.6",
+    "html-webpack-plugin": "^4.3.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-copy-on-build-plugin": "^1.0.4",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "config": {
+    "proxyURL": "http://localhost:8080/index.php",
+    "extraCCProxyFolder": "/var/www/html/templates/xttailwindcss"
+  }
+}
