@@ -2,7 +2,7 @@
 <extension method="upgrade" type="library" version="1.0">
   <name>XT Tailwind CSS Library</name>
   <libraryname>xttailwind</libraryname>
-  <version>5.0.0</version>
+  <version>5.1.0</version>
   <creationDate>2021-06-09</creationDate>
 
 	<author>Extly, CB</author>
