@@ -1,4 +1,5 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "XT Tailwind CSS" */
 
 /*
  * @package     Extly Infrastructure Support for Joomla
@@ -10,17 +11,17 @@
  * @see         https://www.extly.com
  */
 
-namespace Extly\Infrastructure\Service\Cms\Joomla;
+namespace XTP_BUILD\Extly\Infrastructure\Service\Cms\Joomla;
 
-use Extly\Infrastructure\Support\HtmlAsset\Asset\InlineScriptTag;
-use Extly\Infrastructure\Support\HtmlAsset\Asset\InlineStyleTag;
-use Extly\Infrastructure\Support\HtmlAsset\Asset\LinkCriticalStylesheetTag;
-use Extly\Infrastructure\Support\HtmlAsset\Asset\LinkDeferStylesheetTag;
-use Extly\Infrastructure\Support\HtmlAsset\Asset\LinkStylesheetByScript;
-use Extly\Infrastructure\Support\HtmlAsset\Asset\ScriptTag;
-use Extly\Infrastructure\Support\HtmlAsset\HtmlAssetTagsBuilder;
-use Extly\Infrastructure\Support\HtmlAsset\Repository as HtmlAssetRepository;
-use Extly\Infrastructure\Support\UrlHelper;
+use XTP_BUILD\Extly\Infrastructure\Support\HtmlAsset\Asset\InlineScriptTag;
+use XTP_BUILD\Extly\Infrastructure\Support\HtmlAsset\Asset\InlineStyleTag;
+use XTP_BUILD\Extly\Infrastructure\Support\HtmlAsset\Asset\LinkCriticalStylesheetTag;
+use XTP_BUILD\Extly\Infrastructure\Support\HtmlAsset\Asset\LinkDeferStylesheetTag;
+use XTP_BUILD\Extly\Infrastructure\Support\HtmlAsset\Asset\LinkStylesheetByScript;
+use XTP_BUILD\Extly\Infrastructure\Support\HtmlAsset\Asset\ScriptTag;
+use XTP_BUILD\Extly\Infrastructure\Support\HtmlAsset\HtmlAssetTagsBuilder;
+use XTP_BUILD\Extly\Infrastructure\Support\HtmlAsset\Repository as HtmlAssetRepository;
+use XTP_BUILD\Extly\Infrastructure\Support\UrlHelper;
 use Joomla\CMS\Factory as CMSFactory;
 use Joomla\CMS\HTML\HTMLHelper as CMSHTMLHelper;
 use Joomla\CMS\Uri\Uri as CMSUri;

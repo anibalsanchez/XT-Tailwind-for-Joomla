@@ -1,0 +1,19 @@
+{
+  "name": "anibalsanchez/create-pattern",
+  "version": "2.1.0",
+  "description":
+    "A lightweight PHP implementation of the Static Create Pattern using a trait.",
+  "authors": [
+    {
+      "name": "Andrea Gentil & Anibal Sanchez, Extly CB",
+      "email": "team@extly.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Extly\\Infrastructure\\Creator\\": "src/"
+    }
+  },
+  "require": {},
+  "license": "MIT"
+}
