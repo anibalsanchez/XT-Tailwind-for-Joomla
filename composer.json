@@ -9,7 +9,7 @@
   ],
   "require": {
     "php": ">=5.6",
-    "anibalsanchez/extly-html-asset-tags-builder": "dev-master",
+    "anibalsanchez/extly-html-asset-tags-builder": "^1.7.0",
     "doctrine/inflector": "~1.1.0",
     "extly/xt-renderers-for-joomla": "dev-master",
     "illuminate/support": "~5.4.0",
