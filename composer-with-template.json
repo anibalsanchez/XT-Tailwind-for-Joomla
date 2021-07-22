@@ -12,7 +12,7 @@
     "anibalsanchez/extly-html-asset-tags-builder": "^1.7.0",
     "anibalsanchez/xt-tailwind-for-joomla-template": "dev-master",
     "doctrine/inflector": "~1.1.0",
-    "extly/xt-renderers-for-joomla": "dev-master",
+    "extly/xt-renderers-for-joomla": "^0.0.1",
     "illuminate/support": "~5.4.0",
     "mnsami/composer-custom-directory-installer": "^2.0"
   },
