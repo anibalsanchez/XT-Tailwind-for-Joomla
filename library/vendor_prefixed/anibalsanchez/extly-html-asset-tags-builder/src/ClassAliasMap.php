@@ -14,5 +14,11 @@
 use XTP_BUILD\Extly\Infrastructure\Support\HtmlAsset\Asset\LinkDeferStylesheetTag;
 use XTP_BUILD\Extly\Infrastructure\Support\HtmlAsset\Asset\LinkStylesheetByScript;
 
-class_alias(LinkDeferStylesheetTag::class, 'XTP_BUILD\Extly\Infrastructure\Support\HtmlAsset\Asset\LinkPreloadStylesheetTag');
-class_alias(LinkStylesheetByScript::class, 'XTP_BUILD\Extly\Infrastructure\Support\HtmlAsset\Asset\LinkStylesheetByScriptTag');
+class_alias(
+    LinkDeferStylesheetTag::class,
+    'XTP_BUILD\Extly\Infrastructure\Support\HtmlAsset\Asset\LinkPreloadStylesheetTag'
+);
+class_alias(
+    LinkStylesheetByScript::class,
+    'XTP_BUILD\Extly\Infrastructure\Support\HtmlAsset\Asset\LinkStylesheetByScriptTag'
+);

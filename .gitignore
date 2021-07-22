@@ -14,3 +14,11 @@ node_modules/
 /template/*.xml
 
 package-lock.json
+
+library/lib_xttailwind.xml
+package/pkg_xttailwind.xml
+
+template/css/template.js
+template/css/template.css
+template/dist/main.css
+template/dist/main.js
