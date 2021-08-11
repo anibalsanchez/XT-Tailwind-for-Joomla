@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash -e
 
 # Special composer configuration to download the template from a repo, and
 # install it in the template directory.
