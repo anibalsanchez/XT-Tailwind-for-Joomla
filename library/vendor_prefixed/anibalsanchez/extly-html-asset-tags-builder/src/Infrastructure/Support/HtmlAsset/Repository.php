@@ -5,7 +5,7 @@
  * @package     Extly Infrastructure Support
  *
  * @author      Extly, CB. <team@extly.com>
- * @copyright   Copyright (c)2012-2020 Extly, CB. All rights reserved.
+ * @copyright   Copyright (c)2012-2021 Extly, CB. All rights reserved.
  * @license     http://www.opensource.org/licenses/mit-license.html  MIT License
  *
  * @see         https://www.extly.com
@@ -22,11 +22,11 @@ final class Repository
     use CreatorTrait;
     use SingletonTrait;
 
-    const HTML_POSITION = 'position';
-    const HTML_PRIORITY = 'priority';
+    public const HTML_POSITION = 'position';
+    public const HTML_PRIORITY = 'priority';
 
-    const GLOBAL_POSITION_HEAD = 'head';
-    const GLOBAL_POSITION_BODY = 'bottom';
+    public const GLOBAL_POSITION_HEAD = 'head';
+    public const GLOBAL_POSITION_BODY = 'bottom';
 
     private $assetTagCollection;
 

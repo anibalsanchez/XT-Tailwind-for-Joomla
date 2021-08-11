@@ -1,6 +1,6 @@
 {
   "name": "anibalsanchez/extly-html-asset-tags-builder",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "description":
     "Beyond the JDocument, the Asset Tags Builder manages the generation of script and style tags for an Html Document.",
   "authors": [

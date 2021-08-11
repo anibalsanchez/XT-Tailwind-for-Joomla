@@ -5,7 +5,7 @@
  * @package     Extly Infrastructure Support
  *
  * @author      Extly, CB. <team@extly.com>
- * @copyright   Copyright (c)2012-2020 Extly, CB. All rights reserved.
+ * @copyright   Copyright (c)2012-2021 Extly, CB. All rights reserved.
  * @license     http://www.opensource.org/licenses/mit-license.html  MIT License
  *
  * @see         https://www.extly.com
@@ -19,7 +19,7 @@ final class LinkStylesheetByMediaPrint extends HtmlAssetTagAbstract implements H
 {
     use CreatorTrait;
 
-    const DEFAULT_ATTRIBUTES = [
+    public const DEFAULT_ATTRIBUTES = [
         'rel' => 'stylesheet',
         'media' => 'print',
         'onload' => 'this.media="all"; this.onload=null;',
