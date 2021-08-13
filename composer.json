@@ -17,6 +17,7 @@
   },
   "config": {
     "optimize-autoloader": true,
+    "platform-check": false,
     "preferred-install": "dist",
     "sort-packages": true,
     "vendor-dir": "library/vendor"
