@@ -40,7 +40,7 @@ class Pkg_[EXTENSION_CLASS_NAME]InstallerScript
      *
      * @var string
      */
-    protected $minimumPHPVersion = '5.6.0';
+    protected $minimumPHPVersion = '7.1.0';
 
     /**
      * The minimum Joomla! version required to install this extension.
@@ -54,7 +54,7 @@ class Pkg_[EXTENSION_CLASS_NAME]InstallerScript
      *
      * @var string
      */
-    protected $maximumJoomlaVersion = '4.9.99';
+    protected $maximumJoomlaVersion = '3.99.99';
 
     /**
      * A list of extensions (modules, plugins) to enable after installation. Each item has four values, in this order:
