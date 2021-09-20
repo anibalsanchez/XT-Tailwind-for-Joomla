@@ -23,7 +23,9 @@ if (file_exists(JPATH_SITE.'/cli/sentry.php')) {
     }
 }
 
-require_once JPATH_ROOT.'/libraries/xttailwind/vendor/autoload.php';
+if (!@include_once(JPATH_ROOT.'/libraries/xttailwind/vendor/autoload.php')) {
+  return;
+}
 
 use XTP_BUILD\Extly\Infrastructure\Service\Cms\Joomla\ScriptHelper;
 use XTP_BUILD\Extly\Infrastructure\Support\HtmlAsset\Asset\InlineScriptTag;
