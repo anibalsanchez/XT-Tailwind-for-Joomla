@@ -12,7 +12,9 @@
 
 defined('_JEXEC') or die;
 
-require_once JPATH_ROOT.'/libraries/xttailwind/vendor/autoload.php';
+if (!@include_once(JPATH_ROOT.'/libraries/xttailwind/vendor/autoload.php')) {
+  return;
+}
 
 use Extly\Infrastructure\Service\Cms\Joomla\ScriptHelper;
 use Extly\Infrastructure\Support\HtmlAsset\Asset\InlineScriptTag;
