@@ -1,287 +1,127 @@
 <!DOCTYPE html>
-<html lang="en-gb" dir="ltr">
+<html lang="es-es" dir="ltr">
 
 <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport"
 		content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-	<meta charset="utf-8" />
-	<meta name="author" content="Aníbal" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<base href="http://blog.lndo.site/index.php">
+
+	<meta charset="utf-8">
+	<meta name="author" content="Aníbal">
+	<meta property="og:title"
+		content="Qu&amp;eacute; Hacer Despu&amp;eacute;s del Lanzamiento de Joomla 4">
+	<meta property="og:type" content="article">
+	<meta property="og:description"
+		content="El 17 de agosto, despu&amp;eacute;s de cinco a&amp;ntilde;os de trabajo, se&amp;nbsp;public&amp;oacute; Joomla 4. Ese mismo d&amp;iacute;a, tambi&amp;eacute;n se&amp;nbsp;public&amp;oacute; Joomla 3.10 como &amp;uacute;ltima versi&amp;oacute;n intermedia de la rama de Joomla 3. Si has estado usando Joomla desde el 17 de agosto de 2005, probablemente eres consciente de toda la alegr&amp;iacute;a y frustraci&amp;oacute;n a partes iguales de usar Joomla y sus extensiones. Para facilitar la transici&amp;oacute;n, compartimos contigo las siguientes recomendaciones para guiarte en la planificaci&amp;oacute;n de la migraci&amp;oacute;n.">
+	<meta property="og:locale" content="es_ES">
+	<meta property="og:site_name" content="Dev Site blog">
+	<meta property="og:image"
+		content="https://blog.anibalhsanchez.com/images/2021-08-joomla-4-launch.jpg">
+	<meta property="og:image:alt"
+		content="Qu&amp;eacute; Hacer Despu&amp;eacute;s del Lanzamiento de Joomla 4">
+	<meta property="og:url"
+		content="http://blog.lndo.site/index.php?option=com_content&amp;amp;view=article&amp;amp;id=78:qu%C3%A9-hacer-despu%C3%A9s-del-lanzamiento-de-joomla-4&amp;amp;catid=9&amp;amp;lang=es&amp;amp;Itemid=103">
+	<meta property="article:published_time"
+		content="2021-08-18T08:13:54+00:00">
+	<meta property="article:modified_time"
+		content="2021-08-18T14:34:34+00:00">
+	<meta property="article:section" content="Blogueando">
+	<meta property="article:author" content="anibal.sanchez">
+	<meta property="fb:app_id" content="233252297250364">
+	<meta property="twitter:title"
+		content="Qu&amp;eacute; Hacer Despu&amp;eacute;s del Lanzamiento de Joomla 4">
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:description"
+		content="El 17 de agosto, despu&amp;eacute;s de cinco a&amp;ntilde;os de trabajo, se&amp;nbsp;public&amp;oacute; Joomla 4. Ese mismo d&amp;iacute;a, tambi&amp;eacute;n se&amp;nbsp;public&amp;oacute; Joomla 3.10 como &amp;uacute;ltima versi&amp;oacute;n intermedia de la rama de Joomla 3. Si has estado usando Joomla desde el 17 de agosto de 2005, probablemente eres consciente de toda la alegr&amp;iacute;a y frustraci&amp;oacute;n a partes iguales de usar Joomla y sus extensiones. Para facilitar la transici&amp;oacute;n, compartimos contigo las siguientes recomendaciones para guiarte en la planificaci&amp;oacute;n de la migraci&amp;oacute;n.">
+	<meta property="twitter:image:src"
+		content="https://blog.anibalhsanchez.com/images/2021-08-joomla-4-launch.jpg">
+	<meta property="twitter:image:alt"
+		content="Qu&amp;eacute; Hacer Despu&amp;eacute;s del Lanzamiento de Joomla 4">
+	<meta property="twitter:creator" content="An&amp;iacute;bal">
 	<meta name="description"
-		content="Perdido y Encontrado en la Tecnología // selector: 'anibal_sanchez\ - Mi Blog Personal" />
+		content="Perdido y Encontrado en la Tecnología / Mi Blog Personal">
 	<meta name="generator"
-		content="Joomla! - Open Source Content Management" />
-	<title>Geometry field oddities between MySQL 5.6 and MySQL 5.7
-	</title>
+		content="Joomla! - Open Source Content Management">
+	<title>Qué Hacer Después del Lanzamiento de Joomla 4</title>
+	<link href="/favicon.ico" rel="shortcut icon"
+		type="image/vnd.microsoft.icon">
 	<link
-		href="https://blog.anibalhsanchez.com/en/10-blogging/lost-and-found/51-geometry-field-oddities-between-mysql-5-6-and-mysql-5-7.amp.html"
-		rel="amphtml" />
-	<link href="/templates/xttailwindcss/favicon.ico"
-		rel="shortcut icon" type="image/vnd.microsoft.icon" />
+		href="/media/mod_languages/css/template.min.css?23c1437ab91d2c5254a372dabd211dc9"
+		rel="stylesheet" />
+	<link
+		href="/media/vendor/joomla-custom-elements/css/joomla-alert.min.css?0.2.0"
+		rel="stylesheet" />
 	<style>
-		.xt-youtube-video-optimizer {
-			position: relative;
-			padding-bottom: 56.23%;
-			height: 0;
-			overflow: hidden;
-			max-width: 100%;
-			background: #000
-		}
-
-		.xt-youtube-video-optimizer iframe {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			z-index: 100;
-			background: 0 0
-		}
-
-		.xt-youtube-video-optimizer img {
-			bottom: 0;
-			display: block;
-			left: 0;
-			margin: auto;
-			max-width: 100%;
-			width: 100%;
-			position: absolute;
-			right: 0;
-			top: 0;
-			border: none;
-			height: auto;
-			cursor: pointer;
-			-webkit-transition: .4s;
-			-moz-transition: .4s;
-			transition: .4s
-		}
-
-		.xt-youtube-video-optimizer img:hover {
-			-webkit-filter: brightness(75%)
-		}
-
 		.xt-youtube-video-optimizer .play {
-			height: 72px;
-			width: 72px;
-			left: 50%;
-			top: 50%;
-			margin-left: -36px;
-			margin-top: -36px;
-			position: absolute;
-			cursor: pointer
-		}
-
-		.xt-youtube-video-optimizer .play {
-			background: url("https://d1hvvp61iyzquq.cloudfront.net/media/plg_XTYouTubeVideoOptimizer/images/button0.png") no-repeat;
+			background: url("http://blog.lndo.site/media/plg_XTYouTubeVideoOptimizer/images/button0.png") no-repeat;
 		}
 	</style>
+	<script type="application/json"
+		class="joomla-script-options new">{"joomla.jtext":{"ERROR":"Error","MESSAGE":"Mensaje","NOTICE":"Aviso","WARNING":"Advertencia","JCLOSE":"Close","JOK":"OK","JOPEN":"Open"},"system.paths":{"root":"","rootFull":"http:\/\/blog.lndo.site\/","base":"","baseFull":"http:\/\/blog.lndo.site\/"},"csrf.token":"fdc5a94bc35bc9ec7d3110a7ba58b820"}</script>
 	<script
-		src="https://d1hvvp61iyzquq.cloudfront.net/media/plg_system_adaptiveimagesforjoomla/js/lazyload.min.js?2222a2d10b7feb98a066fe8af9cade49"
-		defer></script>
-	<script>
-		"use strict"; document.addEventListener("DOMContentLoaded", function () { function a(a, b, c) { return ("<img src=\"https://" + b + "/vi/ID/" + c + "\">").replace("ID", a) + "<div class=\"play\"></div>" } function b(a, b) { return ("<img src=\"" + b + "\">").replace("ID", a) + "<div class=\"play\"></div>" } function c() { var a = document.createElement("iframe"), b = "https://www.youtube.com/embed/ID?autoplay=1".replace("ID", this.dataset.id); window.ga && ga("send", "event", "Videos", "play", b), a.setAttribute("src", b), this.dataset.frameborder ? a.setAttribute("frameborder", this.dataset.frameborder) : a.setAttribute("frameborder", "0"), this.dataset.allowfullscreen ? a.setAttribute("allowfullscreen", this.dataset.allowfullscreen) : a.setAttribute("allowfullscreen", "1"), this.dataset.width && a.setAttribute("width", this.dataset.width), this.dataset.height && a.setAttribute("height", this.dataset.height), this.dataset.title && a.setAttribute("title", this.dataset.title), this.parentNode.replaceChild(a, this) } var d, e, f = document.getElementsByClassName("xt-youtube-video-optimizer"); for (e = 0; e < f.length; e++) { d = document.createElement("div"); var g = f[e]; if (d.setAttribute("data-id", g.dataset.id), g.dataset.frameborder && d.setAttribute("data-frameborder", g.dataset.frameborder), g.dataset.allowfullscreen && d.setAttribute("data-allowfullscreen", g.dataset.allowfullscreen), g.dataset.width && d.setAttribute("data-width", g.dataset.width), g.dataset.height && d.setAttribute("data-height", g.dataset.height), g.dataset.title && d.setAttribute("data-title", g.dataset.title), g.dataset.thumbnail) d.innerHTML = b(g.dataset.id, g.dataset.thumbnail); else { var h = "https://d1hvvp61iyzquq.cloudfront.net/hqdefault.jpg"; g.classList && g.classList.contains("hd-thumbnail") && (h = "https://d1hvvp61iyzquq.cloudfront.net/sddefault.jpg"), d.innerHTML = a(g.dataset.id, "i.ytimg.com", h) } d.onclick = c, g.appendChild(d) } });
-
-
-		document.cookie = 'resolution=' + Math.max(screen.width, screen.height) + ("devicePixelRatio" in window ? "," + devicePixelRatio : ",1") + '; path=/';
-		document.addEventListener("DOMContentLoaded", function () { lazyload(document.querySelectorAll(".xt-lazy-img")); });
-	</script>
-	<meta property="og:title"
-		content="Geometry field oddities between MySQL 5.6 and MySQL 5.7" />
-	<meta property="og:type" content="article" />
-	<meta property="og:description"
-		content="In general, Akeeba backups are infallible. I&#039;m used to moving backups between servers blindly, with the kickstart restore or the Unite command line. However, MySQL GEOMETRY fields are a hard case. It seems that MySQL 5.6 - MySQL 5.7 transitions are rough. Restoring a backup on a MySQL failed due to a POINT field. After searching, it seems that there&#039;s no solution, and a POINT field can&#039;t be exported and imported between MySQL versions. # Failed with error: 1416 -- Cannot get geometry object from data y..." />
-	<meta property="og:locale" content="en_GB" />
-	<meta property="og:site_name"
-		content="Anibal&#039;s Blog // selector: &#039;anibal_sanchez&#039; - Lost and Found in Technology" />
-	<meta property="og:url"
-		content="https://blog.anibalhsanchez.com/en/10-blogging/lost-and-found/51-geometry-field-oddities-between-mysql-5-6-and-mysql-5-7.html" />
-	<meta property="article:published_time"
-		content="2019-06-07T16:58:22+00:00" />
-	<meta property="article:modified_time"
-		content="2019-06-07T17:01:51+00:00" />
-	<meta property="article:section" content="Lost and Found" />
-	<meta property="article:author" content="anibal.sanchez" />
-	<meta property="fb:app_id" content="233252297250364" />
-	<meta property="twitter:title"
-		content="Geometry field oddities between MySQL 5.6 and MySQL 5.7" />
-	<meta property="twitter:card" content="summary_large_image" />
-	<meta property="twitter:description"
-		content="Perdido y Encontrado en la Tecnolog&iacute;a // selector: &#039;anibal_sanchez\ - Mi Blog Personal" />
-	<meta property="twitter:creator" content="An&iacute;bal" />
+		src="/media/system/js/core.min.js?c47dc50c9a8b9c85d135bbac3f47a6e9b4100832"></script>
+	<script
+		src="/media/system/js/messages-es5.min.js?3cfa02e233a3320687fe9b7d1134d90c6d88e40a"
+		nomodule defer></script>
+	<script
+		src="/media/system/js/messages.min.js?7425e8d1cb9e4f061d5e30271d6d99b085344117"
+		type="module"></script>
+	<script
+		src="http://blog.lndo.site/media/plg_XTYouTubeVideoOptimizer/js/youtubevideooptimizer.min.js?23c1437ab91d2c5254a372dabd211dc9"></script>
+	<script
+		type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"Person","name":"An\u00edbal S\u00e1nchez","url":"http:\/\/blog.anibalhsanchez.com","sameAs":["@anibal_sanchez"]}</script>
+	<script>!function (e) { var t = document.createElement("link"); t.rel = "stylesheet", t.href = "http://blog.lndo.site/media/plg_XTYouTubeVideoOptimizer/css/youtubevideooptimizer.min.css?23c1437ab91d2c5254a372dabd211dc9", t.type = "text/css"; var n = document.getElementsByTagName("link")[0]; n.parentNode.insertBefore(t, n) }();</script>
+	<noscript>
+		<link rel="stylesheet" type="text/css"
+			href="http://blog.lndo.site/media/plg_XTYouTubeVideoOptimizer/css/youtubevideooptimizer.min.css?23c1437ab91d2c5254a372dabd211dc9">
+	</noscript>
+	<link rel="stylesheet" type="text/css"
+		href="/templates/xttailwindcss/css/template.css?23c1437ab91d2c5254a372dabd211dc9">
+	<script defer
+		src="/templates/xttailwindcss/js/prism.js?23c1437ab91d2c5254a372dabd211dc9"></script>
 	<script defer src="https://buttons.github.io/buttons.js"></script>
+	<script defer
+		src="http://blog.lndo.site/media/plg_XTYouTubeVideoOptimizer/js/youtubevideooptimizer.min.js?23c1437ab91d2c5254a372dabd211dc9"></script>
+	<style>
+		.xt-youtube-video-optimizer .play {
+			background: url("http://blog.lndo.site/media/plg_XTYouTubeVideoOptimizer/images/button0.png") no-repeat;
+		}
+	</style>
+	<script defer
+		src="http://blog.lndo.site/media/lib_xt-gdpr-cookie-consent-banner/js/xt-gdpr-cookie-consent-banner.min.js?23c1437ab91d2c5254a372dabd211dc9"></script>
 	<script defer crossorigin="anonymous"
 		src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
 	<script defer crossorigin="anonymous"
 		src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
 	<script defer
-		src="https://d1hvvp61iyzquq.cloudfront.net/media/lib_xtdir4alg/app/js/autocomplete.min.js"></script>
-	<style>
-		.aa-input-container {
-			display: inline-block;
-			position: relative
-		}
-
-		.aa-input-search {
-			width: 300px;
-			padding: 12px 28px 12px 12px;
-			border: 2px solid #e4e4e4;
-			border-radius: 4px;
-			-webkit-transition: .2s;
-			transition: .2s;
-			box-shadow: 4px 4px 0 rgba(241, 241, 241, .35);
-			font-size: 11px;
-			box-sizing: border-box;
-			color: #333;
-			-webkit-appearance: none;
-			-moz-appearance: none;
-			appearance: none
-		}
-
-		.aa-input-search::-webkit-search-cancel-button,
-		.aa-input-search::-webkit-search-decoration,
-		.aa-input-search::-webkit-search-results-button,
-		.aa-input-search::-webkit-search-results-decoration {
-			display: none
-		}
-
-		.aa-input-search:focus {
-			outline: 0;
-			border-color: #3a96cf;
-			box-shadow: 4px 4px 0 rgba(58, 150, 207, .1)
-		}
-
-		.aa-input-icon {
-			height: 16px;
-			width: 16px;
-			position: absolute;
-			top: 40%;
-			right: 16px;
-			-webkit-transform: translateY(-50%);
-			transform: translateY(-50%);
-			fill: #e4e4e4
-		}
-
-		.aa-hint {
-			color: #e4e4e4
-		}
-
-		.aa-dropdown-menu {
-			background-color: #fff;
-			border: 2px solid rgba(228, 228, 228, .6);
-			border-top-width: 1px;
-			font-family: Montserrat, sans-serif;
-			margin-top: 10px;
-			box-shadow: 4px 4px 0 rgba(241, 241, 241, .35);
-			font-size: 11px;
-			border-radius: 4px;
-			box-sizing: border-box;
-			width: 100%
-		}
-
-		@media (min-width:768px) {
-			.aa-dropdown-menu {
-				width: 360px
-			}
-		}
-
-		.aa-suggestion {
-			padding: 12px;
-			border-top: 1px solid rgba(228, 228, 228, .6);
-			cursor: pointer;
-			-webkit-transition: .2s;
-			transition: .2s;
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: flex;
-			-webkit-box-pack: justify;
-			-ms-flex-pack: justify;
-			justify-content: space-between;
-			-webkit-box-align: center;
-			-ms-flex-align: center;
-			align-items: center
-		}
-
-		.aa-suggestion.aa-cursor,
-		.aa-suggestion:hover {
-			background-color: rgba(241, 241, 241, .35)
-		}
-
-		.aa-suggestion>span:first-child {
-			color: #333
-		}
-
-		.aa-suggestion>span:last-child {
-			text-transform: uppercase;
-			color: #a9a9a9
-		}
-
-		.aa-suggestion>span:first-child em,
-		.aa-suggestion>span:last-child em {
-			display: inline-block;
-			font-weight: 700;
-			font-style: normal;
-			background-color: rgba(58, 150, 207, .1)
-		}
-
-		.aa-dropdown-menu p {
-			padding: 8px
-		}
-
-		.xt-suggestion-with-image {
-			padding-left: 12px;
-			display: flex !important;
-			width: 100%
-		}
-
-		.xt-suggestion-image {
-			flex: 0 1 auto !important
-		}
-
-		.xt-suggestion-text {
-			flex: 1 1 auto !important;
-			padding-left: 8px
-		}
-
-		.xt-suggestion-subtext {
-			display: inline-block;
-			font-size: 8px;
-			padding-top: 4px
-		}
-
-		.xt-suggestion-image img {
-			width: 50px;
-			margin-bottom: 8px;
-			margin-right: 8px
-		}
-
-		.autocomplete-footer-advanced-search {
-			display: block
-		}
-
-		.algolia-advanced-search-link {
-			float: left;
-			margin-left: 12px;
-			text-decoration: none;
-			color: #333
-		}
-
-		.algolia-advanced-search-link:hover {
-			text-decoration: none
-		}
-
-		.algolia-powered-by-link {
-			float: right;
-			margin-right: 5px
-		}
-	</style>
-	<script>var xtAutoComplete = window.xtAutoComplete || []; xtAutoComplete.push({ "translations": { "PLACEHOLDER": "Search ...", "MORE_SEARCH_RESULTS_LABEL": "More Search Results" }, "algoliaApplicationId": "4151SVU45X", "algoliaSearchOnlyApiKey": "7266267cf3fac0babe2612e785910a38", "algoliaIndexName": "blog-anibalhsanchez-com_en-GB", "name": "name", "imageUrl": null, "hits": 7, "placeholder": null, "connectorFilter": false, "showNoResults": false, "noResultsLabel": null, "noResultsTemplate": null, "url": "url", "newWindow": false, "advancedSearchLinkUrl": null, "advancedSearchLinkId": null, "advancedSearchIconLinkId": null, "showAlgoliaFooter": true, "customAutocompleteFooter": "<div id='alg-autocomplete-footer' class='autocomplete-footer'>\n<div class='autocomplete-footer-branding'>\n    <a href='https:\/\/www.algolia.com' class='algolia-powered-by-link' title='Algolia' target='_blank'>\n        <svg width='130' viewBox='0 0 130 18' xmlns='http:\/\/www.w3.org\/2000\/svg'>\n            <title>Search by Algolia<\/title>\n            <defs>\n            <linearGradient x1='-36.868%' y1='134.936%' x2='129.432%' y2='-27.7%' id='a'>\n                <stop stop-color='#00AEFF' offset='0%'\/>\n                <stop stop-color='#3369E7' offset='100%'\/>\n            <\/linearGradient>\n            <\/defs>\n            <g fill='none' fill-rule='evenodd'>\n            <path\n                d='M59.399.022h13.299a2.372 2.372 0 0 1 2.377 2.364V15.62a2.372 2.372 0 0 1-2.377 2.364H59.399a2.372 2.372 0 0 1-2.377-2.364V2.381A2.368 2.368 0 0 1 59.399.022z'\n                fill='url(#a)'\/>\n            <path\n                d='M66.257 4.56c-2.815 0-5.1 2.272-5.1 5.078 0 2.806 2.284 5.072 5.1 5.072 2.815 0 5.1-2.272 5.1-5.078 0-2.806-2.279-5.072-5.1-5.072zm0 8.652c-1.983 0-3.593-1.602-3.593-3.574 0-1.972 1.61-3.574 3.593-3.574 1.983 0 3.593 1.602 3.593 3.574a3.582 3.582 0 0 1-3.593 3.574zm0-6.418v2.664c0 .076.082.131.153.093l2.377-1.226c.055-.027.071-.093.044-.147a2.96 2.96 0 0 0-2.465-1.487c-.055 0-.11.044-.11.104l.001-.001zm-3.33-1.956l-.312-.311a.783.783 0 0 0-1.106 0l-.372.37a.773.773 0 0 0 0 1.101l.307.305c.049.049.121.038.164-.011.181-.245.378-.479.597-.697.225-.223.455-.42.707-.599.055-.033.06-.109.016-.158h-.001zm5.001-.806v-.616a.781.781 0 0 0-.783-.779h-1.824a.78.78 0 0 0-.783.779v.632c0 .071.066.12.137.104a5.736 5.736 0 0 1 1.588-.223c.52 0 1.035.071 1.534.207a.106.106 0 0 0 .131-.104z'\n                fill='#FFF'\/>\n            <path\n                d='M102.162 13.762c0 1.455-.372 2.517-1.123 3.193-.75.676-1.895 1.013-3.44 1.013-.564 0-1.736-.109-2.673-.316l.345-1.689c.783.163 1.819.207 2.361.207.86 0 1.473-.174 1.84-.523.367-.349.548-.866.548-1.553v-.349a6.374 6.374 0 0 1-.838.316 4.151 4.151 0 0 1-1.194.158 4.515 4.515 0 0 1-1.616-.278 3.385 3.385 0 0 1-1.254-.817 3.744 3.744 0 0 1-.811-1.351c-.192-.539-.29-1.504-.29-2.212 0-.665.104-1.498.307-2.054a3.925 3.925 0 0 1 .904-1.433 4.124 4.124 0 0 1 1.441-.926 5.31 5.31 0 0 1 1.945-.365c.696 0 1.337.087 1.961.191a15.86 15.86 0 0 1 1.588.332v8.456h-.001zm-5.954-4.206c0 .893.197 1.885.592 2.299.394.414.904.621 1.528.621.34 0 .663-.049.964-.142a2.75 2.75 0 0 0 .734-.332v-5.29a8.531 8.531 0 0 0-1.413-.18c-.778-.022-1.369.294-1.786.801-.411.507-.619 1.395-.619 2.223zm16.12 0c0 .719-.104 1.264-.318 1.858a4.389 4.389 0 0 1-.904 1.52c-.389.42-.854.746-1.402.975-.548.229-1.391.36-1.813.36-.422-.005-1.26-.125-1.802-.36a4.088 4.088 0 0 1-1.397-.975 4.486 4.486 0 0 1-.909-1.52 5.037 5.037 0 0 1-.329-1.858c0-.719.099-1.411.318-1.999.219-.588.526-1.09.92-1.509.394-.42.865-.741 1.402-.97a4.547 4.547 0 0 1 1.786-.338 4.69 4.69 0 0 1 1.791.338c.548.229 1.019.55 1.402.97.389.42.69.921.909 1.509.23.588.345 1.28.345 1.999h.001zm-2.191.005c0-.921-.203-1.689-.597-2.223-.394-.539-.948-.806-1.654-.806-.707 0-1.26.267-1.654.806-.394.539-.586 1.302-.586 2.223 0 .932.197 1.558.592 2.098.394.545.948.812 1.654.812.707 0 1.26-.272 1.654-.812.394-.545.592-1.166.592-2.098h-.001zm6.962 4.707c-3.511.016-3.511-2.822-3.511-3.274L113.583.926l2.142-.338v10.003c0 .256 0 1.88 1.375 1.885v1.792h-.001zm3.774 0h-2.153V5.072l2.153-.338v9.534zm-1.079-10.542c.718 0 1.304-.578 1.304-1.291 0-.714-.581-1.291-1.304-1.291-.723 0-1.304.578-1.304 1.291 0 .714.586 1.291 1.304 1.291zm6.431 1.013c.707 0 1.304.087 1.786.262.482.174.871.42 1.156.73.285.311.488.735.608 1.182.126.447.186.937.186 1.476v5.481a25.24 25.24 0 0 1-1.495.251c-.668.098-1.419.147-2.251.147a6.829 6.829 0 0 1-1.517-.158 3.213 3.213 0 0 1-1.178-.507 2.455 2.455 0 0 1-.761-.904c-.181-.37-.274-.893-.274-1.438 0-.523.104-.855.307-1.215.208-.36.487-.654.838-.883a3.609 3.609 0 0 1 1.227-.49 7.073 7.073 0 0 1 2.202-.103c.263.027.537.076.833.147v-.349c0-.245-.027-.479-.088-.697a1.486 1.486 0 0 0-.307-.583c-.148-.169-.34-.3-.581-.392a2.536 2.536 0 0 0-.915-.163c-.493 0-.942.06-1.353.131-.411.071-.75.153-1.008.245l-.257-1.749c.268-.093.668-.185 1.183-.278a9.335 9.335 0 0 1 1.66-.142l-.001-.001zm.181 7.731c.657 0 1.145-.038 1.484-.104v-2.168a5.097 5.097 0 0 0-1.978-.104c-.241.033-.46.098-.652.191a1.167 1.167 0 0 0-.466.392c-.121.169-.175.267-.175.523 0 .501.175.79.493.981.323.196.75.289 1.293.289h.001zM84.109 4.794c.707 0 1.304.087 1.786.262.482.174.871.42 1.156.73.29.316.487.735.608 1.182.126.447.186.937.186 1.476v5.481a25.24 25.24 0 0 1-1.495.251c-.668.098-1.419.147-2.251.147a6.829 6.829 0 0 1-1.517-.158 3.213 3.213 0 0 1-1.178-.507 2.455 2.455 0 0 1-.761-.904c-.181-.37-.274-.893-.274-1.438 0-.523.104-.855.307-1.215.208-.36.487-.654.838-.883a3.609 3.609 0 0 1 1.227-.49 7.073 7.073 0 0 1 2.202-.103c.257.027.537.076.833.147v-.349c0-.245-.027-.479-.088-.697a1.486 1.486 0 0 0-.307-.583c-.148-.169-.34-.3-.581-.392a2.536 2.536 0 0 0-.915-.163c-.493 0-.942.06-1.353.131-.411.071-.75.153-1.008.245l-.257-1.749c.268-.093.668-.185 1.183-.278a8.89 8.89 0 0 1 1.66-.142l-.001-.001zm.186 7.736c.657 0 1.145-.038 1.484-.104v-2.168a5.097 5.097 0 0 0-1.978-.104c-.241.033-.46.098-.652.191a1.167 1.167 0 0 0-.466.392c-.121.169-.175.267-.175.523 0 .501.175.79.493.981.318.191.75.289 1.293.289h.001zm8.682 1.738c-3.511.016-3.511-2.822-3.511-3.274L89.461.926l2.142-.338v10.003c0 .256 0 1.88 1.375 1.885v1.792h-.001z'\n                fill='#182359'\/>\n            <path\n                d='M5.027 11.025c0 .698-.252 1.246-.757 1.644-.505.397-1.201.596-2.089.596-.888 0-1.615-.138-2.181-.414v-1.214c.358.168.739.301 1.141.397.403.097.778.145 1.125.145.508 0 .884-.097 1.125-.29a.945.945 0 0 0 .363-.779.978.978 0 0 0-.333-.747c-.222-.204-.68-.446-1.375-.725-.716-.29-1.221-.621-1.515-.994-.294-.372-.44-.82-.44-1.343 0-.655.233-1.171.698-1.547.466-.376 1.09-.564 1.875-.564.752 0 1.5.165 2.245.494l-.408 1.047c-.698-.294-1.321-.44-1.869-.44-.415 0-.73.09-.945.271a.89.89 0 0 0-.322.717c0 .204.043.379.129.524.086.145.227.282.424.411.197.129.551.299 1.063.51.577.24.999.464 1.268.671.269.208.466.442.591.704.125.261.188.569.188.924l-.001.002zm3.98 2.24c-.924 0-1.646-.269-2.167-.808-.521-.539-.782-1.281-.782-2.226 0-.97.242-1.733.725-2.288.483-.555 1.148-.833 1.993-.833.784 0 1.404.238 1.858.714.455.476.682 1.132.682 1.966v.682H7.357c.018.577.174 1.02.467 1.329.294.31.707.465 1.241.465.351 0 .678-.033.98-.099a5.1 5.1 0 0 0 .975-.33v1.026a3.865 3.865 0 0 1-.935.312 5.723 5.723 0 0 1-1.08.091l.002-.001zm-.231-5.199c-.401 0-.722.127-.964.381s-.386.625-.432 1.112h2.696c-.007-.491-.125-.862-.354-1.115-.229-.252-.544-.379-.945-.379l-.001.001zm7.692 5.092l-.252-.827h-.043c-.286.362-.575.608-.865.739-.29.131-.662.196-1.117.196-.584 0-1.039-.158-1.367-.473-.328-.315-.491-.761-.491-1.337 0-.612.227-1.074.682-1.386.455-.312 1.148-.482 2.079-.51l1.026-.032v-.317c0-.38-.089-.663-.266-.851-.177-.188-.452-.282-.824-.282-.304 0-.596.045-.876.134a6.68 6.68 0 0 0-.806.317l-.408-.902a4.414 4.414 0 0 1 1.058-.384 4.856 4.856 0 0 1 1.085-.132c.756 0 1.326.165 1.711.494.385.329.577.847.577 1.552v4.002h-.902l-.001-.001zm-1.88-.859c.458 0 .826-.128 1.104-.384.278-.256.416-.615.416-1.077v-.516l-.763.032c-.594.021-1.027.121-1.297.298s-.406.448-.406.814c0 .265.079.47.236.615.158.145.394.218.709.218h.001zm7.557-5.189c.254 0 .464.018.628.054l-.124 1.176a2.383 2.383 0 0 0-.559-.064c-.505 0-.914.165-1.227.494-.313.329-.47.757-.47 1.284v3.105h-1.262V7.218h.988l.167 1.047h.064c.197-.354.454-.636.771-.843a1.83 1.83 0 0 1 1.023-.312h.001zm4.125 6.155c-.899 0-1.582-.262-2.049-.787-.467-.525-.701-1.277-.701-2.259 0-.999.244-1.767.733-2.304.489-.537 1.195-.806 2.119-.806.627 0 1.191.116 1.692.349l-.381 1.015c-.534-.208-.974-.312-1.321-.312-1.028 0-1.542.682-1.542 2.046 0 .666.128 1.166.384 1.501.256.335.631.502 1.125.502a3.23 3.23 0 0 0 1.595-.419v1.101a2.53 2.53 0 0 1-.722.285 4.356 4.356 0 0 1-.932.086v.002zm8.277-.107h-1.268V9.506c0-.458-.092-.8-.277-1.026-.184-.226-.477-.338-.878-.338-.53 0-.919.158-1.168.475-.249.317-.373.848-.373 1.593v2.949h-1.262V4.801h1.262v2.122c0 .34-.021.704-.064 1.09h.081a1.76 1.76 0 0 1 .717-.666c.306-.158.663-.236 1.072-.236 1.439 0 2.159.725 2.159 2.175v3.873l-.001-.001zm7.649-6.048c.741 0 1.319.269 1.732.806.414.537.62 1.291.62 2.261 0 .974-.209 1.732-.628 2.275-.419.542-1.001.814-1.746.814-.752 0-1.336-.27-1.751-.811h-.086l-.231.704h-.945V4.801h1.262v1.987l-.021.655-.032.553h.054c.401-.591.992-.886 1.772-.886zm-.328 1.031c-.508 0-.875.149-1.098.448-.224.299-.339.799-.346 1.501v.086c0 .723.115 1.247.344 1.571.229.324.603.486 1.123.486.448 0 .787-.177 1.018-.532.231-.354.346-.867.346-1.536 0-1.35-.462-2.025-1.386-2.025l-.001.001zm3.244-.924h1.375l1.209 3.368c.183.48.304.931.365 1.354h.043c.032-.197.091-.436.177-.717.086-.281.541-1.616 1.364-4.004h1.364l-2.541 6.73c-.462 1.235-1.232 1.853-2.31 1.853-.279 0-.551-.03-.816-.091v-.999c.19.043.406.064.65.064.609 0 1.037-.353 1.284-1.058l.22-.559-2.385-5.941h.001z'\n                fill='#1D3657'\/>\n            <\/g>\n        <\/svg>\n    <\/a>\n<\/div>\n<\/div>" });</script>
+		src="http://blog.lndo.site/media/lib_xtdir4alg/app/js/autocomplete.min.js?23c1437ab91d2c5254a372dabd211dc9"></script>
+	<script>var xtAutoComplete = window.xtAutoComplete || []; xtAutoComplete.push({ "translations": { "PLACEHOLDER": "Search ...", "MORE_SEARCH_RESULTS_LABEL": "More Search Results" }, "algoliaApplicationId": "4151SVU45X", "algoliaSearchOnlyApiKey": "7266267cf3fac0babe2612e785910a38", "algoliaIndexName": "blog-anibalhsanchez-com_es-ES", "name": "name", "hits": 7, "url": "url", "showAlgoliaFooter": true, "customAutocompleteFooter": "<div id='alg-autocomplete-footer' class='autocomplete-footer'>\n<div class='autocomplete-footer-branding'>\n    <a href='https:\/\/www.algolia.com' class='algolia-powered-by-link' title='Algolia' target='_blank'>\n        <svg width='130' viewBox='0 0 130 18' xmlns='http:\/\/www.w3.org\/2000\/svg'>\n            <title>Search by Algolia<\/title>\n            <defs>\n            <linearGradient x1='-36.868%' y1='134.936%' x2='129.432%' y2='-27.7%' id='a'>\n                <stop stop-color='#00AEFF' offset='0%'\/>\n                <stop stop-color='#3369E7' offset='100%'\/>\n            <\/linearGradient>\n            <\/defs>\n            <g fill='none' fill-rule='evenodd'>\n            <path\n                d='M59.399.022h13.299a2.372 2.372 0 0 1 2.377 2.364V15.62a2.372 2.372 0 0 1-2.377 2.364H59.399a2.372 2.372 0 0 1-2.377-2.364V2.381A2.368 2.368 0 0 1 59.399.022z'\n                fill='url(#a)'\/>\n            <path\n                d='M66.257 4.56c-2.815 0-5.1 2.272-5.1 5.078 0 2.806 2.284 5.072 5.1 5.072 2.815 0 5.1-2.272 5.1-5.078 0-2.806-2.279-5.072-5.1-5.072zm0 8.652c-1.983 0-3.593-1.602-3.593-3.574 0-1.972 1.61-3.574 3.593-3.574 1.983 0 3.593 1.602 3.593 3.574a3.582 3.582 0 0 1-3.593 3.574zm0-6.418v2.664c0 .076.082.131.153.093l2.377-1.226c.055-.027.071-.093.044-.147a2.96 2.96 0 0 0-2.465-1.487c-.055 0-.11.044-.11.104l.001-.001zm-3.33-1.956l-.312-.311a.783.783 0 0 0-1.106 0l-.372.37a.773.773 0 0 0 0 1.101l.307.305c.049.049.121.038.164-.011.181-.245.378-.479.597-.697.225-.223.455-.42.707-.599.055-.033.06-.109.016-.158h-.001zm5.001-.806v-.616a.781.781 0 0 0-.783-.779h-1.824a.78.78 0 0 0-.783.779v.632c0 .071.066.12.137.104a5.736 5.736 0 0 1 1.588-.223c.52 0 1.035.071 1.534.207a.106.106 0 0 0 .131-.104z'\n                fill='#FFF'\/>\n            <path\n                d='M102.162 13.762c0 1.455-.372 2.517-1.123 3.193-.75.676-1.895 1.013-3.44 1.013-.564 0-1.736-.109-2.673-.316l.345-1.689c.783.163 1.819.207 2.361.207.86 0 1.473-.174 1.84-.523.367-.349.548-.866.548-1.553v-.349a6.374 6.374 0 0 1-.838.316 4.151 4.151 0 0 1-1.194.158 4.515 4.515 0 0 1-1.616-.278 3.385 3.385 0 0 1-1.254-.817 3.744 3.744 0 0 1-.811-1.351c-.192-.539-.29-1.504-.29-2.212 0-.665.104-1.498.307-2.054a3.925 3.925 0 0 1 .904-1.433 4.124 4.124 0 0 1 1.441-.926 5.31 5.31 0 0 1 1.945-.365c.696 0 1.337.087 1.961.191a15.86 15.86 0 0 1 1.588.332v8.456h-.001zm-5.954-4.206c0 .893.197 1.885.592 2.299.394.414.904.621 1.528.621.34 0 .663-.049.964-.142a2.75 2.75 0 0 0 .734-.332v-5.29a8.531 8.531 0 0 0-1.413-.18c-.778-.022-1.369.294-1.786.801-.411.507-.619 1.395-.619 2.223zm16.12 0c0 .719-.104 1.264-.318 1.858a4.389 4.389 0 0 1-.904 1.52c-.389.42-.854.746-1.402.975-.548.229-1.391.36-1.813.36-.422-.005-1.26-.125-1.802-.36a4.088 4.088 0 0 1-1.397-.975 4.486 4.486 0 0 1-.909-1.52 5.037 5.037 0 0 1-.329-1.858c0-.719.099-1.411.318-1.999.219-.588.526-1.09.92-1.509.394-.42.865-.741 1.402-.97a4.547 4.547 0 0 1 1.786-.338 4.69 4.69 0 0 1 1.791.338c.548.229 1.019.55 1.402.97.389.42.69.921.909 1.509.23.588.345 1.28.345 1.999h.001zm-2.191.005c0-.921-.203-1.689-.597-2.223-.394-.539-.948-.806-1.654-.806-.707 0-1.26.267-1.654.806-.394.539-.586 1.302-.586 2.223 0 .932.197 1.558.592 2.098.394.545.948.812 1.654.812.707 0 1.26-.272 1.654-.812.394-.545.592-1.166.592-2.098h-.001zm6.962 4.707c-3.511.016-3.511-2.822-3.511-3.274L113.583.926l2.142-.338v10.003c0 .256 0 1.88 1.375 1.885v1.792h-.001zm3.774 0h-2.153V5.072l2.153-.338v9.534zm-1.079-10.542c.718 0 1.304-.578 1.304-1.291 0-.714-.581-1.291-1.304-1.291-.723 0-1.304.578-1.304 1.291 0 .714.586 1.291 1.304 1.291zm6.431 1.013c.707 0 1.304.087 1.786.262.482.174.871.42 1.156.73.285.311.488.735.608 1.182.126.447.186.937.186 1.476v5.481a25.24 25.24 0 0 1-1.495.251c-.668.098-1.419.147-2.251.147a6.829 6.829 0 0 1-1.517-.158 3.213 3.213 0 0 1-1.178-.507 2.455 2.455 0 0 1-.761-.904c-.181-.37-.274-.893-.274-1.438 0-.523.104-.855.307-1.215.208-.36.487-.654.838-.883a3.609 3.609 0 0 1 1.227-.49 7.073 7.073 0 0 1 2.202-.103c.263.027.537.076.833.147v-.349c0-.245-.027-.479-.088-.697a1.486 1.486 0 0 0-.307-.583c-.148-.169-.34-.3-.581-.392a2.536 2.536 0 0 0-.915-.163c-.493 0-.942.06-1.353.131-.411.071-.75.153-1.008.245l-.257-1.749c.268-.093.668-.185 1.183-.278a9.335 9.335 0 0 1 1.66-.142l-.001-.001zm.181 7.731c.657 0 1.145-.038 1.484-.104v-2.168a5.097 5.097 0 0 0-1.978-.104c-.241.033-.46.098-.652.191a1.167 1.167 0 0 0-.466.392c-.121.169-.175.267-.175.523 0 .501.175.79.493.981.323.196.75.289 1.293.289h.001zM84.109 4.794c.707 0 1.304.087 1.786.262.482.174.871.42 1.156.73.29.316.487.735.608 1.182.126.447.186.937.186 1.476v5.481a25.24 25.24 0 0 1-1.495.251c-.668.098-1.419.147-2.251.147a6.829 6.829 0 0 1-1.517-.158 3.213 3.213 0 0 1-1.178-.507 2.455 2.455 0 0 1-.761-.904c-.181-.37-.274-.893-.274-1.438 0-.523.104-.855.307-1.215.208-.36.487-.654.838-.883a3.609 3.609 0 0 1 1.227-.49 7.073 7.073 0 0 1 2.202-.103c.257.027.537.076.833.147v-.349c0-.245-.027-.479-.088-.697a1.486 1.486 0 0 0-.307-.583c-.148-.169-.34-.3-.581-.392a2.536 2.536 0 0 0-.915-.163c-.493 0-.942.06-1.353.131-.411.071-.75.153-1.008.245l-.257-1.749c.268-.093.668-.185 1.183-.278a8.89 8.89 0 0 1 1.66-.142l-.001-.001zm.186 7.736c.657 0 1.145-.038 1.484-.104v-2.168a5.097 5.097 0 0 0-1.978-.104c-.241.033-.46.098-.652.191a1.167 1.167 0 0 0-.466.392c-.121.169-.175.267-.175.523 0 .501.175.79.493.981.318.191.75.289 1.293.289h.001zm8.682 1.738c-3.511.016-3.511-2.822-3.511-3.274L89.461.926l2.142-.338v10.003c0 .256 0 1.88 1.375 1.885v1.792h-.001z'\n                fill='#182359'\/>\n            <path\n                d='M5.027 11.025c0 .698-.252 1.246-.757 1.644-.505.397-1.201.596-2.089.596-.888 0-1.615-.138-2.181-.414v-1.214c.358.168.739.301 1.141.397.403.097.778.145 1.125.145.508 0 .884-.097 1.125-.29a.945.945 0 0 0 .363-.779.978.978 0 0 0-.333-.747c-.222-.204-.68-.446-1.375-.725-.716-.29-1.221-.621-1.515-.994-.294-.372-.44-.82-.44-1.343 0-.655.233-1.171.698-1.547.466-.376 1.09-.564 1.875-.564.752 0 1.5.165 2.245.494l-.408 1.047c-.698-.294-1.321-.44-1.869-.44-.415 0-.73.09-.945.271a.89.89 0 0 0-.322.717c0 .204.043.379.129.524.086.145.227.282.424.411.197.129.551.299 1.063.51.577.24.999.464 1.268.671.269.208.466.442.591.704.125.261.188.569.188.924l-.001.002zm3.98 2.24c-.924 0-1.646-.269-2.167-.808-.521-.539-.782-1.281-.782-2.226 0-.97.242-1.733.725-2.288.483-.555 1.148-.833 1.993-.833.784 0 1.404.238 1.858.714.455.476.682 1.132.682 1.966v.682H7.357c.018.577.174 1.02.467 1.329.294.31.707.465 1.241.465.351 0 .678-.033.98-.099a5.1 5.1 0 0 0 .975-.33v1.026a3.865 3.865 0 0 1-.935.312 5.723 5.723 0 0 1-1.08.091l.002-.001zm-.231-5.199c-.401 0-.722.127-.964.381s-.386.625-.432 1.112h2.696c-.007-.491-.125-.862-.354-1.115-.229-.252-.544-.379-.945-.379l-.001.001zm7.692 5.092l-.252-.827h-.043c-.286.362-.575.608-.865.739-.29.131-.662.196-1.117.196-.584 0-1.039-.158-1.367-.473-.328-.315-.491-.761-.491-1.337 0-.612.227-1.074.682-1.386.455-.312 1.148-.482 2.079-.51l1.026-.032v-.317c0-.38-.089-.663-.266-.851-.177-.188-.452-.282-.824-.282-.304 0-.596.045-.876.134a6.68 6.68 0 0 0-.806.317l-.408-.902a4.414 4.414 0 0 1 1.058-.384 4.856 4.856 0 0 1 1.085-.132c.756 0 1.326.165 1.711.494.385.329.577.847.577 1.552v4.002h-.902l-.001-.001zm-1.88-.859c.458 0 .826-.128 1.104-.384.278-.256.416-.615.416-1.077v-.516l-.763.032c-.594.021-1.027.121-1.297.298s-.406.448-.406.814c0 .265.079.47.236.615.158.145.394.218.709.218h.001zm7.557-5.189c.254 0 .464.018.628.054l-.124 1.176a2.383 2.383 0 0 0-.559-.064c-.505 0-.914.165-1.227.494-.313.329-.47.757-.47 1.284v3.105h-1.262V7.218h.988l.167 1.047h.064c.197-.354.454-.636.771-.843a1.83 1.83 0 0 1 1.023-.312h.001zm4.125 6.155c-.899 0-1.582-.262-2.049-.787-.467-.525-.701-1.277-.701-2.259 0-.999.244-1.767.733-2.304.489-.537 1.195-.806 2.119-.806.627 0 1.191.116 1.692.349l-.381 1.015c-.534-.208-.974-.312-1.321-.312-1.028 0-1.542.682-1.542 2.046 0 .666.128 1.166.384 1.501.256.335.631.502 1.125.502a3.23 3.23 0 0 0 1.595-.419v1.101a2.53 2.53 0 0 1-.722.285 4.356 4.356 0 0 1-.932.086v.002zm8.277-.107h-1.268V9.506c0-.458-.092-.8-.277-1.026-.184-.226-.477-.338-.878-.338-.53 0-.919.158-1.168.475-.249.317-.373.848-.373 1.593v2.949h-1.262V4.801h1.262v2.122c0 .34-.021.704-.064 1.09h.081a1.76 1.76 0 0 1 .717-.666c.306-.158.663-.236 1.072-.236 1.439 0 2.159.725 2.159 2.175v3.873l-.001-.001zm7.649-6.048c.741 0 1.319.269 1.732.806.414.537.62 1.291.62 2.261 0 .974-.209 1.732-.628 2.275-.419.542-1.001.814-1.746.814-.752 0-1.336-.27-1.751-.811h-.086l-.231.704h-.945V4.801h1.262v1.987l-.021.655-.032.553h.054c.401-.591.992-.886 1.772-.886zm-.328 1.031c-.508 0-.875.149-1.098.448-.224.299-.339.799-.346 1.501v.086c0 .723.115 1.247.344 1.571.229.324.603.486 1.123.486.448 0 .787-.177 1.018-.532.231-.354.346-.867.346-1.536 0-1.35-.462-2.025-1.386-2.025l-.001.001zm3.244-.924h1.375l1.209 3.368c.183.48.304.931.365 1.354h.043c.032-.197.091-.436.177-.717.086-.281.541-1.616 1.364-4.004h1.364l-2.541 6.73c-.462 1.235-1.232 1.853-2.31 1.853-.279 0-.551-.03-.816-.091v-.999c.19.043.406.064.65.064.609 0 1.037-.353 1.284-1.058l.22-.559-2.385-5.941h.001z'\n                fill='#1D3657'\/>\n            <\/g>\n        <\/svg>\n    <\/a>\n<\/div>\n<\/div>" });</script>
+	<noscript>
+		<link rel="stylesheet" type="text/css"
+			href="/templates/xttailwindcss/css/prism.css?23c1437ab91d2c5254a372dabd211dc9">
+	</noscript><noscript>
+		<link rel="stylesheet" type="text/css"
+			href="http://blog.lndo.site/media/plg_XTYouTubeVideoOptimizer/css/youtubevideooptimizer.min.css?23c1437ab91d2c5254a372dabd211dc9">
+	</noscript><noscript>
+		<link rel="stylesheet" type="text/css"
+			href="http://blog.lndo.site/media/lib_xt-gdpr-cookie-consent-banner/css/styles.min.css?23c1437ab91d2c5254a372dabd211dc9">
+	</noscript><noscript>
+		<link rel="stylesheet" type="text/css"
+			href="http://blog.lndo.site/media/mod_xtdir4alg_autocomplete/css/xtdir4alg_autocomplete.min.css?23c1437ab91d2c5254a372dabd211dc9">
+	</noscript>
 
 	<!-- TODO: Support GA and the extra links -->
-	<link rel="preconnect" href="https://api.github.com">
-	<link rel="preconnect" href="https://www.google-analytics.com">
+	<link rel="preconnect" href="https://buttons.github.io" crossorigin>
+	<link rel="preconnect" href="https://www.google-analytics.com"
+		crossorigin>
+	<link rel="preconnect" href="https://www.googletagmanager.com"
+		crossorigin>
 </head>
 
 <body
-	class="site com_content view-article no-layout no-task itemid-102">
+	class="site com_content view-article no-layout no-task itemid-103">
 
 	<!-- navigation-block -->
 	<div class="navigation-block">
@@ -307,28 +147,33 @@
 							class="font-bold text-white no-underline">
 							# Aníbal Sánchez </a>
 						<p class="site-description">Team Leader / Senior
-							Developer.
-							@Extly Tech</p>
+							Developer. @Extly Tech</p>
 					</div>
 
 					<!-- languages-block -->
 					<div class="languages-element">
-						<div class="moduletable">
-							<div class="mod-languages">
+						<div class="mod-languages">
+							<p class="visually-hidden"
+								id="language_picker_des_87">Select your
+								language</p>
 
-								<ul class="lang-inline" dir="ltr">
-									<li class="lang-active">
-										<a
-											href="https://blog.anibalhsanchez.com/es/9-blogueando/69-hablando-de-tailwind-css.html">
-											Español </a>
-									</li>
-									<li>
-										<a href="/en/">
-											English (UK) </a>
-									</li>
-								</ul>
 
-							</div>
+							<ul role="listbox"
+								aria-labelledby="language_picker_des_87"
+								class="mod-languages__list lang-inline">
+
+								<li class="lang-active">
+									<a aria-current="true" role="option"
+										href="http://blog.lndo.site/index.php?option=com_content&view=article&id=78:qu%C3%A9-hacer-despu%C3%A9s-del-lanzamiento-de-joomla-4&catid=9&lang=es&Itemid=103">
+										Español </a>
+								</li>
+								<li>
+									<a role="option"
+										href="/index.php?option=com_content&amp;view=featured&amp;lang=en&amp;Itemid=102">
+										English (UK) </a>
+								</li>
+							</ul>
+
 						</div>
 
 					</div>
@@ -360,244 +205,459 @@
 					<div class="w-full sm:w-2/3 sm:pr-4">
 						<!-- breadcrumbs-block -->
 						<div class="breadcrumbs-block">
-							<div class="moduletable">
-								<div aria-label="breadcrumbs"
-									role="navigation">
-									<ul itemscope
-										itemtype="https://schema.org/BreadcrumbList"
-										class="breadcrumb">
-										<li>
-											You are here: &#160;
-										</li>
+							<nav class="mod-breadcrumbs__wrapper"
+								aria-label="Breadcrumbs">
+								<ol itemscope
+									itemtype="https://schema.org/BreadcrumbList"
+									class="mod-breadcrumbs breadcrumb px-3 py-2">
+									<li
+										class="mod-breadcrumbs__here float-start">
+										Está aquí: &#160;
+									</li>
 
-										<li itemprop="itemListElement"
-											itemscope
-											itemtype="https://schema.org/ListItem">
-											<a itemprop="item"
-												href="/en/"
-												class="pathway"><span
-													itemprop="name">Home</span></a>
-
-											<span class="divider">
-												<img src="https://d1hvvp61iyzquq.cloudfront.net/media/system/images/arrow.png"
-													alt="" /> </span>
-											<meta itemprop="position"
-												content="1">
-										</li>
-										<li itemprop="itemListElement"
-											itemscope
-											itemtype="https://schema.org/ListItem">
-											<a itemprop="item"
-												href="/en/8-blogging.html"
-												class="pathway"><span
-													itemprop="name">Blogging</span></a>
-
-											<span class="divider">
-												<img src="https://d1hvvp61iyzquq.cloudfront.net/media/system/images/arrow.png"
-													alt="" /> </span>
-											<meta itemprop="position"
-												content="2">
-										</li>
-										<li itemprop="itemListElement"
-											itemscope
-											itemtype="https://schema.org/ListItem">
-											<a itemprop="item"
-												href="/en/10-blogging/lost-and-found.html"
-												class="pathway"><span
-													itemprop="name">Lost
-													and
-													Found</span></a>
-
-											<meta itemprop="position"
-												content="3">
-										</li>
-									</ul>
-								</div>
-							</div>
+									<li itemprop="itemListElement"
+										itemscope
+										itemtype="https://schema.org/ListItem"
+										class="mod-breadcrumbs__item breadcrumb-item">
+										<a itemprop="item"
+											href="/index.php?option=com_content&amp;view=featured&amp;Itemid=103&amp;lang=es"
+											class="pathway"><span
+												itemprop="name">Inicio</span></a>
+										<meta itemprop="position"
+											content="1">
+									</li>
+									<li itemprop="itemListElement"
+										itemscope
+										itemtype="https://schema.org/ListItem"
+										class="mod-breadcrumbs__item breadcrumb-item">
+										<a itemprop="item"
+											href="/index.php?option=com_content&amp;view=category&amp;id=9&amp;lang=es&amp;Itemid=103"
+											class="pathway"><span
+												itemprop="name">Blogueando</span></a>
+										<meta itemprop="position"
+											content="2">
+									</li>
+								</ol>
+							</nav>
 
 						</div>
 
 						<!-- blog-block -->
 						<div class="blog-block prose">
 							<!-- Begin Content -->
-							<div id="system-message-container">
-							</div>
+							<div id="system-message-container"
+								aria-live="polite"></div>
 
-							<div class="item-page" itemscope
+							<div class="com-content-article item-page"
+								itemscope
 								itemtype="https://schema.org/Article">
 								<meta itemprop="inLanguage"
-									content="en-GB" />
+									content="es-ES">
 
 
 								<div class="page-header">
-									<h2 itemprop="headline">
-										Geometry field oddities between
-										MySQL 5.6 and MySQL
-										5.7 </h2>
+									<h1 itemprop="headline">
+										Qué Hacer Después del
+										Lanzamiento de Joomla 4 </h1>
 								</div>
 
 
-								<dl class="article-info muted">
+								<dl class="article-info text-muted">
 
 
 									<dt class="article-info-term">
-										Details </dt>
+										Detalles </dt>
 
 
 
 
 
 									<dd class="published">
-										<span class="icon-calendar"
+										<span
+											class="icon-calendar icon-fw"
 											aria-hidden="true"></span>
 										<time
-											datetime="2019-06-07T16:58:22+00:00"
+											datetime="2021-08-18T08:13:54+00:00"
 											itemprop="datePublished">
-											Published: 07 June 2019
+											Publicado: 18 Agosto 2021
 										</time>
 									</dd>
+
 
 
 
 								</dl>
 
 
-								<ul class="tags inline">
-									<li class="tag-2 tag-list0"
+								<ul class="tags list-inline">
+									<li class="list-inline-item tag-2 tag-list0"
 										itemprop="keywords">
-										<a href="/en/component/tags/tag/joomla.html"
-											class="label label-info">
+										<a href="/index.php?option=com_tags&amp;view=tag&amp;id=2:joomla&amp;lang=es"
+											class="btn btn-sm label label-info">
 											Joomla </a>
 									</li>
-									<li class="tag-36 tag-list1"
+									<li class="list-inline-item tag-13 tag-list1"
 										itemprop="keywords">
-										<a href="/en/component/tags/tag/mysql.html"
-											class="label label-info">
-											MySQL </a>
-									</li>
-									<li class="tag-37 tag-list2"
-										itemprop="keywords">
-										<a href="/en/component/tags/tag/sql.html"
-											class="label label-info">
-											SQL </a>
-									</li>
-									<li class="tag-38 tag-list3"
-										itemprop="keywords">
-										<a href="/en/component/tags/tag/gis.html"
-											class="label label-info">
-											GIS </a>
+										<a href="/index.php?option=com_tags&amp;view=tag&amp;id=13:joomla4&amp;lang=es"
+											class="btn btn-sm btn-info">
+											joomla4 </a>
 									</li>
 								</ul>
 
 
-								<div itemprop="articleBody">
-									<p>In general, <a
-											href="https://www.akeebabackup.com/"
+								<figure class="left item-image">
+									<img src="/images/2021-08-joomla-4-launch.jpg"
+										alt="Qué Hacer Después del Lanzamiento de Joomla 4"
+										itemprop="image" />
+								</figure>
+								<div itemprop="articleBody"
+									class="com-content-article__body">
+									<p>El 17 de agosto, <strong>después
+											de cinco años de trabajo, se
+											publicó Joomla 4</strong>.
+										Ese mismo día, también se
+										publicó Joomla 3.10 como última
+										versión intermedia de la rama de
+										Joomla 3.</p>
+									<p>Si has estado usando Joomla desde
+										el 17 de agosto de 2005,
+										probablemente eres consciente de
+										toda la alegría y frustración a
+										partes iguales de usar Joomla y
+										sus extensiones. Para facilitar
+										la transición, compartimos
+										contigo las siguientes
+										recomendaciones para guiarte en
+										la planificación de la
+										migración.</p>
+
+									<p> </p>
+									<h2>Nuestro calendario de adopción
+										de Joomla 4</h2>
+									<p>Hay varios puntos que hay que
+										comprobar antes de migrar. La
+										transición a Joomla 4 no tiene
+										por qué ser un proceso
+										traumático, y <strong>la
+											planificación es la clave
+											del éxito.</strong></p>
+									<h3>Día 1 - Disfruta del día</h3>
+									<p>El 17 de agosto es un día para
+										celebrar el 16º cumpleaños de
+										Joomla y comprobar que Joomla 4
+										es el <a
+											href="https://www.joomla.org/announcements/release-news/5843-birthday-present-announcement-joomla-4-stable-17th-august.html"
 											target="_blank"
-											rel="noopener">Akeeba
-											backups</a>
-										are infallible. I'm used to
-										moving backups between
-										servers blindly, with the
-										kickstart restore or the
-										Unite command line. However,
-										MySQL GEOMETRY fields
-										are a hard case. It seems that
-										MySQL 5.6 - MySQL 5.7
-										transitions are rough.</p>
+											rel="noopener noreferrer">Regalo
+											de cumpleaños</a>. Comparte
+										tu emoción con la comunidad.
+										Consulta las publicaciones
+										sociales oficiales y únete a la
+										fiesta.</p>
+									<h3>Semana 1 - Qué hay para mí</h3>
+									<p>Si tienes tiempo,
+										<strong>descarga Joomla 3.10 o
+											Joomla 4 y prueba</strong>
+										lo que viene en un sitio de
+										pruebas. Joomla 3.10 es el
+										primer paso en la transición, y
+										es el paso obligatorio antes de
+										migrar a Joomla 4.</p>
+									<h3>Mes 1 - Requisitos de
+										alojamiento</h3>
+									<p>Según <a
+											href="https://developer.joomla.org/about/stats.html"
+											target="_blank"
+											rel="noopener noreferrer">Joomla
+											Stats</a>, muchos sitios
+										están funcionando con PHP 7.2,
+										hoy no soportado, o con
+										versiones inferiores legacy.
+										<strong>Confirma que tus sitios
+											están corriendo en la última
+											versión estable de PHP
+											disponible</strong>, PHP 7.4
+										o PHP 8.</p>
+									<p>La base de datos es un activo
+										crítico para el rendimiento
+										superior del sitio. MySQL 8.0
+										tiene importantes mejoras de
+										rendimiento y seguridad; Joomla
+										4 soporta Prepared Statements
+										para aprovecharlo.
+										<strong>Confirma si tu sitio
+											está funcionando con la
+											última versión de MySQL o
+											con la versión más reciente
+											de la base de datos que
+											prefieras.</strong></p>
+									<p><strong>Prueba que todo está
+											listo para actualizar a
+											Joomla 3.10.</strong> Si
+										encuentras problemas en Joomla o
+										en las extensiones, informa a
+										los desarrolladores para
+										acelerar la transición.</p>
+									<h3>2021 Cuarto Trimestre -
+										Actualización a Joomla 3.10</h3>
+									<p><strong>Entre septiembre y
+											diciembre se espera tener
+											todos los sitios funcionando
+											con Joomla 3.10.</strong>
+										Esta versión va a tener soporte
+										hasta agosto de 2023. Todavía
+										hay mucho tiempo para planificar
+										la migración a Joomla 4.</p>
+									<p>Presta atención a la tecnología
+										innovadora que ofrece el mercado
+										para Joomla 4.</p>
+									<h4>Mejorar la búsqueda del sitio
+									</h4>
+									<p>Desde nuestra experiencia, hay
+										flamantes servicios en la nube
+										que se pueden integrar de forma
+										creativa. Por ejemplo, nuestro
+										<strong><a
+												href="https://www.extly.com/xt-search-for-algolia.html"
+												target="_blank"
+												rel="noopener noreferrer">XT
+												Search for
+												Algolia</a></strong>
+										renueva la función de búsqueda
+										sencilla que viene por defecto
+										con Joomla con un disruptivo
+										motor de búsqueda ofrecido por
+										Algolia.</p>
+									<p>La actual búsqueda de J3 será
+										discontinuada, y Joomla 4 viene
+										con la Búsqueda Inteligente como
+										única posibilidad. Recomendamos
+										comprobar cómo funciona Algolia
+										en Joomla o PrestaShop en
+										nuestros sitios de
+										demostración:<br /><br /></p>
 									<ul>
-										<li><a href="https://tailwindcss.com/"
+										<li><a href="https://demo.extly.com/"
 												target="_blank"
-												rel="nofollow noopener noreferrer">Tailwind
-												CSS - Oficial Page</a>
-										</li>
-										<li><a href="https://tailwindui.com/components"
+												rel="noopener noreferrer">XT
+												Search for Algolia -
+												Demo Joomla</a></li>
+										<li><a href="https://demo-prestashop.extly.com/en/"
 												target="_blank"
-												rel="nofollow noopener noreferrer">Tailwind
-												UI Components - Oficial
-												Page</a></li>
-										<li><a href="https://tailwindcomponents.com/"
-												target="_blank"
-												rel="nofollow noopener noreferrer">Tailwind
-												CSS - Community
-												Components</a></li>
-										<li><a href="https://builtwithtailwind.com/"
-												target="_blank"
-												rel="nofollow noopener noreferrer">Made
-												with Tailwind CSS</a>
-										</li>
-										<li><a href="https://nerdcave.com/tailwind-cheat-sheet"
-												target="_blank"
-												rel="nofollow noopener noreferrer">Tailwind
-												Cheat Sheet</a></li>
-										<li><a href="https://tailwind.run/new"
-												target="_blank"
-												rel="nofollow noopener noreferrer">Tailwind
-												CSS Sandbox</a>, un
-											sitio para para probar
-											Tailwind en línea</li>
-										<li><a href="https://github.com/aniftyco/awesome-tailwindcss"
-												rel="nofollow">Awesome
-												Tailwind CSS</a></li>
+												rel="noopener noreferrer">XT
+												Search for Algolia -
+												Demo PrestaShop</a></li>
 									</ul>
-									<p>Restoring a backup on a MySQL
-										failed due to a POINT
-										field.&nbsp;After searching, it
-										seems that there's
-										no solution, and a POINT field
-										can't be exported and
-										imported between MySQL versions.
+									<p>Asegúrate de decidir qué
+										experiencia de búsqueda es mejor
+										para tus usuarios. Si tienes
+										alguna pregunta, estamos aquí
+										para responder sobre las
+										apasionantes posibilidades de
+										<strong><a
+												href="https://www.extly.com/xt-search-for-algolia.html"
+												target="_blank"
+												rel="noopener noreferrer">XT
+												Search for
+												Algolia</a>.</strong>
 									</p>
-									<pre># Failed with error: 1416 -- Cannot get geometry object from data you send to the GEOMETRY field</pre>
-									<p>In this particular case, I'm
-										lucky. The extension
-										(JCalPro) that uses the POINT
-										field also stores the
-										original Latitude and Longitude.
-										So, the POINT field
-										"latlng" can be reconstructed
-										with:</p>
-									<p><code class="language-sql">
-UPDATE #__jcalpro_locations SET latlng = GeomFromText(CONCAT(
-    'POINT(',
-    latitude,
-    ' ',
-    longitude,
-    ')'));
-</code></p>
-									<p>A tough nut&nbsp;cracked.</p>
+									<h4>La Comprobación de
+										Pre-Actualización de las
+										extensiones (Pre-Update Check)
+									</h4>
+									<p>Joomla 3.10 tiene una nueva
+										extensión del núcleo, la
+										<strong>Comprobación de
+											Pre-Actualización
+											(Pre-Update Check)</strong>,
+										para confirmar si el sitio está
+										listo para Joomla 4. Esta
+										herramienta va a dar el primer
+										informe sobre los puntos a
+										trabajar. Por supuesto, es mejor
+										probar en un sitio de desarrollo
+										(no en el sitio en vivo).</p>
+									<h3>2022 Primer Trimestre /
+										Resoluciones de Año Nuevo:
+										Proyectos sobre Joomla 4</h3>
+									<p>Una forma de aprender Joomla 4 es
+										<strong>empezar nuevos proyectos
+											sobre este web
+											stack</strong>. La nueva
+										plataforma es una oportunidad
+										para modernizar nuestro
+										ecosistema y pasar a nuevas
+										tecnologías. Sé creativo y no
+										dejes ninguna piedra sin dar
+										vuelta!.</p>
+									<h4>El estado del ecosistema de
+										extensiones</h4>
+									<p>En este momento, <strong>hay
+											alrededor de 1.000
+											extensiones compatibles con
+											Joomla 4.</strong> Sin
+										embargo, tómalo con un grano de
+										sal. Los desarrolladores de
+										extensiones han estado probando
+										y preparando sus productos desde
+										noviembre de 2017, cuando se
+										publicó Joomla 4 Alpha 1, o en
+										los años siguientes. Hubo muchos
+										cambios en el camino. Por lo
+										tanto, es mejor esperar hasta
+										que se publiquen las nuevas
+										versiones y se prueben en Joomla
+										4 Estable en los meses
+										siguientes.</p>
+									<h4>Plantillas para Joomla</h4>
+									<p>Pregúntate: ¿Vas a crear
+										<strong>una nueva plantilla para
+											Joomla 4 utilizando
+											Bootstrap 5</strong>? ¿Vas a
+										renovar el diseño para una mejor
+										experiencia móvil? ¿Vas a
+										utilizar una plantilla de tu
+										proveedor favorito? ¿Han sacado
+										plantillas o quick starters para
+										Joomla 4?</p>
+									<p>Todas estas preguntas son
+										válidas, y tienes que
+										responderlas antes de intentar
+										la migración a Joomla 4. Tu
+										plantilla actual para Joomla 3
+										probablemente está desarrollada
+										con Bootstrap 2/3 en mente, y
+										este es un excelente momento
+										para evaluar Bootstrap 5 como la
+										característica principal para
+										tener un sitio responsive en
+										cualquier tamaño de pantalla.
+									</p>
+									<h4>Extensiones comerciales para
+										Joomla 4</h4>
+									<p><strong>¿De qué extensión depende
+											tu negocio?</strong> ¿Están
+										disponibles para Joomla 4? Si no
+										es así, ¿cuándo lo estarán? En
+										este momento, muchos
+										desarrolladores de extensiones
+										están compartiendo sus planes
+										para la actualización de sus
+										extensiones. Puedes encontrar
+										algunos de ellos en la<a
+											href="https://magazine.joomla.org/search?q=getting+extensions+ready"
+											target="_blank"
+											rel="noopener noreferrer">
+											serie de artículos de JCM,
+											Getting extensions ready for
+											Joomla 4</a>. </p>
+									<h4>Reducir la deuda técnica</h4>
+									<p>Tras dieciséis años de
+										desarrollo, Joomla 3 acumuló
+										deuda técnica en muchas áreas y
+										Joomla 4 llega para reducirla,
+										aligerar la carga y prepararla
+										para el futuro. Revisa tus
+										proyectos en los mismos
+										términos. <strong>¿Qué harías si
+											empezaras de cero?</strong>
+									</p>
+									<h3>Web Vitals 2022</h3>
+									<p>Debido a la pandemia del
+										COVID-19, este año ha sido
+										extraño. Hay un cambio tectónico
+										en el mercado que afecta a la
+										experiencia web; es el
+										<strong>Web Vitals</strong>. Web
+										Vitals es una iniciativa de
+										Google para proporcionar una
+										guía unificada para las señales
+										de calidad esenciales para
+										ofrecer una gran experiencia de
+										usuario en la web. El tema va
+										más allá del alcance de este
+										artículo, pero el punto debe
+										estar en la parte superior de
+										todas las listas de verificación
+										que evalúan la nueva tecnología.
+										Por suerte, Joomla 4 vendrá con
+										suficiente potencia para
+										soportar las métricas clave.
+										Para saber más sobre WebVitals,
+										haz clic <a
+											href="https://web.dev/vitals/"
+											target="_blank"
+											rel="noopener noreferrer">aquí<br /><br /></a>
+									</p>
+									<h2>Resumen</h2>
+									<p>En Extly, creemos firmemente que
+										Joomla 4 por sí solo no hará que
+										nuestra comunidad sea más
+										próspera, y <strong>el objetivo
+											final es modernizar nuestros
+											sitios web.</strong></p>
+									<p>Nuestro equipo de producto está
+										enfocado en mejorar la
+										experiencia del usuario y en
+										aportar frescura desde
+										diferentes ámbitos. Pensamos
+										seguir facilitando que cualquier
+										persona pueda aprovechar todas
+										las ventajas del
+										<strong>desarrollo web
+											moderno</strong>.</p>
+									<p>Siguiendo estas directrices,
+										publicamos una nueva tanda de
+										versiones de extensiones
+										destinadas a facilitar la
+										adopción de Joomla 3.10 y Joomla
+										4.<br /><br /></p>
+									<ul>
+										<li>Perfect Publisher 9.1.0</li>
+										<li>XT Search for Algolia
+											(Joomla y PrestaShop) 4.9.0
+										</li>
+										<li>XT Adaptive Images 6.6.0
+										</li>
+										<li>XT YouTube Optimizer 2.15.0
+										</li>
+										<li>XT GDPR Cookie Consent
+											Banner 1.3.0</li>
+									</ul>
+									<p>Para más información sobre cada
+										versión, por favor, consulta la
+										documentación <a
+											href="https://www.extly.com/docs/"
+											target="_blank"
+											rel="noopener noreferrer">aquí</a>.
+									</p>
+									<p>Prepárate; pronto habrá más
+										novedades. ¡Hasta la luna!</p>
+									<h4>Referencias</h4>
+									<ul>
+										<li>- <a href="https://docs.joomla.org/Planning_for_Mini-Migration_-_Joomla_3.10.x_to_4.x"
+												target="_blank"
+												rel="noopener noreferrer">Planning
+												for Mini-Migration -
+												Joomla 3.10.x to 4.x</a>
+										</li>
+										<li>- <a href="https://docs.joomla.org/Joomla_3.x_to_4.x_Step_by_Step_Migration"
+												target="_blank"
+												rel="noopener noreferrer">Joomla
+												3.x to 4.x Step by Step
+												Migration</a></li>
+										<li>- <a href="https://forum.joomla.org/viewforum.php?f=812&amp;sid=b7168c16772eba2a9b3bf9d8b677de1c"
+												target="_blank"
+												rel="noopener noreferrer">Forum:
+												Migrating and Upgrading
+												to Joomla! 4.x</a></li>
+									</ul>
+									<p> </p>
 								</div>
 
 
-								<ul class="pager pagenav">
-									<li class="previous">
-										<a class="hasTooltip"
-											title="FAQ - XT Tailwind for Joomla"
-											aria-label="Previous article: FAQ - XT Tailwind for Joomla"
-											href="/en/10-blogging/lost-and-found/55-faq-xt-tailwind-for-joomla.html"
-											rel="prev">
-											<span
-												class="icon-chevron-left"
-												aria-hidden="true"></span>
-											<span
-												aria-hidden="true">Prev</span>
-										</a>
-									</li>
-									<li class="next">
-										<a class="hasTooltip"
-											title="Updating to Tailwind CSS v1.0.0-beta.1 in Joomla "
-											aria-label="Next article: Updating to Tailwind CSS v1.0.0-beta.1 in Joomla "
-											href="/en/10-blogging/lost-and-found/50-updating-to-tailwind-css-v1-0-0-beta-1-in-joomla.html"
-											rel="next">
-											<span
-												aria-hidden="true">Next</span>
-											<span
-												class="icon-chevron-right"
-												aria-hidden="true"></span>
-										</a>
-									</li>
-								</ul>
 							</div>
+
 							<!-- End Content -->
 						</div>
 					</div>
@@ -605,228 +665,116 @@ UPDATE #__jcalpro_locations SET latlng = GeomFromText(CONCAT(
 					<div class="w-full mb-8 sm:w-1/3 sm:ml-8">
 						<!-- search-block -->
 						<div class="search-block">
-							<div class="moduletable">
-								<div class="aa-input-container"
-									id="aa-input-container">
-									<input type="search"
-										class="aa-search-input aa-input-search"
-										placeholder="Search ..."
-										aria-label="Search ..."
-										name="search"
-										autocomplete="off" />
-									<svg class="aa-input-icon"
-										viewBox="654 -372 1664 1664">
-										<path
-											d="M1806,332c0-123.3-43.8-228.8-131.5-316.5C1586.8-72.2,1481.3-116,1358-116s-228.8,43.8-316.5,131.5  C953.8,103.2,910,208.7,910,332s43.8,228.8,131.5,316.5C1129.2,736.2,1234.7,780,1358,780s228.8-43.8,316.5-131.5  C1762.2,560.8,1806,455.3,1806,332z M2318,1164c0,34.7-12.7,64.7-38,90s-55.3,38-90,38c-36,0-66-12.7-90-38l-343-342  c-119.3,82.7-252.3,124-399,124c-95.3,0-186.5-18.5-273.5-55.5s-162-87-225-150s-113-138-150-225S654,427.3,654,332  s18.5-186.5,55.5-273.5s87-162,150-225s138-113,225-150S1262.7-372,1358-372s186.5,18.5,273.5,55.5s162,87,225,150s113,138,150,225  S2062,236.7,2062,332c0,146.7-41.3,279.7-124,399l343,343C2305.7,1098.7,2318,1128.7,2318,1164z" />
-									</svg>
-								</div>
+							<div class="aa-input-container"
+								id="aa-input-container">
+								<input type="search"
+									class="aa-search-input aa-input-search"
+									placeholder="Search ..."
+									aria-label="Search ..."
+									name="search" autocomplete="off" />
+								<svg class="aa-input-icon"
+									viewBox="654 -372 16 16" width="16"
+									height="16">
+									<path
+										d="M665.077-365.23c0-1.186-.421-2.2-1.265-3.044-.843-.843-1.857-1.264-3.043-1.264-1.185 0-2.2.42-3.043 1.264-.843.843-1.264 1.858-1.264 3.043 0 1.186.42 2.2 1.264 3.044.843.843 1.858 1.264 3.043 1.264 1.186 0 2.2-.421 3.043-1.264.844-.844 1.265-1.858 1.265-3.044zm4.923 8c0 .333-.122.621-.365.865a1.183 1.183 0 01-.866.365c-.346 0-.634-.122-.865-.365l-3.298-3.289a6.581 6.581 0 01-3.837 1.193 6.652 6.652 0 01-2.63-.534 6.768 6.768 0 01-2.163-1.443 6.768 6.768 0 01-1.442-2.163 6.652 6.652 0 01-.534-2.63c0-.916.178-1.793.534-2.63a6.768 6.768 0 011.442-2.163 6.767 6.767 0 012.163-1.442 6.652 6.652 0 012.63-.534c.917 0 1.793.178 2.63.534a6.767 6.767 0 012.164 1.442 6.768 6.768 0 011.442 2.163c.356.837.533 1.714.533 2.63a6.58 6.58 0 01-1.192 3.837l3.298 3.298c.238.237.356.526.356.865z" />
+								</svg>
 							</div>
 
 						</div>
 
 						<!-- aside-block -->
 						<div class="aside-block">
-							<div class="moduletable about-me">
-								<h3>About me</h3>
 
-
-								<div class="custom about-me">
-									<p><img class="img-circle xt-lazy-img"
-											data-src="https://d1hvvp61iyzquq.cloudfront.net/images/anibal-0612-200.jpg"
-											alt="Aníbal Sánchez - Perdido y Encontrado en la Computación" />
-									</p>
-									<h4>Aníbal Sánchez</h4>
-									<ul class="list-none">
-										<li>
-											<a href="http://www.extly.com"
-												target="_blank"
-												rel="noopener">
-												<svg class="inline-block"
-													height="16px"
-													viewBox="0 0 237.067 237.067">
-													<path fill="#ffa32b"
-														d="M208.844 112.889h-16.933V67.733c0-12.417-10.16-22.577-22.578-22.577h-45.155V28.222C124.178 12.644 111.534 0 95.956 0c-15.58 0-28.223 12.644-28.223 28.222v16.934H22.578C10.16 45.156.113 55.316.113 67.733v42.898h16.82c16.82 0 30.48 13.66 30.48 30.48s-13.66 30.48-30.48 30.48H0v42.898c0 12.418 10.16 22.578 22.578 22.578h42.898v-16.934c0-16.82 13.66-30.48 30.48-30.48s30.48 13.66 30.48 30.48v16.934h42.897c12.418 0 22.578-10.16 22.578-22.578v-45.156h16.933c15.58 0 28.223-12.643 28.223-28.222s-12.644-28.222-28.223-28.222z" />
-												</svg>
-												Extly Tech</a></li>
-										<li>Team Leader / Senior
-											Developer</li>
-										<li>Empower your project with
-											our web solutions</li>
-										<li>Today, working on <svg
-												class="inline-block"
-												height="16px"
-												viewBox="0 0 640 512">
-												<path
-													d="M637.5 241.6c-4.2-4.8-62.8-78.1-73.1-90.5-10.3-12.4-15.4-10.2-21.7-9.3-6.4.9-80.5 13.4-89.1 14.8-8.6 1.5-14 4.9-8.7 12.3 4.7 6.6 53.4 75.7 64.2 90.9l-193.7 46.4L161.2 48.7c-6.1-9.1-7.4-12.3-21.4-11.6-14 .6-120.9 9.5-128.5 10.2-7.6.6-16 4-8.4 22s129 279.6 132.4 287.2c3.4 7.6 12.2 20 32.8 15 21.1-5.1 94.3-24.2 134.3-34.7 21.1 38.3 64.2 115.9 72.2 127 10.6 14.9 18 12.4 34.3 7.4 12.8-3.9 199.6-71.1 208-74.5 8.4-3.5 13.6-5.9 7.9-14.4-4.2-6.2-53.5-72.2-79.3-106.8 17.7-4.7 80.6-21.4 87.3-23.3 7.9-2 9-5.8 4.7-10.6zm-352.2 72c-2.3.5-110.8 26.5-116.6 27.8-5.8 1.3-5.8.7-6.5-1.3-.7-2-129-266.7-130.8-270-1.8-3.3-1.7-5.9 0-5.9s102.5-9 106-9.2c3.6-.2 3.2.6 4.5 2.8 0 0 142.2 245.4 144.6 249.7 2.6 4.3 1.1 5.6-1.2 6.1zm306 57.4c1.7 2.7 3.5 4.5-2 6.4-5.4 2-183.7 62.1-187.1 63.6-3.5 1.5-6.2 2-10.6-4.5s-62.4-106.8-62.4-106.8L518 280.6c4.7-1.5 6.2-2.5 9.2 2.2 2.9 4.8 62.4 85.5 64.1 88.2zm12.1-134.1c-4.2.9-73.6 18.1-73.6 18.1l-56.7-77.8c-1.6-2.3-2.9-4.5 1.1-5s68.4-12.2 71.3-12.8c2.9-.7 5.4-1.5 9 3.4 3.6 4.9 52.6 67 54.5 69.4 1.8 2.3-1.4 3.7-5.6 4.7z" />
-											</svg> Laravel, <svg
-												class="inline-block"
-												height="16px"
-												viewBox="0 0 448 512">
-												<path
-													d="M257.2 162.7c-48.7 1.8-169.5 15.5-169.5 117.5 0 109.5 138.3 114 183.5 43.2 6.5 10.2 35.4 37.5 45.3 46.8l56.8-56S341 288.9 341 261.4V114.3C341 89 316.5 32 228.7 32 140.7 32 94 87 94 136.3l73.5 6.8c16.3-49.5 54.2-49.5 54.2-49.5 40.7-.1 35.5 29.8 35.5 69.1zm0 86.8c0 80-84.2 68-84.2 17.2 0-47.2 50.5-56.7 84.2-57.8v40.6zm136 163.5c-7.7 10-70 67-174.5 67S34.2 408.5 9.7 379c-6.8-7.7 1-11.3 5.5-8.3C88.5 415.2 203 488.5 387.7 401c7.5-3.7 13.3 2 5.5 12zm39.8 2.2c-6.5 15.8-16 26.8-21.2 31-5.5 4.5-9.5 2.7-6.5-3.8s19.3-46.5 12.7-55c-6.5-8.3-37-4.3-48-3.2-10.8 1-13 2-14-.3-2.3-5.7 21.7-15.5 37.5-17.5 15.7-1.8 41-.8 46 5.7 3.7 5.1 0 27.1-6.5 43.1z" />
-											</svg> Amazon AWS, and
-											Ionic/ <svg
-												class="inline-block"
-												height="16px"
-												viewBox="0 0 415.6 512">
-												<path
-													d="M169.7 268.1h76.2l-38.1-91.6-38.1 91.6zM207.8 32L0 106.4l31.8 275.7 176 97.9 176-97.9 31.8-275.7L207.8 32zM338 373.8h-48.6l-26.2-65.4H152.6l-26.2 65.4H77.7L207.8 81.5 338 373.8z" />
-											</svg> Angular</li>
-										<li>A <svg class="inline-block"
-												height="16px"
-												viewBox="0 0 448 512">
-												<path
-													d="M.6 92.1C.6 58.8 27.4 32 60.4 32c30 0 54.5 21.9 59.2 50.2 32.6-7.6 67.1.6 96.5 30l-44.3 44.3c-20.5-20.5-42.6-16.3-55.4-3.5-14.3 14.3-14.3 37.9 0 52.2l99.5 99.5-44 44.3c-87.7-87.2-49.7-49.7-99.8-99.7-26.8-26.5-35-64.8-24.8-98.9C20.4 144.6.6 120.7.6 92.1zm129.5 116.4l44.3 44.3c10-10 89.7-89.7 99.7-99.8 14.3-14.3 37.6-14.3 51.9 0 12.8 12.8 17 35-3.5 55.4l44 44.3c31.2-31.2 38.5-67.6 28.9-101.2 29.2-4.1 51.9-29.2 51.9-59.5 0-33.2-26.8-60.1-59.8-60.1-30.3 0-55.4 22.5-59.5 51.6-33.8-9.9-71.7-1.5-98.3 25.1-18.3 19.1-71.1 71.5-99.6 99.9zm266.3 152.2c8.2-32.7-.9-68.5-26.3-93.9-11.8-12.2 5 4.7-99.5-99.7l-44.3 44.3 99.7 99.7c14.3 14.3 14.3 37.6 0 51.9-12.8 12.8-35 17-55.4-3.5l-44 44.3c27.6 30.2 68 38.8 102.7 28 5.5 27.4 29.7 48.1 58.9 48.1 33 0 59.8-26.8 59.8-60.1 0-30.2-22.5-55-51.6-59.1zm-84.3-53.1l-44-44.3c-87 86.4-50.4 50.4-99.7 99.8-14.3 14.3-37.6 14.3-51.9 0-13.1-13.4-16.9-35.3 3.2-55.4l-44-44.3c-30.2 30.2-38 65.2-29.5 98.3-26.7 6-46.2 29.9-46.2 58.2C0 453.2 26.8 480 59.8 480c28.6 0 52.5-19.8 58.6-46.7 32.7 8.2 68.5-.6 94.2-26 32.1-32 12.2-12.4 99.5-99.7z" />
-											</svg> Joomla Volunteer</li>
-									</ul>
-
-									<ul class="list-none">
-										<li><a href="https://es.linkedin.com/in/anibalsanchez"
-												target="_blank"
-												rel="noopener noreferrer"><svg
-													class="inline-block"
-													height="16px"
-													viewBox="0 0 448 512">
-													<path fill="#ffa32b"
-														d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
-												</svg>
-												linkedin.com/in/anibalsanchez</a>
-										</li>
-										<li><a href="https://github.com/anibalsanchez"
-												target="_blank"
-												rel="noopener noreferrer"><svg
-													class="inline-block"
-													height="16px"
-													viewBox="0 0 496 512">
-													<path fill="#ffa32b"
-														d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
-												</svg>
-												github.com/anibalsanchez</a>
-										</li>
-										<li><a href="https://twitter.com/anibal_sanchez"
-												target="_blank"
-												rel="noopener noreferrer"><svg
-													class="inline-block"
-													height="16px"
-													viewBox="0 0 512 512">
-													<path fill="#ffa32b"
-														d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
-												</svg>
-												@anibal_sanchez</a></li>
-										<li><a href="http://www.facebook.com/anibal.sanchez"
-												target="_blank"
-												rel="noopener noreferrer"><svg
-													class="inline-block"
-													height="16px"
-													viewBox="0 0 448 512">
-													<path fill="#ffa32b"
-														d="M448 56.7v398.5c0 13.7-11.1 24.7-24.7 24.7H309.1V306.5h58.2l8.7-67.6h-67v-43.2c0-19.6 5.4-32.9 33.5-32.9h35.8v-60.5c-6.2-.8-27.4-2.7-52.2-2.7-51.6 0-87 31.5-87 89.4v49.9h-58.4v67.6h58.4V480H24.7C11.1 480 0 468.9 0 455.3V56.7C0 43.1 11.1 32 24.7 32h398.5c13.7 0 24.8 11.1 24.8 24.7z" />
-												</svg>
-												facebook/anibal.sanchez</a>
-										</li>
-										<li><a href="https://joomla.stackexchange.com/users/174/anibal"
-												target="_blank"
-												rel="noopener noreferrer"><svg
-													class="inline-block"
-													height="16px"
-													viewBox="0 0 448 512">
-													<path fill="#ffa32b"
-														d="M17.7 332.3h412.7v22c0 37.7-29.3 68-65.3 68h-19L259.3 512v-89.7H83c-36 0-65.3-30.3-65.3-68v-22zm0-23.6h412.7v-85H17.7v85zm0-109.4h412.7v-85H17.7v85zM365 0H83C47 0 17.7 30.3 17.7 67.7V90h412.7V67.7C430.3 30.3 401 0 365 0z" />
-												</svg>
-												stackexchange/anibal</a>
-										</li>
-									</ul>
-
-									<a class="github-button"
+							<div id="mod-custom102"
+								class="mod-custom custom">
+								<p><img class="img-circle xt-lazy-img"
+										src="/images/anibal-0612-200.jpg"
+										alt="Aníbal Sánchez - Perdido y Encontrado en la Computación" />
+								</p>
+								<h4>Aníbal Sánchez</h4>
+								<ul class="list-none">
+									<li><a href="https://php-prefixer.com/"
+											target="_blank"
+											rel="noopener noreferrer">
+											PHP-Prefixer</a> / Product
+										Manager</li>
+									<li>PHP-Prefixer is an automated
+										online service powered by a
+										complex rule-based system to
+										apply prefixes to Composer
+										dependencies.</li>
+								</ul>
+								<ul class="list-none">
+									<li><a href="http://www.extly.com"
+											target="_blank"
+											rel="noopener noreferrer">
+											Extly Tech</a> / Team Leader
+									</li>
+									<li>Empower your project with our
+										web solutions. Today, working on
+										Laravel, Amazon AWS, and Ionic.
+										A Joomla Volunteer.</li>
+								</ul>
+								<ul class="list-none">
+									<li><a href="https://es.linkedin.com/in/anibalsanchez"
+											target="_blank"
+											rel="noopener noreferrer">
+											linkedin.com/in/anibalsanchez</a>
+									</li>
+									<li><a href="https://github.com/anibalsanchez"
+											target="_blank"
+											rel="noopener noreferrer">
+											github.com/anibalsanchez</a>
+									</li>
+									<li><a href="https://twitter.com/anibal_sanchez"
+											target="_blank"
+											rel="noopener noreferrer">
+											@anibal_sanchez</a></li>
+									<li><a href="http://www.facebook.com/anibal.sanchez"
+											target="_blank"
+											rel="noopener noreferrer">
+											facebook/anibal.sanchez</a>
+									</li>
+									<li><a href="https://joomla.stackexchange.com/users/174/anibal"
+											target="_blank"
+											rel="noopener noreferrer">
+											stackexchange/anibal</a>
+									</li>
+								</ul>
+								<p><a class="github-button"
 										href="https://github.com/anibalsanchez"
 										data-size="large"
-										data-show-count="true"
-										aria-label="Follow @anibalsanchez on GitHub">Follow
-										@anibalsanchez</a>
-
-									<ul class="list-none">
-										<li><a href="https://volunteers.joomla.org/joomlers/273-anibal-sanchez"
-												target="_blank"
-												rel="noopener"><svg
-													class="inline-block"
-													height="16px"
-													viewBox="0 0 448 512">
-													<path fill="#ffa32b"
-														d="M.6 92.1C.6 58.8 27.4 32 60.4 32c30 0 54.5 21.9 59.2 50.2 32.6-7.6 67.1.6 96.5 30l-44.3 44.3c-20.5-20.5-42.6-16.3-55.4-3.5-14.3 14.3-14.3 37.9 0 52.2l99.5 99.5-44 44.3c-87.7-87.2-49.7-49.7-99.8-99.7-26.8-26.5-35-64.8-24.8-98.9C20.4 144.6.6 120.7.6 92.1zm129.5 116.4l44.3 44.3c10-10 89.7-89.7 99.7-99.8 14.3-14.3 37.6-14.3 51.9 0 12.8 12.8 17 35-3.5 55.4l44 44.3c31.2-31.2 38.5-67.6 28.9-101.2 29.2-4.1 51.9-29.2 51.9-59.5 0-33.2-26.8-60.1-59.8-60.1-30.3 0-55.4 22.5-59.5 51.6-33.8-9.9-71.7-1.5-98.3 25.1-18.3 19.1-71.1 71.5-99.6 99.9zm266.3 152.2c8.2-32.7-.9-68.5-26.3-93.9-11.8-12.2 5 4.7-99.5-99.7l-44.3 44.3 99.7 99.7c14.3 14.3 14.3 37.6 0 51.9-12.8 12.8-35 17-55.4-3.5l-44 44.3c27.6 30.2 68 38.8 102.7 28 5.5 27.4 29.7 48.1 58.9 48.1 33 0 59.8-26.8 59.8-60.1 0-30.2-22.5-55-51.6-59.1zm-84.3-53.1l-44-44.3c-87 86.4-50.4 50.4-99.7 99.8-14.3 14.3-37.6 14.3-51.9 0-13.1-13.4-16.9-35.3 3.2-55.4l-44-44.3c-30.2 30.2-38 65.2-29.5 98.3-26.7 6-46.2 29.9-46.2 58.2C0 453.2 26.8 480 59.8 480c28.6 0 52.5-19.8 58.6-46.7 32.7 8.2 68.5-.6 94.2-26 32.1-32 12.2-12.4 99.5-99.7z" />
-												</svg> Joomla! Community
-												Leadership Team</a>
-										</li>
-										<li><a href="http://extensions.joomla.org/about-jed/about-the-team"
-												target="_blank"
-												rel="noopener"><svg
-													class="inline-block"
-													height="16px"
-													viewBox="0 0 448 512">
-													<path fill="#ffa32b"
-														d="M.6 92.1C.6 58.8 27.4 32 60.4 32c30 0 54.5 21.9 59.2 50.2 32.6-7.6 67.1.6 96.5 30l-44.3 44.3c-20.5-20.5-42.6-16.3-55.4-3.5-14.3 14.3-14.3 37.9 0 52.2l99.5 99.5-44 44.3c-87.7-87.2-49.7-49.7-99.8-99.7-26.8-26.5-35-64.8-24.8-98.9C20.4 144.6.6 120.7.6 92.1zm129.5 116.4l44.3 44.3c10-10 89.7-89.7 99.7-99.8 14.3-14.3 37.6-14.3 51.9 0 12.8 12.8 17 35-3.5 55.4l44 44.3c31.2-31.2 38.5-67.6 28.9-101.2 29.2-4.1 51.9-29.2 51.9-59.5 0-33.2-26.8-60.1-59.8-60.1-30.3 0-55.4 22.5-59.5 51.6-33.8-9.9-71.7-1.5-98.3 25.1-18.3 19.1-71.1 71.5-99.6 99.9zm266.3 152.2c8.2-32.7-.9-68.5-26.3-93.9-11.8-12.2 5 4.7-99.5-99.7l-44.3 44.3 99.7 99.7c14.3 14.3 14.3 37.6 0 51.9-12.8 12.8-35 17-55.4-3.5l-44 44.3c27.6 30.2 68 38.8 102.7 28 5.5 27.4 29.7 48.1 58.9 48.1 33 0 59.8-26.8 59.8-60.1 0-30.2-22.5-55-51.6-59.1zm-84.3-53.1l-44-44.3c-87 86.4-50.4 50.4-99.7 99.8-14.3 14.3-37.6 14.3-51.9 0-13.1-13.4-16.9-35.3 3.2-55.4l-44-44.3c-30.2 30.2-38 65.2-29.5 98.3-26.7 6-46.2 29.9-46.2 58.2C0 453.2 26.8 480 59.8 480c28.6 0 52.5-19.8 58.6-46.7 32.7 8.2 68.5-.6 94.2-26 32.1-32 12.2-12.4 99.5-99.7z" />
-												</svg> Joomla! JED Team
-												Manager</a></li>
-									</ul>
-									<ul class="list-none">
-										<li><a
-												href="/en/a-bunch-of-slides-and-random-thoughts.html"><svg
-													class="inline-block"
-													height="16px"
-													viewBox="0 0 576 512">
-													<path fill="#ffa32b"
-														d="M528 0H48C21.5 0 0 21.5 0 48v320c0 26.5 21.5 48 48 48h192l-16 48h-72c-13.3 0-24 10.7-24 24s10.7 24 24 24h272c13.3 0 24-10.7 24-24s-10.7-24-24-24h-72l-16-48h192c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zm-16 352H64V64h448v288z" />
-												</svg> A Bunch of Slides
-												and Random
-												Thoughts</a></li>
-									</ul>
-
-									<hr>
-									<p><a
-											href="/en/aikido-manual-aetaiki-aikikai.html">Aikido
-											Manual Aetaiki - Aikikai</a>
-									</p>
-								</div>
-							</div>
-							<div class="moduletable">
-								<div class="tagspopular">
-									<ul>
-										<li>
-											<a
-												href="/en/component/tags/tag/joomla.html">
-												Joomla</a>
-										</li>
-										<li>
-											<a
-												href="/en/component/tags/tag/javascript.html">
-												Javascript</a>
-										</li>
-										<li>
-											<a
-												href="/en/component/tags/tag/español.html">
-												español</a>
-										</li>
-										<li>
-											<a
-												href="/en/component/tags/tag/ionic.html">
-												Ionic</a>
-										</li>
-										<li>
-											<a
-												href="/en/component/tags/tag/ingles.html">
-												Ingles</a>
-										</li>
-										<li>
-											<a
-												href="/en/component/tags/tag/angularjs.html">
-												AngularJS</a>
-										</li>
-										<li>
-											<a
-												href="/en/component/tags/tag/phonegap.html">
-												Phonegap</a>
-										</li>
-									</ul>
-								</div>
+										data-show-count="true">Follow
+										@anibalsanchez</a></p>
+								<ul class="list-none">
+									<li><a href="https://volunteers.joomla.org/joomlers/273-anibal-sanchez"
+											target="_blank"
+											rel="noopener noreferrer">
+											Joomla! Community Leadership
+											Team</a></li>
+									<li><a href="http://extensions.joomla.org/about-jed/about-the-team"
+											target="_blank"
+											rel="noopener noreferrer">
+											Joomla! JED Team Manager</a>
+									</li>
+								</ul>
+								<ul class="list-none">
+									<li><a
+											href="/index.php?option=com_content&amp;view=article&amp;id=34&amp;Itemid=1414&amp;lang=es">
+											A Bunch of Slides and Random
+											Thoughts</a></li>
+								</ul>
+								<hr />
+								<p><a
+										href="/index.php?option=com_content&amp;view=article&amp;id=39&amp;Itemid=1740&amp;lang=es">Aikido
+										Manual Aetaiki - Aikikai</a></p>
+								<hr />
+								<h5>Red Astur de Bloggers</h5>
+								<p><a href="https://jonatanweber.es/"
+										target="_blank"
+										rel="noopener noreferrer">Jonatan
+										Weber - Consultor de Marketing
+										Automatizado</a></p>
 							</div>
 
 						</div>
@@ -837,18 +785,145 @@ UPDATE #__jcalpro_locations SET latlng = GeomFromText(CONCAT(
 			<!-- footer-element -->
 			<div class="footer-element py-8 px-4 lg:px-0">
 				<p>
-					&copy; 2020 <a a href="/" target="_self"
-						title="# Aníbal Sánchez"># Aníbal Sánchez -
-						Anibal&#039;s
-						Blog // selector: &#039;anibal_sanchez&#039; -
-						Lost and
-						Found in Technology</a>
+					&copy; 2021 <a a href="/" target="_self"
+						title="# Aníbal Sánchez"># Aníbal Sánchez - Dev
+						Site blog</a>
 				</p>
 			</div>
 		</div>
 
 	</div>
-	<script>!function (e) { var t = document.createElement("link"); t.rel = "stylesheet", t.href = "https://d1hvvp61iyzquq.cloudfront.net/templates/xttailwindcss/css/prism.css", t.type = "text/css"; var n = document.getElementsByTagName("link")[0]; n.parentNode.insertBefore(t, n) }();</script>
+
+	<script type="text/plain" data-xtg-cookie-banner="analytics">
+
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-8356750-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+	<div id="xtg-cookie-banner" style="display:none">
+		<div class="xtg-container">
+			<div id="xt-gdpr-cookie-consent-banner"
+				class="xtg-bg-step-1">
+				<div class="xtg-row">
+					<div class="xtg-text-wrapper">
+						<span class="xtg-icon-cell">
+							<svg class="xtg-icon-svg" width="24"
+								height="24"
+								xmlns="http://www.w3.org/2000/svg"
+								fill="#fff" viewbox="0 0 512 512"
+								stroke="currentColor">
+								<path
+									d="M510.52 255.82c-69.97-.85-126.47-57.69-126.47-127.86-70.17 0-127-56.49-127.86-126.45-27.26-4.14-55.13.3-79.72 12.82l-69.13 35.22a132.221 132.221 0 0 0-57.79 57.81l-35.1 68.88a132.645 132.645 0 0 0-12.82 80.95l12.08 76.27a132.521 132.521 0 0 0 37.16 72.96l54.77 54.76a132.036 132.036 0 0 0 72.71 37.06l76.71 12.15c27.51 4.36 55.7-.11 80.53-12.76l69.13-35.21a132.273 132.273 0 0 0 57.79-57.81l35.1-68.88c12.56-24.64 17.01-52.58 12.91-79.91zM176 368c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm32-160c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm160 128c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32z">
+								</path>
+							</svg>
+						</span>
+						<p class="xtg-message-1">
+							<span class="xtg-message-1-mobile">
+								We use cookies <a href="#"
+									class="xt-button__learn-more">
+									Learn more</a>
+							</span>
+							<span class="xtg-message-1-desktop">
+								We use third-party analytics cookies to
+								understand how you use our website so we
+								can build better products. <a href="#"
+									class="xt-button__learn-more">
+									Learn more</a>
+							</span>
+						</p>
+					</div>
+					<div class="xt-button-wrapper-2">
+						<div class="xt-button-box">
+							<a href="#"
+								class="xt-button-link__inverse xt-button__accept">
+								Accept </a>
+						</div>
+					</div>
+					<div class="xt-button-wrapper-3">
+						<div class="xt-button-box">
+							<a href="#"
+								class="xt-button-link__inverse xt-button__reject">
+								Reject </a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="xt-gdpr-cookie-consent-banner_learn-more"
+				class="xtg-bg-step-2 xtg-hidden">
+				<div class="xtg-messages-2">
+					<div class="xtg-text-wrapper">
+						<p>
+							We use optional third-party analytics
+							cookies to understand how you use the
+							website so we can build better products.<br>
+							For more information, see our <a
+								href='https://www.extly.com/privacy-policy.html'>Privacy
+								Statement</a>. </p>
+					</div>
+				</div>
+				<hr class="my-2">
+				<div class="xtg-messages-2">
+					<div class="xtg-text-wrapper">
+						<p>
+							<b>Essential cookies</b><br>
+							We use essential cookies to perform
+							essential website functions, e.g. they're
+							used to log you in. <a
+								href="https://www.extly.com/privacy-policy.html">
+								Learn more </a>
+						</p>
+					</div>
+					<div class="xt-button-wrapper-2">
+						<b>Always active</b>
+					</div>
+				</div>
+				<hr class="my-2">
+				<div class="xtg-messages-2">
+					<div class="xtg-text-wrapper">
+						<p>
+							<b>Analytics cookies</b><br>
+							We use analytics cookies to understand how
+							you use our websites so we can make them
+							better, e.g. they're used to gather
+							information about the pages you visit and
+							how many clicks you need to accomplish a
+							task. <a
+								href="https://www.extly.com/privacy-policy.html">
+								Learn more </a>
+						</p>
+					</div>
+					<div class="xt-button-wrapper-2">
+						<div class="xt-button-box">
+							<a href="#"
+								class="xt-button-link xt-button__accept">
+								Accept </a>
+						</div>
+					</div>
+					<div class="xt-button-wrapper-3">
+						<div class="xt-button-box">
+							<a href="#"
+								class="xt-button-link xt-button__reject">
+								Reject </a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<script>!function (e) { var t = document.createElement("link"); t.rel = "stylesheet", t.href = "/templates/xttailwindcss/css/prism.css?23c1437ab91d2c5254a372dabd211dc9", t.type = "text/css"; var n = document.getElementsByTagName("link")[0]; n.parentNode.insertBefore(t, n) }();</script>
+	<script>!function (e) { var t = document.createElement("link"); t.rel = "stylesheet", t.href = "http://blog.lndo.site/media/plg_XTYouTubeVideoOptimizer/css/youtubevideooptimizer.min.css?23c1437ab91d2c5254a372dabd211dc9", t.type = "text/css"; var n = document.getElementsByTagName("link")[0]; n.parentNode.insertBefore(t, n) }();</script>
+	<script>!function (e) { var t = document.createElement("link"); t.rel = "stylesheet", t.href = "http://blog.lndo.site/media/lib_xt-gdpr-cookie-consent-banner/css/styles.min.css?23c1437ab91d2c5254a372dabd211dc9", t.type = "text/css"; var n = document.getElementsByTagName("link")[0]; n.parentNode.insertBefore(t, n) }();</script>
+	<script>!function (e) { var t = document.createElement("link"); t.rel = "stylesheet", t.href = "http://blog.lndo.site/media/mod_xtdir4alg_autocomplete/css/xtdir4alg_autocomplete.min.css?23c1437ab91d2c5254a372dabd211dc9", t.type = "text/css"; var n = document.getElementsByTagName("link")[0]; n.parentNode.insertBefore(t, n) }();</script>
+	<script>!function (e) { var t = document.createElement("link"); t.rel = "stylesheet", t.href = "http://blog.lndo.site/media/plg_XTYouTubeVideoOptimizer/css/youtubevideooptimizer.min.css?23c1437ab91d2c5254a372dabd211dc9", t.type = "text/css"; var n = document.getElementsByTagName("link")[0]; n.parentNode.insertBefore(t, n) }();</script>
 </body>
 
 </html>

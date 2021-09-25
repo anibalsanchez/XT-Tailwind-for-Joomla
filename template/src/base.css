@@ -81,3 +81,11 @@ blockquote {
     @apply mt-2;
   }
 }
+
+.visually-hidden {
+  @apply hidden;
+}
+
+pre {
+  @apply mt-6 truncate;
+}

@@ -79,7 +79,7 @@ module.exports = {
     },
   },
   variants: {
-    backgroundColor: ['active'],
+    backgroundColor: ['active', 'hover'],
     textColor: ['active', 'hover'],
   },
   plugins: [
