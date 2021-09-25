@@ -14,10 +14,9 @@ defined('_JEXEC') or die;
 
 // Sentry: Application Monitoring and Error Tracking Software
 // To integrate "XT Sentry for Joomla" - https://github.com/anibalsanchez/XT-Sentry-for-Joomla
-if (file_exists(JPATH_SITE.'/cli/sentry.php')) {
-    require_once JPATH_SITE.'/cli/sentry.php';
+if (@include_once(JPATH_SITE.'/cli/sentry.php')) {
 
-    if ($this->error instanceof \Throwable) {
+    if ($this->error instanceof \Throwable && function_exists('\Sentry\captureException')) {
         \Sentry\captureException($this->error);
     }
 }

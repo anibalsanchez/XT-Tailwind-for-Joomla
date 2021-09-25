@@ -18,6 +18,9 @@
   @apply text-sm text-white mt-0;
 }
 
+/*
+--- mod_languages for Joomla 3 ---
+
 .languages-element {
   @apply flex-initial;
 
@@ -40,6 +43,16 @@
   li.lang-active a {
     text-decoration: underline !important;
   }
+}
+*/
+
+/* --- mod_languages for Joomla 4 --- */
+.languages-element {
+  @apply flex-initial text-xs;
+}
+
+div.mod-languages ul li.lang-active {
+  @apply bg-transparent;
 }
 
 .about-me img {
@@ -65,15 +78,15 @@
   top: 7rem;
 }
 
-.breadcrumbs-block {
-  @apply flex-row pr-4 bg-grey-light opacity-50 rounded;
+.breadcrumbs-block, nav.mod-breadcrumbs__wrapper {
+  @apply flex-row pr-4 rounded;
 
-  li {
-    @apply flex-initial whitespace-nowrap px-2 py-2;
-  }
-
-  ul {
+  ul, ol {
     @apply flex flex-wrap list-none p-0 mt-0 px-2 py-4 mb-6;
+
+    li {
+      @apply flex-initial whitespace-nowrap px-2 py-2;
+    }
   }
 }
 
@@ -140,7 +153,8 @@
   }
 }
 
-.pagination {
+/* --- Pagination for Joomla 3 --- */
+div.pagination {
   @apply flex-1 flex justify-between;
 
   p.counter {
@@ -219,17 +233,52 @@ div.blog-block.prose > div.blog-featured > div.pagination > ul > li:before {
   li {
     @apply relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm leading-5 font-medium rounded-md text-gray-700 bg-white;
 
-    /* To avoid prose padding */
     padding-left: 1rem !important;
   }
 
-  /* To avoid prose disc */
   li::before {
     content: none !important;
   }
 
   a {
     @apply active:bg-gray-100 active:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:ring-blue-400 hover:text-gray-400;
+  }
+}
+
+/* --- Pagination for Joomla 4 --- */
+nav.pagination__wrapper {
+  @apply mt-4;
+
+  ul {
+    @apply relative z-0 inline-flex rounded-md shadow-sm -space-x-px;
+  }
+
+  li {
+    @apply list-none relative inline-flex items-center px-4 py-2 bg-white border border-gray-300 text-gray-500 hover:bg-gray-50 border text-sm font-medium;
+  }
+
+  li.disabled {
+    @apply cursor-not-allowed opacity-50;
+  }
+
+  li.page-item-start {
+    @apply px-2 rounded-l-md;
+  }
+
+  li.page-item-end {
+    @apply px-2 rounded-r-md;
+  }
+
+  li.active {
+    @apply z-10 bg-indigo-50 border-indigo-500 text-indigo-600;
+  }
+
+  li.page-item-goto-page {
+    @apply hidden md:inline-flex;
+  }
+
+  svg {
+    @apply h-4 w-4;
   }
 }
 
@@ -261,4 +310,8 @@ div.blog-block.prose > div.blog-featured > div.pagination > ul > li:before {
 
 .tagspopular a {
   @apply block;
+}
+
+.prose ul {
+  @apply list-disc list-inside
 }
