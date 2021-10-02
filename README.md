@@ -41,7 +41,7 @@ The original XT build files, used to build the extension, can be found here [ani
 
 ### 6.0.0
 
-- Review for Joomla 4
+- Review for Joomla 4. Updates to the Pagination, Languages and Breadcrumbs modules
 - Usability improvements, optimizations and code styling
 
 ### 5.0.0

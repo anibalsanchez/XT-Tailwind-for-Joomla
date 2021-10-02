@@ -54,6 +54,10 @@ p {
   @apply mt-6;
 }
 
+h1 {
+  @apply text-4xl mb-3 font-bold;
+}
+
 h2 {
   @apply text-3xl mb-3 font-bold;
 }
