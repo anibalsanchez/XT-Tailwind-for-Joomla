@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../../',
         'aliases' => array(),
-        'reference' => 'e9c52f113009fa51a1bd1248c4ce49ea8475f024',
+        'reference' => 'b0464b6b564e787fbcf22c064c051153187fdb9a',
         'name' => 'anibalsanchez/xt-tailwind-css',
         'dev' => false,
     ),
@@ -34,7 +34,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../../',
             'aliases' => array(),
-            'reference' => 'e9c52f113009fa51a1bd1248c4ce49ea8475f024',
+            'reference' => 'b0464b6b564e787fbcf22c064c051153187fdb9a',
             'dev_requirement' => false,
         ),
         'doctrine/inflector' => array(
