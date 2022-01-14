@@ -4,16 +4,16 @@
  * @package     XT Tailwind for Joomla
  *
  * @author      Extly, CB. <team@extly.com>
- * @copyright   Copyright (c)2012-2021 Extly, CB. All rights reserved.
+ * @copyright   Copyright (c)2019-2022 Extly, CB. All rights reserved.
  * @license     https://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
  *
  * @see         https://www.extly.com
  */
 
-defined('_JEXEC') or die;
+defined('_JEXEC') || exit;
 
 if (!@include_once(JPATH_ROOT.'/libraries/xttailwind/vendor/autoload.php')) {
-  return;
+    return;
 }
 
 use Extly\Infrastructure\Service\Cms\Joomla\ScriptHelper;
@@ -48,7 +48,7 @@ $view = $app->input->getCmd('view', '');
 $layout = $app->input->getCmd('layout', '');
 $task = $app->input->getCmd('task', '');
 $itemid = $app->input->getCmd('Itemid', '');
-$siteName = htmlspecialchars($app->get('sitename'), ENT_QUOTES, 'UTF-8');
+$siteName = htmlspecialchars($app->get('sitename'), \ENT_QUOTES, 'UTF-8');
 $mediaversion = (new CMSVersion())->getMediaVersion();
 
 // Add template js - JavaScript to be deferred - Removed to Optimize
@@ -81,8 +81,8 @@ $htmlAssetRepository->push(ScriptTag::create(ScriptHelper::addMediaVersion($pris
 
 $htmlAssetRepository->push(ScriptTag::create('https://buttons.github.io/buttons.js'));
 
-$logoTitle =  htmlspecialchars($params->get('logoTitle', '@Anibal_Sanchez'));
-$siteDescription = htmlspecialchars($params->get('siteDescription'), ENT_QUOTES, 'UTF-8');
+$logoTitle = htmlspecialchars($params->get('logoTitle', '@Anibal_Sanchez'));
+$siteDescription = htmlspecialchars($params->get('siteDescription'), \ENT_QUOTES, 'UTF-8');
 
 ?>
 <!DOCTYPE html>
@@ -130,7 +130,7 @@ $siteDescription = htmlspecialchars($params->get('siteDescription'), ENT_QUOTES,
             </a>
             <?php
                 if (!empty($siteDescription)) {
-                    echo '<p class="site-description">'.htmlspecialchars($siteDescription, ENT_COMPAT, 'UTF-8').'</p>';
+                    echo '<p class="site-description">'.htmlspecialchars($siteDescription, \ENT_COMPAT, 'UTF-8').'</p>';
                 }
             ?>
           </div>

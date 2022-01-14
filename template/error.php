@@ -4,25 +4,24 @@
  * @package     XT Tailwind for Joomla
  *
  * @author      Extly, CB. <team@extly.com>
- * @copyright   Copyright (c)2012-2021 Extly, CB. All rights reserved.
+ * @copyright   Copyright (c)2019-2022 Extly, CB. All rights reserved.
  * @license     https://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
  *
  * @see         https://www.extly.com
  */
 
-defined('_JEXEC') or die;
+defined('_JEXEC') || exit;
 
 // Sentry: Application Monitoring and Error Tracking Software
 // To integrate "XT Sentry for Joomla" - https://github.com/anibalsanchez/XT-Sentry-for-Joomla
 if (@include_once(JPATH_SITE.'/cli/sentry.php')) {
-
     if ($this->error instanceof \Throwable && function_exists('\Sentry\captureException')) {
         \Sentry\captureException($this->error);
     }
 }
 
 if (!@include_once(JPATH_ROOT.'/libraries/xttailwind/vendor/autoload.php')) {
-  return;
+    return;
 }
 
 use Extly\Infrastructure\Service\Cms\Joomla\ScriptHelper;
@@ -54,7 +53,7 @@ $view = $app->input->getCmd('view', '');
 $layout = $app->input->getCmd('layout', '');
 $task = $app->input->getCmd('task', '');
 $itemid = $app->input->getCmd('Itemid', '');
-$siteName = htmlspecialchars($app->get('sitename'), ENT_QUOTES, 'UTF-8');
+$siteName = htmlspecialchars($app->get('sitename'), \ENT_QUOTES, 'UTF-8');
 $mediaversion = (new CMSVersion())->getMediaVersion();
 
 // Add template js - JavaScript to be deferred - Removed to Optimize
@@ -74,12 +73,12 @@ if (!empty($headScripts)) {
 }
 
 $headData = $document->getHeadData();
-$siteDescription = htmlspecialchars($params->get('siteDescription'), ENT_QUOTES, 'UTF-8');
+$siteDescription = htmlspecialchars($params->get('siteDescription'), \ENT_QUOTES, 'UTF-8');
 
 /* The template customization starts here */
 
-$logoTitle =  htmlspecialchars($params->get('logoTitle', '@Anibal_Sanchez'));
-$siteDescription = htmlspecialchars($params->get('siteDescription'), ENT_QUOTES, 'UTF-8');
+$logoTitle = htmlspecialchars($params->get('logoTitle', '@Anibal_Sanchez'));
+$siteDescription = htmlspecialchars($params->get('siteDescription'), \ENT_QUOTES, 'UTF-8');
 
 ?>
 <!DOCTYPE html>
@@ -124,7 +123,7 @@ $siteDescription = htmlspecialchars($params->get('siteDescription'), ENT_QUOTES,
             </a>
             <?php
                 if (!empty($siteDescription)) {
-                    echo '<p class="site-description">'.htmlspecialchars($siteDescription, ENT_COMPAT, 'UTF-8').'</p>';
+                    echo '<p class="site-description">'.htmlspecialchars($siteDescription, \ENT_COMPAT, 'UTF-8').'</p>';
                 }
             ?>
           </div>
@@ -165,10 +164,10 @@ $siteDescription = htmlspecialchars($params->get('siteDescription'), ENT_QUOTES,
 
                 <p><?php echo JText::_('JERROR_LAYOUT_PLEASE_CONTACT_THE_SYSTEM_ADMINISTRATOR'); ?></p>
                 <blockquote>
-                    <span class="label label-inverse"><?php echo $this->error->getCode(); ?></span> <?php echo htmlspecialchars($this->error->getMessage(), ENT_QUOTES, 'UTF-8'); ?>
+                    <span class="label label-inverse"><?php echo $this->error->getCode(); ?></span> <?php echo htmlspecialchars($this->error->getMessage(), \ENT_QUOTES, 'UTF-8'); ?>
                         <?php if ($this->debug) {
                 ?>
-                            <br/><?php echo htmlspecialchars($this->error->getFile(), ENT_QUOTES, 'UTF-8'); ?>:<?php echo $this->error->getLine(); ?>
+                            <br/><?php echo htmlspecialchars($this->error->getFile(), \ENT_QUOTES, 'UTF-8'); ?>:<?php echo $this->error->getLine(); ?>
                         <?php
             } ?>
                 </blockquote>
@@ -188,8 +187,8 @@ $siteDescription = htmlspecialchars($params->get('siteDescription'), ENT_QUOTES,
                         ?>
                                     <p><strong><?php echo JText::_('JERROR_LAYOUT_PREVIOUS_ERROR'); ?></strong></p>
                                     <p>
-                                        <?php echo htmlspecialchars($this->_error->getMessage(), ENT_QUOTES, 'UTF-8'); ?>
-                                        <br/><?php echo htmlspecialchars($this->_error->getFile(), ENT_QUOTES, 'UTF-8'); ?>:<?php echo $this->_error->getLine(); ?>
+                                        <?php echo htmlspecialchars($this->_error->getMessage(), \ENT_QUOTES, 'UTF-8'); ?>
+                                        <br/><?php echo htmlspecialchars($this->_error->getFile(), \ENT_QUOTES, 'UTF-8'); ?>:<?php echo $this->_error->getLine(); ?>
                                     </p>
                                     <?php echo $this->renderBacktrace(); ?>
                                     <?php $loop = $this->setError($this->_error->getPrevious()); ?>
@@ -201,7 +200,7 @@ $siteDescription = htmlspecialchars($params->get('siteDescription'), ENT_QUOTES,
                 } ?>
                         </div>
                     <?php
-                } ?>
+            } ?>
 
                 <!-- End Content -->
             </div>

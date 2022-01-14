@@ -16,6 +16,9 @@
     "mnsami/composer-custom-directory-installer": "^2.0"
   },
   "config": {
+    "allow-plugins": {
+      "mnsami/composer-custom-directory-installer": true
+    },
     "optimize-autoloader": true,
     "platform-check": false,
     "preferred-install": "dist",

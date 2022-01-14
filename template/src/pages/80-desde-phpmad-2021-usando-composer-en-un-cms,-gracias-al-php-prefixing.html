@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="es-es" dir="ltr">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Desde PHPMad 2021: Usando Composer en un CMS, Gracias al PHP Prefixing</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link rel="stylesheet" type="text/css"
+        href="https://d1hvvp61iyzquq.cloudfront.net/media/plg_XTYouTubeVideoOptimizer/css/youtubevideooptimizer.min.css?5330069a929096dac07b4a93dcdb15cd">
+    <link rel="stylesheet" type="text/css"
+        href="https://blog.anibalhsanchez.com/templates/xttailwindcss/css/prism.css?5330069a929096dac07b4a93dcdb15cd">
+    <link rel="stylesheet" type="text/css"
+        href="https://d1hvvp61iyzquq.cloudfront.net/media/plg_XTYouTubeVideoOptimizer/css/youtubevideooptimizer.min.css?5330069a929096dac07b4a93dcdb15cd">
+    <link rel="stylesheet" type="text/css"
+        href="https://d1hvvp61iyzquq.cloudfront.net/media/mod_xtdir4alg_autocomplete/css/xtdir4alg_autocomplete.min.css?5330069a929096dac07b4a93dcdb15cd">
+</head>
+
+<body
+    class="site com_content view-article layout-blog no-task itemid-3614">
+
+    <!-- navigation-block -->
+    <div class="navigation-block">
+        <div class="w-full px-4 py-8 lg:px-0">
+            <div class="container mx-auto">
+                <div class="header">
+
+                    <!-- logo-block -->
+                    <div class="logo-element">
+                        <a href="#" target="_self"
+                            title="# Aníbal Sánchez" rel="home"
+                            class="logo-element-link">
+                            # Aníbal Sánchez </a>
+                        <p class="site-description">Team Leader / Senior
+                            Developer. @Extly Tech &amp; @phpPrefixer</p>
+                    </div>
+
+                    <!-- languages-block -->
+                    <div class="languages-element">
+                        <div class="mod-languages">
+                            <p class="visually-hidden"
+                                id="language_picker_des_87">Seleccione
+                                su idioma</p>
+
+
+                            <ul role="listbox"
+                                aria-labelledby="language_picker_des_87"
+                                class="mod-languages__list lang-inline">
+
+                                <li class="lang-active">
+                                    <a aria-current="true" role="option"
+                                        href="#">
+                                        Español </a>
+                                </li>
+                                <li>
+                                    <a role="option"
+                                        href="#">
+                                        English (UK) </a>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- main-container-block -->
+    <div class="main-container-block">
+        <div class="w-full px-4 py-8 lg:px-0">
+            <div class="container mx-auto">
+
+                <div class="flex flex-wrap sm:flex-nowrap">
+                    <div class="w-full sm:w-2/3 sm:pr-4">
+                        <!-- breadcrumbs-block -->
+                        <div class="breadcrumbs-block">
+                            <nav class="mod-breadcrumbs__wrapper"
+                                aria-label="Breadcrumbs">
+                                <ol itemscope
+                                    itemtype="https://schema.org/BreadcrumbList"
+                                    class="px-3 py-2 mod-breadcrumbs breadcrumb">
+                                    <li
+                                        class="mod-breadcrumbs__here float-start">
+                                        Está aquí: &#160;
+                                    </li>
+
+                                    <li itemprop="itemListElement"
+                                        itemscope
+                                        itemtype="https://schema.org/ListItem"
+                                        class="mod-breadcrumbs__item breadcrumb-item">
+                                        <a itemprop="item" href="#"
+                                            class="pathway"><span
+                                                itemprop="name">Inicio</span></a>
+                                        <meta itemprop="position"
+                                            content="1">
+                                    </li>
+                                    <li itemprop="itemListElement"
+                                        itemscope
+                                        itemtype="https://schema.org/ListItem"
+                                        class="mod-breadcrumbs__item breadcrumb-item">
+                                        <a itemprop="item"
+                                            href="#"
+                                            class="pathway"><span
+                                                itemprop="name">Blogueando</span></a>
+                                        <meta itemprop="position"
+                                            content="2">
+                                    </li>
+                                </ol>
+                            </nav>
+
+                        </div>
+
+                        <!-- blog-block -->
+                        <div class="blog-block">
+                            <!-- Begin Content -->
+                            <div id="system-message-container"
+                                aria-live="polite"></div>
+
+                            <div class="com-content-article item-page"
+                                itemscope
+                                itemtype="https://schema.org/Article">
+                                <meta itemprop="inLanguage"
+                                    content="es-ES">
+
+
+                                <div class="page-header">
+                                    <h1 itemprop="headline">
+                                        Desde PHPMad 2021: Usando
+                                        Composer en un CMS, Gracias al
+                                        PHP Prefixing </h1>
+                                </div>
+
+
+                                <dl class="article-info text-muted">
+
+
+                                    <dt class="article-info-term">
+                                        Detalles </dt>
+
+
+
+
+
+                                    <dd class="published">
+                                        <span
+                                            class="icon-calendar icon-fw"
+                                            aria-hidden="true"></span>
+                                        <time
+                                            datetime="2022-01-13T09:45:49+00:00"
+                                            itemprop="datePublished">
+                                            Publicado: 13 Enero 2022
+                                        </time>
+                                    </dd>
+
+
+
+
+                                </dl>
+
+
+                                <ul class="tags list-inline">
+                                    <li class="list-inline-item tag-52 tag-list0"
+                                        itemprop="keywords">
+                                        <a href="#"
+                                            class="btn btn-sm btn-info">
+                                            PHP-Prefixer </a>
+                                    </li>
+                                    <li class="list-inline-item tag-53 tag-list1"
+                                        itemprop="keywords">
+                                        <a href="#"
+                                            class="btn btn-sm btn-info">
+                                            Composer </a>
+                                    </li>
+                                </ul>
+
+
+                                <div itemprop="articleBody"
+                                    class="prose com-content-article__body">
+                                    <p>En Diciembre 2021, para cerrar el
+                                        año bien arriba, nos encontramos
+                                        online con el <a
+                                            href="#"
+                                            target="_blank"
+                                            rel="noopener">PHPMad
+                                        </a>para charlar acerca del uso
+                                        de <strong>PHP Composer</strong>
+                                        en el contexto de un sistema
+                                        multi-desarrollador, como
+                                        WordPress, Joomla, o PrestaShop
+                                        entre otros. En esta situación,
+                                        la aplicación de prefijos PHP a
+                                        los <strong>namespaces
+                                        </strong>es una necesidad que
+                                        evita los errores por conflictos
+                                        de nombres. Para solucionar
+                                        estos problemas y automatizar el
+                                        PHP Prefixing, presenté nuestro
+                                        servicio de <a
+                                            href="#"
+                                            target="_blank"
+                                            rel="noopener">PHP-Prefixer</a>.
+                                    </p>
+
+                                    <p>Este es el vídeo de la
+                                        presentación:</p>
+                                    <p>
+                                    <div data-width="560"
+                                        data-height="315"
+                                        src="https://www.youtube.com/embed/hKUIKA0Sh5k"
+                                        data-title="YouTube video player"
+                                        data-frameborder="0"
+                                        data-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        data-allowfullscreen
+                                        class="xt-youtube-video-optimizer"
+                                        data-id="hKUIKA0Sh5k"></div>
+                                    </p>
+                                    <h2 id="en-este-taller-">En este
+                                        taller hablamos de:
+                                        <!-- -->
+                                    </h2>
+                                    <ul>
+                                        <li>¿Qué es Composer?</li>
+                                        <li>Motivación del uso de
+                                            Composer</li>
+                                        <li>¿Cuál es el problema?</li>
+                                        <li>Usando Composer en un plugin
+                                            WordPress</li>
+                                        <li>Cómo usar
+                                            <strong>Prefijos</strong> en
+                                            el código fuente PHP
+                                        </li>
+                                        <li>Conclusión</li>
+                                    </ul>
+                                    <p>Slides: <a
+                                            href="#">ppub.link/usandocomposer</a>
+                                        <!-- -->
+                                    </p>
+                                    <h2 id="¿qué-es-composer-">¿Qué es
+                                        Composer?</h2>
+                                    <ul>
+                                        <li>Un Administrador de
+                                            Dependencias (Librerías)
+                                        </li>
+                                        <li>Un Administrador de Paquetes
+                                            a nivel de aplicación</li>
+                                        <li>Está fuertemente inspirado
+                                            por Node.js's "npm" y Ruby's
+                                            "bundler"</li>
+                                    </ul>
+                                    <h2 id="packagist---estadísticas-">
+                                        Packagist - Estadísticas</h2>
+                                    <ul>
+                                        <li>323 K Packages</li>
+                                        <li>1600 M Installs/mo
+                                            (Septiembre 2021)</li>
+                                    </ul>
+                                    <h2 id="paquetes-destacados-">
+                                        Paquetes Destacados</h2>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Package Name</th>
+                                                <th>Downloads</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>symfony/console</td>
+                                                <td>259&thinsp;558&thinsp;850
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>guzzlehttp/guzzle
+                                                </td>
+                                                <td>227&thinsp;583&thinsp;337
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>monolog/monolog</td>
+                                                <td>251&thinsp;635&thinsp;763
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>phpunit/phpunit</td>
+                                                <td>219&thinsp;664&thinsp;109
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>nesbot/carbon</td>
+                                                <td>147&thinsp;951&thinsp;475
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>league/flysystem
+                                                </td>
+                                                <td>133&thinsp;508&thinsp;404
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>laravel/framework
+                                                </td>
+                                                <td>114&thinsp;282&thinsp;476
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h2 id="la-motivación">La Motivación
+                                        del Uso de Composer</h2>
+                                    <figure>
+                                        <blockquote>
+                                            <p>Si he logrado ver más
+                                                lejos ha sido porque he
+                                                subido a hombros de
+                                                gigantes</p>
+                                        </blockquote>
+                                        <figcaption>—Isaac Newton
+                                        </figcaption>
+                                    </figure>
+                                    <ul>
+                                        <li>Compartir Código Abierto y
+                                            Buenas Prácticas ✔</li>
+                                        <li>Adoptar las innovaciones PHP
+                                            más recientes ✔</li>
+                                        <li>Usar frameworks populares y
+                                            probados ✔</li>
+                                        <li>Separación de Intereses
+                                            (SoC) ✔</li>
+                                        <li>Centrarse en el desarrollo
+                                            de negocio ✔</li>
+                                        <li>Mejor definición del Dominio
+                                            ✔</li>
+                                        <li>Desarrollar independiente
+                                            del CMS ✔</li>
+                                    </ul>
+                                    <h2
+                                        id="composer-como-una-herramienta-de-comunicación-">
+                                        Composer como una
+                                        <br>"Herramienta" de
+                                        Comunicación
+                                    </h2>
+                                    <ul>
+                                        <li>Acceso al hub de Packagist
+                                        </li>
+                                        <li>Acceso directo a
+                                            Repositorios Públicos/
+                                            Privados</li>
+                                        <li>Uso de Autoloaders Estándars
+                                        </li>
+                                    </ul>
+                                    <h2 id="fig-psr-4-estándar">FIG
+                                        PSR-4 Estándar</h2>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Fully Qualified
+                                                    Class Name</th>
+                                                <th>Namespace</th>
+                                                <th>Directory</th>
+                                                <th>File Path</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>\Acme\Log\Writer\File_Writer
+                                                </td>
+                                                <td>Acme\Log\Writer</td>
+                                                <td>./acme-log-writer/lib/
+                                                </td>
+                                                <td>./acme-log-writer/lib/File_Writer.php
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>\Aura\Web\Response\Status
+                                                </td>
+                                                <td>Aura\Web</td>
+                                                <td>/path/to/aura-web/src/
+                                                </td>
+                                                <td>/path/to/aura-web/src/Response/Status.php
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>\Symfony\Core\Request
+                                                </td>
+                                                <td>Symfony\Core</td>
+                                                <td>./vendor/Symfony/Core/
+                                                </td>
+                                                <td>./vendor/Symfony/Core/Request.php
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>\Zend\Acl</td>
+                                                <td>Zend</td>
+                                                <td>/usr/includes/Zend/
+                                                </td>
+                                                <td>/usr/includes/Zend/Acl.php
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h2 id="¿cuál-es-el-problema-">¿Cuál
+                                        es el problema de usar Composer
+                                        en un CMS?</h2>
+                                    <h2
+                                        id="si-dos-desarrolladores-independientes-trabajan-con-composer-">
+                                        Si dos desarrolladores
+                                        independientes trabajan con
+                                        Composer ...</h2>
+                                    <ul>
+                                        <li>Desarrollador A ➡
+                                            <b>guzzlehttp/guzzle:^5.3</b>
+                                        </li>
+                                        <li>Desarrollador B ➡
+                                            <b>guzzlehttp/guzzle:^7.4</b>
+                                        </li>
+                                    </ul>
+                                    <p class="small">Dos desarrolladores
+                                        independientes pueden elegir una
+                                        versión de biblioteca diferente
+                                        o bibliotecas con los mismos
+                                        espacios de nombres, y el
+                                        administrador del sitio puede
+                                        instalarlas en el mismo sitio.
+                                        <!-- -->
+                                    </p>
+                                    <h2
+                                        id="si-desarrollo-un-sistema-2019-y-luego-vuelvo-a-trabajar-en-2021-">
+                                        Si desarrollo un sistema 2019 y
+                                        luego vuelvo a trabajar en 2021
+                                        ...</h2>
+                                    <ul>
+                                        <li>Año 2019 ➡
+                                            <b>guzzlehttp/guzzle:^5.3</b>
+                                        </li>
+                                        <li>Año 2021 ➡
+                                            <b>guzzlehttp/guzzle:^7.4</b>
+                                        </li>
+                                    </ul>
+                                    <p class="small">El mismo
+                                        desarrollador "por tiempos"
+                                        puede tener que desarrollar con
+                                        diferentes versiones.
+                                        <!-- -->
+                                    </p>
+                                    <p>Pueden encontrar la presentación
+                                        completa en este link: <a
+                                            href="#">https://blog.php-prefixer.com/usando-composer-en-un-cms-gracias-al-php-prefixing/#/</a>
+                                    </p>
+                                    <p>Una gran charla del <a
+                                            href="#"
+                                            target="_blank"
+                                            rel="noopener">PHPMad</a>.
+                                        ¡Espero poder repetir pronto!
+                                        Para poder seguir la actividad
+                                        del grupo, lo pueden encontrar
+                                        en Meetup: <a
+                                            href="#">https://www.meetup.com/es-ES/phpmad</a>
+                                    </p>
+                                    <p> </p>
+                                </div>
+
+
+                            </div>
+                            <!-- End Content -->
+                        </div>
+                    </div>
+
+                    <div class="aside-container">
+                        <!-- search-block -->
+                        <div class="search-block">
+                            <div class="aa-input-container"
+                                id="aa-input-container">
+                                <input type="search"
+                                    class="aa-search-input aa-input-search"
+                                    placeholder="Search ..."
+                                    aria-label="Search ..."
+                                    name="search" autocomplete="off" />
+                                <svg class="aa-input-icon"
+                                    viewBox="654 -372 16 16" width="16"
+                                    height="16">
+                                    <path
+                                        d="M665.077-365.23c0-1.186-.421-2.2-1.265-3.044-.843-.843-1.857-1.264-3.043-1.264-1.185 0-2.2.42-3.043 1.264-.843.843-1.264 1.858-1.264 3.043 0 1.186.42 2.2 1.264 3.044.843.843 1.858 1.264 3.043 1.264 1.186 0 2.2-.421 3.043-1.264.844-.844 1.265-1.858 1.265-3.044zm4.923 8c0 .333-.122.621-.365.865a1.183 1.183 0 01-.866.365c-.346 0-.634-.122-.865-.365l-3.298-3.289a6.581 6.581 0 01-3.837 1.193 6.652 6.652 0 01-2.63-.534 6.768 6.768 0 01-2.163-1.443 6.768 6.768 0 01-1.442-2.163 6.652 6.652 0 01-.534-2.63c0-.916.178-1.793.534-2.63a6.768 6.768 0 011.442-2.163 6.767 6.767 0 012.163-1.442 6.652 6.652 0 012.63-.534c.917 0 1.793.178 2.63.534a6.767 6.767 0 012.164 1.442 6.768 6.768 0 011.442 2.163c.356.837.533 1.714.533 2.63a6.58 6.58 0 01-1.192 3.837l3.298 3.298c.238.237.356.526.356.865z" />
+                                </svg>
+                            </div>
+
+                        </div>
+
+                        <!-- aside-block -->
+                        <div class="aside-block">
+
+                            <div id="mod-custom102"
+                                class="prose mod-custom custom">
+                                <p><img class="img-circle xt-lazy-img"
+                                        src="https://d1hvvp61iyzquq.cloudfront.net/images/anibal-0612-200.jpg"
+                                        alt="Aníbal Sánchez - Perdido y Encontrado en la Computación" />
+                                </p>
+                                <h4>Aníbal Sánchez</h4>
+                                <ul class="list-none">
+                                    <li><a href="#"
+                                            target="_blank"
+                                            rel="noopener noreferrer">
+                                            PHP-Prefixer</a> / Product
+                                        Manager</li>
+                                    <li>PHP-Prefixer is an automated
+                                        online service powered by a
+                                        complex rule-based system to
+                                        apply prefixes to Composer
+                                        dependencies.</li>
+                                </ul>
+                                <ul class="list-none">
+                                    <li><a href="#"
+                                            target="_blank"
+                                            rel="noopener noreferrer">
+                                            Extly Tech</a> / Team Leader
+                                    </li>
+                                    <li>Empower your project with our
+                                        web solutions. Today, working on
+                                        Laravel, Amazon AWS, and Ionic.
+                                        A Joomla Volunteer.</li>
+                                </ul>
+                                <ul class="list-none">
+                                    <li><a href="#"
+                                            target="_blank"
+                                            rel="noopener noreferrer">
+                                            linkedin.com/in/anibalsanchez</a>
+                                    </li>
+                                    <li><a href="#"
+                                            target="_blank"
+                                            rel="noopener noreferrer">
+                                            github.com/anibalsanchez</a>
+                                    </li>
+                                    <li><a href="#"
+                                            target="_blank"
+                                            rel="noopener noreferrer">
+                                            @anibal_sanchez</a></li>
+                                    <li><a href="#"
+                                            target="_blank"
+                                            rel="noopener noreferrer">
+                                            facebook/anibal.sanchez</a>
+                                    </li>
+                                    <li><a href="#"
+                                            target="_blank"
+                                            rel="noopener noreferrer">
+                                            stackexchange/anibal</a>
+                                    </li>
+                                </ul>
+                                <p><a class="github-button"
+                                        href="#"
+                                        data-size="large"
+                                        data-show-count="true">Follow
+                                        @anibalsanchez</a></p>
+                                <ul class="list-none">
+                                    <li><a href="#"
+                                            target="_blank"
+                                            rel="noopener noreferrer">
+                                            Joomla! Community Leadership
+                                            Team</a></li>
+                                    <li><a href="#"
+                                            target="_blank"
+                                            rel="noopener noreferrer">
+                                            Joomla! JED Team Manager</a>
+                                    </li>
+                                </ul>
+                                <ul class="list-none">
+                                    <li><a
+                                            href="#">
+                                            A Bunch of Slides and Random
+                                            Thoughts</a></li>
+                                </ul>
+                                <hr />
+                                <p><a
+                                        href="#">Aikido
+                                        Manual Aetaiki - Aikikai</a></p>
+                                <hr />
+                                <h5>Red Astur de Bloggers</h5>
+                                <p><a href="#"
+                                        target="_blank"
+                                        rel="noopener noreferrer">Jonatan
+                                        Weber - Consultor de Marketing
+                                        Automatizado</a></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- footer-element -->
+            <div class="footer-element">
+                <p>
+                    &copy; 2022 <a a href="#" target="_self"
+                        title="# Aníbal Sánchez"># Aníbal Sánchez -
+                        Anibal&#039;s Blog / Lost and Found in
+                        Technology</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
