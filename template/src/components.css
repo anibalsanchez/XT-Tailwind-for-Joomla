@@ -129,7 +129,7 @@ div.mod-languages ul li.lang-active {
   }
 
   img {
-    @apply my-4 rounded-lg;
+    @apply my-4 rounded-lg shadow;
   }
 
   .items-leading {
