@@ -68,6 +68,10 @@ div.mod-languages ul li.lang-active a {
   @apply underline;
 }
 
+div.mod-languages ul li.lang-active {
+  background-color: inherit!important;
+}
+
 .about-me img {
   @apply rounded-full;
 }
@@ -89,10 +93,10 @@ div.mod-languages ul li.lang-active a {
   @apply flex-row bg-white rounded shadow-lg p-6;
 
   ul, ol {
-    @apply flex flex-wrap list-none p-0 mt-0 px-2 py-4;
+    @apply flex flex-wrap p-0 mt-0 pr-4 py-4 list-disc list-inside;
 
     li {
-      @apply flex-initial whitespace-nowrap p-2;
+      @apply flex-initial whitespace-nowrap py-2 pr-6;
     }
   }
 }
