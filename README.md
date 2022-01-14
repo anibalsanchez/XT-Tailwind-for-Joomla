@@ -39,6 +39,11 @@ The original XT build files, used to build the extension, can be found here [ani
 
 ## Changelog
 
+### 7.0.0
+
+- Upgrade to Tailwind CSS v3
+- Usability improvements, optimizations and code styling
+
 ### 6.0.0
 
 - Review for Joomla 4. Updates to the Pagination, Languages and Breadcrumbs modules
