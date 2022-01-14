@@ -1,21 +1,26 @@
-.header-background {
-  @apply bg-grey-dark overflow-hidden opacity-90;
-}
-
 .navigation-block {
-  @apply static;
-}
+  @apply bg-white;
 
-.logo-element {
-  @apply flex-initial w-5/6 text-xl;
-
-  @screen md {
-    @apply text-3xl;
+  .header {
+    @apply flex;
   }
 }
 
-.site-description {
-  @apply text-sm text-white mt-0;
+.logo-element {
+  @apply inline-block w-2/3;
+
+  a {
+    @apply text-xl font-bold text-indigo-600
+  }
+
+  @screen md {
+    a {
+      @apply text-3xl;
+    }
+  }
+
+  .site-description {
+  }
 }
 
 /*
@@ -48,11 +53,19 @@
 
 /* --- mod_languages for Joomla 4 --- */
 .languages-element {
-  @apply flex-initial text-xs;
+  @apply inline-block w-1/3;
+
+  ul {
+    @apply m-0 list-none pl-0 block;
+
+    li {
+      @apply inline-block ml-4;
+    }
+  }
 }
 
-div.mod-languages ul li.lang-active {
-  @apply bg-transparent;
+div.mod-languages ul li.lang-active a {
+  @apply underline;
 }
 
 .about-me img {
@@ -60,6 +73,8 @@ div.mod-languages ul li.lang-active {
 }
 
 .aside-block {
+  @apply mt-4;
+
   ul {
     @apply my-6 list-disc pl-4;
     padding-inline-start: 1rem;
@@ -70,32 +85,20 @@ div.mod-languages ul li.lang-active {
   }
 }
 
-.main-container-block {
-  @apply static text-grey;
-}
-
-.top-32-lite {
-  top: 7rem;
-}
-
-.breadcrumbs-block, nav.mod-breadcrumbs__wrapper {
-  @apply flex-row pr-4 rounded;
+.breadcrumbs-block {
+  @apply flex-row bg-white rounded shadow-lg p-6;
 
   ul, ol {
-    @apply flex flex-wrap list-none p-0 mt-0 px-2 py-4 mb-6;
+    @apply flex flex-wrap list-none p-0 mt-0 px-2 py-4;
 
     li {
-      @apply flex-initial whitespace-nowrap px-2 py-2;
+      @apply flex-initial whitespace-nowrap p-2;
     }
   }
 }
 
 .divider img {
   @apply inline-block;
-}
-
-.search-block {
-  @apply pt-4;
 }
 
 .blog-block {
@@ -117,16 +120,20 @@ div.mod-languages ul li.lang-active {
     @apply mt-2 mb-4 text-lg;
   }
 
+  dl.article-info dd {
+    @apply text-lg;
+  }
+
   img {
-    @apply my-4 border border-link rounded-lg;
+    @apply my-4 rounded-lg;
   }
 
   .items-leading {
-    @apply pb-16;
+    @apply pt-16;
   }
 
   .items-row {
-    @apply pb-8;
+    @apply pt-8;
   }
 }
 
@@ -134,7 +141,7 @@ div.mod-languages ul li.lang-active {
   @apply list-none my-4 p-0;
 
   li {
-    @apply inline-block rounded-full bg-blue-happy px-4 py-2 text-xs mr-4 mt-2;
+    @apply inline-block rounded-full bg-blue-900 px-4 py-2 text-xs mr-4 mt-2;
     /* Just to force the style over prose */
     padding-left: 1rem !important;
   }
@@ -219,14 +226,6 @@ div.pagination {
   }
 }
 
-div.blog-block.prose > div.blog-featured > div.pagination > ul > li {
-  @apply pl-0;
-}
-
-div.blog-block.prose > div.blog-featured > div.pagination > ul > li:before {
-  content: none !important;
-}
-
 .pager {
   @apply flex-1 flex justify-between pl-0;
 
@@ -247,14 +246,14 @@ div.blog-block.prose > div.blog-featured > div.pagination > ul > li:before {
 
 /* --- Pagination for Joomla 4 --- */
 nav.pagination__wrapper {
-  @apply mt-4;
+  @apply mb-4;
 
   ul {
     @apply relative z-0 inline-flex rounded-md shadow-sm -space-x-px;
   }
 
   li {
-    @apply list-none relative inline-flex items-center px-4 py-2 bg-white border border-gray-300 text-gray-500 hover:bg-gray-50 border text-sm font-medium;
+    @apply list-none relative inline-flex items-center px-4 py-2 bg-white border-gray-300 text-gray-500 hover:bg-gray-50 border text-sm font-medium;
   }
 
   li.disabled {
@@ -283,11 +282,15 @@ nav.pagination__wrapper {
 }
 
 .footer-element {
-  @apply bg-oldlace text-center text-orange-hot;
+  @apply bg-blue-900 text-center text-blue-900 px-4 py-8 lg:px-0 mt-8;
 
   a {
-    @apply text-link no-underline;
+    @apply text-white no-underline;
   }
+}
+
+.aside-container {
+  @apply bg-white rounded shadow-lg w-full mb-8 sm:w-1/3 sm:ml-8 p-6;
 }
 
 .aside-block {
@@ -312,6 +315,13 @@ nav.pagination__wrapper {
   @apply block;
 }
 
-.prose ul {
-  @apply list-disc list-inside
+.item-page .prose ul {
+}
+
+.blog-item {
+  @apply bg-white rounded shadow-lg p-6;
+}
+
+.item-page {
+  @apply bg-white rounded shadow-lg p-6 mt-14;
 }

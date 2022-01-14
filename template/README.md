@@ -109,10 +109,9 @@ npm run prod
 - [Webpack](https://webpack.js.org/)
 - [PostCSS](https://postcss.org/)
 - [cssnano](https://cssnano.co/)
-- [Purgecss](https://www.purgecss.com)
 
 ## Copyright & License
 
-- Copyright (c)2012-2021 Extly, CB. All rights reserved.
+- Copyright (c)2019-2022 Extly, CB. All rights reserved.
 - Distributed under the GNU General Public License version 3 or later; see LICENSE
 - This project is dedicated to [Andrea Gentil](http://www.twitter.com/andreagentil) ;-D

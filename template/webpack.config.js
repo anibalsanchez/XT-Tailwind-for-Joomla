@@ -1,23 +1,25 @@
 /**
  * @author     Extly, CB <team@extly.com>
- * @copyright  Copyright (c)2012-2021 Extly, CB All rights reserved.
- * @license    GNU General Public License version 3 or later; see LICENSE.txt
+ * @copyright  Copyright (c)2019-2022 Extly, CB All rights reserved.
+ * @license    MIT; see LICENSE.txt
  *
  * @see       https://www.extly.com
  */
 
-// Define the pages to be prototyped
-const prototypePages = [
-  'index',
-  'blog-post',
-];
-
 // Declaration of Webpack plugins
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
-const FileManagerPlugin = require('filemanager-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
+
+// Define the pages to be prototyped
+const prototypePages = [
+  'index',
+  'index.es',
+  '74-using-composer-in-joomla-and-other-content-management-systems',
+  '80-desde-phpmad-2021-usando-composer-en-un-cms,-gracias-al-php-prefixing',
+];
 
 // Read the package configuration
 const packageConfig = require('./package.json');
@@ -25,6 +27,8 @@ const packageConfig = require('./package.json');
 // Read the control flags
 const devMode = process.env.NODE_ENV === 'development';
 const productionMode = !devMode;
+
+// The proxy mode is only used within a template package
 const proxyMode = process.env.npm_lifecycle_event === 'dev-proxy'
   && packageConfig.config
   && packageConfig.config.proxyURL;
@@ -48,7 +52,7 @@ if (devMode && !proxyMode) {
     ...prototypePages.map(
       (page) => new HtmlWebpackPlugin({
         filename: `${page}.html`,
-        template: `src/${page}.html`,
+        template: `src/pages/${page}.html`,
       }),
     ),
   );
@@ -74,43 +78,44 @@ if (proxyMode) {
 if (proxyMode || productionMode) {
   // Copy files
   plugins.push(
-    new FileManagerPlugin({
-      onEnd: {
-        delete: [
-          path.resolve(__dirname, './css/template*.css'),
-        ],
-        copy: [{
-          source: path.resolve(__dirname, './dist/main.css'),
-          destination: path.resolve(__dirname, './css/template.css'),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, './dist/main.css'),
+          to: path.resolve(__dirname, './css/template.css'),
         },
         {
-          source: path.resolve(__dirname, './dist/main.js'),
-          destination: path.resolve(__dirname, './css/template.js'),
+          from: path.resolve(__dirname, './dist/main.js'),
+          to: path.resolve(__dirname, './js/template.js'),
         },
-        ],
-      },
+      ]
     }),
   );
-}
 
-// If proxy mode and there is an extra folder,
-//  copy also the css file to the extra destination
-if (proxyMode && packageConfig.config && packageConfig.config.extraCCProxyFolder) {
-  plugins.push(
-    new FileManagerPlugin({
-      onEnd: {
-        copy: [{
-          source: path.resolve(__dirname, './dist/main.css'),
-          destination: path.resolve(packageConfig.config.extraCCProxyFolder, './css/template.css'),
-        },
-        {
-          source: path.resolve(__dirname, './dist/main.js'),
-          destination: path.resolve(packageConfig.config.extraCCProxyFolder, './js/template.js'),
-        },
-        ],
-      },
-    }),
-  );
+  // If there is an extra folder,
+  //  copy also the css file to the extra destination
+  if (packageConfig.config && packageConfig.config.extraCCProxyFolder) {
+    plugins.push(
+      new CopyPlugin({
+        patterns: [
+          {
+            from: path.resolve(__dirname, './dist/main.css'),
+            to: path.resolve(
+              packageConfig.config.extraCCProxyFolder,
+              './css/template.css',
+            ),
+          },
+          {
+            from: path.resolve(__dirname, './dist/main.js'),
+            to: path.resolve(
+              packageConfig.config.extraCCProxyFolder,
+              './js/template.js',
+            ),
+          },
+        ]
+      }),
+    );
+  }
 }
 
 // Declare export for webpack processing
@@ -118,22 +123,22 @@ module.exports = {
   entry: './src/styles.css',
   mode: process.env.NODE_ENV,
   module: {
-    rules: [{
-      test: /\.css$/,
-      use: [{
-        loader: MiniCssExtractPlugin.loader,
-        options: {
-          hmr: devMode,
-        },
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+          },
+
+          // Load css
+          'css-loader',
+
+          // Load PostCss, see postcss.config.js
+          'postcss-loader',
+        ],
       },
-
-      // Load css
-      'css-loader',
-
-      // Load PostCss, see postcss.config.js
-      'postcss-loader',
-      ],
-    }],
+    ],
   },
   plugins,
 };

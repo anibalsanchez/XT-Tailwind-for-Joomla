@@ -1,0 +1,37 @@
+; EditorConfig helps developers define and maintain consistent
+; coding styles between different editors and IDEs.
+
+; For more visit http://editorconfig.org.
+root = true
+
+; Choose between lf or rf on "end_of_line" property
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 2
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# editorconfig-tools is unable to ignore longs strings or urls
+max_line_length = null
+
+[*.html]
+indent_style = tab
+
+# PSR-2
+[*.php]
+indent_size = 4
+indent_style = space
+
+# Joomla Coding Standards - WordPress Coding Standards
+# [*.php]
+# indent_size = 4
+# indent_style = tab
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.yml]
+indent_style = space
+indent_size = 2
