@@ -17,4 +17,4 @@ require JPATH_ROOT.'/components/com_content/tmpl/article/default.php';
 $item = ob_get_contents();
 ob_end_clean();
 
-echo str_replace('class="com-content-article__body"', 'class="prose com-content-article__body"', $item);
+echo str_replace('class="com-content-article', 'class="prose com-content-article', $item);
