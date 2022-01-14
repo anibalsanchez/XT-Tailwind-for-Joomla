@@ -50,3 +50,7 @@ blockquote {
 .visually-hidden {
   @apply hidden;
 }
+
+.prose table {
+  @apply overflow-auto w-full block;
+}
