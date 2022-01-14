@@ -12,10 +12,8 @@
 
   <files>
     <folder>css</folder>
-    <folder>dist</folder>
     <folder>html</folder>
     <folder>js</folder>
-    <folder>src</folder>
 
     <filename>component.php</filename>
     <filename>error.php</filename>
