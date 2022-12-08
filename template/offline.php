@@ -144,19 +144,19 @@ $siteDescription = htmlspecialchars($params->get('siteDescription'), \ENT_QUOTES
             <div class="blog-block">
               <!-- Begin Content -->
 				<?php if ($app->get('offline_image') && file_exists($app->get('offline_image'))) {
-                ?>
+				    ?>
 					<img src="<?php echo $app->get('offline_image'); ?>" alt="<?php echo $sitename; ?>" />
 				<?php
-            } ?>
+				} ?>
 				<?php if ('1' === $app->get('display_offline_message', 1) && '' !== str_replace(' ', '', $app->get('offline_message'))) {
-                ?>
+				    ?>
 					<h2><?php echo $app->get('offline_message'); ?></h2>
 				<?php
-            } elseif ('2' === $app->get('display_offline_message', 1)) {
-                ?>
+				} elseif ('2' === $app->get('display_offline_message', 1)) {
+				    ?>
 					<h2><?php echo JText::_('JOFFLINE_MESSAGE'); ?></h2>
 				<?php
-            } ?>
+				} ?>
                 <!-- End Content -->
 
             </div>

@@ -15,39 +15,6 @@
     "illuminate/support": "~5.4.0",
     "mnsami/composer-custom-directory-installer": "^2.0"
   },
-  "config": {
-    "allow-plugins": {
-      "mnsami/composer-custom-directory-installer": true
-    },
-    "optimize-autoloader": true,
-    "platform-check": false,
-    "preferred-install": "dist",
-    "sort-packages": true,
-    "platform": {
-      "php": "7.4.33"
-    },
-    "vendor-dir": "library/vendor"
-  },
-  "extra": {
-    "php-prefixer": {
-      "project-name": "XT Tailwind CSS",
-      "namespaces-prefix": "XTP_BUILD",
-      "global-scope-prefix": "XTP_",
-      "includeExtraSourcePaths": [
-        "template"
-      ]
-    }
-  },
-  "autoload": {
-    "psr-4": {
-      "Extly\\": "library/src/"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Extly\\": "library/tests/"
-    }
-  },
   "repositories": [
     {
       "type": "git",
@@ -59,5 +26,38 @@
     }
   ],
   "minimum-stability": "dev",
-  "prefer-stable": true
+  "prefer-stable": true,
+  "autoload": {
+    "psr-4": {
+      "Extly\\": "library/src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Extly\\": "library/tests/"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "mnsami/composer-custom-directory-installer": true
+    },
+    "optimize-autoloader": true,
+    "platform": {
+      "php": "7.4.33"
+    },
+    "platform-check": false,
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "vendor-dir": "library/vendor"
+  },
+  "extra": {
+    "php-prefixer": {
+      "global-scope-prefix": "XTP_",
+      "includeExtraSourcePaths": [
+        "template"
+      ],
+      "namespaces-prefix": "XTP_BUILD",
+      "project-name": "XT Tailwind CSS"
+    }
+  }
 }

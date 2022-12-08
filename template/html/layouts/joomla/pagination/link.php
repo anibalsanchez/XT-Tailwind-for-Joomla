@@ -35,7 +35,7 @@ switch ((string) $item->text) {
         $aria = Text::sprintf('JLIB_HTML_GOTO_POSITION', strtolower($item->text));
         break;
 
-    // Check for "Prev" item
+        // Check for "Prev" item
     case $item->text === Text::_('JPREV') :
         $pageLinkClass = 'page-item-prev';
         $item->text = Text::_('JPREVIOUS');
@@ -44,7 +44,7 @@ switch ((string) $item->text) {
         $aria = Text::sprintf('JLIB_HTML_GOTO_POSITION', strtolower($item->text));
         break;
 
-    // Check for "Next" item
+        // Check for "Next" item
     case Text::_('JNEXT') :
         $pageLinkClass = 'page-item-next';
         $icon = $app->getLanguage()->isRtl() ? 'icon-angle-left' : 'icon-angle-right';
@@ -52,7 +52,7 @@ switch ((string) $item->text) {
         $aria = Text::sprintf('JLIB_HTML_GOTO_POSITION', strtolower($item->text));
         break;
 
-    // Check for "End" item
+        // Check for "End" item
     case Text::_('JLIB_HTML_END') :
         $pageLinkClass = 'page-item-end';
         $icon = $app->getLanguage()->isRtl() ? 'icon-angle-double-left' : 'icon-angle-double-right';

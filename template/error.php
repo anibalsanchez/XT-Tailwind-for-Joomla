@@ -91,15 +91,15 @@ $siteDescription = htmlspecialchars($params->get('siteDescription'), \ENT_QUOTES
   <base href="<?php echo CMSUri::current(); ?>">
   <?php
     echo HtmlAssetTagsBuilder::create()->generate(HtmlAssetRepository::GLOBAL_POSITION_HEAD);
-  ?>
+?>
 </head>
 
 <body class="site <?php echo $option
-    .' view-'.$view
-    .($layout ? ' layout-'.$layout : ' no-layout')
-    .($task ? ' task-'.$task : ' no-task')
-    .($itemid ? ' itemid-'.$itemid : '')
-    .('rtl' === $this->direction ? ' rtl' : '');
+  .' view-'.$view
+  .($layout ? ' layout-'.$layout : ' no-layout')
+  .($task ? ' task-'.$task : ' no-task')
+  .($itemid ? ' itemid-'.$itemid : '')
+  .('rtl' === $this->direction ? ' rtl' : '');
 ?>">
 
   <!-- navigation-block -->
@@ -118,7 +118,7 @@ $siteDescription = htmlspecialchars($params->get('siteDescription'), \ENT_QUOTES
                 if (!empty($siteDescription)) {
                     echo '<p class="site-description">'.htmlspecialchars($siteDescription, \ENT_COMPAT, 'UTF-8').'</p>';
                 }
-            ?>
+?>
           </div>
 
         </div>
@@ -151,25 +151,25 @@ $siteDescription = htmlspecialchars($params->get('siteDescription'), \ENT_QUOTES
                 <blockquote>
                     <span class="label label-inverse"><?php echo $this->error->getCode(); ?></span> <?php echo htmlspecialchars($this->error->getMessage(), \ENT_QUOTES, 'UTF-8'); ?>
                         <?php if ($this->debug) {
-                ?>
+                            ?>
                             <br/><?php echo htmlspecialchars($this->error->getFile(), \ENT_QUOTES, 'UTF-8'); ?>:<?php echo $this->error->getLine(); ?>
                         <?php
-            } ?>
+                        } ?>
                 </blockquote>
 
                 <?php if ($this->debug) {
-                ?>
+                    ?>
                         <div>
                             <?php echo $this->renderBacktrace(); ?>
                             <?php // Check if there are more Exceptions and render their data as well?>
                             <?php if ($this->error->getPrevious()) {
-                    ?>
+                                ?>
                                 <?php $loop = true; ?>
                                 <?php // Reference $this->_error here and in the loop as setError() assigns errors to this property and we need this for the backtrace to work correctly?>
                                 <?php // Make the first assignment to setError() outside the loop so the loop does not skip Exceptions?>
                                 <?php $this->setError($this->_error->getPrevious()); ?>
                                 <?php while (true === $loop) {
-                        ?>
+                                    ?>
                                     <p><strong><?php echo JText::_('JERROR_LAYOUT_PREVIOUS_ERROR'); ?></strong></p>
                                     <p>
                                         <?php echo htmlspecialchars($this->_error->getMessage(), \ENT_QUOTES, 'UTF-8'); ?>
@@ -178,14 +178,14 @@ $siteDescription = htmlspecialchars($params->get('siteDescription'), \ENT_QUOTES
                                     <?php echo $this->renderBacktrace(); ?>
                                     <?php $loop = $this->setError($this->_error->getPrevious()); ?>
                                 <?php
-                    } ?>
+                                } ?>
                                 <?php // Reset the main error object to the base error?>
                                 <?php $this->setError($this->error); ?>
                             <?php
-                } ?>
+                            } ?>
                         </div>
                     <?php
-            } ?>
+                } ?>
 
                 <!-- End Content -->
             </div>
