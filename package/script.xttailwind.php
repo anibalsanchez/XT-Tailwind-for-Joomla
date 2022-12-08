@@ -2,13 +2,15 @@
 
 /*
  * @package     XT Tailwind for Joomla
+ *
  * @author      Extly, CB. <team@extly.com>
- * @copyright   Copyright (c)2012-2021 Extly, CB. All rights reserved.
+ * @copyright   Copyright (c)2012-2022 Extly, CB. All rights reserved.
  * @license     https://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
+ *
  * @see         https://www.extly.com
  */
 
-/**
+/*
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
@@ -24,7 +26,7 @@
  */
 
 // no direct access
-defined('_JEXEC') or die();
+defined('_JEXEC') || exit;
 
 class Pkg_XTTailwindInstallerScript
 {
@@ -40,7 +42,7 @@ class Pkg_XTTailwindInstallerScript
      *
      * @var string
      */
-    protected $minimumPHPVersion = '7.1.0';
+    protected $minimumPHPVersion = '7.4.0';
 
     /**
      * The minimum Joomla! version required to install this extension.
@@ -91,7 +93,7 @@ class Pkg_XTTailwindInstallerScript
     public function preflight($type, $parent)
     {
         // Check the minimum PHP version
-        if (!version_compare(PHP_VERSION, $this->minimumPHPVersion, 'ge')) {
+        if (!version_compare(\PHP_VERSION, $this->minimumPHPVersion, 'ge')) {
             $msg = "<p>You need PHP {$this->minimumPHPVersion} or later to install this package</p>";
             JLog::add($msg, JLog::WARNING, 'jerror');
 
