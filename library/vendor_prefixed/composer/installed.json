@@ -1,78 +1,29 @@
 {
     "packages": [
         {
-            "name": "anibalsanchez/create-pattern",
-            "version": "2.1.0",
-            "version_normalized": "2.1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/anibalsanchez/create-pattern.git",
-                "reference": "4e739df39dacd28b414e4f040f790504e9f0e65c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/anibalsanchez/create-pattern/zipball/4e739df39dacd28b414e4f040f790504e9f0e65c",
-                "reference": "4e739df39dacd28b414e4f040f790504e9f0e65c",
-                "shasum": ""
-            },
-            "time": "2019-08-03T15:54:14+00:00",
-            "type": "library",
-            "installation-source": "dist",
-            "autoload": {
-                "psr-4": {
-                    "Extly\\Infrastructure\\Creator\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Andrea Gentil & Anibal Sanchez, Extly CB",
-                    "email": "team@extly.com"
-                }
-            ],
-            "description": "A lightweight PHP implementation of the Static Create Pattern using a trait.",
-            "support": {
-                "issues": "https://github.com/anibalsanchez/create-pattern/issues",
-                "source": "https://github.com/anibalsanchez/create-pattern/tree/2.1.0"
-            },
-            "install-path": "../anibalsanchez/create-pattern"
-        },
-        {
             "name": "anibalsanchez/extly-html-asset-tags-builder",
-            "version": "1.8.0",
-            "version_normalized": "1.8.0.0",
+            "version": "1.9.0",
+            "version_normalized": "1.9.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/anibalsanchez/extly-html-asset-tags-builder.git",
-                "reference": "7a1edb3d808ef35437091498ca5239a257e4c791"
+                "reference": "cfc237393b80ed6a10a693f802254e302885eac5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/anibalsanchez/extly-html-asset-tags-builder/zipball/7a1edb3d808ef35437091498ca5239a257e4c791",
-                "reference": "7a1edb3d808ef35437091498ca5239a257e4c791",
+                "url": "https://api.github.com/repos/anibalsanchez/extly-html-asset-tags-builder/zipball/cfc237393b80ed6a10a693f802254e302885eac5",
+                "reference": "cfc237393b80ed6a10a693f802254e302885eac5",
                 "shasum": ""
             },
             "require": {
-                "anibalsanchez/create-pattern": "^2.0",
                 "illuminate/support": "^5.4|^6.0",
-                "php": ">=5.6.0",
-                "studiow/html": "^1.0"
+                "php": "^7.3 || ^8.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^7.4"
+                "phpunit/phpunit": "^8.5.31"
             },
-            "time": "2021-07-24T14:40:34+00:00",
+            "time": "2022-12-06T11:38:15+00:00",
             "type": "library",
-            "extra": {
-                "php-prefixer": {
-                    "projectName": "PHP-PREFIXER",
-                    "prefixForNamespaces": "DIV_BUILD",
-                    "prefixForGlobalObjects": "DIV_"
-                }
-            },
             "installation-source": "dist",
             "autoload": {
                 "files": [
@@ -92,10 +43,10 @@
                     "email": "team@extly.com"
                 }
             ],
-            "description": "Beyond the JDocument, the Asset Tags Builder manages the generation of script and style tags for an Html Document.",
+            "description": "The Asset Tags Builder manages the generation of script and style tags for an Html Document.",
             "support": {
                 "issues": "https://github.com/anibalsanchez/extly-html-asset-tags-builder/issues",
-                "source": "https://github.com/anibalsanchez/extly-html-asset-tags-builder/tree/1.8.0"
+                "source": "https://github.com/anibalsanchez/extly-html-asset-tags-builder/tree/1.9.0"
             },
             "install-path": "../anibalsanchez/extly-html-asset-tags-builder"
         },
@@ -314,12 +265,12 @@
             },
             "installation-source": "dist",
             "autoload": {
-                "psr-4": {
-                    "Illuminate\\Support\\": ""
-                },
                 "files": [
                     "helpers.php"
-                ]
+                ],
+                "psr-4": {
+                    "Illuminate\\Support\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -400,29 +351,29 @@
         },
         {
             "name": "paragonie/random_compat",
-            "version": "v2.0.20",
-            "version_normalized": "2.0.20.0",
+            "version": "v2.0.21",
+            "version_normalized": "2.0.21.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "0f1f60250fccffeaf5dda91eea1c018aed1adc2a"
+                "reference": "96c132c7f2f7bc3230723b66e89f8f150b29d5ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/0f1f60250fccffeaf5dda91eea1c018aed1adc2a",
-                "reference": "0f1f60250fccffeaf5dda91eea1c018aed1adc2a",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/96c132c7f2f7bc3230723b66e89f8f150b29d5ae",
+                "reference": "96c132c7f2f7bc3230723b66e89f8f150b29d5ae",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "4.*|5.*"
+                "phpunit/phpunit": "*"
             },
             "suggest": {
                 "ext-libsodium": "Provides a modern crypto API that can be used to generate random bytes."
             },
-            "time": "2021-04-17T09:33:01+00:00",
+            "time": "2022-02-16T17:07:03+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -454,52 +405,6 @@
                 "source": "https://github.com/paragonie/random_compat"
             },
             "install-path": "../paragonie/random_compat"
-        },
-        {
-            "name": "studiow/html",
-            "version": "v1.0.1",
-            "version_normalized": "1.0.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/studiowbe/html.git",
-                "reference": "860a6d4ff85bc25df5b9e0293d7ff916db8e01af"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/studiowbe/html/zipball/860a6d4ff85bc25df5b9e0293d7ff916db8e01af",
-                "reference": "860a6d4ff85bc25df5b9e0293d7ff916db8e01af",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.7"
-            },
-            "time": "2015-10-29T23:11:19+00:00",
-            "type": "library",
-            "installation-source": "dist",
-            "autoload": {
-                "psr-4": {
-                    "Studiow\\HTML\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Willem Wollebrants",
-                    "email": "willem@studiow.be"
-                }
-            ],
-            "description": "A helper package for generating HTML5 tags",
-            "support": {
-                "issues": "https://github.com/studiowbe/html/issues",
-                "source": "https://github.com/studiowbe/html/tree/master"
-            },
-            "install-path": "../studiow/html"
         }
     ],
     "dev": false,

@@ -5,21 +5,18 @@
  * @package     Extly Infrastructure Support
  *
  * @author      Extly, CB. <team@extly.com>
- * @copyright   Copyright (c)2012-2021 Extly, CB. All rights reserved.
- * @license     http://www.opensource.org/licenses/mit-license.html  MIT License
+ * @copyright   Copyright (c)2012-2022 Extly, CB. All rights reserved.
+ * @license     https://www.opensource.org/licenses/mit-license.html  MIT License
  *
  * @see         https://www.extly.com
  */
 
 namespace XTP_BUILD\Extly\Infrastructure\Support\HtmlAsset\Asset;
 
-use XTP_BUILD\Extly\Infrastructure\Creator\CreatorTrait;
 use XTP_BUILD\Extly\Infrastructure\Support\HtmlAsset\Repository;
 
 final class LinkDeferStylesheetTag extends HtmlAssetTagAbstract implements HtmlAssetTagInterface
 {
-    use CreatorTrait;
-
     public function __construct(string $href, array $attributes = [])
     {
         // Similar to LinkStylesheetTag
@@ -28,7 +25,7 @@ final class LinkDeferStylesheetTag extends HtmlAssetTagAbstract implements HtmlA
         ];
 
         $script = LinkStylesheetByScript::renderScript($href);
-        $noScriptTag = LinkCriticalStylesheetTag::create($href);
+        $noScriptTag = new LinkCriticalStylesheetTag($href);
 
         parent::__construct('script', $script, array_merge($defaultAttributes, $attributes), $noScriptTag);
     }

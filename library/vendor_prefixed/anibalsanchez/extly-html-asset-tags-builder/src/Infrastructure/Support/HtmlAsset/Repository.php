@@ -5,46 +5,57 @@
  * @package     Extly Infrastructure Support
  *
  * @author      Extly, CB. <team@extly.com>
- * @copyright   Copyright (c)2012-2021 Extly, CB. All rights reserved.
- * @license     http://www.opensource.org/licenses/mit-license.html  MIT License
+ * @copyright   Copyright (c)2012-2022 Extly, CB. All rights reserved.
+ * @license     https://www.opensource.org/licenses/mit-license.html  MIT License
  *
  * @see         https://www.extly.com
  */
 
 namespace XTP_BUILD\Extly\Infrastructure\Support\HtmlAsset;
 
-use XTP_BUILD\Extly\Infrastructure\Creator\CreatorTrait;
-use XTP_BUILD\Extly\Infrastructure\Creator\SingletonTrait;
 use XTP_BUILD\Extly\Infrastructure\Support\HtmlAsset\Asset\HtmlAssetTagInterface;
+use XTP_BUILD\Illuminate\Support\Collection;
 
 final class Repository
 {
-    use CreatorTrait;
-    use SingletonTrait;
-
     public const HTML_POSITION = 'position';
+
     public const HTML_PRIORITY = 'priority';
 
     public const GLOBAL_POSITION_HEAD = 'head';
+
     public const GLOBAL_POSITION_BODY = 'bottom';
 
     private $assetTagCollection;
 
+    private static $repositoryInstance;
+
     public function __construct()
     {
-        $this->assetCollection = AssetCollection::make();
+        $this->assetTagCollection = Collection::make();
+    }
+
+    public static function getInstance()
+    {
+        if (self::$repositoryInstance) {
+            return self::$repositoryInstance;
+        }
+
+        self::$repositoryInstance = new self();
+
+        return self::$repositoryInstance;
     }
 
     public function push(HtmlAssetTagInterface $htmlAsset)
     {
-        $this->assetCollection->push($htmlAsset);
+        $this->assetTagCollection->push($htmlAsset);
 
         return $this;
     }
 
     public function getAssetTagsByPosition($positionName)
     {
-        return $this->assetCollection
+        return $this->assetTagCollection
             ->filter(function (HtmlAssetTagInterface $item) use ($positionName) {
                 return $item->getPosition() === $positionName;
             })
@@ -55,7 +66,7 @@ final class Repository
 
     public function getNoScriptContentTags()
     {
-        return $this->assetCollection->map(function (HtmlAssetTagInterface $item) {
+        return $this->assetTagCollection->map(function (HtmlAssetTagInterface $item) {
             return $item->getNoScriptContentTag();
         })->filter();
     }

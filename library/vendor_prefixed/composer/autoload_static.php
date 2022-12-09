@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit0d7132d96f8163db93c49bca86a35cbf
+class ComposerStaticInita634fff237db59743e42f7dd3a527431
 {
     public static $files = array (
         '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
@@ -14,10 +14,6 @@ class ComposerStaticInit0d7132d96f8163db93c49bca86a35cbf
     );
 
     public static $prefixLengthsPsr4 = array (
-        'S' => 
-        array (
-            'Studiow\\HTML\\' => 13,
-        ),
         'I' => 
         array (
             'Illuminate\\Support\\' => 19,
@@ -25,17 +21,12 @@ class ComposerStaticInit0d7132d96f8163db93c49bca86a35cbf
         ),
         'E' => 
         array (
-            'Extly\\Infrastructure\\Creator\\' => 29,
             'Extly\\CMS\\Document\\Renderer\\Html\\' => 33,
             'Extly\\' => 6,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Studiow\\HTML\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/studiow/html/src',
-        ),
         'Illuminate\\Support\\' => 
         array (
             0 => __DIR__ . '/..' . '/illuminate/support',
@@ -43,10 +34,6 @@ class ComposerStaticInit0d7132d96f8163db93c49bca86a35cbf
         'Illuminate\\Contracts\\' => 
         array (
             0 => __DIR__ . '/..' . '/illuminate/contracts',
-        ),
-        'Extly\\Infrastructure\\Creator\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/anibalsanchez/create-pattern/src',
         ),
         'Extly\\CMS\\Document\\Renderer\\Html\\' => 
         array (
@@ -88,10 +75,7 @@ class ComposerStaticInit0d7132d96f8163db93c49bca86a35cbf
         'Doctrine\\Common\\Inflector\\Inflector' => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Common/Inflector/Inflector.php',
         'Extly\\CMS\\Document\\Renderer\\Html\\XTHtmlAssetsBodyRenderer' => __DIR__ . '/..' . '/extly/xt-renderers-for-joomla/src/XTHtmlAssetsBodyRenderer.php',
         'Extly\\CMS\\Document\\Renderer\\Html\\XTHtmlAssetsRenderer' => __DIR__ . '/..' . '/extly/xt-renderers-for-joomla/src/XTHtmlAssetsRenderer.php',
-        'Extly\\Infrastructure\\Creator\\CreatorTrait' => __DIR__ . '/..' . '/anibalsanchez/create-pattern/src/CreatorTrait.php',
-        'Extly\\Infrastructure\\Creator\\SingletonTrait' => __DIR__ . '/..' . '/anibalsanchez/create-pattern/src/SingletonTrait.php',
         'Extly\\Infrastructure\\Service\\Cms\\Joomla\\ScriptHelper' => __DIR__ . '/../../..' . '/library/src/Infrastructure/Service/Cms/Joomla/ScriptHelper.php',
-        'Extly\\Infrastructure\\Support\\HtmlAsset\\AssetCollection' => __DIR__ . '/..' . '/anibalsanchez/extly-html-asset-tags-builder/src/Infrastructure/Support/HtmlAsset/AssetCollection.php',
         'Extly\\Infrastructure\\Support\\HtmlAsset\\Asset\\HtmlAssetTagAbstract' => __DIR__ . '/..' . '/anibalsanchez/extly-html-asset-tags-builder/src/Infrastructure/Support/HtmlAsset/Asset/HtmlAssetTagAbstract.php',
         'Extly\\Infrastructure\\Support\\HtmlAsset\\Asset\\HtmlAssetTagInterface' => __DIR__ . '/..' . '/anibalsanchez/extly-html-asset-tags-builder/src/Infrastructure/Support/HtmlAsset/Asset/HtmlAssetTagInterface.php',
         'Extly\\Infrastructure\\Support\\HtmlAsset\\Asset\\InlineScriptTag' => __DIR__ . '/..' . '/anibalsanchez/extly-html-asset-tags-builder/src/Infrastructure/Support/HtmlAsset/Asset/InlineScriptTag.php',
@@ -103,6 +87,9 @@ class ComposerStaticInit0d7132d96f8163db93c49bca86a35cbf
         'Extly\\Infrastructure\\Support\\HtmlAsset\\Asset\\LinkStylesheetByScript' => __DIR__ . '/..' . '/anibalsanchez/extly-html-asset-tags-builder/src/Infrastructure/Support/HtmlAsset/Asset/LinkStylesheetByScript.php',
         'Extly\\Infrastructure\\Support\\HtmlAsset\\Asset\\LinkStylesheetTag' => __DIR__ . '/..' . '/anibalsanchez/extly-html-asset-tags-builder/src/Infrastructure/Support/HtmlAsset/Asset/LinkStylesheetTag.php',
         'Extly\\Infrastructure\\Support\\HtmlAsset\\Asset\\ScriptTag' => __DIR__ . '/..' . '/anibalsanchez/extly-html-asset-tags-builder/src/Infrastructure/Support/HtmlAsset/Asset/ScriptTag.php',
+        'Extly\\Infrastructure\\Support\\HtmlAsset\\HTML\\Attributes' => __DIR__ . '/..' . '/anibalsanchez/extly-html-asset-tags-builder/src/Infrastructure/Support/HtmlAsset/HTML/Attributes.php',
+        'Extly\\Infrastructure\\Support\\HtmlAsset\\HTML\\Element' => __DIR__ . '/..' . '/anibalsanchez/extly-html-asset-tags-builder/src/Infrastructure/Support/HtmlAsset/HTML/Element.php',
+        'Extly\\Infrastructure\\Support\\HtmlAsset\\HTML\\HasAttributesTrait' => __DIR__ . '/..' . '/anibalsanchez/extly-html-asset-tags-builder/src/Infrastructure/Support/HtmlAsset/HTML/HasAttributesTrait.php',
         'Extly\\Infrastructure\\Support\\HtmlAsset\\HtmlAssetTagsBuilder' => __DIR__ . '/..' . '/anibalsanchez/extly-html-asset-tags-builder/src/Infrastructure/Support/HtmlAsset/HtmlAssetTagsBuilder.php',
         'Extly\\Infrastructure\\Support\\HtmlAsset\\Repository' => __DIR__ . '/..' . '/anibalsanchez/extly-html-asset-tags-builder/src/Infrastructure/Support/HtmlAsset/Repository.php',
         'Illuminate\\Contracts\\Auth\\Access\\Authorizable' => __DIR__ . '/..' . '/illuminate/contracts/Auth/Access/Authorizable.php',
@@ -243,18 +230,15 @@ class ComposerStaticInit0d7132d96f8163db93c49bca86a35cbf
         'Illuminate\\Support\\Traits\\CapsuleManagerTrait' => __DIR__ . '/..' . '/illuminate/support/Traits/CapsuleManagerTrait.php',
         'Illuminate\\Support\\Traits\\Macroable' => __DIR__ . '/..' . '/illuminate/support/Traits/Macroable.php',
         'Illuminate\\Support\\ViewErrorBag' => __DIR__ . '/..' . '/illuminate/support/ViewErrorBag.php',
-        'Studiow\\HTML\\Attributes' => __DIR__ . '/..' . '/studiow/html/src/Attributes.php',
-        'Studiow\\HTML\\Element' => __DIR__ . '/..' . '/studiow/html/src/Element.php',
-        'Studiow\\HTML\\HasAttributesTrait' => __DIR__ . '/..' . '/studiow/html/src/HasAttributesTrait.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit0d7132d96f8163db93c49bca86a35cbf::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit0d7132d96f8163db93c49bca86a35cbf::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit0d7132d96f8163db93c49bca86a35cbf::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit0d7132d96f8163db93c49bca86a35cbf::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInita634fff237db59743e42f7dd3a527431::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInita634fff237db59743e42f7dd3a527431::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInita634fff237db59743e42f7dd3a527431::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInita634fff237db59743e42f7dd3a527431::$classMap;
 
         }, null, ClassLoader::class);
     }

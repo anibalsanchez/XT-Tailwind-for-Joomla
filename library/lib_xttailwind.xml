@@ -2,8 +2,8 @@
 <extension method="upgrade" type="library" version="1.0">
   <name>XT Tailwind CSS Library</name>
   <libraryname>xttailwind</libraryname>
-  <version>7.0.0</version>
-  <creationDate>2022-01-14</creationDate>
+  <version>7.1.0</version>
+  <creationDate>2022-12-09</creationDate>
 
 	<author>Extly, CB</author>
 	<authorEmail>team@extly.com</authorEmail>

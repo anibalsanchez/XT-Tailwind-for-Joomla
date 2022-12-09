@@ -7,18 +7,21 @@
             "email": "team@extly.com"
         }
     ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "config": {
         "allow-plugins": {
             "mnsami/composer-custom-directory-installer": true
         },
         "optimize-autoloader": true,
+        "platform": {
+            "php": "7.4.33"
+        },
         "platform-check": false,
         "preferred-install": "dist",
         "sort-packages": true,
         "vendor-dir": "library/vendor"
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "autoload": {
         "classmap": [
             "library/vendor_prefixed/mnsami/composer-custom-directory-installer/src/Composer/CustomDirectoryInstaller/LibraryInstaller.php",
@@ -31,10 +34,7 @@
             "library/vendor_prefixed/doctrine/inflector/lib/Doctrine/Common/Inflector/Inflector.php",
             "library/vendor_prefixed/extly/xt-renderers-for-joomla/src/XTHtmlAssetsBodyRenderer.php",
             "library/vendor_prefixed/extly/xt-renderers-for-joomla/src/XTHtmlAssetsRenderer.php",
-            "library/vendor_prefixed/anibalsanchez/create-pattern/src/CreatorTrait.php",
-            "library/vendor_prefixed/anibalsanchez/create-pattern/src/SingletonTrait.php",
             "library/src/Infrastructure/Service/Cms/Joomla/ScriptHelper.php",
-            "library/vendor_prefixed/anibalsanchez/extly-html-asset-tags-builder/src/Infrastructure/Support/HtmlAsset/AssetCollection.php",
             "library/vendor_prefixed/anibalsanchez/extly-html-asset-tags-builder/src/Infrastructure/Support/HtmlAsset/Asset/HtmlAssetTagAbstract.php",
             "library/vendor_prefixed/anibalsanchez/extly-html-asset-tags-builder/src/Infrastructure/Support/HtmlAsset/Asset/HtmlAssetTagInterface.php",
             "library/vendor_prefixed/anibalsanchez/extly-html-asset-tags-builder/src/Infrastructure/Support/HtmlAsset/Asset/InlineScriptTag.php",
@@ -46,6 +46,9 @@
             "library/vendor_prefixed/anibalsanchez/extly-html-asset-tags-builder/src/Infrastructure/Support/HtmlAsset/Asset/LinkStylesheetByScript.php",
             "library/vendor_prefixed/anibalsanchez/extly-html-asset-tags-builder/src/Infrastructure/Support/HtmlAsset/Asset/LinkStylesheetTag.php",
             "library/vendor_prefixed/anibalsanchez/extly-html-asset-tags-builder/src/Infrastructure/Support/HtmlAsset/Asset/ScriptTag.php",
+            "library/vendor_prefixed/anibalsanchez/extly-html-asset-tags-builder/src/Infrastructure/Support/HtmlAsset/HTML/Attributes.php",
+            "library/vendor_prefixed/anibalsanchez/extly-html-asset-tags-builder/src/Infrastructure/Support/HtmlAsset/HTML/Element.php",
+            "library/vendor_prefixed/anibalsanchez/extly-html-asset-tags-builder/src/Infrastructure/Support/HtmlAsset/HTML/HasAttributesTrait.php",
             "library/vendor_prefixed/anibalsanchez/extly-html-asset-tags-builder/src/Infrastructure/Support/HtmlAsset/HtmlAssetTagsBuilder.php",
             "library/vendor_prefixed/anibalsanchez/extly-html-asset-tags-builder/src/Infrastructure/Support/HtmlAsset/Repository.php",
             "library/vendor_prefixed/illuminate/contracts/Auth/Access/Authorizable.php",
@@ -185,10 +188,7 @@
             "library/vendor_prefixed/illuminate/support/Testing/Fakes/QueueFake.php",
             "library/vendor_prefixed/illuminate/support/Traits/CapsuleManagerTrait.php",
             "library/vendor_prefixed/illuminate/support/Traits/Macroable.php",
-            "library/vendor_prefixed/illuminate/support/ViewErrorBag.php",
-            "library/vendor_prefixed/studiow/html/src/Attributes.php",
-            "library/vendor_prefixed/studiow/html/src/Element.php",
-            "library/vendor_prefixed/studiow/html/src/HasAttributesTrait.php"
+            "library/vendor_prefixed/illuminate/support/ViewErrorBag.php"
         ],
         "files": [
             "library/vendor_prefixed/paragonie/random_compat/lib/random.php",

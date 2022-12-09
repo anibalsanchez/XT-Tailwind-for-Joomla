@@ -7,14 +7,18 @@
       "email": "team@extly.com"
     }
   ],
-  "config": {
-    "preferred-install": "dist",
-    "sort-packages": true,
-    "optimize-autoloader": true
+  "require": {
+    "php": "^7.3 || ^8.0"
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
-  "require": {
-    "php": ">=5.6"
+  "config": {
+    "optimize-autoloader": true,
+    "platform": {
+      "php": "7.4.33"
+    },
+    "platform-check": false,
+    "preferred-install": "dist",
+    "sort-packages": true
   }
 }
