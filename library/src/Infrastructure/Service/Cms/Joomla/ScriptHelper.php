@@ -1,11 +1,11 @@
 <?php
 
 /*
- * @package     Extly Infrastructure Support for Joomla
+ * @package     XT Tailwind for Joomla
  *
  * @author      Extly, CB. <team@extly.com>
- * @copyright   Copyright (c)2012-2021 Extly, CB. All rights reserved.
- * @license     http://www.opensource.org/licenses/mit-license.html  MIT License
+ * @copyright   Copyright (c)2012-2023 Extly, CB. All rights reserved.
+ * @license     https://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
  *
  * @see         https://www.extly.com
  */
@@ -29,6 +29,7 @@ use Joomla\CMS\Version as CMSVersion;
 final class ScriptHelper
 {
     const CLIENT_FRONTEND = 1;
+
     const CLIENT_ADMINISTRATOR = 0;
 
     public static function addScriptDeclaration($script)
@@ -68,7 +69,6 @@ final class ScriptHelper
      *
      * @param string $extensionScript Param
      * @param mixed  $attribs         Html Attributes
-     * @param mixed  $options
      */
     public static function addDeferredExtensionScript($extensionScript, $options = [], $attribs = [])
     {
@@ -104,7 +104,6 @@ final class ScriptHelper
      *
      * @param string $extensionScriptUri Param
      * @param mixed  $attribs            Html Attributes
-     * @param mixed  $options
      */
     public static function addDeferredScript($extensionScriptUri, $options = [], $attribs = [])
     {
@@ -134,8 +133,6 @@ final class ScriptHelper
      * ScriptHelper::addDeferredStylesheet('https://cdn.jsdelivr.net/npm/...instantsearch.min.css');
      *
      * @param string $stylesheetUri Param
-     * @param mixed  $options
-     * @param mixed  $attribs
      */
     public static function addDeferredStylesheet($stylesheetUri, $options = [], $attribs = [])
     {
@@ -161,10 +158,6 @@ final class ScriptHelper
      * addInlineScript (Extension).
      *
      * Example: ScriptHelper::addInlineScript('lib_xtdir4alg/app/autocomplete.min.js');
-     *
-     * @param mixed $extensionRelativeScript
-     * @param mixed $options
-     * @param mixed $attribs
      */
     public static function addInlineExtensionScript($extensionRelativeScript, $options = [], $attribs = [])
     {
@@ -197,11 +190,6 @@ final class ScriptHelper
      * addInlineStylesheet.
      *
      * Example: ScriptHelper::addInlineStylesheet('mod_xtdir4alg_autocomplete/xtdir4alg_autocomplete.min.css');
-     *
-     * @param string $extensionStyle
-     * @param mixed  $extensionRelativeStylesheet
-     * @param mixed  $options
-     * @param mixed  $attribs
      */
     public static function addInlineExtensionStylesheet($extensionRelativeStylesheet, $options = [], $attribs = [])
     {
@@ -310,10 +298,6 @@ final class ScriptHelper
      * addDeferredStyle.
      *
      * @deprecated
-     *
-     * @param mixed $stylesheetUri
-     * @param mixed $options
-     * @param mixed $attribs
      */
     public static function addDeferredStyle($stylesheetUri, $options = [], $attribs = [])
     {

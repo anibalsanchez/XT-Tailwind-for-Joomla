@@ -4,7 +4,7 @@
  * @package     XT Tailwind for Joomla
  *
  * @author      Extly, CB. <team@extly.com>
- * @copyright   Copyright (c)2012-2022 Extly, CB. All rights reserved.
+ * @copyright   Copyright (c)2012-2023 Extly, CB. All rights reserved.
  * @license     https://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
  *
  * @see         https://www.extly.com
@@ -54,17 +54,17 @@ $mediaversion = (new CMSVersion())->getMediaVersion();
 // Add template js - JavaScript to be deferred - Removed to Optimize
 // $templateJsFile = CMSHTMLHelper::script('template.js', ['relative' => true, 'pathOnly' => true]);
 // $templateJsFile = $templateJsFile.'?'.$mediaversion;
-// $htmlAssetRepository->push(ScriptTag::create(ScriptHelper::addMediaVersion($templateJsFile)));
+// $htmlAssetRepository->push(new ScriptTag(ScriptHelper::addMediaVersion($templateJsFile)));
 
 // Add template.css
 $templateCssFile = CMSHTMLHelper::stylesheet('template.css', ['relative' => true, 'pathOnly' => true]);
-$htmlAssetRepository->push(LinkCriticalStylesheetTag::create(ScriptHelper::addMediaVersion($templateCssFile)));
+$htmlAssetRepository->push(new LinkCriticalStylesheetTag(ScriptHelper::addMediaVersion($templateCssFile)));
 
 // Additional inline head scripts
 $headScripts = $params->get('headScripts');
 
 if (!empty($headScripts)) {
-    $htmlAssetRepository->push(InlineScriptTag::create($headScripts));
+    $htmlAssetRepository->push(new InlineScriptTag($headScripts));
 }
 
 $headData = $document->getHeadData();
@@ -73,13 +73,13 @@ $headData = $document->getHeadData();
 
 // Prism - Deferred Stylesheet
 $prismCssFile = CMSHTMLHelper::stylesheet('prism.css', ['relative' => true, 'pathOnly' => true]);
-$htmlAssetRepository->push(LinkStylesheetTag::create(ScriptHelper::addMediaVersion($prismCssFile)));
+$htmlAssetRepository->push(new LinkStylesheetTag(ScriptHelper::addMediaVersion($prismCssFile)));
 
 // Prism - Deferred JavaScript
 $prismJsFile = CMSHTMLHelper::script('prism.js', ['relative' => true, 'pathOnly' => true]);
-$htmlAssetRepository->push(ScriptTag::create(ScriptHelper::addMediaVersion($prismJsFile)));
+$htmlAssetRepository->push(new ScriptTag(ScriptHelper::addMediaVersion($prismJsFile)));
 
-$htmlAssetRepository->push(ScriptTag::create('https://buttons.github.io/buttons.js'));
+$htmlAssetRepository->push(new ScriptTag('https://buttons.github.io/buttons.js'));
 
 $logoTitle = htmlspecialchars($params->get('logoTitle', '@Anibal_Sanchez'));
 $siteDescription = htmlspecialchars($params->get('siteDescription'), \ENT_QUOTES, 'UTF-8');

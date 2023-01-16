@@ -4,7 +4,7 @@
  * @package     XT Tailwind for Joomla
  *
  * @author      Extly, CB. <team@extly.com>
- * @copyright   Copyright (c)2012-2022 Extly, CB. All rights reserved.
+ * @copyright   Copyright (c)2012-2023 Extly, CB. All rights reserved.
  * @license     https://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
  *
  * @see         https://www.extly.com
@@ -59,17 +59,17 @@ $mediaversion = (new CMSVersion())->getMediaVersion();
 // Add template js - JavaScript to be deferred - Removed to Optimize
 // $templateJsFile = CMSHTMLHelper::script('template.js', ['relative' => true, 'pathOnly' => true]);
 // $templateJsFile = $templateJsFile.'?'.$mediaversion;
-// $htmlAssetRepository->push(ScriptTag::create(ScriptHelper::addMediaVersion($templateJsFile)));
+// $htmlAssetRepository->push(new ScriptTag(ScriptHelper::addMediaVersion($templateJsFile)));
 
 // Add template.css
 $templateCssFile = CMSHTMLHelper::stylesheet('template.css', ['relative' => true, 'pathOnly' => true]);
-$htmlAssetRepository->push(LinkCriticalStylesheetTag::create(ScriptHelper::addMediaVersion($templateCssFile)));
+$htmlAssetRepository->push(new LinkCriticalStylesheetTag(ScriptHelper::addMediaVersion($templateCssFile)));
 
 // Additional inline head scripts
 $headScripts = $params->get('headScripts');
 
 if (!empty($headScripts)) {
-    $htmlAssetRepository->push(InlineScriptTag::create($headScripts));
+    $htmlAssetRepository->push(new InlineScriptTag($headScripts));
 }
 
 $headData = $document->getHeadData();
@@ -90,7 +90,7 @@ $siteDescription = htmlspecialchars($params->get('siteDescription'), \ENT_QUOTES
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <base href="<?php echo CMSUri::current(); ?>">
   <?php
-    echo HtmlAssetTagsBuilder::create()->generate(HtmlAssetRepository::GLOBAL_POSITION_HEAD);
+    echo (new HtmlAssetTagsBuilder())->generate(HtmlAssetRepository::GLOBAL_POSITION_HEAD);
 ?>
 </head>
 
