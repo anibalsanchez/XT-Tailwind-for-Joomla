@@ -43,7 +43,7 @@ final class ScriptHelper
         $document->addScriptDeclaration($script);
 
         // Alternative XT Html Asset Tags Builder
-        $inlineScriptTag = InlineScriptTag::create($script);
+        $inlineScriptTag = new InlineScriptTag($script);
         HtmlAssetRepository::getInstance()->push($inlineScriptTag);
     }
 
@@ -58,7 +58,7 @@ final class ScriptHelper
         $document->addStyleDeclaration($style);
 
         // Alternative XT Html Asset Tags Builder
-        $inlineStyleTag = InlineStyleTag::create($style);
+        $inlineStyleTag = new InlineStyleTag($style);
         HtmlAssetRepository::getInstance()->push($inlineStyleTag);
     }
 
@@ -81,7 +81,7 @@ final class ScriptHelper
         self::addScriptToDocument($uriWithMediaVersion, $options, $attribs);
 
         // Alternative XT Html Asset Tags Builder
-        $scriptTag = ScriptTag::create($uriWithMediaVersion, $attribs);
+        $scriptTag = new ScriptTag($uriWithMediaVersion, $attribs);
         HtmlAssetRepository::getInstance()->push($scriptTag);
     }
 
@@ -122,7 +122,7 @@ final class ScriptHelper
         $document->addScript($extensionScriptUri, $options, $attribs);
 
         // Alternative XT Html Asset Tags Builder
-        $scriptTag = ScriptTag::create($extensionScriptUri, $attribs);
+        $scriptTag = new ScriptTag($extensionScriptUri, $attribs);
         HtmlAssetRepository::getInstance()->push($scriptTag);
     }
 
@@ -145,12 +145,12 @@ final class ScriptHelper
         $script = LinkStylesheetByScript::renderScript($stylesheetUri);
         $document->addScriptDeclaration($script);
 
-        $noScriptTagTag = LinkCriticalStylesheetTag::create($stylesheetUri);
-        $noScriptTag = HtmlAssetTagsBuilder::create()->buildNoScriptTag($noScriptTagTag);
+        $noScriptTagTag = new LinkCriticalStylesheetTag($stylesheetUri);
+        $noScriptTag = (new HtmlAssetTagsBuilder())->buildNoScriptTag($noScriptTagTag);
         $document->addCustomTag($noScriptTag);
 
         // Alternative XT Html Asset Tags Builder
-        $linkStylesheetTag = LinkDeferStylesheetTag::create($stylesheetUri, $attribs);
+        $linkStylesheetTag = new LinkDeferStylesheetTag($stylesheetUri, $attribs);
         HtmlAssetRepository::getInstance()->push($linkStylesheetTag);
     }
 
@@ -177,7 +177,7 @@ final class ScriptHelper
             $document->addScriptDeclaration($scriptDeclaration);
 
             // Alternative XT Html Asset Tags Builder
-            $inlineScriptTag = InlineScriptTag::create($scriptDeclaration);
+            $inlineScriptTag = new InlineScriptTag($scriptDeclaration);
             HtmlAssetRepository::getInstance()->push($inlineScriptTag);
 
             return true;
@@ -209,7 +209,7 @@ final class ScriptHelper
             $document->addStyleDeclaration($styleDeclaration);
 
             // Alternative XT Html Asset Tags Builder
-            $inlineStyleTag = InlineStyleTag::create($styleDeclaration);
+            $inlineStyleTag = new InlineStyleTag($styleDeclaration);
             HtmlAssetRepository::getInstance()->push($inlineStyleTag);
 
             return true;
@@ -246,7 +246,7 @@ final class ScriptHelper
             $uriBase = CMSUri::root();
         }
 
-        return UrlHelper::create()->combine($uriBase, $uriRelative);
+        return (new UrlHelper())->combine($uriBase, $uriRelative);
     }
 
     // Alias addInlineExtensionScript
