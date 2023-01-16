@@ -38,12 +38,12 @@
             'dev_requirement' => false,
         ),
         'extly/xt-renderers-for-joomla' => array(
-            'pretty_version' => '0.0.1',
-            'version' => '0.0.1.0',
+            'pretty_version' => '0.0.2',
+            'version' => '0.0.2.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../extly/xt-renderers-for-joomla',
             'aliases' => array(),
-            'reference' => '467e2d1ff92f126bf1c2b06b9b765831239526e4',
+            'reference' => '93012bd64583af097523828161dc3c25913ed6ed',
             'dev_requirement' => false,
         ),
         'illuminate/contracts' => array(

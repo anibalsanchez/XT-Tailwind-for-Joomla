@@ -5,15 +5,15 @@
  * @package     Extly Infrastructure Support
  *
  * @author      Extly, CB. <team@extly.com>
- * @copyright   Copyright (c)2012-2020 Extly, CB. All rights reserved.
- * @license     http://www.gnu.org/licenses/gpl-3.0.html  GNU/GPLv3
+ * @copyright   Copyright (c)2012-2022 Extly, CB. All rights reserved.
+ * @license     https://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
  *
  * @see         https://www.extly.com
  */
 
 namespace XTP_BUILD\Extly\CMS\Document\Renderer\Html;
 
-\defined('JPATH_PLATFORM') or die;
+\defined('JPATH_PLATFORM') || exit;
 
 use XTP_BUILD\Extly\Infrastructure\Support\HtmlAsset\HtmlAssetTagsBuilder;
 use XTP_BUILD\Extly\Infrastructure\Support\HtmlAsset\Repository;
@@ -35,6 +35,6 @@ class XTHtmlAssetsBodyRenderer extends HeadRenderer
      */
     public function render($head, $params = [], $content = null)
     {
-        return HtmlAssetTagsBuilder::create()->generate(Repository::GLOBAL_POSITION_BODY);
+        return (new HtmlAssetTagsBuilder())->generate(Repository::GLOBAL_POSITION_BODY);
     }
 }

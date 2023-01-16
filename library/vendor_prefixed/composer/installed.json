@@ -125,48 +125,48 @@
         },
         {
             "name": "extly/xt-renderers-for-joomla",
-            "version": "0.0.1",
-            "version_normalized": "0.0.1.0",
+            "version": "0.0.2",
+            "version_normalized": "0.0.2.0",
             "source": {
                 "type": "git",
                 "url": "git@github.com:extly/xt-renderers-for-joomla.git",
-                "reference": "467e2d1ff92f126bf1c2b06b9b765831239526e4"
+                "reference": "93012bd64583af097523828161dc3c25913ed6ed"
             },
             "require": {
                 "anibalsanchez/extly-html-asset-tags-builder": "^1.7.0",
-                "doctrine/inflector": "~1.1.0|^1.4|^2.0",
-                "illuminate/support": "~5.4.0|^6.0|^7.0",
-                "php": ">=5.6"
+                "doctrine/inflector": "~1.1.0 || ^1.4 || ^2.0",
+                "illuminate/support": "~5.4.0 || ^6.0 || ^7.0",
+                "php": "^7.3 || ^8.0"
             },
-            "time": "2021-07-22T10:30:35+00:00",
+            "time": "2022-12-08T18:53:56+00:00",
             "type": "library",
             "extra": {
                 "php-prefixer": {
-                    "projectName": "XT Tailwind for Extly",
-                    "prefixForNamespaces": "XTP_BUILD",
-                    "prefixForGlobalObjects": "XTP_",
                     "case-1": "includeLibrariesDependiencies: Process additional dependencies",
                     "case-2": "ignorePaths: Do not prefix.",
                     "case-3": "ignoreLibraries: Do not prefix.",
-                    "ignoreLibraries": [],
                     "case-4": "Do not prefix.",
-                    "ignoreGlobalObjects": [],
                     "case-5": "excludeFromClassmap: Libraries to be removed, but keep dependecies consistent (Platform Lib).",
                     "case-6": "excludePaths: Files to be removed from the prefixer output.",
                     "case-7": "Process additional project directories",
+                    "ignoreGlobalObjects": [],
+                    "ignoreLibraries": [],
                     "includeExtraSourcePaths": [
                         "template"
-                    ]
+                    ],
+                    "prefixForGlobalObjects": "XTP_",
+                    "prefixForNamespaces": "XTP_BUILD",
+                    "projectName": "XT Tailwind for Extly"
                 }
             },
             "installation-source": "source",
             "autoload": {
-                "files": [
-                    "src/ClassAliasMap.php"
-                ],
                 "psr-4": {
                     "Extly\\CMS\\Document\\Renderer\\Html\\": "src/"
-                }
+                },
+                "files": [
+                    "src/ClassAliasMap.php"
+                ]
             },
             "authors": [
                 {

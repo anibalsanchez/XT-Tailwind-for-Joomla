@@ -1,11 +1,12 @@
 <?php
 
-/**
- * @author      Extly, CB. <team@extly.com>
- * @copyright   Copyright (c)2018-2022 Extly, CB. All rights reserved.
- * @license     https://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+/*
+ * @package     XT Tailwind for Joomla
  *
- * @package     XT Search for Algolia
+ * @author      Extly, CB. <team@extly.com>
+ * @copyright   Copyright (c)2012-2023 Extly, CB. All rights reserved.
+ * @license     https://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
+ *
  * @see         https://www.extly.com
  */
 
@@ -13,7 +14,7 @@ $header = <<<'EOF'
 @package     XT Tailwind for Joomla
 
 @author      Extly, CB. <team@extly.com>
-@copyright   Copyright (c)2012-2022 Extly, CB. All rights reserved.
+@copyright   Copyright (c)2012-2023 Extly, CB. All rights reserved.
 @license     https://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
 
 @see         https://www.extly.com
