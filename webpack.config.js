@@ -3,7 +3,7 @@
  *
  * @license   License GNU General Public License version 2 or later; see LICENSE.txt
  * @author    Andrea Gentil - Anibal Sanchez <team@extly.com>
- * @copyright (c)2012-2022 Extly, CB. All rights reserved.
+ * @copyright (c)2012-2023 Extly, CB. All rights reserved.
  *
  */
 
