@@ -112,6 +112,6 @@ npm run prod
 
 ## Copyright & License
 
-- Copyright (c)2012-2023 Extly, CB. All rights reserved.
+- Copyright (c)2012-2024 Extly, CB. All rights reserved.
 - Distributed under the GNU General Public License version 3 or later; see LICENSE
 - This project is dedicated to [Andrea Gentil](http://www.twitter.com/andreagentil) ;-D

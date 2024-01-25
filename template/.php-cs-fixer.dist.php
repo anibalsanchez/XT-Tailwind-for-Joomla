@@ -4,7 +4,7 @@
  * @package     XT Tailwind for Joomla
  *
  * @author      Extly, CB. <team@extly.com>
- * @copyright   Copyright (c)2012-2023 Extly, CB. All rights reserved.
+ * @copyright   Copyright (c)2012-2024 Extly, CB. All rights reserved.
  * @license     https://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
  *
  * @see         https://www.extly.com
@@ -14,7 +14,7 @@ $header = <<<'EOF'
 @package     XT Tailwind for Joomla
 
 @author      Extly, CB. <team@extly.com>
-@copyright   Copyright (c)2012-2023 Extly, CB. All rights reserved.
+@copyright   Copyright (c)2012-2024 Extly, CB. All rights reserved.
 @license     https://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
 
 @see         https://www.extly.com
@@ -152,6 +152,7 @@ return (new PhpCsFixer\Config())
         'short_scalar_cast' => true,
         'simplified_null_return' => false, // disabled as "risky"
         'single_blank_line_at_eof' => true,
+        'blank_lines_before_namespace' => false,
         'single_blank_line_before_namespace' => true,
         'single_class_element_per_statement' => [
             'elements' => ['const', 'property'],

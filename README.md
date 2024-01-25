@@ -149,7 +149,7 @@ Update to Tailwind CSS v1.2.0, including Tailwind UI support.
 
 ## Copyright & License
 
-- Copyright (c)2012-2021 Extly, CB. All rights reserved.
+- Copyright (c)2012-2024 Extly, CB. All rights reserved.
 - Distributed under the GNU General Public License version 3 or later; see LICENSE
 - This project is dedicated to [Andrea Gentil](http://www.twitter.com/andreagentil) ;-D
 

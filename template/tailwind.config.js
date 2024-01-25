@@ -1,6 +1,6 @@
 /**
  * @author     Extly, CB <team@extly.com>
- * @copyright  Copyright (c)2012-2023 Extly, CB All rights reserved.
+ * @copyright  Copyright (c)2012-2024 Extly, CB All rights reserved.
  * @license    MIT; see LICENSE.txt
  *
  * @see       https://www.extly.com
