@@ -122,7 +122,7 @@ $siteDescription = htmlspecialchars($params->get('siteDescription'), \ENT_QUOTES
                 <?php echo $logoTitle; ?>
             </a>
             <?php
-                if (!empty($siteDescription)) {
+                if ($siteDescription !== '' && $siteDescription !== '0') {
                     echo '<p class="site-description">'.htmlspecialchars($siteDescription, \ENT_COMPAT, 'UTF-8').'</p>';
                 }
             ?>

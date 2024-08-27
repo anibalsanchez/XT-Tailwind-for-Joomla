@@ -71,14 +71,8 @@ if (null !== $icon) {
 }
 
 if ($displayData['active']) {
-    if ($item->base > 0) {
-        $limit = 'limitstart.value='.$item->base;
-    } else {
-        $limit = 'limitstart.value=0';
-    }
-
+    $limit = $item->base > 0 ? 'limitstart.value='.$item->base : 'limitstart.value=0';
     $class = 'active';
-
     if ($app->isClient('administrator')) {
         $link = 'href="#" onclick="document.adminForm.'.$item->prefix.$limit.'; Joomla.submitform();return false;"';
     } elseif ($app->isClient('site')) {

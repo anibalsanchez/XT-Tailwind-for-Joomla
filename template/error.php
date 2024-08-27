@@ -14,10 +14,8 @@ defined('_JEXEC') || exit;
 
 // Sentry: Application Monitoring and Error Tracking Software
 // To integrate "XT Sentry for Joomla" - https://github.com/anibalsanchez/XT-Sentry-for-Joomla
-if (@include_once(JPATH_SITE.'/cli/sentry.php')) {
-    if ($this->error instanceof \Throwable && function_exists('\Sentry\captureException')) {
-        \Sentry\captureException($this->error);
-    }
+if (@(include_once(JPATH_SITE.'/cli/sentry.php')) && ($this->error instanceof \Throwable && function_exists('\Sentry\captureException'))) {
+    \Sentry\captureException($this->error);
 }
 
 if (!@include_once(JPATH_ROOT.'/libraries/xttailwind/vendor/autoload.php')) {
@@ -115,7 +113,7 @@ $siteDescription = htmlspecialchars($params->get('siteDescription'), \ENT_QUOTES
                 <?php echo $logoTitle; ?>
             </a>
             <?php
-                if (!empty($siteDescription)) {
+                if ($siteDescription !== '' && $siteDescription !== '0') {
                     echo '<p class="site-description">'.htmlspecialchars($siteDescription, \ENT_COMPAT, 'UTF-8').'</p>';
                 }
 ?>
@@ -154,7 +152,8 @@ $siteDescription = htmlspecialchars($params->get('siteDescription'), \ENT_QUOTES
                             ?>
                             <br/><?php echo htmlspecialchars($this->error->getFile(), \ENT_QUOTES, 'UTF-8'); ?>:<?php echo $this->error->getLine(); ?>
                         <?php
-                        } ?>
+                        }
+ ?>
                 </blockquote>
 
                 <?php if ($this->debug) {
@@ -178,14 +177,17 @@ $siteDescription = htmlspecialchars($params->get('siteDescription'), \ENT_QUOTES
                                     <?php echo $this->renderBacktrace(); ?>
                                     <?php $loop = $this->setError($this->_error->getPrevious()); ?>
                                 <?php
-                                } ?>
+                                }
+                                 ?>
                                 <?php // Reset the main error object to the base error?>
                                 <?php $this->setError($this->error); ?>
-                            <?php
-                            } ?>
+<?php
+                            }
+                     ?>
                         </div>
-                    <?php
-                } ?>
+<?php
+                }
+                             ?>
 
                 <!-- End Content -->
             </div>
