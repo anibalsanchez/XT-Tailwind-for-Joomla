@@ -11,12 +11,12 @@
     ),
     'versions' => array(
         'anibalsanchez/extly-html-asset-tags-builder' => array(
-            'pretty_version' => '1.9.0',
-            'version' => '1.9.0.0',
+            'pretty_version' => '1.10.0',
+            'version' => '1.10.0.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../anibalsanchez/extly-html-asset-tags-builder',
             'aliases' => array(),
-            'reference' => 'cfc237393b80ed6a10a693f802254e302885eac5',
+            'reference' => '3536abf810bd88232adcf4b594f6c06c53e9f178',
             'dev_requirement' => false,
         ),
         'anibalsanchez/xt-tailwind-css' => array(

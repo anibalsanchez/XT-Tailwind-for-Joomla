@@ -5,7 +5,7 @@
  * @package     Extly Infrastructure Support
  *
  * @author      Extly, CB. <team@extly.com>
- * @copyright   Copyright (c)2012-2022 Extly, CB. All rights reserved.
+ * @copyright   Copyright (c)2012-2024 Extly, CB. All rights reserved.
  * @license     https://www.opensource.org/licenses/mit-license.html  MIT License
  *
  * @see         https://www.extly.com
@@ -28,8 +28,8 @@ final class LinkStylesheetTag extends HtmlAssetTagAbstract implements HtmlAssetT
         ];
 
         $script = LinkStylesheetByScript::renderScript($href);
-        $noScriptTag = new LinkCriticalStylesheetTag($href);
+        $linkCriticalStylesheetTag = new LinkCriticalStylesheetTag($href);
 
-        parent::__construct('script', $script, array_merge($defaultAttributes, $attributes), $noScriptTag);
+        parent::__construct('script', $script, array_merge($defaultAttributes, $attributes), $linkCriticalStylesheetTag);
     }
 }

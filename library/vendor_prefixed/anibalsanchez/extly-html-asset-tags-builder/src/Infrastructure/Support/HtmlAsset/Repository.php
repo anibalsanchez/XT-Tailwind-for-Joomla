@@ -5,7 +5,7 @@
  * @package     Extly Infrastructure Support
  *
  * @author      Extly, CB. <team@extly.com>
- * @copyright   Copyright (c)2012-2022 Extly, CB. All rights reserved.
+ * @copyright   Copyright (c)2012-2024 Extly, CB. All rights reserved.
  * @license     https://www.opensource.org/licenses/mit-license.html  MIT License
  *
  * @see         https://www.extly.com
@@ -46,9 +46,9 @@ final class Repository
         return self::$repositoryInstance;
     }
 
-    public function push(HtmlAssetTagInterface $htmlAsset)
+    public function push(HtmlAssetTagInterface $htmlAssetTag)
     {
-        $this->assetTagCollection->push($htmlAsset);
+        $this->assetTagCollection->push($htmlAssetTag);
 
         return $this;
     }
@@ -56,18 +56,12 @@ final class Repository
     public function getAssetTagsByPosition($positionName)
     {
         return $this->assetTagCollection
-            ->filter(function (HtmlAssetTagInterface $item) use ($positionName) {
-                return $item->getPosition() === $positionName;
-            })
-            ->sortBy(function (HtmlAssetTagInterface $item) {
-                return $item->getPriority();
-            });
+            ->filter(fn(HtmlAssetTagInterface $htmlAssetTag) => $htmlAssetTag->getPosition() === $positionName)
+            ->sortBy(fn(HtmlAssetTagInterface $htmlAssetTag) => $htmlAssetTag->getPriority());
     }
 
     public function getNoScriptContentTags()
     {
-        return $this->assetTagCollection->map(function (HtmlAssetTagInterface $item) {
-            return $item->getNoScriptContentTag();
-        })->filter();
+        return $this->assetTagCollection->map(fn(HtmlAssetTagInterface $htmlAssetTag) => $htmlAssetTag->getNoScriptContentTag())->filter();
     }
 }

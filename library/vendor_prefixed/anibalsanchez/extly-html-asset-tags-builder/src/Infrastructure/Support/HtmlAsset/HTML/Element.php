@@ -5,7 +5,7 @@
  * @package     Extly Infrastructure Support
  *
  * @author      Extly, CB. <team@extly.com>
- * @copyright   Copyright (c)2012-2022 Extly, CB. All rights reserved.
+ * @copyright   Copyright (c)2012-2024 Extly, CB. All rights reserved.
  * @license     https://www.opensource.org/licenses/mit-license.html  MIT License
  *
  * @see         https://www.extly.com
@@ -124,9 +124,9 @@ class Element
      */
     private function getOpenTag()
     {
-        $content = trim("{$this->tagname} ".(string) $this->attributes);
+        $content = trim($this->tagname . ' '.(string) $this->attributes);
 
-        return "<{$content}>";
+        return sprintf('<%s>', $content);
     }
 
     /**
@@ -136,6 +136,6 @@ class Element
      */
     private function getCloseTag()
     {
-        return "</{$this->tagname}>";
+        return sprintf('</%s>', $this->tagname);
     }
 }

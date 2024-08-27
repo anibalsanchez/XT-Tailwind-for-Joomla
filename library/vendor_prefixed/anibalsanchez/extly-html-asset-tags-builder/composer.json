@@ -2,7 +2,7 @@
   "name": "anibalsanchez/extly-html-asset-tags-builder",
   "description": "The Asset Tags Builder manages the generation of script and style tags for an Html Document.",
   "license": "MIT",
-  "version": "1.9.0",
+  "version": "1.10.0",
   "authors": [
     {
       "name": "Andrea Gentil & Anibal Sanchez, Extly CB",

@@ -25,7 +25,7 @@
  */
 
 // no direct access
-defined('_JEXEC') or die();
+defined('_JEXEC') || die();
 
 class Pkg_[EXTENSION_CLASS_NAME]InstallerScript
 {
@@ -93,7 +93,7 @@ class Pkg_[EXTENSION_CLASS_NAME]InstallerScript
     {
         // Check the minimum PHP version
         if (!version_compare(PHP_VERSION, $this->minimumPHPVersion, 'ge')) {
-            $msg = "<p>You need PHP {$this->minimumPHPVersion} or later to install this package</p>";
+            $msg = sprintf('<p>You need PHP %s or later to install this package</p>', $this->minimumPHPVersion);
             JLog::add($msg, JLog::WARNING, 'jerror');
 
             return false;
@@ -101,7 +101,7 @@ class Pkg_[EXTENSION_CLASS_NAME]InstallerScript
 
         // Check the minimum Joomla! version
         if (!version_compare(JVERSION, $this->minimumJoomlaVersion, 'ge')) {
-            $msg = "<p>You need Joomla! {$this->minimumJoomlaVersion} or later to install this component</p>";
+            $msg = sprintf('<p>You need Joomla! %s or later to install this component</p>', $this->minimumJoomlaVersion);
             JLog::add($msg, JLog::WARNING, 'jerror');
 
             return false;
@@ -109,7 +109,7 @@ class Pkg_[EXTENSION_CLASS_NAME]InstallerScript
 
         // Check the maximum Joomla! version
         if (!version_compare(JVERSION, $this->maximumJoomlaVersion, 'le')) {
-            $msg = "<p>You need Joomla! {$this->maximumJoomlaVersion} or earlier to install this component</p>";
+            $msg = sprintf('<p>You need Joomla! %s or earlier to install this component</p>', $this->maximumJoomlaVersion);
             JLog::add($msg, JLog::WARNING, 'jerror');
 
             return false;
@@ -153,12 +153,12 @@ class Pkg_[EXTENSION_CLASS_NAME]InstallerScript
         $clearGroups = ['_system', 'com_modules', 'mod_menu', 'com_plugins', 'com_modules'];
         $cacheClients = [0, 1];
 
-        foreach ($clearGroups as $group) {
-            foreach ($cacheClients as $client_id) {
+        foreach ($clearGroups as $clearGroup) {
+            foreach ($cacheClients as $cacheClient) {
                 try {
                     $options = [
-                        'defaultgroup' => $group,
-                        'cachebase' => ($client_id) ? JPATH_ADMINISTRATOR.'/cache' : $conf->get('cache_path', JPATH_SITE.'/cache'),
+                        'defaultgroup' => $clearGroup,
+                        'cachebase' => ($cacheClient !== 0) ? JPATH_ADMINISTRATOR.'/cache' : $conf->get('cache_path', JPATH_SITE.'/cache'),
                     ];
 
                     /** @var JCache $cache */
@@ -212,8 +212,8 @@ class Pkg_[EXTENSION_CLASS_NAME]InstallerScript
     {
         $db = JFactory::getDbo();
 
-        foreach ($this->extensionsToEnable as $ext) {
-            $this->enableExtension($ext[0], $ext[1], $ext[2], $ext[3]);
+        foreach ($this->extensionsToEnable as $extensionToEnable) {
+            $this->enableExtension($extensionToEnable[0], $extensionToEnable[1], $extensionToEnable[2], $extensionToEnable[3]);
         }
     }
 
@@ -262,7 +262,7 @@ class Pkg_[EXTENSION_CLASS_NAME]InstallerScript
 
         try {
             $db->execute();
-        } catch (\Exception $e) {
+        } catch (\Exception $exception) {
         }
     }
 }

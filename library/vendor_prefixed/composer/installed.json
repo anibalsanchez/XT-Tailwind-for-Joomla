@@ -2,17 +2,17 @@
     "packages": [
         {
             "name": "anibalsanchez/extly-html-asset-tags-builder",
-            "version": "1.9.0",
-            "version_normalized": "1.9.0.0",
+            "version": "1.10.0",
+            "version_normalized": "1.10.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/anibalsanchez/extly-html-asset-tags-builder.git",
-                "reference": "cfc237393b80ed6a10a693f802254e302885eac5"
+                "reference": "3536abf810bd88232adcf4b594f6c06c53e9f178"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/anibalsanchez/extly-html-asset-tags-builder/zipball/cfc237393b80ed6a10a693f802254e302885eac5",
-                "reference": "cfc237393b80ed6a10a693f802254e302885eac5",
+                "url": "https://api.github.com/repos/anibalsanchez/extly-html-asset-tags-builder/zipball/3536abf810bd88232adcf4b594f6c06c53e9f178",
+                "reference": "3536abf810bd88232adcf4b594f6c06c53e9f178",
                 "shasum": ""
             },
             "require": {
@@ -22,7 +22,7 @@
             "require-dev": {
                 "phpunit/phpunit": "^8.5.31"
             },
-            "time": "2022-12-06T11:38:15+00:00",
+            "time": "2024-08-23T17:56:18+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -46,7 +46,7 @@
             "description": "The Asset Tags Builder manages the generation of script and style tags for an Html Document.",
             "support": {
                 "issues": "https://github.com/anibalsanchez/extly-html-asset-tags-builder/issues",
-                "source": "https://github.com/anibalsanchez/extly-html-asset-tags-builder/tree/1.9.0"
+                "source": "https://github.com/anibalsanchez/extly-html-asset-tags-builder/tree/1.10.0"
             },
             "install-path": "../anibalsanchez/extly-html-asset-tags-builder"
         },

@@ -5,7 +5,7 @@
  * @package     Extly Infrastructure Support
  *
  * @author      Extly, CB. <team@extly.com>
- * @copyright   Copyright (c)2012-2022 Extly, CB. All rights reserved.
+ * @copyright   Copyright (c)2012-2024 Extly, CB. All rights reserved.
  * @license     https://www.opensource.org/licenses/mit-license.html  MIT License
  *
  * @see         https://www.extly.com
@@ -21,15 +21,15 @@ final class HtmlAssetTagsBuilder
 {
     private $repository;
 
-    public function __construct(Repository $repository = null)
+    public function __construct(Repository $htmlAssetRepository = null)
     {
-        if (!$repository) {
+        if (!$htmlAssetRepository instanceof \XTP_BUILD\Extly\Infrastructure\Support\HtmlAsset\Repository) {
             $this->repository = Repository::getInstance();
 
             return;
         }
 
-        $this->repository = $repository;
+        $this->repository = $htmlAssetRepository;
     }
 
     public function generate($positionName)
@@ -52,21 +52,21 @@ final class HtmlAssetTagsBuilder
         return $renderedAssetTags.$renderedNoScriptContentTags;
     }
 
-    public function buildTag(HtmlAssetTagInterface $assetTag): string
+    public function buildTag(HtmlAssetTagInterface $htmlAssetTag): string
     {
         return (string) (new Element(
-            $assetTag->getTag(),
-            $assetTag->getInnerHTML(),
-            $assetTag->getAttributes()
+            $htmlAssetTag->getTag(),
+            $htmlAssetTag->getInnerHTML(),
+            $htmlAssetTag->getAttributes()
                 ->forget(Repository::HTML_POSITION)
                 ->forget(Repository::HTML_PRIORITY)
                 ->toArray()
         ));
     }
 
-    public function buildNoScriptTag(HtmlAssetTagInterface $noScriptContentTag): string
+    public function buildNoScriptTag(HtmlAssetTagInterface $htmlAssetTag): string
     {
-        $renderedNoScriptContentTag = $this->buildTag($noScriptContentTag);
+        $renderedNoScriptContentTag = $this->buildTag($htmlAssetTag);
 
         return (string) (new Element(
             'noscript',
@@ -76,18 +76,14 @@ final class HtmlAssetTagsBuilder
 
     private function build(Collection $assetTags): string
     {
-        $buffer = $assetTags->map(function (HtmlAssetTagInterface $assetTag) {
-            return $this->buildTag($assetTag);
-        });
+        $buffer = $assetTags->map(fn(HtmlAssetTagInterface $htmlAssetTag) => $this->buildTag($htmlAssetTag));
 
         return implode('', $buffer->toArray());
     }
 
     private function buildNoScriptTags(Collection $assetTags)
     {
-        $buffer = $assetTags->map(function (HtmlAssetTagInterface $assetTag) {
-            return $this->buildNoScriptTag($assetTag);
-        });
+        $buffer = $assetTags->map(fn(HtmlAssetTagInterface $htmlAssetTag) => $this->buildNoScriptTag($htmlAssetTag));
 
         return implode('', $buffer->toArray());
     }

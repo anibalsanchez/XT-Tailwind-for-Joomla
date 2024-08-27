@@ -5,7 +5,7 @@
  * @package     Extly Infrastructure Support
  *
  * @author      Extly, CB. <team@extly.com>
- * @copyright   Copyright (c)2012-2022 Extly, CB. All rights reserved.
+ * @copyright   Copyright (c)2012-2024 Extly, CB. All rights reserved.
  * @license     https://www.opensource.org/licenses/mit-license.html  MIT License
  *
  * @see         https://www.extly.com
@@ -30,12 +30,12 @@ class HtmlAssetTagAbstract
         string $tag,
         string $innerHtml,
         array $attributes = [],
-        HtmlAssetTagInterface $noScriptContentTag = null
+        HtmlAssetTagInterface $htmlAssetTag = null
     ) {
         $this->tag = $tag;
         $this->innerHtml = $innerHtml;
         $this->attributes = Collection::make($attributes);
-        $this->noScriptContentTag = $noScriptContentTag;
+        $this->noScriptContentTag = $htmlAssetTag;
     }
 
     /**

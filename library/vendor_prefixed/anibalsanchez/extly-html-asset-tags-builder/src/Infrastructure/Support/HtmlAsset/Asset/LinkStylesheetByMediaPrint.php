@@ -5,7 +5,7 @@
  * @package     Extly Infrastructure Support
  *
  * @author      Extly, CB. <team@extly.com>
- * @copyright   Copyright (c)2012-2022 Extly, CB. All rights reserved.
+ * @copyright   Copyright (c)2012-2024 Extly, CB. All rights reserved.
  * @license     https://www.opensource.org/licenses/mit-license.html  MIT License
  *
  * @see         https://www.extly.com
@@ -24,9 +24,9 @@ final class LinkStylesheetByMediaPrint extends HtmlAssetTagAbstract implements H
     public function __construct(string $href, array $attributes = [])
     {
         $attributes['href'] = $href;
-        $noScriptTag = new LinkCriticalStylesheetTag($href);
+        $linkCriticalStylesheetTag = new LinkCriticalStylesheetTag($href);
 
         // <link rel="stylesheet" href="/path/to/my.css" media="print" onload="this.media='all'; this.onload=null;">
-        parent::__construct('link', '', array_merge(self::DEFAULT_ATTRIBUTES, $attributes), $noScriptTag);
+        parent::__construct('link', '', array_merge(self::DEFAULT_ATTRIBUTES, $attributes), $linkCriticalStylesheetTag);
     }
 }
