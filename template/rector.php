@@ -23,7 +23,7 @@ return RectorConfig::configure()
         '*/vendor/*',
         '*/node_modules/*',
         '*Legacy*',
-        // __DIR__.'/build/templates/package/script.xttailwind.php',
+        __DIR__.'/build/templates/package/script.xtextlynews.php',
     ])
     ->withPhpSets(php74: true)
     ->withPreparedSets(
