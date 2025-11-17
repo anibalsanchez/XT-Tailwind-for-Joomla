@@ -14,44 +14,6 @@
     "extly/xt-renderers-for-joomla": "^2.2.0",
     "mnsami/composer-custom-directory-installer": "^2.0"
   },
-  "config": {
-    "optimize-autoloader": true,
-    "platform-check": false,
-    "preferred-install": "dist",
-    "sort-packages": true,
-    "vendor-dir": "library/vendor",
-    "allow-plugins": {
-      "mnsami/composer-custom-directory-installer": true
-    }
-  },
-  "extra": {
-    "installer-paths": {
-      "./template/": [
-        "anibalsanchez/xt-tailwind-for-joomla-template"
-      ]
-    },
-    "php-prefixer": {
-      "project-name": "XT Tailwind CSS",
-      "namespaces-prefix": "XTP_BUILD",
-      "global-scope-prefix": "XTP_",
-      "ignore-libraries": [
-        "extly/xt-renderers-for-joomla"
-      ],
-      "includeExtraSourcePaths": [
-        "template"
-      ]
-    }
-  },
-  "autoload": {
-    "psr-4": {
-      "Extly\\": "library/src/"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Extly\\": "library/tests/"
-    }
-  },
   "repositories": [
     {
       "type": "git",
@@ -67,5 +29,43 @@
     }
   ],
   "minimum-stability": "dev",
-  "prefer-stable": true
+  "prefer-stable": true,
+  "autoload": {
+    "psr-4": {
+      "Extly\\": "library/src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Extly\\": "library/tests/"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "mnsami/composer-custom-directory-installer": true
+    },
+    "optimize-autoloader": true,
+    "platform-check": false,
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "vendor-dir": "library/vendor"
+  },
+  "extra": {
+    "installer-paths": {
+      "./template/": [
+        "anibalsanchez/xt-tailwind-for-joomla-template"
+      ]
+    },
+    "php-prefixer": {
+      "global-scope-prefix": "XTP_",
+      "ignore-libraries": [
+        "extly/xt-renderers-for-joomla"
+      ],
+      "includeExtraSourcePaths": [
+        "template"
+      ],
+      "namespaces-prefix": "XTP_BUILD",
+      "project-name": "XT Tailwind CSS"
+    }
+  }
 }
