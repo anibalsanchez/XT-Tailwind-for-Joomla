@@ -1,5 +1,4 @@
 <?php
-/* This file has been prefixed by <PHP-Prefixer> for "XT Tailwind CSS" */
 
 declare(strict_types=1);
 
