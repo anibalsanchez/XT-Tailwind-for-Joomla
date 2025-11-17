@@ -147,6 +147,9 @@ class Pkg_[EXTENSION_CLASS_NAME]InstallerScript
                     /** @var JCache $cache */
                     $cache = \Joomla\CMS\Cache\Cache::getInstance('callback', $options);
                     $cache->clean();
+
+                    // FIX AfterCleanCacheEvent::onSetResult(): Argument #1 ($value) must be of type bool, null given
+                    $options['result'] = true;
                 } catch (Exception $exception) {
                     $options['result'] = false;
                 }
