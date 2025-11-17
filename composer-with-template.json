@@ -8,12 +8,10 @@
     }
   ],
   "require": {
-    "php": "^7.3 || ^8.0",
-    "anibalsanchez/extly-html-asset-tags-builder": "^1.7.0",
+    "php": "^8.0",
+    "anibalsanchez/extly-html-asset-tags-builder": "^2.0",
     "anibalsanchez/xt-tailwind-for-joomla-template": "dev-master",
-    "doctrine/inflector": "~1.1.0",
-    "extly/xt-renderers-for-joomla": "^0.0.2",
-    "illuminate/support": "~5.4.0",
+    "extly/xt-renderers-for-joomla": "^2.2.0",
     "mnsami/composer-custom-directory-installer": "^2.0"
   },
   "config": {
@@ -36,6 +34,9 @@
       "project-name": "XT Tailwind CSS",
       "namespaces-prefix": "XTP_BUILD",
       "global-scope-prefix": "XTP_",
+      "ignore-libraries": [
+        "extly/xt-renderers-for-joomla"
+      ],
       "includeExtraSourcePaths": [
         "template"
       ]
@@ -52,6 +53,10 @@
     }
   },
   "repositories": [
+    {
+      "type": "git",
+      "url": "git@github.com:anibalsanchez/extly-infrastructure-cms-contract.git"
+    },
     {
       "type": "git",
       "url": "git@github.com:extly/xt-renderers-for-joomla.git"
