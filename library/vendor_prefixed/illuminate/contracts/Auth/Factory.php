@@ -1,4 +1,5 @@
-<?php /* This file has been prefixed by <PHP-Prefixer> for "XT Tailwind CSS" */
+<?php
+/* This file has been prefixed by <PHP-Prefixer> for "XT Tailwind CSS" */
 
 namespace XTP_BUILD\Illuminate\Contracts\Auth;
 
@@ -8,7 +9,7 @@ interface Factory
      * Get a guard instance by name.
      *
      * @param  string|null  $name
-     * @return mixed
+     * @return \Illuminate\Contracts\Auth\Guard|\Illuminate\Contracts\Auth\StatefulGuard
      */
     public function guard($name = null);
 

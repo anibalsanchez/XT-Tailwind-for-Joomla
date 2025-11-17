@@ -1,4 +1,5 @@
-<?php /* This file has been prefixed by <PHP-Prefixer> for "XT Tailwind CSS" */
+<?php
+/* This file has been prefixed by <PHP-Prefixer> for "XT Tailwind CSS" */
 
 namespace XTP_BUILD\Illuminate\Contracts\Encryption;
 
@@ -7,9 +8,11 @@ interface Encrypter
     /**
      * Encrypt the given value.
      *
-     * @param  string  $value
+     * @param  mixed  $value
      * @param  bool  $serialize
      * @return string
+     *
+     * @throws \Illuminate\Contracts\Encryption\EncryptException
      */
     public function encrypt($value, $serialize = true);
 
@@ -18,7 +21,9 @@ interface Encrypter
      *
      * @param  string  $payload
      * @param  bool  $unserialize
-     * @return string
+     * @return mixed
+     *
+     * @throws \Illuminate\Contracts\Encryption\DecryptException
      */
     public function decrypt($payload, $unserialize = true);
 }

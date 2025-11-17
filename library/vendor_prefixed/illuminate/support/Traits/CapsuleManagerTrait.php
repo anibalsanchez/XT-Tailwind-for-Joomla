@@ -3,8 +3,8 @@
 
 namespace XTP_BUILD\Illuminate\Support\Traits;
 
-use XTP_BUILD\Illuminate\Support\Fluent;
 use XTP_BUILD\Illuminate\Contracts\Container\Container;
+use XTP_BUILD\Illuminate\Support\Fluent;
 
 trait CapsuleManagerTrait
 {

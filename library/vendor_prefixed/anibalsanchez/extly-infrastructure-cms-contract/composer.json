@@ -1,0 +1,37 @@
+{
+  "name": "anibalsanchez/extly-infrastructure-cms-contract",
+  "description": "Extly Infrastructure Cms Contract",
+  "license": "MIT",
+  "version": "2.0.1",
+  "authors": [
+    {
+      "name": "Extly CB",
+      "email": "team@extly.com"
+    }
+  ],
+  "require": {
+    "php": "^8.0",
+    "doctrine/inflector": "^2.1",
+    "illuminate/support": "^8.65",
+    "myclabs/php-enum": "^1.8"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "autoload": {
+    "psr-4": {
+      "Extly\\": "src/"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "kylekatarnls/update-helper": true,
+      "php-http/discovery": true
+    },
+    "optimize-autoloader": true,
+    "platform": {
+      "php": "8.0.30"
+    },
+    "preferred-install": "dist",
+    "sort-packages": true
+  }
+}

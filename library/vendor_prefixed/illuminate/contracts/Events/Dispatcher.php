@@ -1,4 +1,5 @@
-<?php /* This file has been prefixed by <PHP-Prefixer> for "XT Tailwind CSS" */
+<?php
+/* This file has been prefixed by <PHP-Prefixer> for "XT Tailwind CSS" */
 
 namespace XTP_BUILD\Illuminate\Contracts\Events;
 
@@ -7,11 +8,11 @@ interface Dispatcher
     /**
      * Register an event listener with the dispatcher.
      *
-     * @param  string|array  $events
-     * @param  mixed  $listener
+     * @param  \Closure|string|array  $events
+     * @param  \Closure|string|array|null  $listener
      * @return void
      */
-    public function listen($events, $listener);
+    public function listen($events, $listener = null);
 
     /**
      * Determine if a given event has listeners.

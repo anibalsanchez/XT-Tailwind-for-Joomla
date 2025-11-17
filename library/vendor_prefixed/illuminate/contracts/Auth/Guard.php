@@ -1,4 +1,5 @@
-<?php /* This file has been prefixed by <PHP-Prefixer> for "XT Tailwind CSS" */
+<?php
+/* This file has been prefixed by <PHP-Prefixer> for "XT Tailwind CSS" */
 
 namespace XTP_BUILD\Illuminate\Contracts\Auth;
 
@@ -28,7 +29,7 @@ interface Guard
     /**
      * Get the ID for the currently authenticated user.
      *
-     * @return int|null
+     * @return int|string|null
      */
     public function id();
 

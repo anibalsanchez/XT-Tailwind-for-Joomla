@@ -6,8 +6,20 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname(dirname($vendorDir));
 
 return array(
-    'Illuminate\\Support\\' => array($vendorDir . '/illuminate/support'),
+    'voku\\' => array($vendorDir . '/voku/portable-ascii/src/voku'),
+    'Symfony\\Polyfill\\Php80\\' => array($vendorDir . '/symfony/polyfill-php80'),
+    'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
+    'Symfony\\Contracts\\Translation\\' => array($vendorDir . '/symfony/translation-contracts'),
+    'Symfony\\Component\\Translation\\' => array($vendorDir . '/symfony/translation'),
+    'Psr\\SimpleCache\\' => array($vendorDir . '/psr/simple-cache/src'),
+    'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
+    'Psr\\Clock\\' => array($vendorDir . '/psr/clock/src'),
+    'MyCLabs\\Enum\\' => array($vendorDir . '/myclabs/php-enum/src'),
+    'Joomla\\CMS\\Document\\Renderer\\Html\\' => array($vendorDir . '/extly/xt-renderers-for-joomla/src'),
+    'Illuminate\\Support\\' => array($vendorDir . '/illuminate/macroable', $vendorDir . '/illuminate/collections', $vendorDir . '/illuminate/support'),
     'Illuminate\\Contracts\\' => array($vendorDir . '/illuminate/contracts'),
-    'Extly\\CMS\\Document\\Renderer\\Html\\' => array($vendorDir . '/extly/xt-renderers-for-joomla/src'),
-    'Extly\\' => array($baseDir . '/library/src', $vendorDir . '/anibalsanchez/extly-html-asset-tags-builder/src'),
+    'Extly\\' => array($baseDir . '/library/src', $vendorDir . '/anibalsanchez/extly-infrastructure-cms-contract/src', $vendorDir . '/anibalsanchez/extly-html-asset-tags-builder/src'),
+    'Doctrine\\Inflector\\' => array($vendorDir . '/doctrine/inflector/src'),
+    'Carbon\\Doctrine\\' => array($vendorDir . '/carbonphp/carbon-doctrine-types/src/Carbon/Doctrine'),
+    'Carbon\\' => array($vendorDir . '/nesbot/carbon/src/Carbon'),
 );

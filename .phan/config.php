@@ -4,7 +4,7 @@
  * @package     XT Tailwind for Joomla
  *
  * @author      Extly, CB. <team@extly.com>
- * @copyright   Copyright (c)2012-2024 Extly, CB. All rights reserved.
+ * @copyright   Copyright (c)2012-2025 Extly, CB. All rights reserved.
  * @license     https://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
  *
  * @see         https://www.extly.com
@@ -112,15 +112,16 @@ return [
         'PhanUndeclaredClassMethod',
         'PhanUndeclaredExtendedClass',
         'PhanUndeclaredMethod',
-        'PhanUndeclaredConstantOfClass',
-        'PhanUndeclaredClassConstant',
         'PhanUndeclaredConstant',
+        'PhanUndeclaredClassInstanceof',
+        'PhanUndeclaredClassStaticProperty',
+        'PhanUndeclaredClassConstant',
+        'PhanUndeclaredClassCatch',
     ],
 
     // If empty, no filter against issues types will be applied.
     // If this white-list is non-empty, only issues within the list
     // will be emitted by Phan.
     'whitelist_issue_types' => [
-        // 'PhanUndeclaredClassMethod',
     ],
 ];

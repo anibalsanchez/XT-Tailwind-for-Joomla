@@ -1,4 +1,5 @@
-<?php /* This file has been prefixed by <PHP-Prefixer> for "XT Tailwind CSS" */
+<?php
+/* This file has been prefixed by <PHP-Prefixer> for "XT Tailwind CSS" */
 
 namespace XTP_BUILD\Illuminate\Contracts\Queue;
 
@@ -17,4 +18,18 @@ interface QueueableCollection
      * @return array
      */
     public function getQueueableIds();
+
+    /**
+     * Get the relationships of the entities being queued.
+     *
+     * @return array
+     */
+    public function getQueueableRelations();
+
+    /**
+     * Get the connection of the entities being queued.
+     *
+     * @return string|null
+     */
+    public function getQueueableConnection();
 }

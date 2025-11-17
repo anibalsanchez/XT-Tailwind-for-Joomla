@@ -8,14 +8,14 @@
     }
   ],
   "require": {
-    "php": "^7.3 || ^8.0"
+    "php": "^8.0"
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
   "config": {
     "optimize-autoloader": true,
     "platform": {
-      "php": "7.4.33"
+      "php": "8.0.30"
     },
     "platform-check": false,
     "preferred-install": "dist",

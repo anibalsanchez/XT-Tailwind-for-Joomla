@@ -1,12 +1,12 @@
 <?php
 /* This file has been prefixed by <PHP-Prefixer> for "XT Tailwind CSS" */
 
-use XTP_BUILD\Illuminate\Support\Arr;
-use XTP_BUILD\Illuminate\Support\Str;
-use XTP_BUILD\Illuminate\Support\Collection;
-use XTP_BUILD\Illuminate\Support\Debug\Dumper;
+use XTP_BUILD\Illuminate\Contracts\Support\DeferringDisplayableValue;
 use XTP_BUILD\Illuminate\Contracts\Support\Htmlable;
+use XTP_BUILD\Illuminate\Support\Arr;
+use XTP_BUILD\Illuminate\Support\Env;
 use XTP_BUILD\Illuminate\Support\HigherOrderTapProxy;
+use XTP_BUILD\Illuminate\Support\Optional;
 
 if (! function_exists('XTP_append_config')) {
     /**
@@ -31,316 +31,32 @@ if (! function_exists('XTP_append_config')) {
     }
 }
 
-if (! function_exists('XTP_array_add')) {
+if (! function_exists('XTP_blank')) {
     /**
-     * Add an element to an array using "dot" notation if it doesn't exist.
+     * Determine if the given value is "blank".
      *
-     * @param  array   $array
-     * @param  string  $key
-     * @param  mixed   $value
-     * @return array
-     */
-    function XTP_array_add($array, $key, $value)
-    {
-        return Arr::add($array, $key, $value);
-    }
-}
-
-if (! function_exists('XTP_array_collapse')) {
-    /**
-     * Collapse an array of arrays into a single array.
-     *
-     * @param  array  $array
-     * @return array
-     */
-    function XTP_array_collapse($array)
-    {
-        return Arr::collapse($array);
-    }
-}
-
-if (! function_exists('XTP_array_divide')) {
-    /**
-     * Divide an array into two arrays. One with keys and the other with values.
-     *
-     * @param  array  $array
-     * @return array
-     */
-    function XTP_array_divide($array)
-    {
-        return Arr::divide($array);
-    }
-}
-
-if (! function_exists('XTP_array_dot')) {
-    /**
-     * Flatten a multi-dimensional associative array with dots.
-     *
-     * @param  array   $array
-     * @param  string  $prepend
-     * @return array
-     */
-    function XTP_array_dot($array, $prepend = '')
-    {
-        return Arr::dot($array, $prepend);
-    }
-}
-
-if (! function_exists('XTP_array_except')) {
-    /**
-     * Get all of the given array except for a specified array of items.
-     *
-     * @param  array  $array
-     * @param  array|string  $keys
-     * @return array
-     */
-    function XTP_array_except($array, $keys)
-    {
-        return Arr::except($array, $keys);
-    }
-}
-
-if (! function_exists('XTP_array_first')) {
-    /**
-     * Return the first element in an array passing a given truth test.
-     *
-     * @param  array  $array
-     * @param  callable|null  $callback
-     * @param  mixed  $default
-     * @return mixed
-     */
-    function XTP_array_first($array, callable $callback = null, $default = null)
-    {
-        return Arr::first($array, $callback, $default);
-    }
-}
-
-if (! function_exists('XTP_array_flatten')) {
-    /**
-     * Flatten a multi-dimensional array into a single level.
-     *
-     * @param  array  $array
-     * @param  int  $depth
-     * @return array
-     */
-    function XTP_array_flatten($array, $depth = INF)
-    {
-        return Arr::flatten($array, $depth);
-    }
-}
-
-if (! function_exists('XTP_array_forget')) {
-    /**
-     * Remove one or many array items from a given array using "dot" notation.
-     *
-     * @param  array  $array
-     * @param  array|string  $keys
-     * @return void
-     */
-    function XTP_array_forget(&$array, $keys)
-    {
-        return Arr::forget($array, $keys);
-    }
-}
-
-if (! function_exists('XTP_array_get')) {
-    /**
-     * Get an item from an array using "dot" notation.
-     *
-     * @param  \ArrayAccess|array  $array
-     * @param  string  $key
-     * @param  mixed   $default
-     * @return mixed
-     */
-    function XTP_array_get($array, $key, $default = null)
-    {
-        return Arr::get($array, $key, $default);
-    }
-}
-
-if (! function_exists('XTP_array_has')) {
-    /**
-     * Check if an item or items exist in an array using "dot" notation.
-     *
-     * @param  \ArrayAccess|array  $array
-     * @param  string|array  $keys
+     * @param  mixed  $value
      * @return bool
      */
-    function XTP_array_has($array, $keys)
+    function XTP_blank($value)
     {
-        return Arr::has($array, $keys);
-    }
-}
+        if (is_null($value)) {
+            return true;
+        }
 
-if (! function_exists('XTP_array_last')) {
-    /**
-     * Return the last element in an array passing a given truth test.
-     *
-     * @param  array  $array
-     * @param  callable|null  $callback
-     * @param  mixed  $default
-     * @return mixed
-     */
-    function XTP_array_last($array, callable $callback = null, $default = null)
-    {
-        return Arr::last($array, $callback, $default);
-    }
-}
+        if (is_string($value)) {
+            return trim($value) === '';
+        }
 
-if (! function_exists('XTP_array_only')) {
-    /**
-     * Get a subset of the items from the given array.
-     *
-     * @param  array  $array
-     * @param  array|string  $keys
-     * @return array
-     */
-    function XTP_array_only($array, $keys)
-    {
-        return Arr::only($array, $keys);
-    }
-}
+        if (is_numeric($value) || is_bool($value)) {
+            return false;
+        }
 
-if (! function_exists('XTP_array_pluck')) {
-    /**
-     * Pluck an array of values from an array.
-     *
-     * @param  array   $array
-     * @param  string|array  $value
-     * @param  string|array|null  $key
-     * @return array
-     */
-    function XTP_array_pluck($array, $value, $key = null)
-    {
-        return Arr::pluck($array, $value, $key);
-    }
-}
+        if ($value instanceof Countable) {
+            return count($value) === 0;
+        }
 
-if (! function_exists('XTP_array_prepend')) {
-    /**
-     * Push an item onto the beginning of an array.
-     *
-     * @param  array  $array
-     * @param  mixed  $value
-     * @param  mixed  $key
-     * @return array
-     */
-    function XTP_array_prepend($array, $value, $key = null)
-    {
-        return Arr::prepend($array, $value, $key);
-    }
-}
-
-if (! function_exists('XTP_array_pull')) {
-    /**
-     * Get a value from the array, and remove it.
-     *
-     * @param  array   $array
-     * @param  string  $key
-     * @param  mixed   $default
-     * @return mixed
-     */
-    function XTP_array_pull(&$array, $key, $default = null)
-    {
-        return Arr::pull($array, $key, $default);
-    }
-}
-
-if (! function_exists('XTP_array_random')) {
-    /**
-     * Get a random value from an array.
-     *
-     * @param  array  $array
-     * @param  int|null  $num
-     * @return mixed
-     */
-    function XTP_array_random($array, $num = null)
-    {
-        return Arr::random($array, $num);
-    }
-}
-
-if (! function_exists('XTP_array_set')) {
-    /**
-     * Set an array item to a given value using "dot" notation.
-     *
-     * If no key is given to the method, the entire array will be replaced.
-     *
-     * @param  array   $array
-     * @param  string  $key
-     * @param  mixed   $value
-     * @return array
-     */
-    function XTP_array_set(&$array, $key, $value)
-    {
-        return Arr::set($array, $key, $value);
-    }
-}
-
-if (! function_exists('XTP_array_sort')) {
-    /**
-     * Sort the array by the given callback or attribute name.
-     *
-     * @param  array  $array
-     * @param  callable|string  $callback
-     * @return array
-     */
-    function XTP_array_sort($array, $callback)
-    {
-        return Arr::sort($array, $callback);
-    }
-}
-
-if (! function_exists('XTP_array_sort_recursive')) {
-    /**
-     * Recursively sort an array by keys and values.
-     *
-     * @param  array  $array
-     * @return array
-     */
-    function XTP_array_sort_recursive($array)
-    {
-        return Arr::sortRecursive($array);
-    }
-}
-
-if (! function_exists('XTP_array_where')) {
-    /**
-     * Filter the array using the given callback.
-     *
-     * @param  array  $array
-     * @param  callable  $callback
-     * @return array
-     */
-    function XTP_array_where($array, callable $callback)
-    {
-        return Arr::where($array, $callback);
-    }
-}
-
-if (! function_exists('XTP_array_wrap')) {
-    /**
-     * If the given value is not an array, wrap it in one.
-     *
-     * @param  mixed  $value
-     * @return array
-     */
-    function XTP_array_wrap($value)
-    {
-        return Arr::wrap($value);
-    }
-}
-
-if (! function_exists('XTP_camel_case')) {
-    /**
-     * Convert a value to camel case.
-     *
-     * @param  string  $value
-     * @return string
-     */
-    function XTP_camel_case($value)
-    {
-        return Str::camel($value);
+        return empty($value);
     }
 }
 
@@ -361,7 +77,7 @@ if (! function_exists('XTP_class_basename')) {
 
 if (! function_exists('XTP_class_uses_recursive')) {
     /**
-     * Returns all traits used by a class, its subclasses and trait of their traits.
+     * Returns all traits used by a class, its parent classes and trait of their traits.
      *
      * @param  object|string  $class
      * @return array
@@ -374,7 +90,7 @@ if (! function_exists('XTP_class_uses_recursive')) {
 
         $results = [];
 
-        foreach (array_merge([$class => $class], class_parents($class)) as $class) {
+        foreach (array_reverse(class_parents($class)) + [$class => $class] as $class) {
             $results += XTP_trait_uses_recursive($class);
         }
 
@@ -382,184 +98,25 @@ if (! function_exists('XTP_class_uses_recursive')) {
     }
 }
 
-if (! function_exists('XTP_collect')) {
-    /**
-     * Create a collection from the given value.
-     *
-     * @param  mixed  $value
-     * @return \Illuminate\Support\Collection
-     */
-    function XTP_collect($value = null)
-    {
-        return new Collection($value);
-    }
-}
-
-if (! function_exists('XTP_data_fill')) {
-    /**
-     * Fill in data where it's missing.
-     *
-     * @param  mixed   $target
-     * @param  string|array  $key
-     * @param  mixed  $value
-     * @return mixed
-     */
-    function XTP_data_fill(&$target, $key, $value)
-    {
-        return XTP_data_set($target, $key, $value, false);
-    }
-}
-
-if (! function_exists('XTP_data_get')) {
-    /**
-     * Get an item from an array or object using "dot" notation.
-     *
-     * @param  mixed   $target
-     * @param  string|array  $key
-     * @param  mixed   $default
-     * @return mixed
-     */
-    function XTP_data_get($target, $key, $default = null)
-    {
-        if (is_null($key)) {
-            return $target;
-        }
-
-        $key = is_array($key) ? $key : explode('.', $key);
-
-        while (! is_null($segment = array_shift($key))) {
-            if ($segment === '*') {
-                if ($target instanceof Collection) {
-                    $target = $target->all();
-                } elseif (! is_array($target)) {
-                    return XTP_value($default);
-                }
-
-                $result = Arr::pluck($target, $key);
-
-                return in_array('*', $key) ? Arr::collapse($result) : $result;
-            }
-
-            if (Arr::accessible($target) && Arr::exists($target, $segment)) {
-                $target = $target[$segment];
-            } elseif (is_object($target) && isset($target->{$segment})) {
-                $target = $target->{$segment};
-            } else {
-                return XTP_value($default);
-            }
-        }
-
-        return $target;
-    }
-}
-
-if (! function_exists('XTP_data_set')) {
-    /**
-     * Set an item on an array or object using dot notation.
-     *
-     * @param  mixed  $target
-     * @param  string|array  $key
-     * @param  mixed  $value
-     * @param  bool  $overwrite
-     * @return mixed
-     */
-    function XTP_data_set(&$target, $key, $value, $overwrite = true)
-    {
-        $segments = is_array($key) ? $key : explode('.', $key);
-
-        if (($segment = array_shift($segments)) === '*') {
-            if (! Arr::accessible($target)) {
-                $target = [];
-            }
-
-            if ($segments) {
-                foreach ($target as &$inner) {
-                    XTP_data_set($inner, $segments, $value, $overwrite);
-                }
-            } elseif ($overwrite) {
-                foreach ($target as &$inner) {
-                    $inner = $value;
-                }
-            }
-        } elseif (Arr::accessible($target)) {
-            if ($segments) {
-                if (! Arr::exists($target, $segment)) {
-                    $target[$segment] = [];
-                }
-
-                XTP_data_set($target[$segment], $segments, $value, $overwrite);
-            } elseif ($overwrite || ! Arr::exists($target, $segment)) {
-                $target[$segment] = $value;
-            }
-        } elseif (is_object($target)) {
-            if ($segments) {
-                if (! isset($target->{$segment})) {
-                    $target->{$segment} = [];
-                }
-
-                XTP_data_set($target->{$segment}, $segments, $value, $overwrite);
-            } elseif ($overwrite || ! isset($target->{$segment})) {
-                $target->{$segment} = $value;
-            }
-        } else {
-            $target = [];
-
-            if ($segments) {
-                XTP_data_set($target[$segment], $segments, $value, $overwrite);
-            } elseif ($overwrite) {
-                $target[$segment] = $value;
-            }
-        }
-
-        return $target;
-    }
-}
-
-if (! function_exists('dd')) {
-    /**
-     * Dump the passed variables and end the script.
-     *
-     * @param  mixed
-     * @return void
-     */
-    function dd(...$args)
-    {
-        foreach ($args as $x) {
-            (new Dumper)->dump($x);
-        }
-
-        die(1);
-    }
-}
-
 if (! function_exists('e')) {
     /**
-     * Escape HTML special characters in a string.
+     * Encode HTML special characters in a string.
      *
-     * @param  \Illuminate\Contracts\Support\Htmlable|string  $value
+     * @param  \Illuminate\Contracts\Support\DeferringDisplayableValue|\Illuminate\Contracts\Support\Htmlable|string|null  $value
+     * @param  bool  $doubleEncode
      * @return string
      */
-    function e($value)
+    function e($value, $doubleEncode = true)
     {
+        if ($value instanceof DeferringDisplayableValue) {
+            $value = $value->resolveDisplayableValue();
+        }
+
         if ($value instanceof Htmlable) {
             return $value->toHtml();
         }
 
-        return htmlspecialchars($value, ENT_QUOTES, 'UTF-8', false);
-    }
-}
-
-if (! function_exists('XTP_ends_with')) {
-    /**
-     * Determine if a given string ends with a given substring.
-     *
-     * @param  string  $haystack
-     * @param  string|array  $needles
-     * @return bool
-     */
-    function XTP_ends_with($haystack, $needles)
-    {
-        return Str::endsWith($haystack, $needles);
+        return htmlspecialchars($value ?? '', ENT_QUOTES, 'UTF-8', $doubleEncode);
     }
 }
 
@@ -568,76 +125,25 @@ if (! function_exists('XTP_env')) {
      * Gets the value of an environment variable.
      *
      * @param  string  $key
-     * @param  mixed   $default
+     * @param  mixed  $default
      * @return mixed
      */
     function XTP_env($key, $default = null)
     {
-        $value = getenv($key);
-
-        if ($value === false) {
-            return XTP_value($default);
-        }
-
-        switch (strtolower($value)) {
-            case 'true':
-            case '(true)':
-                return true;
-            case 'false':
-            case '(false)':
-                return false;
-            case 'empty':
-            case '(empty)':
-                return '';
-            case 'null':
-            case '(null)':
-                return;
-        }
-
-        if (strlen($value) > 1 && Str::startsWith($value, '"') && Str::endsWith($value, '"')) {
-            return substr($value, 1, -1);
-        }
-
-        return $value;
+        return Env::get($key, $default);
     }
 }
 
-if (! function_exists('XTP_head')) {
+if (! function_exists('XTP_filled')) {
     /**
-     * Get the first element of an array. Useful for method chaining.
+     * Determine if a value is "filled".
      *
-     * @param  array  $array
-     * @return mixed
+     * @param  mixed  $value
+     * @return bool
      */
-    function XTP_head($array)
+    function XTP_filled($value)
     {
-        return reset($array);
-    }
-}
-
-if (! function_exists('XTP_kebab_case')) {
-    /**
-     * Convert a string to kebab case.
-     *
-     * @param  string  $value
-     * @return string
-     */
-    function XTP_kebab_case($value)
-    {
-        return Str::kebab($value);
-    }
-}
-
-if (! function_exists('XTP_last')) {
-    /**
-     * Get the last element from an array.
-     *
-     * @param  array  $array
-     * @return mixed
-     */
-    function XTP_last($array)
-    {
-        return end($array);
+        return ! XTP_blank($value);
     }
 }
 
@@ -646,13 +152,13 @@ if (! function_exists('XTP_object_get')) {
      * Get an item from an object using "dot" notation.
      *
      * @param  object  $object
-     * @param  string  $key
-     * @param  mixed   $default
+     * @param  string|null  $key
+     * @param  mixed  $default
      * @return mixed
      */
     function XTP_object_get($object, $key, $default = null)
     {
-        if (is_null($key) || trim($key) == '') {
+        if (is_null($key) || trim($key) === '') {
             return $object;
         }
 
@@ -668,12 +174,30 @@ if (! function_exists('XTP_object_get')) {
     }
 }
 
+if (! function_exists('XTP_optional')) {
+    /**
+     * Provide access to optional objects.
+     *
+     * @param  mixed  $value
+     * @param  callable|null  $callback
+     * @return mixed
+     */
+    function XTP_optional($value = null, callable $callback = null)
+    {
+        if (is_null($callback)) {
+            return new Optional($value);
+        } elseif (! is_null($value)) {
+            return $callback($value);
+        }
+    }
+}
+
 if (! function_exists('XTP_preg_replace_array')) {
     /**
      * Replace a given pattern with each value in the array in sequentially.
      *
      * @param  string  $pattern
-     * @param  array   $replacements
+     * @param  array  $replacements
      * @param  string  $subject
      * @return string
      */
@@ -693,258 +217,33 @@ if (! function_exists('XTP_retry')) {
      *
      * @param  int  $times
      * @param  callable  $callback
-     * @param  int  $sleep
+     * @param  int|\Closure  $sleepMilliseconds
+     * @param  callable|null  $when
      * @return mixed
      *
      * @throws \Exception
      */
-    function XTP_retry($times, callable $callback, $sleep = 0)
+    function XTP_retry($times, callable $callback, $sleepMilliseconds = 0, $when = null)
     {
-        $times--;
+        $attempts = 0;
 
         beginning:
+        $attempts++;
+        $times--;
+
         try {
-            return $callback();
+            return $callback($attempts);
         } catch (Exception $e) {
-            if (! $times) {
+            if ($times < 1 || ($when && ! $when($e))) {
                 throw $e;
             }
 
-            $times--;
-
-            if ($sleep) {
-                usleep($sleep * 1000);
+            if ($sleepMilliseconds) {
+                usleep(XTP_value($sleepMilliseconds, $attempts) * 1000);
             }
 
             goto beginning;
         }
-    }
-}
-
-if (! function_exists('XTP_snake_case')) {
-    /**
-     * Convert a string to snake case.
-     *
-     * @param  string  $value
-     * @param  string  $delimiter
-     * @return string
-     */
-    function XTP_snake_case($value, $delimiter = '_')
-    {
-        return Str::snake($value, $delimiter);
-    }
-}
-
-if (! function_exists('XTP_starts_with')) {
-    /**
-     * Determine if a given string starts with a given substring.
-     *
-     * @param  string  $haystack
-     * @param  string|array  $needles
-     * @return bool
-     */
-    function XTP_starts_with($haystack, $needles)
-    {
-        return Str::startsWith($haystack, $needles);
-    }
-}
-
-if (! function_exists('XTP_str_after')) {
-    /**
-     * Return the remainder of a string after a given value.
-     *
-     * @param  string  $subject
-     * @param  string  $search
-     * @return string
-     */
-    function XTP_str_after($subject, $search)
-    {
-        return Str::after($subject, $search);
-    }
-}
-
-if (! function_exists('XTP_str_contains')) {
-    /**
-     * Determine if a given string contains a given substring.
-     *
-     * @param  string  $haystack
-     * @param  string|array  $needles
-     * @return bool
-     */
-    function XTP_str_contains($haystack, $needles)
-    {
-        return Str::contains($haystack, $needles);
-    }
-}
-
-if (! function_exists('XTP_str_finish')) {
-    /**
-     * Cap a string with a single instance of a given value.
-     *
-     * @param  string  $value
-     * @param  string  $cap
-     * @return string
-     */
-    function XTP_str_finish($value, $cap)
-    {
-        return Str::finish($value, $cap);
-    }
-}
-
-if (! function_exists('XTP_str_is')) {
-    /**
-     * Determine if a given string matches a given pattern.
-     *
-     * @param  string  $pattern
-     * @param  string  $value
-     * @return bool
-     */
-    function XTP_str_is($pattern, $value)
-    {
-        return Str::is($pattern, $value);
-    }
-}
-
-if (! function_exists('XTP_str_limit')) {
-    /**
-     * Limit the number of characters in a string.
-     *
-     * @param  string  $value
-     * @param  int     $limit
-     * @param  string  $end
-     * @return string
-     */
-    function XTP_str_limit($value, $limit = 100, $end = '...')
-    {
-        return Str::limit($value, $limit, $end);
-    }
-}
-
-if (! function_exists('XTP_str_plural')) {
-    /**
-     * Get the plural form of an English word.
-     *
-     * @param  string  $value
-     * @param  int     $count
-     * @return string
-     */
-    function XTP_str_plural($value, $count = 2)
-    {
-        return Str::plural($value, $count);
-    }
-}
-
-if (! function_exists('XTP_str_random')) {
-    /**
-     * Generate a more truly "random" alpha-numeric string.
-     *
-     * @param  int  $length
-     * @return string
-     *
-     * @throws \RuntimeException
-     */
-    function XTP_str_random($length = 16)
-    {
-        return Str::random($length);
-    }
-}
-
-if (! function_exists('XTP_str_replace_array')) {
-    /**
-     * Replace a given value in the string sequentially with an array.
-     *
-     * @param  string  $search
-     * @param  array   $replace
-     * @param  string  $subject
-     * @return string
-     */
-    function XTP_str_replace_array($search, array $replace, $subject)
-    {
-        return Str::replaceArray($search, $replace, $subject);
-    }
-}
-
-if (! function_exists('XTP_str_replace_first')) {
-    /**
-     * Replace the first occurrence of a given value in the string.
-     *
-     * @param  string  $search
-     * @param  string  $replace
-     * @param  string  $subject
-     * @return string
-     */
-    function XTP_str_replace_first($search, $replace, $subject)
-    {
-        return Str::replaceFirst($search, $replace, $subject);
-    }
-}
-
-if (! function_exists('XTP_str_replace_last')) {
-    /**
-     * Replace the last occurrence of a given value in the string.
-     *
-     * @param  string  $search
-     * @param  string  $replace
-     * @param  string  $subject
-     * @return string
-     */
-    function XTP_str_replace_last($search, $replace, $subject)
-    {
-        return Str::replaceLast($search, $replace, $subject);
-    }
-}
-
-if (! function_exists('XTP_str_singular')) {
-    /**
-     * Get the singular form of an English word.
-     *
-     * @param  string  $value
-     * @return string
-     */
-    function XTP_str_singular($value)
-    {
-        return Str::singular($value);
-    }
-}
-
-if (! function_exists('XTP_str_slug')) {
-    /**
-     * Generate a URL friendly "slug" from a given string.
-     *
-     * @param  string  $title
-     * @param  string  $separator
-     * @return string
-     */
-    function XTP_str_slug($title, $separator = '-')
-    {
-        return Str::slug($title, $separator);
-    }
-}
-
-if (! function_exists('XTP_str_start')) {
-    /**
-     * Begin a string with a single instance of a given value.
-     *
-     * @param  string  $value
-     * @param  string  $prefix
-     * @return string
-     */
-    function XTP_str_start($value, $prefix)
-    {
-        return Str::start($value, $prefix);
-    }
-}
-
-if (! function_exists('XTP_studly_case')) {
-    /**
-     * Convert a value to studly caps case.
-     *
-     * @param  string  $value
-     * @return string
-     */
-    function XTP_studly_case($value)
-    {
-        return Str::studly($value);
     }
 }
 
@@ -968,16 +267,47 @@ if (! function_exists('XTP_tap')) {
     }
 }
 
-if (! function_exists('XTP_title_case')) {
+if (! function_exists('XTP_throw_if')) {
     /**
-     * Convert a value to title case.
+     * Throw the given exception if the given condition is true.
      *
-     * @param  string  $value
-     * @return string
+     * @param  mixed  $condition
+     * @param  \Throwable|string  $exception
+     * @param  mixed  ...$parameters
+     * @return mixed
+     *
+     * @throws \Throwable
      */
-    function XTP_title_case($value)
+    function XTP_throw_if($condition, $exception = 'RuntimeException', ...$parameters)
     {
-        return Str::title($value);
+        if ($condition) {
+            if (is_string($exception) && class_exists($exception)) {
+                $exception = new $exception(...$parameters);
+            }
+
+            throw is_string($exception) ? new RuntimeException($exception) : $exception;
+        }
+
+        return $condition;
+    }
+}
+
+if (! function_exists('XTP_throw_unless')) {
+    /**
+     * Throw the given exception unless the given condition is true.
+     *
+     * @param  mixed  $condition
+     * @param  \Throwable|string  $exception
+     * @param  mixed  ...$parameters
+     * @return mixed
+     *
+     * @throws \Throwable
+     */
+    function XTP_throw_unless($condition, $exception = 'RuntimeException', ...$parameters)
+    {
+        XTP_throw_if(! $condition, $exception, ...$parameters);
+
+        return $condition;
     }
 }
 
@@ -990,7 +320,7 @@ if (! function_exists('XTP_trait_uses_recursive')) {
      */
     function XTP_trait_uses_recursive($trait)
     {
-        $traits = class_uses($trait);
+        $traits = class_uses($trait) ?: [];
 
         foreach ($traits as $trait) {
             $traits += XTP_trait_uses_recursive($trait);
@@ -1000,16 +330,26 @@ if (! function_exists('XTP_trait_uses_recursive')) {
     }
 }
 
-if (! function_exists('XTP_value')) {
+if (! function_exists('XTP_transform')) {
     /**
-     * Return the default value of the given value.
+     * Transform the given value if it is present.
      *
      * @param  mixed  $value
-     * @return mixed
+     * @param  callable  $callback
+     * @param  mixed  $default
+     * @return mixed|null
      */
-    function XTP_value($value)
+    function XTP_transform($value, callable $callback, $default = null)
     {
-        return $value instanceof Closure ? $value() : $value;
+        if (XTP_filled($value)) {
+            return $callback($value);
+        }
+
+        if (is_callable($default)) {
+            return $default($value);
+        }
+
+        return $default;
     }
 }
 
@@ -1021,19 +361,20 @@ if (! function_exists('XTP_windows_os')) {
      */
     function XTP_windows_os()
     {
-        return strtolower(substr(PHP_OS, 0, 3)) === 'win';
+        return PHP_OS_FAMILY === 'Windows';
     }
 }
 
 if (! function_exists('XTP_with')) {
     /**
-     * Return the given object. Useful for chaining.
+     * Return the given value, optionally passed through the given callback.
      *
-     * @param  mixed  $object
+     * @param  mixed  $value
+     * @param  callable|null  $callback
      * @return mixed
      */
-    function XTP_with($object)
+    function XTP_with($value, callable $callback = null)
     {
-        return $object;
+        return is_null($callback) ? $value : $callback($value);
     }
 }

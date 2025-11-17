@@ -1,4 +1,5 @@
-<?php /* This file has been prefixed by <PHP-Prefixer> for "XT Tailwind CSS" */
+<?php
+/* This file has been prefixed by <PHP-Prefixer> for "XT Tailwind CSS" */
 
 namespace XTP_BUILD\Illuminate\Contracts\View;
 
@@ -17,8 +18,15 @@ interface View extends Renderable
      * Add a piece of data to the view.
      *
      * @param  string|array  $key
-     * @param  mixed   $value
+     * @param  mixed  $value
      * @return $this
      */
     public function with($key, $value = null);
+
+    /**
+     * Get the array of view data.
+     *
+     * @return array
+     */
+    public function getData();
 }

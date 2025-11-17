@@ -1,4 +1,5 @@
-<?php /* This file has been prefixed by <PHP-Prefixer> for "XT Tailwind CSS" */
+<?php
+/* This file has been prefixed by <PHP-Prefixer> for "XT Tailwind CSS" */
 
 namespace XTP_BUILD\Illuminate\Contracts\Validation;
 
@@ -6,6 +7,24 @@ use XTP_BUILD\Illuminate\Contracts\Support\MessageProvider;
 
 interface Validator extends MessageProvider
 {
+    /**
+     * Run the validator's rules against its data.
+     *
+     * @return array
+     *
+     * @throws \Illuminate\Validation\ValidationException
+     */
+    public function validate();
+
+    /**
+     * Get the attributes and values that were validated.
+     *
+     * @return array
+     *
+     * @throws \Illuminate\Validation\ValidationException
+     */
+    public function validated();
+
     /**
      * Determine if the data fails the validation rules.
      *
@@ -23,7 +42,7 @@ interface Validator extends MessageProvider
     /**
      * Add conditions to a given field based on a Closure.
      *
-     * @param  string  $attribute
+     * @param  string|array  $attribute
      * @param  string|array  $rules
      * @param  callable  $callback
      * @return $this
@@ -31,10 +50,17 @@ interface Validator extends MessageProvider
     public function sometimes($attribute, $rules, callable $callback);
 
     /**
-     * After an after validation callback.
+     * Add an after validation callback.
      *
      * @param  callable|string  $callback
      * @return $this
      */
     public function after($callback);
+
+    /**
+     * Get all of the validation error messages.
+     *
+     * @return \Illuminate\Support\MessageBag
+     */
+    public function errors();
 }

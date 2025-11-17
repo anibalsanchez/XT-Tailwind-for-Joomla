@@ -3,18 +3,20 @@
 
 namespace XTP_BUILD\Illuminate\Support;
 
-use XTP_BUILD\Doctrine\Common\Inflector\Inflector;
+use XTP_BUILD\Doctrine\Inflector\Inflector;
+use XTP_BUILD\Doctrine\Inflector\InflectorFactory;
 
 class Pluralizer
 {
     /**
      * Uncountable word forms.
      *
-     * @var array
+     * @var string[]
      */
     public static $uncountable = [
         'audio',
         'bison',
+        'cattle',
         'chassis',
         'compensation',
         'coreopsis',
@@ -25,11 +27,14 @@ class Pluralizer
         'equipment',
         'evidence',
         'feedback',
+        'firmware',
         'fish',
         'furniture',
         'gold',
+        'hardware',
         'information',
         'jedi',
+        'kin',
         'knowledge',
         'love',
         'metadata',
@@ -42,9 +47,12 @@ class Pluralizer
         'pokemon',
         'police',
         'rain',
+        'recommended',
+        'related',
         'rice',
         'series',
         'sheep',
+        'software',
         'species',
         'swine',
         'traffic',
@@ -55,16 +63,20 @@ class Pluralizer
      * Get the plural form of an English word.
      *
      * @param  string  $value
-     * @param  int     $count
+     * @param  int|array|\Countable  $count
      * @return string
      */
     public static function plural($value, $count = 2)
     {
-        if ((int) $count === 1 || static::uncountable($value)) {
+        if (is_countable($count)) {
+            $count = count($count);
+        }
+
+        if ((int) abs($count) === 1 || static::uncountable($value) || preg_match('/^(.*)[A-Za-z0-9\x{0080}-\x{FFFF}]$/u', $value) == 0) {
             return $value;
         }
 
-        $plural = Inflector::pluralize($value);
+        $plural = static::inflector()->pluralize($value);
 
         return static::matchCase($plural, $value);
     }
@@ -77,7 +89,7 @@ class Pluralizer
      */
     public static function singular($value)
     {
-        $singular = Inflector::singularize($value);
+        $singular = static::inflector()->singularize($value);
 
         return static::matchCase($singular, $value);
     }
@@ -105,11 +117,27 @@ class Pluralizer
         $functions = ['mb_strtolower', 'mb_strtoupper', 'ucfirst', 'ucwords'];
 
         foreach ($functions as $function) {
-            if (call_user_func($function, $comparison) === $comparison) {
-                return call_user_func($function, $value);
+            if ($function($comparison) === $comparison) {
+                return $function($value);
             }
         }
 
         return $value;
+    }
+
+    /**
+     * Get the inflector instance.
+     *
+     * @return \Doctrine\Inflector\Inflector
+     */
+    public static function inflector()
+    {
+        static $inflector;
+
+        if (is_null($inflector)) {
+            $inflector = InflectorFactory::createForLanguage('english')->build();
+        }
+
+        return $inflector;
     }
 }

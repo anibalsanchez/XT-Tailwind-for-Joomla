@@ -1,4 +1,5 @@
-<?php /* This file has been prefixed by <PHP-Prefixer> for "XT Tailwind CSS" */
+<?php
+/* This file has been prefixed by <PHP-Prefixer> for "XT Tailwind CSS" */
 
 namespace XTP_BUILD\Illuminate\Contracts\Cache;
 
@@ -23,29 +24,29 @@ interface Store
     public function many(array $keys);
 
     /**
-     * Store an item in the cache for a given number of minutes.
+     * Store an item in the cache for a given number of seconds.
      *
      * @param  string  $key
-     * @param  mixed   $value
-     * @param  float|int  $minutes
-     * @return void
+     * @param  mixed  $value
+     * @param  int  $seconds
+     * @return bool
      */
-    public function put($key, $value, $minutes);
+    public function put($key, $value, $seconds);
 
     /**
-     * Store multiple items in the cache for a given number of minutes.
+     * Store multiple items in the cache for a given number of seconds.
      *
      * @param  array  $values
-     * @param  float|int  $minutes
-     * @return void
+     * @param  int  $seconds
+     * @return bool
      */
-    public function putMany(array $values, $minutes);
+    public function putMany(array $values, $seconds);
 
     /**
      * Increment the value of an item in the cache.
      *
      * @param  string  $key
-     * @param  mixed   $value
+     * @param  mixed  $value
      * @return int|bool
      */
     public function increment($key, $value = 1);
@@ -54,7 +55,7 @@ interface Store
      * Decrement the value of an item in the cache.
      *
      * @param  string  $key
-     * @param  mixed   $value
+     * @param  mixed  $value
      * @return int|bool
      */
     public function decrement($key, $value = 1);
@@ -63,8 +64,8 @@ interface Store
      * Store an item in the cache indefinitely.
      *
      * @param  string  $key
-     * @param  mixed   $value
-     * @return void
+     * @param  mixed  $value
+     * @return bool
      */
     public function forever($key, $value);
 

@@ -5,7 +5,7 @@
  * @package     XT Tailwind for Joomla
  *
  * @author      Extly, CB. <team@extly.com>
- * @copyright   Copyright (c)2012-2024 Extly, CB. All rights reserved.
+ * @copyright   Copyright (c)2012-2025 Extly, CB. All rights reserved.
  * @license     https://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
  *
  * @see         https://www.extly.com
@@ -21,7 +21,7 @@ use XTP_BUILD\Extly\Infrastructure\Support\HtmlAsset\Asset\LinkStylesheetByScrip
 use XTP_BUILD\Extly\Infrastructure\Support\HtmlAsset\Asset\ScriptTag;
 use XTP_BUILD\Extly\Infrastructure\Support\HtmlAsset\HtmlAssetTagsBuilder;
 use XTP_BUILD\Extly\Infrastructure\Support\HtmlAsset\Repository as HtmlAssetRepository;
-use XTP_BUILD\Extly\Infrastructure\Support\UrlHelper;
+use XTP_BUILD\Extly\Infrastructure\Support\UrlTools\Helper as UrlHelper;
 use Joomla\CMS\Factory as CMSFactory;
 use Joomla\CMS\HTML\HTMLHelper as CMSHTMLHelper;
 use Joomla\CMS\Uri\Uri as CMSUri;
@@ -29,9 +29,9 @@ use Joomla\CMS\Version as CMSVersion;
 
 final class ScriptHelper
 {
-    const CLIENT_FRONTEND = 1;
+    public const CLIENT_FRONTEND = 1;
 
-    const CLIENT_ADMINISTRATOR = 0;
+    public const CLIENT_ADMINISTRATOR = 0;
 
     public static function addScriptDeclaration($script)
     {

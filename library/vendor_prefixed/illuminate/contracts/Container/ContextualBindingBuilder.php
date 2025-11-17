@@ -1,4 +1,5 @@
-<?php /* This file has been prefixed by <PHP-Prefixer> for "XT Tailwind CSS" */
+<?php
+/* This file has been prefixed by <PHP-Prefixer> for "XT Tailwind CSS" */
 
 namespace XTP_BUILD\Illuminate\Contracts\Container;
 
@@ -15,8 +16,16 @@ interface ContextualBindingBuilder
     /**
      * Define the implementation for the contextual binding.
      *
-     * @param  \Closure|string  $implementation
+     * @param  \Closure|string|array  $implementation
      * @return void
      */
     public function give($implementation);
+
+    /**
+     * Define tagged services to be used as the implementation for the contextual binding.
+     *
+     * @param  string  $tag
+     * @return void
+     */
+    public function giveTagged($tag);
 }
