@@ -20,7 +20,7 @@ use Extly\Infrastructure\Support\HtmlAsset\Asset\LinkStylesheetByScript;
 use Extly\Infrastructure\Support\HtmlAsset\Asset\ScriptTag;
 use Extly\Infrastructure\Support\HtmlAsset\HtmlAssetTagsBuilder;
 use Extly\Infrastructure\Support\HtmlAsset\Repository as HtmlAssetRepository;
-use Extly\Infrastructure\Support\UrlHelper;
+use Extly\Infrastructure\Support\UrlTools\Helper as UrlHelper;
 use Joomla\CMS\Factory as CMSFactory;
 use Joomla\CMS\HTML\HTMLHelper as CMSHTMLHelper;
 use Joomla\CMS\Uri\Uri as CMSUri;

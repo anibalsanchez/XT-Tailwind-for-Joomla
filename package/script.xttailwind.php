@@ -2,11 +2,9 @@
 
 /*
  * @package     XT Tailwind for Joomla
- *
  * @author      Extly, CB. <team@extly.com>
  * @copyright   Copyright (c)2012-2025 Extly, CB. All rights reserved.
  * @license     https://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
- *
  * @see         https://www.extly.com
  */
 
@@ -86,7 +84,7 @@ class Pkg_XTTailwindInstallerScript
      * since the FOF installation is expected to fail if a newer version of FOF is already installed on the site.
      *
      * @param string                    $type   Installation type (install, update, discover_install)
-     * @param JInstallerAdapterPackage $parent Parent object
+     * @param \JInstallerAdapterPackage $parent Parent object
      *
      * @return bool True to let the installation proceed, false to halt the installation
      */
@@ -116,22 +114,6 @@ class Pkg_XTTailwindInstallerScript
             return false;
         }
 
-        // if (!JComponentHelper::getComponent('com_sobipro', true)->enabled)
-        // {
-        //     $msg = '<b>SobiPro is not installed or enabled</b>. It is required to connect XT Search and Algolia to provide the Instant Search service.';
-
-        //     if (version_compare(JVERSION, '3.0', 'gt'))
-        //     {
-        //         JLog::add($msg, JLog::WARNING, 'jerror');
-        //     }
-        //     else
-        //     {
-        //         JFactory::getApplication()->enqueueMessage($msg, 'warning');
-        //     }
-
-        //     return false;
-        // }
-
         return true;
     }
 
@@ -141,7 +123,7 @@ class Pkg_XTTailwindInstallerScript
      * database updates and similar housekeeping functions.
      *
      * @param string                      $type   install, update or discover_update
-     * @param JInstallerAdapterComponent $parent Parent object
+     * @param \JInstallerAdapterComponent $parent Parent object
      */
     public function postflight($type, $parent)
     {
@@ -182,7 +164,7 @@ class Pkg_XTTailwindInstallerScript
     /**
      * Tuns on installation (but not on upgrade). This happens in install and discover_install installation routes.
      *
-     * @param JInstallerAdapterPackage $parent Parent object
+     * @param \JInstallerAdapterPackage $parent Parent object
      *
      * @return bool
      */
@@ -197,7 +179,7 @@ class Pkg_XTTailwindInstallerScript
     /**
      * Runs on uninstallation.
      *
-     * @param JInstallerAdapterPackage $parent Parent object
+     * @param \JInstallerAdapterPackage $parent Parent object
      *
      * @return bool
      */
@@ -263,7 +245,7 @@ class Pkg_XTTailwindInstallerScript
 
         try {
             $db->execute();
-        } catch (Exception $exception) {
+        } catch (\Exception $exception) {
         }
     }
 }

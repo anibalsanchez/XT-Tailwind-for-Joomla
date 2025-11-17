@@ -1,4 +1,6 @@
-#!/bin/bash -e
+#!/bin/bash
+
+set -euo pipefail
 
 # Special composer configuration to download the template from a repo, and
 # install it in the template directory.

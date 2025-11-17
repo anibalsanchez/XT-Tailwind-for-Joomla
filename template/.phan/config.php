@@ -110,15 +110,16 @@ return [
         'PhanUndeclaredClassMethod',
         'PhanUndeclaredExtendedClass',
         'PhanUndeclaredMethod',
-        'PhanUndeclaredConstantOfClass',
-        'PhanUndeclaredClassConstant',
         'PhanUndeclaredConstant',
+        'PhanUndeclaredClassInstanceof',
+        'PhanUndeclaredClassStaticProperty',
+        'PhanUndeclaredClassConstant',
+        'PhanUndeclaredClassCatch',
     ],
 
     // If empty, no filter against issues types will be applied.
     // If this white-list is non-empty, only issues within the list
     // will be emitted by Phan.
     'whitelist_issue_types' => [
-        // 'PhanUndeclaredClassMethod',
     ],
 ];

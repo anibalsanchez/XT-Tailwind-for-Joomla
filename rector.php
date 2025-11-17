@@ -13,11 +13,13 @@ declare(strict_types=1);
  */
 
 use Rector\Config\RectorConfig;
+use Utils\Rector\Rector\LegacyCallToJClassToJModernRector;
+
+require_once '/home/anibalsanchez/7_Projects/Platform/rector-rule-joomla-legacy-to-joomla-modern/src/Rector/LegacyCallToJClassToJModernRector.php';
 
 return RectorConfig::configure()
     ->withPaths([
         __DIR__.'/build',
-        __DIR__.'/library/src',
         __DIR__.'/package',
         __DIR__.'/template',
     ])
@@ -26,17 +28,19 @@ return RectorConfig::configure()
         '*/vendor/*',
         '*/node_modules/*',
         '*Legacy*',
-        __DIR__.'/build/templates/package/script.xttailwind.php',
+        // __DIR__.'/build/templates/package/script.xtextlynews.php',
     ])
     ->withPhpSets(php74: true)
     ->withPreparedSets(
         codeQuality: true,
         codingStyle: true,
+        earlyReturn: true,
+        instanceOf: true,
+        naming: true,
         // TODO: Enable typed properties
         typeDeclarations: false,
-        naming: true,
-        instanceOf: true,
-        earlyReturn: true,
     )
     ->withRules([
+        LegacyCallToJClassToJModernRector::class,
     ]);
+
