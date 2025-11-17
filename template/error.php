@@ -4,7 +4,7 @@
  * @package     XT Tailwind for Joomla
  *
  * @author      Extly, CB. <team@extly.com>
- * @copyright   Copyright (c)2012-2024 Extly, CB. All rights reserved.
+ * @copyright   Copyright (c)2012-2025 Extly, CB. All rights reserved.
  * @license     https://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
  *
  * @see         https://www.extly.com
@@ -14,7 +14,7 @@ defined('_JEXEC') || exit;
 
 // Sentry: Application Monitoring and Error Tracking Software
 // To integrate "XT Sentry for Joomla" - https://github.com/anibalsanchez/XT-Sentry-for-Joomla
-if (@(include_once(JPATH_SITE.'/cli/sentry.php')) && ($this->error instanceof \Throwable && function_exists('\Sentry\captureException'))) {
+if (@(include_once JPATH_SITE.'/cli/sentry.php') && ($this->error instanceof Throwable && function_exists('\Sentry\captureException'))) {
     \Sentry\captureException($this->error);
 }
 
@@ -134,18 +134,18 @@ $siteDescription = htmlspecialchars($params->get('siteDescription'), \ENT_QUOTES
             <!-- blog-block -->
             <div class="blog-block">
               <!-- Begin Content -->
-                <h1 class="page-header"><?php echo JText::_('JERROR_LAYOUT_PAGE_NOT_FOUND'); ?></h1>
+                <h1 class="page-header"><?php echo \Joomla\CMS\Language\Text::_('JERROR_LAYOUT_PAGE_NOT_FOUND'); ?></h1>
 
-                <p><strong><?php echo JText::_('JERROR_LAYOUT_ERROR_HAS_OCCURRED_WHILE_PROCESSING_YOUR_REQUEST'); ?></strong></p>
-                <p><?php echo JText::_('JERROR_LAYOUT_NOT_ABLE_TO_VISIT'); ?></p>
+                <p><strong><?php echo \Joomla\CMS\Language\Text::_('JERROR_LAYOUT_ERROR_HAS_OCCURRED_WHILE_PROCESSING_YOUR_REQUEST'); ?></strong></p>
+                <p><?php echo \Joomla\CMS\Language\Text::_('JERROR_LAYOUT_NOT_ABLE_TO_VISIT'); ?></p>
                 <ul>
-                    <li><?php echo JText::_('JERROR_LAYOUT_AN_OUT_OF_DATE_BOOKMARK_FAVOURITE'); ?></li>
-                    <li><?php echo JText::_('JERROR_LAYOUT_MIS_TYPED_ADDRESS'); ?></li>
-                    <li><?php echo JText::_('JERROR_LAYOUT_SEARCH_ENGINE_OUT_OF_DATE_LISTING'); ?></li>
-                    <li><?php echo JText::_('JERROR_LAYOUT_YOU_HAVE_NO_ACCESS_TO_THIS_PAGE'); ?></li>
+                    <li><?php echo \Joomla\CMS\Language\Text::_('JERROR_LAYOUT_AN_OUT_OF_DATE_BOOKMARK_FAVOURITE'); ?></li>
+                    <li><?php echo \Joomla\CMS\Language\Text::_('JERROR_LAYOUT_MIS_TYPED_ADDRESS'); ?></li>
+                    <li><?php echo \Joomla\CMS\Language\Text::_('JERROR_LAYOUT_SEARCH_ENGINE_OUT_OF_DATE_LISTING'); ?></li>
+                    <li><?php echo \Joomla\CMS\Language\Text::_('JERROR_LAYOUT_YOU_HAVE_NO_ACCESS_TO_THIS_PAGE'); ?></li>
                 </ul>
 
-                <p><?php echo JText::_('JERROR_LAYOUT_PLEASE_CONTACT_THE_SYSTEM_ADMINISTRATOR'); ?></p>
+                <p><?php echo \Joomla\CMS\Language\Text::_('JERROR_LAYOUT_PLEASE_CONTACT_THE_SYSTEM_ADMINISTRATOR'); ?></p>
                 <blockquote>
                     <span class="label label-inverse"><?php echo $this->error->getCode(); ?></span> <?php echo htmlspecialchars($this->error->getMessage(), \ENT_QUOTES, 'UTF-8'); ?>
                         <?php if ($this->debug) {
@@ -153,7 +153,7 @@ $siteDescription = htmlspecialchars($params->get('siteDescription'), \ENT_QUOTES
                             <br/><?php echo htmlspecialchars($this->error->getFile(), \ENT_QUOTES, 'UTF-8'); ?>:<?php echo $this->error->getLine(); ?>
                         <?php
                         }
- ?>
+?>
                 </blockquote>
 
                 <?php if ($this->debug) {
@@ -169,7 +169,7 @@ $siteDescription = htmlspecialchars($params->get('siteDescription'), \ENT_QUOTES
                                 <?php $this->setError($this->_error->getPrevious()); ?>
                                 <?php while (true === $loop) {
                                     ?>
-                                    <p><strong><?php echo JText::_('JERROR_LAYOUT_PREVIOUS_ERROR'); ?></strong></p>
+                                    <p><strong><?php echo \Joomla\CMS\Language\Text::_('JERROR_LAYOUT_PREVIOUS_ERROR'); ?></strong></p>
                                     <p>
                                         <?php echo htmlspecialchars($this->_error->getMessage(), \ENT_QUOTES, 'UTF-8'); ?>
                                         <br/><?php echo htmlspecialchars($this->_error->getFile(), \ENT_QUOTES, 'UTF-8'); ?>:<?php echo $this->_error->getLine(); ?>
@@ -178,16 +178,16 @@ $siteDescription = htmlspecialchars($params->get('siteDescription'), \ENT_QUOTES
                                     <?php $loop = $this->setError($this->_error->getPrevious()); ?>
                                 <?php
                                 }
-                                 ?>
+                                ?>
                                 <?php // Reset the main error object to the base error?>
                                 <?php $this->setError($this->error); ?>
 <?php
                             }
-                     ?>
+                    ?>
                         </div>
 <?php
                 }
-                             ?>
+?>
 
                 <!-- End Content -->
             </div>

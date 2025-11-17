@@ -4,7 +4,7 @@
  * @package     XT Tailwind for Joomla
  *
  * @author      Extly, CB. <team@extly.com>
- * @copyright   Copyright (c)2012-2024 Extly, CB. All rights reserved.
+ * @copyright   Copyright (c)2012-2025 Extly, CB. All rights reserved.
  * @license     https://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
  *
  * @see         https://www.extly.com
@@ -126,7 +126,7 @@ $siteDescription = htmlspecialchars($params->get('siteDescription'), \ENT_QUOTES
                 if ($siteDescription !== '' && $siteDescription !== '0') {
                     echo '<p class="site-description">'.htmlspecialchars($siteDescription, \ENT_COMPAT, 'UTF-8').'</p>';
                 }
-            ?>
+?>
           </div>
 
           <!-- languages-block -->

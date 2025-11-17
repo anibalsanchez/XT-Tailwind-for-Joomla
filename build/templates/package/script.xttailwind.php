@@ -3,7 +3,7 @@
 /*
  * @package     XT Tailwind for Joomla
  * @author      Extly, CB. <team@extly.com>
- * @copyright   Copyright (c)2012-2024 Extly, CB. All rights reserved.
+ * @copyright   Copyright (c)2012-2025 Extly, CB. All rights reserved.
  * @license     https://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
  * @see         https://www.extly.com
  */
@@ -93,7 +93,7 @@ class Pkg_[EXTENSION_CLASS_NAME]InstallerScript
         // Check the minimum PHP version
         if (!version_compare(PHP_VERSION, $this->minimumPHPVersion, 'ge')) {
             $msg = sprintf('<p>You need PHP %s or later to install this package</p>', $this->minimumPHPVersion);
-            JLog::add($msg, JLog::WARNING, 'jerror');
+            \Joomla\CMS\Log\Log::add($msg, \Joomla\CMS\Log\Log::WARNING, 'jerror');
 
             return false;
         }
@@ -101,7 +101,7 @@ class Pkg_[EXTENSION_CLASS_NAME]InstallerScript
         // Check the minimum Joomla! version
         if (!version_compare(JVERSION, $this->minimumJoomlaVersion, 'ge')) {
             $msg = sprintf('<p>You need Joomla! %s or later to install this component</p>', $this->minimumJoomlaVersion);
-            JLog::add($msg, JLog::WARNING, 'jerror');
+            \Joomla\CMS\Log\Log::add($msg, \Joomla\CMS\Log\Log::WARNING, 'jerror');
 
             return false;
         }
@@ -109,26 +109,10 @@ class Pkg_[EXTENSION_CLASS_NAME]InstallerScript
         // Check the maximum Joomla! version
         if (!version_compare(JVERSION, $this->maximumJoomlaVersion, 'le')) {
             $msg = sprintf('<p>You need Joomla! %s or earlier to install this component</p>', $this->maximumJoomlaVersion);
-            JLog::add($msg, JLog::WARNING, 'jerror');
+            \Joomla\CMS\Log\Log::add($msg, \Joomla\CMS\Log\Log::WARNING, 'jerror');
 
             return false;
         }
-
-        // if (!JComponentHelper::getComponent('com_sobipro', true)->enabled)
-        // {
-        //     $msg = '<b>SobiPro is not installed or enabled</b>. It is required to connect XT Search and Algolia to provide the Instant Search service.';
-
-        //     if (version_compare(JVERSION, '3.0', 'gt'))
-        //     {
-        //         JLog::add($msg, JLog::WARNING, 'jerror');
-        //     }
-        //     else
-        //     {
-        //         JFactory::getApplication()->enqueueMessage($msg, 'warning');
-        //     }
-
-        //     return false;
-        // }
 
         return true;
     }
@@ -148,7 +132,7 @@ class Pkg_[EXTENSION_CLASS_NAME]InstallerScript
          *
          * See bug report https://github.com/joomla/joomla-cms/issues/16147
          */
-        $conf = \JFactory::getConfig();
+        $conf = \Joomla\CMS\Factory::getConfig();
         $clearGroups = ['_system', 'com_modules', 'mod_menu', 'com_plugins', 'com_modules'];
         $cacheClients = [0, 1];
 
@@ -161,7 +145,7 @@ class Pkg_[EXTENSION_CLASS_NAME]InstallerScript
                     ];
 
                     /** @var JCache $cache */
-                    $cache = \JCache::getInstance('callback', $options);
+                    $cache = \Joomla\CMS\Cache\Cache::getInstance('callback', $options);
                     $cache->clean();
                 } catch (Exception $exception) {
                     $options['result'] = false;
@@ -169,7 +153,7 @@ class Pkg_[EXTENSION_CLASS_NAME]InstallerScript
 
                 // Trigger the onContentCleanCache event.
                 try {
-                    JFactory::getApplication()->triggerEvent('onContentCleanCache', $options);
+                    \Joomla\CMS\Factory::getApplication()->triggerEvent('onContentCleanCache', $options);
                 } catch (Exception $e) {
                     // Suck it up
                 }
@@ -209,7 +193,7 @@ class Pkg_[EXTENSION_CLASS_NAME]InstallerScript
      */
     private function enableExtensions()
     {
-        $db = JFactory::getDbo();
+        $db = \Joomla\CMS\Factory::getDbo();
 
         foreach ($this->extensionsToEnable as $extensionToEnable) {
             $this->enableExtension($extensionToEnable[0], $extensionToEnable[1], $extensionToEnable[2], $extensionToEnable[3]);
@@ -226,7 +210,7 @@ class Pkg_[EXTENSION_CLASS_NAME]InstallerScript
      */
     private function enableExtension($type, $name, $client = 1, $group = null)
     {
-        $db = JFactory::getDbo();
+        $db = \Joomla\CMS\Factory::getDbo();
 
         $query = $db->getQuery(true)
             ->update('#__extensions')
@@ -244,7 +228,7 @@ class Pkg_[EXTENSION_CLASS_NAME]InstallerScript
             case 'module':
             case 'template':
                 // Languages, modules and templates have a client but not a folder
-                $client = JApplicationHelper::getClientInfo($client, true);
+                $client = \Joomla\CMS\Application\ApplicationHelper::getClientInfo($client, true);
                 $query->where('client_id = '.(int) $client->id);
 
                 break;

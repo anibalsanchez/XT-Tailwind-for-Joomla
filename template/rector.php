@@ -13,9 +13,9 @@ return RectorConfig::configure()
     ->withPreparedSets(
         codeQuality: true,
         codingStyle: true,
-        earlyReturn: true,
-        instanceOf: true,
         naming: true,
+        instanceOf: true,
+        earlyReturn: true,
         symfonyCodeQuality: true,
     )
     ->withSkip([__DIR__.'/rector.php'])

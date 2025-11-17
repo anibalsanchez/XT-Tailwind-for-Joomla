@@ -4,21 +4,21 @@
  * @package     XT Tailwind for Joomla
  *
  * @author      Extly, CB. <team@extly.com>
- * @copyright   Copyright (c)2012-2024 Extly, CB. All rights reserved.
+ * @copyright   Copyright (c)2012-2025 Extly, CB. All rights reserved.
  * @license     https://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
  *
  * @see         https://www.extly.com
  */
 
 $header = <<<'EOF'
-@package     XT Tailwind for Joomla
+    @package     XT Tailwind for Joomla
 
-@author      Extly, CB. <team@extly.com>
-@copyright   Copyright (c)2012-2024 Extly, CB. All rights reserved.
-@license     https://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
+    @author      Extly, CB. <team@extly.com>
+    @copyright   Copyright (c)2012-2025 Extly, CB. All rights reserved.
+    @license     https://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
 
-@see         https://www.extly.com
-EOF;
+    @see         https://www.extly.com
+    EOF;
 
 return (new PhpCsFixer\Config())
     ->setRules([
